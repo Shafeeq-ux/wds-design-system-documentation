@@ -64,16 +64,16 @@
   <table>
     <thead><tr><th scope="col">Type</th><th scope="col">Limit</th><th scope="col">Example</th></tr></thead>
     <tbody>
-      <tr><td>Primary, Secondary</td><td>2–4 words, 25 characters max</td><td>Request a demo</td></tr>
+      <tr><td>Primary, Secondary</td><td>2–4 words, 25 characters max</td><td>Request a Demo</td></tr>
       <tr><td>Tertiary</td><td>2–4 words, 30 characters max</td><td>Terms &amp; Conditions</td></tr>
-      <tr><td>Link</td><td>1–4 words</td><td>Read the case study</td></tr>
+      <tr><td>Link</td><td>1–4 words</td><td>Read the Case Study</td></tr>
       <tr><td>Icon-only</td><td>Accessible name of 1–3 words</td><td>aria-label="Play video"</td></tr>
     </tbody>
   </table>
 </div>
 <ul>
-  <li><strong>Start with a verb</strong>: "Book a demo", not "Demo booking".</li>
-  <li><strong>Use sentence case</strong> and no end punctuation.</li>
+  <li><strong>Start with a verb</strong>: "Book a Demo", not "Demo Booking".</li>
+  <li><strong>Use Title Case</strong>, as in Figma ("Request a Demo", "See AI in Action"), and no end punctuation. See <a href="/content/ctas.html">CTA labels</a>.</li>
   <li><strong>Say what happens</strong>: avoid "Click here", "Submit" and "Learn more" on their own.</li>
   <li><strong>Allow for translation</strong>: German and French labels run about 30% longer.</li>
 </ul>
@@ -81,7 +81,7 @@
 
 <h2>Developer implementation</h2>
 <pre><code>&lt;!-- Action --&gt;
-&lt;button class="wds-btn wds-btn--primary" type="button"&gt;Request a demo&lt;/button&gt;
+&lt;button class="wds-btn wds-btn--primary" type="button"&gt;Request a Demo&lt;/button&gt;
 
 &lt;!-- Navigation: same look, link semantics --&gt;
 &lt;a class="wds-btn wds-btn--secondary" href="/platform"&gt;See the platform&lt;/a&gt;
@@ -147,5 +147,5 @@
   <li>Icon-only buttons have an accessible name.</li>
   <li>Disabled buttons use <code>aria-disabled</code> and do nothing on click.</li>
   <li>CTA groups stack at 767px and below.</li>
-  <li>Labels are verb-first, sentence case and within the limit.</li>
+  <li>Labels are verb-first, Title Case and within the limit.</li>
 </ul>

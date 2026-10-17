@@ -1,0 +1,45 @@
+<!--meta {"status": "Stable"} -->
+<h2>Pattern purpose</h2>
+<p>Alt text describes an image for people who can't see it: screen reader users, people on slow connections, and search engines. Every image needs a decision: describe it, or mark it as decorative (WCAG 1.1.1).</p>
+
+<h2>Voice and tone</h2>
+<p>Plain and factual. Describe what matters in this context, the way you'd describe it to a colleague on the phone.</p>
+
+<h2>Writing rules</h2>
+<div class="table-wrap">
+  <table>
+    <thead><tr><th scope="col">Image type</th><th scope="col">What to write</th></tr></thead>
+    <tbody>
+      <tr><td>Product screenshot</td><td>What the screen shows and why it matters: "T1 answering a sales manager's question about today's pipeline"</td></tr>
+      <tr><td>Photo of people</td><td>Who, doing what, where, if it's relevant: "Dealers comparing notes at a Tekion One roundtable"</td></tr>
+      <tr><td>Chart or diagram</td><td>The takeaway, with the data in nearby text or a table: "Bar chart showing total AI revenue reaching $235M in 2025"</td></tr>
+      <tr><td>Customer or partner logo</td><td>The company name only: "Penske Automotive"</td></tr>
+      <tr><td>Compliance badge</td><td>The certification: "ISO/IEC 27001 certified"</td></tr>
+      <tr><td>Linked image or logo</td><td>Where the link goes: "Tekion home"</td></tr>
+      <tr><td>Decorative art, blobs, gradients</td><td>Empty alt (<code>alt=""</code>) or <code>aria-hidden="true"</code></td></tr>
+      <tr><td>Icon next to a text label</td><td>Decorative: <code>aria-hidden="true"</code></td></tr>
+    </tbody>
+  </table>
+</div>
+<ul>
+  <li>Don't start with "Image of" or "Picture of". Screen readers already say it's an image.</li>
+  <li>Don't repeat the caption or nearby heading word for word.</li>
+  <li>Put text that's inside an image into the alt text, but avoid images of text in the first place.</li>
+  <li>End with a full stop so screen readers pause.</li>
+</ul>
+
+<h2>Character or word limits</h2>
+<p><strong>125 characters</strong> at most. Some screen readers cut longer alt text. If an image needs more (a complex diagram, for example), describe it in the page copy or a caption and keep the alt text short.</p>
+
+<h2>Approved examples</h2>
+<div class="do-dont">
+  <div class="do"><h3>Approved</h3><ul><li><code>alt="Service advisor reviewing a repair order recommendation in Tekion ARC."</code></li><li><code>alt="SOC 2 compliant"</code></li><li><code>alt=""</code> on the gradient blobs in a banner</li></ul></div>
+  <div class="dont"><h3>Not approved</h3><ul><li><code>alt="image123.jpg"</code></li><li><code>alt="Image of a screen"</code></li><li>No <code>alt</code> attribute at all</li></ul></div>
+</div>
+
+<h2>Accessibility and localisation notes</h2>
+<ul>
+  <li>Alt text is translated with the page, so keep it in the CMS with the rest of the copy, not baked into templates.</li>
+  <li>Video needs captions and, for important visual detail, audio description or a text alternative (WCAG 1.2).</li>
+  <li>Background images set in CSS have no alt text. If one carries meaning, it shouldn't be a background.</li>
+</ul>

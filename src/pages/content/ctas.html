@@ -1,0 +1,56 @@
+<!--meta {"status": "Proposed"} -->
+<h2>Pattern purpose</h2>
+<p>CTA labels tell people what happens when they select a button or link. A good label makes the next step obvious and sets the right expectation.</p>
+
+<h2>Voice and tone</h2>
+<p>Direct and active. The label describes the action from the visitor's side ("Request a Demo"), not the system's ("Submit").</p>
+
+<h2>Writing rules</h2>
+<ul>
+  <li><strong>Start with a verb</strong>: Request, See, Watch, Read, Explore, Register, Get.</li>
+  <li><strong>Title Case</strong>, as in Figma, and no end punctuation.</li>
+  <li><strong>2–4 words.</strong> Every word should earn its place.</li>
+  <li><strong>Make it specific.</strong> "Watch Video" beats "Learn More" when the link opens a video.</li>
+  <li><strong>Keep one label per action across the site.</strong> If the demo CTA is "Request a Demo" in the footer, it's "Request a Demo" everywhere (not "Request Demo" in one place and "Book a Demo" in another).</li>
+  <li><strong>Pair actions by weight</strong>: one primary ("Request a Demo"), one secondary or tertiary alternative ("See AI in Action").</li>
+</ul>
+<div class="callout"><p><strong>Inconsistency in Figma.</strong> The file uses "Request Demo", "Request a Demo", "Learn more" and "Read More" in different places. Proposed standards: <strong>Request a Demo</strong> for the main conversion, and <strong>Read More</strong> for article cards.</p></div>
+
+<h2>Character or word limits</h2>
+<div class="table-wrap">
+  <table>
+    <thead><tr><th scope="col">Type</th><th scope="col">Words</th><th scope="col">Characters</th></tr></thead>
+    <tbody>
+      <tr><td>Primary and secondary buttons</td><td class="num">2–4</td><td class="num">25</td></tr>
+      <tr><td>Tertiary button</td><td class="num">2–4</td><td class="num">30</td></tr>
+      <tr><td>Link button</td><td class="num">1–4</td><td class="num">25</td></tr>
+      <tr><td>Header CTA</td><td class="num">2–3</td><td class="num">16</td></tr>
+      <tr><td>Image banner CTA</td><td class="num">2–6</td><td class="num">30</td></tr>
+      <tr><td>Icon button accessible name</td><td class="num">1–3</td><td class="num">25</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<h2>Approved examples</h2>
+<div class="table-wrap">
+  <table>
+    <thead><tr><th scope="col">Goal</th><th scope="col">Approved label</th><th scope="col">Avoid</th></tr></thead>
+    <tbody>
+      <tr><td>Main conversion</td><td>Request a Demo</td><td>Submit, Contact Us, Click Here</td></tr>
+      <tr><td>See the product</td><td>See AI in Action</td><td>Learn More</td></tr>
+      <tr><td>Play media</td><td>Watch Video</td><td>Play, Video</td></tr>
+      <tr><td>Open an article</td><td>Read More</td><td>More, Continue</td></tr>
+      <tr><td>Event sign-up</td><td>Get on the Early Access List</td><td>Sign Up Now!</td></tr>
+      <tr><td>Partner program</td><td>Register Now</td><td>Join</td></tr>
+      <tr><td>Trust and security</td><td>Visit Trust Portal</td><td>Security</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<h2>Accessibility and localisation notes</h2>
+<ul>
+  <li><strong>Link text must make sense on its own</strong> (WCAG 2.4.4). When several cards say "Read More", add hidden context: <code>Read More&lt;span class="visually-hidden"&gt; about Deal Guard AI&lt;/span&gt;</code>.</li>
+  <li><strong>Label in name</strong> (WCAG 2.5.3): if you add an <code>aria-label</code>, it must start with the visible label.</li>
+  <li><strong>Say when a link opens something unexpected</strong>: a new tab, a PDF or a video pop-up.</li>
+  <li><strong>Allow 30% more length</strong> for translation. Buttons never wrap, so shorter English labels give translators room.</li>
+</ul>

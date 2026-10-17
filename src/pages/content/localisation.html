@@ -1,0 +1,46 @@
+<!--meta {"status": "Proposed"} -->
+<h2>Pattern purpose</h2>
+<p>Copy written with translation in mind costs less to localise and doesn't break layouts when the site is translated, for example into Canadian French. The examples below use en-US and fr-CA.</p>
+
+<h2>Voice and tone</h2>
+<p>The voice stays the same in every language: clear, confident, concrete. Translators should adapt idioms and examples, not translate them word for word.</p>
+
+<h2>Writing rules</h2>
+<ul>
+  <li><strong>Leave room to grow.</strong> French and German run about 30% longer than English, and short strings like buttons can grow by 100%. Aim for 70% of each character limit in English.</li>
+  <li><strong>Avoid idioms, puns and cultural references</strong>: "move the needle", "home run", "slam dunk".</li>
+  <li><strong>Write full sentences</strong> rather than strings assembled from pieces. Word order changes between languages.</li>
+  <li><strong>Never put text in images.</strong> It can't be translated, searched or read by screen readers.</li>
+  <li><strong>Keep product names in English</strong>: Automotive Retail Cloud, T1, Tekion One.</li>
+  <li><strong>Use one term per concept</strong> (for example "rooftop", not "rooftop", "location" and "store" interchangeably) so translation memory stays consistent.</li>
+</ul>
+<h3>Formats</h3>
+<div class="table-wrap">
+  <table>
+    <thead><tr><th scope="col">Item</th><th scope="col">en-US</th><th scope="col">fr-CA</th></tr></thead>
+    <tbody>
+      <tr><td>Date</td><td>October 17, 2026</td><td>17 octobre 2026</td></tr>
+      <tr><td>Number</td><td>3,000+</td><td>3 000+</td></tr>
+      <tr><td>Currency</td><td>$235M</td><td>235 M$</td></tr>
+      <tr><td>Percent</td><td>30%</td><td>30 %</td></tr>
+      <tr><td>Phone</td><td>(302) 502-1237</td><td>302 502-1237</td></tr>
+    </tbody>
+  </table>
+</div>
+<p>Format dates, numbers and currencies with the browser's <code>Intl</code> APIs rather than hard-coding them.</p>
+
+<h2>Character or word limits</h2>
+<p>Use the <a href="/content/character-limits.html">Character limits</a> page, and check translated copy against the same limits. If a translation doesn't fit, rewrite it. Don't shrink the text style.</p>
+
+<h2>Approved examples</h2>
+<div class="do-dont">
+  <div class="do"><h3>Translates well</h3><ul><li>"Close deals faster with one connected desk."</li><li>"Every Department. Every Role. One AI."</li></ul></div>
+  <div class="dont"><h3>Translates badly</h3><ul><li>"Hit the ground running on day one."</li><li>"T1 is a game-changer."</li><li>A headline built from "Save" + {number} + "hours a week"</li></ul></div>
+</div>
+
+<h2>Accessibility and localisation notes</h2>
+<ul>
+  <li>Set <code>lang="en-US"</code> or <code>lang="fr-CA"</code> on <code>&lt;html&gt;</code>, and <code>hreflang</code> on links between language versions.</li>
+  <li>Test every section with long translated copy at mobile width before launch.</li>
+  <li>Right-to-left languages aren't planned. If they are, the layout tokens will need logical properties (<code>margin-inline</code>).</li>
+</ul>

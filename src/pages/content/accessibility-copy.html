@@ -1,0 +1,61 @@
+<!--meta {"status": "Stable"} -->
+<h2>Pattern purpose</h2>
+<p>Some copy is mostly heard rather than seen: link text read out of context, button names, form labels, error messages and hidden text for screen readers. This page covers how to write it so the site works for everyone.</p>
+
+<h2>Voice and tone</h2>
+<p>The same voice as visible copy, only more literal. Hidden text should describe, not market.</p>
+
+<h2>Writing rules</h2>
+<h3>Links and buttons</h3>
+<ul>
+  <li>Make each link make sense on its own. Screen reader users often list all links on a page (WCAG 2.4.4).</li>
+  <li>When the visible label repeats ("Read More"), add hidden context with <code>.visually-hidden</code>.</li>
+  <li>Name icon-only buttons by their action: "Play video", "Close", "Next slide". Not "Button" or "Icon".</li>
+  <li>Say when a link opens a new tab: "(opens in a new tab)", in visually hidden text.</li>
+</ul>
+<h3>Forms</h3>
+<ul>
+  <li>Every field has a visible label. Placeholders are examples, not labels.</li>
+  <li>Error messages say what's wrong and how to fix it: "Enter a 10-digit phone number", not "Invalid".</li>
+  <li>Say which fields are required before people start ("All fields are required" or mark the optional ones).</li>
+  <li>After submitting, confirm what happened and what comes next.</li>
+</ul>
+<h3>Landmarks and page structure</h3>
+<ul>
+  <li>Give each <code>nav</code> a distinct name: "Main", "Footer", "Breadcrumb".</li>
+  <li>The skip link reads "Skip to content".</li>
+  <li>The page <code>&lt;title&gt;</code> is unique and starts with the page's own name.</li>
+</ul>
+<h3>Plain language</h3>
+<ul>
+  <li>Spell out abbreviations on first use: "dealer management system (DMS)".</li>
+  <li>Write numbers as numerals, and spell out symbols screen readers misread where it matters: "per repair order" rather than "/RO" in hidden text.</li>
+  <li>Avoid directions that depend on sight: "the button on the right" or "the green link".</li>
+</ul>
+
+<h2>Character or word limits</h2>
+<div class="table-wrap">
+  <table>
+    <thead><tr><th scope="col">Copy</th><th scope="col">Limit</th></tr></thead>
+    <tbody>
+      <tr><td>Icon button name (<code>aria-label</code>)</td><td class="num">1–3 words</td></tr>
+      <tr><td>Hidden link context</td><td class="num">Up to 6 words</td></tr>
+      <tr><td>Form error message</td><td class="num">60 characters, one sentence</td></tr>
+      <tr><td>Field label</td><td class="num">25 characters</td></tr>
+      <tr><td>Landmark name</td><td class="num">1–2 words</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<h2>Approved examples</h2>
+<div class="do-dont">
+  <div class="do"><h3>Approved</h3><ul><li><code>&lt;a&gt;Read More&lt;span class="visually-hidden"&gt; about Salesperson AI&lt;/span&gt;&lt;/a&gt;</code></li><li><code>aria-label="Open menu"</code> / <code>"Close menu"</code></li><li>"Select a role"</li></ul></div>
+  <div class="dont"><h3>Not approved</h3><ul><li>"Click here"</li><li><code>aria-label="hamburger icon"</code></li><li>"Error: field invalid"</li></ul></div>
+</div>
+
+<h2>Accessibility and localisation notes</h2>
+<ul>
+  <li>Hidden text is translated too. Keep it in the CMS, not hard-coded in templates.</li>
+  <li>If an <code>aria-label</code> replaces visible text, it must contain that visible text (WCAG 2.5.3).</li>
+  <li>Set <code>lang</code> on the page, and on any phrase in another language (WCAG 3.1.1, 3.1.2).</li>
+</ul>

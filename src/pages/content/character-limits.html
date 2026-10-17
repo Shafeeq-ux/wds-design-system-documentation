@@ -1,0 +1,67 @@
+<!--meta {"status": "Proposed"} -->
+<div class="callout"><p><strong>Proposed, pending Marketing sign-off.</strong> These limits are calculated from the Figma layouts. Once approved, change this page's status to Stable and treat the limits as hard rules in briefs and CMS fields.</p></div>
+
+<h2>Pattern purpose</h2>
+<p>Every text slot in a WDS section has a fixed width and a set number of lines before the layout breaks. Character limits turn that into a number writers can work to, so copy fits at every breakpoint without redesigns or last-minute cuts.</p>
+
+<h2>How limits are calculated</h2>
+<ol>
+  <li>Take the slot's <strong>text style</strong> and its <strong>maximum width</strong> on desktop, measured in Figma.</li>
+  <li>Estimate characters per line: <code>width ÷ (font size × 0.45 × font width)</code>. Tekion Sans averages about 0.45em per character. Headlines are set at 110% width, body at 105% and statistics at 125%, which makes characters wider.</li>
+  <li>Multiply by the allowed lines, keep 95% to leave room for word wrap, and round down to the nearest 5.</li>
+  <li>Check the same text at the mobile size and the 342px mobile width, to see how many lines it will take there.</li>
+</ol>
+<p>The 0.45em figure was calibrated against the longest real copy in Figma. For example, "Connected Intelligence. Seamless Consumer Experiences." (54 characters) fits two lines of Headline 2 at 580px.</p>
+
+<h2>Calculator</h2>
+<p>Use this for a slot that isn't listed, or to test copy against a custom width.</p>
+<!--wds:limit-calculator-->
+
+<h2>Core limits</h2>
+<p>The limits most briefs need. Each section page has its full table, with a live checker for every slot.</p>
+<div class="table-wrap">
+  <table>
+    <thead><tr><th scope="col">Slot</th><th scope="col">Style</th><th scope="col">Width</th><th scope="col">Lines</th><th scope="col">Limit</th></tr></thead>
+    <tbody>
+      <tr><td>Eyebrow</td><td>Body 4 Regular</td><td class="num">hug</td><td class="num">1</td><td class="num"><strong>40</strong></td></tr>
+      <tr><td>Hero H1</td><td>Headline 1</td><td class="num">940px</td><td class="num">2</td><td class="num"><strong>60</strong></td></tr>
+      <tr><td>Hero supporting copy</td><td>Body 1 Regular</td><td class="num">720px</td><td class="num">3</td><td class="num"><strong>215</strong></td></tr>
+      <tr><td>Section H2, centred</td><td>Headline 2</td><td class="num">720px</td><td class="num">2</td><td class="num"><strong>65</strong></td></tr>
+      <tr><td>Section H2, left</td><td>Headline 2</td><td class="num">580px</td><td class="num">2</td><td class="num"><strong>55</strong></td></tr>
+      <tr><td>Section description</td><td>Body 1 Regular</td><td class="num">720px</td><td class="num">3</td><td class="num"><strong>215</strong></td></tr>
+      <tr><td>Card title, 3 columns</td><td>Headline 4</td><td class="num">393px</td><td class="num">2</td><td class="num"><strong>60</strong></td></tr>
+      <tr><td>Card body, 3 columns</td><td>Body 3 Regular</td><td class="num">393px</td><td class="num">4</td><td class="num"><strong>190</strong></td></tr>
+      <tr><td>Stat value</td><td>Statistics</td><td class="num">hug</td><td class="num">1</td><td class="num"><strong>10</strong></td></tr>
+      <tr><td>CTA label</td><td>Button</td><td class="num">hug</td><td class="num">1</td><td class="num"><strong>25</strong></td></tr>
+      <tr><td>FAQ answer</td><td>Body 3 Medium</td><td class="num">700px</td><td class="num">6</td><td class="num"><strong>470</strong></td></tr>
+      <tr><td>Page title tag</td><td>—</td><td class="num">—</td><td class="num">—</td><td class="num"><strong>60</strong></td></tr>
+      <tr><td>Meta description</td><td>—</td><td class="num">—</td><td class="num">—</td><td class="num"><strong>155</strong></td></tr>
+      <tr><td>Alt text</td><td>—</td><td class="num">—</td><td class="num">—</td><td class="num"><strong>125</strong></td></tr>
+    </tbody>
+  </table>
+</div>
+
+<h2>Every slot, by section</h2>
+<!--wds:all-limits-->
+
+<h2>Writing rules</h2>
+<ul>
+  <li><strong>Write to the limit at mobile width, not just desktop.</strong> A two-line desktop H1 can take four lines on a phone.</li>
+  <li><strong>Limits are maximums, not targets.</strong> The best headlines are usually well under.</li>
+  <li><strong>Count spaces and punctuation.</strong> The checkers do.</li>
+  <li><strong>Keep parallel items similar in length.</strong> Cards in a row look broken when one has twice as much copy.</li>
+  <li><strong>Don't fix overflow with a smaller style.</strong> Shorten the copy, or pick a section variant built for more text.</li>
+</ul>
+
+<h2>Approved examples</h2>
+<div class="do-dont">
+  <div class="do"><h3>Fits</h3><ul><li>Hero H1, 51 characters: "The AI-Native Platform for Modern Automotive Retail"</li><li>Card title, 25 characters: "Operate as One Enterprise"</li></ul></div>
+  <div class="dont"><h3>Too long</h3><ul><li>Hero H1, 87 characters: "The Only Truly AI-Native Platform Built From the Ground Up for Modern Automotive Retail"</li><li>CTA, 37 characters: "Schedule Your Personalized Demo Today"</li></ul></div>
+</div>
+
+<h2>Accessibility and localisation notes</h2>
+<ul>
+  <li>Plan for <strong>30% expansion</strong> when copy will be translated. Aim for 70% of the limit in English.</li>
+  <li>People who zoom to 200% or override text spacing see fewer characters per line (WCAG 1.4.4, 1.4.12). Layouts wrap, and limits that leave room for wrapping keep the page usable.</li>
+  <li>Never truncate copy with an ellipsis to make it fit. Rewrite it.</li>
+</ul>

@@ -207,3 +207,30 @@ document.querySelectorAll('input[data-limit]').forEach((input) => {
   };
   input.addEventListener('input', update);
 });
+
+// ---------- Character limit calculator (same formula as scripts/shortcodes.mjs) ----------
+document.querySelectorAll('form.calc').forEach((form) => {
+  const styles = JSON.parse(form.dataset.styles);
+  const res = form.querySelector('.calc-result');
+  const count = form.querySelector('.calc-count');
+  let limit = 0;
+  function calc() {
+    const f = form.elements;
+    const s = styles[f.style.value];
+    const width = Math.max(50, Number(f.width.value) || 0);
+    const lines = Math.max(1, Number(f.lines.value) || 1);
+    const k = 0.45 * (s.stretch / 100);
+    const cpl = Math.floor(width / (s.size[0] * k));
+    limit = Math.max(5, Math.floor((cpl * lines * 0.95) / 5) * 5);
+    const cplM = Math.floor(Math.min(width, 342) / (s.size[2] * k));
+    res.innerHTML = `<b>${limit}</b> characters max · about ${cpl} per line at ${s.size[0]}px · about ${Math.ceil(limit / cplM)} lines on mobile at ${s.size[2]}px`;
+    countCopy();
+  }
+  function countCopy() {
+    const n = [...form.elements.copy.value].length;
+    count.textContent = n ? `${n} / ${limit}${n > limit ? ` · ${n - limit} too many` : ' · fits'}` : '';
+    count.classList.toggle('over', n > limit);
+  }
+  form.addEventListener('input', (e) => (e.target.name === 'copy' ? countCopy() : calc()));
+  calc();
+});

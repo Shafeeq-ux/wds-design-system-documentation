@@ -1,0 +1,52 @@
+<!--meta {"status": "Proposed"} -->
+<h2>Pattern purpose</h2>
+<p>Search engines and social platforms read a page's title, description, headings and structured data to decide how to show it. Good metadata gets the right people to the right page.</p>
+
+<h2>Voice and tone</h2>
+<p>Titles and descriptions are ads in search results. Lead with what the searcher wants, in the same clear voice as the page.</p>
+
+<h2>Writing rules</h2>
+<div class="table-wrap">
+  <table>
+    <thead><tr><th scope="col">Element</th><th scope="col">Rule</th><th scope="col">Limit</th></tr></thead>
+    <tbody>
+      <tr><td>Title tag</td><td>Unique per page. Page topic first, then "| Tekion".</td><td class="num">60 characters</td></tr>
+      <tr><td>Meta description</td><td>One or two sentences: what the page offers and why to click. Include the main search phrase naturally.</td><td class="num">155 characters</td></tr>
+      <tr><td>H1</td><td>One per page, close in meaning to the title tag.</td><td class="num">60 characters</td></tr>
+      <tr><td>URL slug</td><td>Lowercase words joined by hyphens, no dates or IDs: <code>/automotive-retail-cloud/service</code></td><td class="num">3–5 words</td></tr>
+      <tr><td>Open Graph title</td><td>Can be warmer than the title tag. No "| Tekion".</td><td class="num">60 characters</td></tr>
+      <tr><td>Open Graph image</td><td>1200 × 630px, key text inside the central 1000 × 500px, under 1MB.</td><td class="num">—</td></tr>
+      <tr><td>Alt text</td><td>See <a href="/content/alt-text.html">Alt text</a>.</td><td class="num">125 characters</td></tr>
+    </tbody>
+  </table>
+</div>
+<ul>
+  <li>Use headings in order (h1 → h2 → h3), with real words in them. Search engines use them to understand the page.</li>
+  <li>Link between related pages with descriptive link text.</li>
+  <li>Add FAQ structured data (<code>FAQPage</code>) only for questions that are visible on the page.</li>
+  <li>Don't hide copy in closed accordions or tabs if the page needs to rank for it. Put a summary in visible text too.</li>
+</ul>
+
+<h2>Character or word limits</h2>
+<p>Title 60 · description 155 · H1 60 · alt text 125. Test titles and descriptions here:</p>
+<div class="table-wrap">
+  <table class="limits-table">
+    <thead><tr><th scope="col">Field</th><th scope="col">Limit</th><th scope="col">Check your copy</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Title tag</strong></td><td class="num">60</td><td><label class="visually-hidden" for="seo-title">Title tag</label><input class="try" id="seo-title" data-limit="60" placeholder="Automotive Retail Cloud for Dealers | Tekion"><output for="seo-title" class="try-count">0 / 60</output></td></tr>
+      <tr><td><strong>Meta description</strong></td><td class="num">155</td><td><label class="visually-hidden" for="seo-desc">Meta description</label><input class="try" id="seo-desc" data-limit="155" placeholder="One platform for sales, service, parts and accounting…"><output for="seo-desc" class="try-count">0 / 155</output></td></tr>
+    </tbody>
+  </table>
+</div>
+
+<h2>Approved examples</h2>
+<div class="do-dont">
+  <div class="do"><h3>Approved</h3><ul><li>Title: "AI-Native Dealer Management System | Tekion" (43)</li><li>Description: "Run sales, service, parts and accounting on one AI-native platform. See how Tekion ARC helps dealerships save time and sell more." (129)</li></ul></div>
+  <div class="dont"><h3>Not approved</h3><ul><li>Title: "Home" or "Tekion | Tekion | Tekion"</li><li>Description: the same text on every page</li></ul></div>
+</div>
+
+<h2>Accessibility and localisation notes</h2>
+<ul>
+  <li>The title tag is the first thing a screen reader announces on a new page, so it must describe the page (WCAG 2.4.2).</li>
+  <li>Translate titles, descriptions and Open Graph text for each language version, and link versions with <code>hreflang</code>.</li>
+</ul>

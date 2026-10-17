@@ -150,7 +150,7 @@ const FIGMA = 'https://www.figma.com/design/lf5SOxUpWBtO8AIzXf6snw/WDS-3.0?node-
 const MOBILE_WIDTH = 342;
 
 // Average Tekion Sans character width is about 0.45em at 100% width (calibrated against the
-// longest real copy in Figma, e.g. a 55-character H2 that fits two lines at 580px). The width axis scales it.
+// longest real copy in Figma, e.g. a 54-character H2 that fits two lines at 580px). The width axis scales it.
 export function slotLimit([label, style, width, lines, fixed]) {
   const S = C.typography.styles[style];
   if (!S || !width) return { label, style, width, lines, cpl: null, limit: fixed ?? (style === 'button' ? 25 : null), mobileLines: 1 };
@@ -198,7 +198,24 @@ function allLimits() {
     + table(['Section', 'Slot', 'Style', 'Lines', 'Limit'], rows).replace('<table class="">', '<table id="all-limits">');
 }
 
-const CODES = { 'section-sets': sectionSets, 'section-limits': sectionLimits, 'all-limits': allLimits, pairs, icons, 'icon-keywords': iconKeywords, ramp, theme, 'type-scale': typeScale, scale, responsive, radii, borders, gradients };
+
+// Interactive calculator: pick a text style and width, get a limit, test copy against it.
+function limitCalculator() {
+  const styles = Object.fromEntries(Object.entries(C.typography.styles).map(([n, v]) => [n, { size: v.size, stretch: v.stretch }]));
+  const opts = Object.keys(styles).map((n) => `<option value="${n}"${n === 'headline-2' ? ' selected' : ''}>${n}</option>`).join('');
+  return `<form class="calc" data-styles='${JSON.stringify(styles)}' onsubmit="return false">
+  <div class="calc-inputs">
+    <label>Text style<select name="style">${opts}</select></label>
+    <label>Max width (px)<input name="width" type="number" min="50" max="1420" value="720" inputmode="numeric"></label>
+    <label>Lines on desktop<input name="lines" type="number" min="1" max="12" value="2" inputmode="numeric"></label>
+  </div>
+  <output class="calc-result" aria-live="polite"></output>
+  <label class="calc-copy">Your copy<textarea name="copy" rows="3" placeholder="Paste a headline or paragraph"></textarea></label>
+  <output class="calc-count" aria-live="polite"></output>
+</form>`;
+}
+
+const CODES = { 'limit-calculator': limitCalculator, 'section-sets': sectionSets, 'section-limits': sectionLimits, 'all-limits': allLimits, pairs, icons, 'icon-keywords': iconKeywords, ramp, theme, 'type-scale': typeScale, scale, responsive, radii, borders, gradients };
 
 export function applyShortcodes(html) {
   return html.replace(/<!--wds:([\w-]+)\s*([^>]*?)-->/g, (all, name, arg) => {

@@ -168,7 +168,7 @@ Derived from Figma width tokens and type sizes. Tekion Sans averages about 0.5em
 | Meta title / description | — | — | 60 / 155 chars | — |
 | Alt text | — | — | ≤125 chars, no "image of" | — |
 
-Plus: sentence case for headings and CTAs, no trailing punctuation on headings or CTAs, one H1 per page, no skipped heading levels, and 30% expansion allowance for localisation (German, French).
+Plus: Title Case for headings, CTAs and field labels (matching the Figma copy) and sentence case for body text and messages, no trailing punctuation on headings or CTAs, one H1 per page, no skipped heading levels, and 30% expansion allowance for localisation (German, French).
 
 ---
 
