@@ -1,0 +1,39 @@
+<!--meta {"status": "Stable", "figma": "255-2510"} -->
+<h2>Section overview</h2>
+<p>Card grids present a set of parallel items, such as products, benefits or articles, with the same structure so people can scan and compare. The Figma page has 11 grid variants from 2 to 8 cards.</p>
+<div class="meta-grid">
+  <div><h3>Recommended placement</h3><p>Mid-page, after the hero or a feature section. Use one or two card grids per page at most.</p></div>
+  <div><h3>Audience</h3><p>Visitors comparing options or looking for the part that applies to them.</p></div>
+  <div><h3>Goal</h3><p>Help people find the product, benefit or article that matters to them and move on to it.</p></div>
+</div>
+
+<h2>Variants</h2>
+<p>Use <strong>3-column</strong> for three key benefits, <strong>4-column</strong> for product families, <strong>grid 6</strong> and <strong>grid 8</strong> for longer benefit lists, <strong>explore more</strong> for related content, and the <strong>video grids</strong> for session libraries.</p>
+<ul class="variant-index"><li><a href="#variant-card-grid-4-column">4 column</a></li><li><a href="#variant-card-grid-3-column">3 column</a></li><li><a href="#variant-card-grid-grid6">grid6</a></li><li><a href="#variant-card-grid-grid8">grid8</a></li><li><a href="#variant-card-grid-card-6-img">card 6 img</a></li><li><a href="#variant-card-grid-cards-2">cards 2</a></li><li><a href="#variant-card-grid-explore-more">explore more</a></li><li><a href="#variant-card-grid-industry-stats">industry stats</a></li><li><a href="#variant-card-grid-bento-grid-3">bento grid 3</a></li><li><a href="#variant-card-grid-video-grid5">video grid5</a></li><li><a href="#variant-card-grid-video-grid4">video grid4</a></li></ul>
+<h3>Live example</h3>
+<p>Switch the viewport and theme to see how the section adapts.</p>
+<div class="doc-preview" data-src="/examples/card-grid.html" data-title="Card grid · 3 column" data-theme="dark"></div>
+<!--wds:section-sets card-grid-->
+
+<h2>Content structure and character limits</h2>
+<p>Limits are calculated from each slot's text style and its maximum width in Figma, so copy fits without breaking the layout. Type your copy into the last column to check it. Limits are <strong>proposed</strong> until Marketing signs them off.</p>
+<!--wds:section-limits card-grid-->
+
+<h2>Responsive layout behaviour</h2>
+<ul><li>Desktop shows 2 to 5 columns using the card-width tokens (see Grid & breakpoints).</li><li>On tablet, 3-column cards become rows with text on the left and image on the right. 4-column grids become two columns.</li><li>On mobile, every grid becomes one column, except 5-column grids, which can fit two.</li></ul>
+<p>Section padding, gaps and widths come from the <a href="/foundations/grid.html">breakpoint tokens</a>, so the spacing changes automatically at each breakpoint.</p>
+
+<h2>Light and dark theme</h2>
+<p>Most card grids are dark in Figma. Card surfaces use bg-page with border-subtle dividers, so they work in light too.</p>
+
+<h2>Design guidance</h2>
+<div class="do-dont">
+  <div class="do"><h3>Do</h3><ul><li>Pick the variant that fits the content, rather than forcing content into a variant.</li><li>Keep copy within the limits at mobile width, not just desktop.</li></ul></div>
+  <div class="dont"><h3>Don't</h3><ul><li>Mix cards with and without images in one grid.</li><li>Make one card much longer than the rest.</li><li>Use a card grid for a single item.</li></ul></div>
+</div>
+
+<h2>Accessibility</h2>
+<ul><li>Each card title is a heading (usually <code>h3</code>) under the section's <code>h2</code>.</li><li>If the whole card is clickable, use one link and stretch its hit area. Don't nest several links.</li><li>Repeated link labels like "Learn more" need hidden context: "Learn more <span class="visually-hidden">about Core DMS</span>".</li></ul>
+
+<h2>Marketing handoff checklist</h2>
+<ul><li>All cards have the same parts, filled in.</li><li>Card titles within 60 characters (3 columns) or 45 (4 columns).</li><li>Images share one aspect ratio.</li><li>Section and variant chosen from Figma, with its node link.</li><li>Copy within every character limit on this page, checked at mobile width.</li><li>Eyebrow, H2 and description follow the <a href="/content/headings.html">heading rules</a>.</li><li>Images supplied at 2× with alt text.</li><li>Reviewed in light and dark if the page supports both.</li></ul>

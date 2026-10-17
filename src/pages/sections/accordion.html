@@ -1,0 +1,36 @@
+<!--meta {"status": "WIP", "figma": "269-4350"} -->
+<h2>Section overview</h2>
+<p>Accordion sections show a list of topics where only one is open at a time, with an image or list that changes with the open row. They let a page cover several roles or steps without getting long.</p>
+<div class="meta-grid">
+  <div><h3>Recommended placement</h3><p>Mid-page, for 3 to 6 related topics such as roles, steps or use cases.</p></div>
+  <div><h3>Audience</h3><p>Visitors who want detail on one topic without reading all of them.</p></div>
+  <div><h3>Goal</h3><p>Let people find the topic that applies to them and see it in context.</p></div>
+</div>
+
+<h2>Variants</h2>
+<p><strong>Right image</strong> and <strong>left image</strong> pair rows with a visual that changes. The <strong>variant</strong> opens each role into an icon list.</p>
+<ul class="variant-index"><li><a href="#variant-accordion-right-image">right image</a></li><li><a href="#variant-accordion-left-image">left image</a></li><li><a href="#variant-accordion-variant">variant</a></li></ul>
+<!--wds:section-sets accordion-->
+
+<h2>Content structure and character limits</h2>
+<p>Limits are calculated from each slot's text style and its maximum width in Figma, so copy fits without breaking the layout. Type your copy into the last column to check it. Limits are <strong>proposed</strong> until Marketing signs them off.</p>
+<!--wds:section-limits accordion-->
+
+<h2>Responsive layout behaviour</h2>
+<ul><li>On desktop, rows and image sit side by side.</li><li>On tablet and mobile the image moves inside the open row, directly below its text.</li></ul>
+<p>Section padding, gaps and widths come from the <a href="/foundations/grid.html">breakpoint tokens</a>, so the spacing changes automatically at each breakpoint.</p>
+
+<h2>Light and dark theme</h2>
+<p>Right image is dark in Figma; the other two are light.</p>
+
+<h2>Design guidance</h2>
+<div class="do-dont">
+  <div class="do"><h3>Do</h3><ul><li>Pick the variant that fits the content, rather than forcing content into a variant.</li><li>Keep copy within the limits at mobile width, not just desktop.</li></ul></div>
+  <div class="dont"><h3>Don't</h3><ul><li>Hide essential information, such as pricing, in a closed row.</li><li>Open several rows at once in the image variants.</li></ul></div>
+</div>
+
+<h2>Accessibility</h2>
+<ul><li>Each row header is a <code>button</code> with <code>aria-expanded</code>, inside a heading.</li><li>Keep keyboard focus on the row header when it opens.</li><li>Content in closed rows must still be reachable by opening the row, not hidden from search engines entirely.</li></ul>
+
+<h2>Marketing handoff checklist</h2>
+<ul><li>3 to 6 rows.</li><li>One image per row, same aspect ratio.</li><li>Which row is open by default.</li><li>Section and variant chosen from Figma, with its node link.</li><li>Copy within every character limit on this page, checked at mobile width.</li><li>Eyebrow, H2 and description follow the <a href="/content/headings.html">heading rules</a>.</li><li>Images supplied at 2× with alt text.</li><li>Reviewed in light and dark if the page supports both.</li></ul>

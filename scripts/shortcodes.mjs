@@ -143,7 +143,62 @@ function iconKeywords() {
     + `<p>Another ${d.undocumented.length} feature icons exist in Figma without keywords yet:</p><p class="tag-list">${d.undocumented.map((n) => `<code>${esc(n)}</code>`).join(' ')}</p>`;
 }
 
-const CODES = { pairs, icons, 'icon-keywords': iconKeywords, ramp, theme, 'type-scale': typeScale, scale, responsive, radii, borders, gradients };
+
+// ---------- Section layouts ----------
+const SECTIONS = JSON.parse(readFileSync(join(root, 'src/data/sections.json'), 'utf8'));
+const FIGMA = 'https://www.figma.com/design/lf5SOxUpWBtO8AIzXf6snw/WDS-3.0?node-id=';
+const MOBILE_WIDTH = 342;
+
+// Average Tekion Sans character width is about 0.45em at 100% width (calibrated against the
+// longest real copy in Figma, e.g. a 55-character H2 that fits two lines at 580px). The width axis scales it.
+export function slotLimit([label, style, width, lines, fixed]) {
+  const S = C.typography.styles[style];
+  if (!S || !width) return { label, style, width, lines, cpl: null, limit: fixed ?? (style === 'button' ? 25 : null), mobileLines: 1 };
+  const k = 0.45 * (S.stretch / 100);
+  const cpl = Math.floor(width / (S.size[0] * k));
+  const limit = fixed ?? Math.max(5, Math.floor((cpl * lines * 0.95) / 5) * 5); // 95% fill leaves room for word wrap
+  const cplM = Math.floor(Math.min(width, MOBILE_WIDTH) / (S.size[2] * k));
+  return { label, style, width, lines, cpl, limit, mobileLines: Math.ceil(limit / Math.max(cplM, 1)), size: S.size };
+}
+
+function sectionSets(key) {
+  const sec = SECTIONS[key];
+  if (!sec) throw new Error(`No section data for ${key}`);
+  return sec.sets.map(([file, node, theme, desc], i) => `
+<figure class="figure section-figure" id="variant-${file}">
+  <img src="/assets/sections/${file}.jpg" alt="${esc(desc)}, shown at desktop, tablet and mobile widths" loading="${i < 2 ? 'eager' : 'lazy'}">
+  <figcaption><strong>${esc(file.replace(key + '-', '').replace(/-/g, ' '))}</strong> · ${esc(desc)} <span class="badge badge-muted">${theme}</span> <a href="${FIGMA}${node}" target="_blank" rel="noopener">Figma<span class="visually-hidden"> (opens in a new tab)</span></a></figcaption>
+</figure>`).join('');
+}
+
+function sectionLimits(key) {
+  const sec = SECTIONS[key];
+  const rows = sec.slots.map((slot) => {
+    const r = slotLimit(slot);
+    const sizes = r.size ? `${r.size[0]} / ${r.size[2]}px` : '14px';
+    const limit = r.limit ?? '—';
+    const lines = r.cpl ? `${r.lines} (≈${r.cpl} per line)` : '1';
+    const id = `try-${key}-${slot[0].toLowerCase().replace(/[^a-z0-9]+/g, '-')}`;
+    return `<tr><td><strong>${esc(r.label)}</strong></td><td><code>.wds-${r.style}</code><br><small>${sizes} D / M</small></td><td class="num">${r.width || 'hug'}${r.width ? 'px' : ''}</td><td class="num">${lines}</td><td class="num"><strong>${limit}</strong>${r.cpl ? `<br><small>≈${r.mobileLines} lines on mobile</small>` : ''}</td><td>${r.limit ? `<label class="visually-hidden" for="${id}">Try copy for ${esc(r.label)}</label><input class="try" id="${id}" type="text" data-limit="${r.limit}" placeholder="Paste copy" autocomplete="off"><output for="${id}" class="try-count">0 / ${r.limit}</output>` : ''}</td></tr>`;
+  });
+  return table(['Slot', 'Text style', 'Max width', 'Lines on desktop', 'Character limit', 'Check your copy'], rows, 'limits-table');
+}
+
+// Every slot from every section, for the Content guidelines page
+function allLimits() {
+  const rows = [];
+  for (const [key, sec] of Object.entries(SECTIONS)) {
+    if (key.startsWith('_')) continue;
+    for (const slot of sec.slots) {
+      const r = slotLimit(slot);
+      rows.push(`<tr><td><a href="/sections/${key}.html#content-structure-and-character-limits">${esc(key.replace(/-/g, ' '))}</a></td><td>${esc(r.label)}</td><td><code>${r.style}</code></td><td class="num">${r.lines}</td><td class="num"><strong>${r.limit ?? '—'}</strong></td></tr>`);
+    }
+  }
+  return `<label class="filter"><span>Filter slots</span><input type="search" data-filter="#all-limits" placeholder="Try “headline” or “faq”" autocomplete="off"></label>`
+    + table(['Section', 'Slot', 'Style', 'Lines', 'Limit'], rows).replace('<table class="">', '<table id="all-limits">');
+}
+
+const CODES = { 'section-sets': sectionSets, 'section-limits': sectionLimits, 'all-limits': allLimits, pairs, icons, 'icon-keywords': iconKeywords, ramp, theme, 'type-scale': typeScale, scale, responsive, radii, borders, gradients };
 
 export function applyShortcodes(html) {
   return html.replace(/<!--wds:([\w-]+)\s*([^>]*?)-->/g, (all, name, arg) => {

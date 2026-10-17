@@ -1,0 +1,36 @@
+<!--meta {"status": "WIP", "figma": "505-13076"} -->
+<h2>Section overview</h2>
+<p>Tabbed sections switch between related views in one place, such as Ask / Decide / Act, or a before-and-after comparison.</p>
+<div class="meta-grid">
+  <div><h3>Recommended placement</h3><p>Mid-page, when 2 to 4 views share the same structure.</p></div>
+  <div><h3>Audience</h3><p>Evaluators who want to compare scenarios.</p></div>
+  <div><h3>Goal</h3><p>Show how the product behaves in different situations without repeating the layout.</p></div>
+</div>
+
+<h2>Variants</h2>
+<p><strong>UI</strong> shows product screens under each tab. <strong>2-column</strong> compares "without" and "with" for each gap.</p>
+<ul class="variant-index"><li><a href="#variant-tabbed-ui">ui</a></li><li><a href="#variant-tabbed-2-column">2 column</a></li></ul>
+<!--wds:section-sets tabbed-->
+
+<h2>Content structure and character limits</h2>
+<p>Limits are calculated from each slot's text style and its maximum width in Figma, so copy fits without breaking the layout. Type your copy into the last column to check it. Limits are <strong>proposed</strong> until Marketing signs them off.</p>
+<!--wds:section-limits tabbed-->
+
+<h2>Responsive layout behaviour</h2>
+<ul><li>Tabs stay in one row on tablet. On mobile they scroll sideways if they don't fit.</li><li>The 2-column panel stacks on mobile, "without" first.</li></ul>
+<p>Section padding, gaps and widths come from the <a href="/foundations/grid.html">breakpoint tokens</a>, so the spacing changes automatically at each breakpoint.</p>
+
+<h2>Light and dark theme</h2>
+<p>Both tabbed variants are dark in Figma.</p>
+
+<h2>Design guidance</h2>
+<div class="do-dont">
+  <div class="do"><h3>Do</h3><ul><li>Pick the variant that fits the content, rather than forcing content into a variant.</li><li>Keep copy within the limits at mobile width, not just desktop.</li></ul></div>
+  <div class="dont"><h3>Don't</h3><ul><li>Use tabs for content people need to see together.</li><li>Nest tabs inside tabs.</li></ul></div>
+</div>
+
+<h2>Accessibility</h2>
+<ul><li>Use the tabs pattern: <code>role="tablist"</code>, <code>tab</code> and <code>tabpanel</code>, with arrow keys moving between tabs.</li><li>The selected tab must be clear without colour alone.</li></ul>
+
+<h2>Marketing handoff checklist</h2>
+<ul><li>2 to 4 tabs, labels within 20 characters.</li><li>Same content structure in every panel.</li><li>Section and variant chosen from Figma, with its node link.</li><li>Copy within every character limit on this page, checked at mobile width.</li><li>Eyebrow, H2 and description follow the <a href="/content/headings.html">heading rules</a>.</li><li>Images supplied at 2× with alt text.</li><li>Reviewed in light and dark if the page supports both.</li></ul>

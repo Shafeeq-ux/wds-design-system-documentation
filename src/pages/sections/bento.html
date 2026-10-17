@@ -1,0 +1,36 @@
+<!--meta {"status": "Stable", "figma": "502-13495"} -->
+<h2>Section overview</h2>
+<p>Bento sections arrange tiles of different sizes in one grid, so one or two ideas can lead while the rest support them. Figma has four bento layouts.</p>
+<div class="meta-grid">
+  <div><h3>Recommended placement</h3><p>Mid-page, to summarise a platform or a process.</p></div>
+  <div><h3>Audience</h3><p>Visitors who want the overview at a glance.</p></div>
+  <div><h3>Goal</h3><p>Show several capabilities with a clear hierarchy.</p></div>
+</div>
+
+<h2>Variants</h2>
+<p><strong>Bento 5 image</strong> has image tiles, <strong>bento 5</strong> shows numbered steps, <strong>6 + 1</strong> has six process tiles and a highlight, and <strong>4 + 1</strong> has an intro tile with a CTA beside four features.</p>
+<ul class="variant-index"><li><a href="#variant-bento-5-image">5 image</a></li><li><a href="#variant-bento-5">5</a></li><li><a href="#variant-bento-6-1">6 1</a></li><li><a href="#variant-bento-4-1">4 1</a></li></ul>
+<!--wds:section-sets bento-->
+
+<h2>Content structure and character limits</h2>
+<p>Limits are calculated from each slot's text style and its maximum width in Figma, so copy fits without breaking the layout. Type your copy into the last column to check it. Limits are <strong>proposed</strong> until Marketing signs them off.</p>
+<!--wds:section-limits bento-->
+
+<h2>Responsive layout behaviour</h2>
+<ul><li>Tiles keep their grid positions on desktop.</li><li>On tablet the grid becomes two columns, and on mobile one column, keeping the reading order.</li><li>Bento tiles use the 24px <code>bento-card</code> radius.</li></ul>
+<p>Section padding, gaps and widths come from the <a href="/foundations/grid.html">breakpoint tokens</a>, so the spacing changes automatically at each breakpoint.</p>
+
+<h2>Light and dark theme</h2>
+<p>The image and numbered bentos are dark; 6 + 1 and 4 + 1 are light.</p>
+
+<h2>Design guidance</h2>
+<div class="do-dont">
+  <div class="do"><h3>Do</h3><ul><li>Pick the variant that fits the content, rather than forcing content into a variant.</li><li>Keep copy within the limits at mobile width, not just desktop.</li></ul></div>
+  <div class="dont"><h3>Don't</h3><ul><li>Use more than 7 tiles.</li><li>Put a CTA in more than one tile.</li></ul></div>
+</div>
+
+<h2>Accessibility</h2>
+<ul><li>The visual order of tiles must match the HTML order, so screen readers and keyboards follow the same path.</li><li>Number steps in text, not only with large decorative numerals.</li></ul>
+
+<h2>Marketing handoff checklist</h2>
+<ul><li>Which tile leads.</li><li>Tile copy within limits.</li><li>Images cropped for each tile size.</li><li>Section and variant chosen from Figma, with its node link.</li><li>Copy within every character limit on this page, checked at mobile width.</li><li>Eyebrow, H2 and description follow the <a href="/content/headings.html">heading rules</a>.</li><li>Images supplied at 2× with alt text.</li><li>Reviewed in light and dark if the page supports both.</li></ul>

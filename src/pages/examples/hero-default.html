@@ -1,34 +1,14 @@
-<!--meta {"layout": "bare"} -->
-<!doctype html>
-<html lang="en-GB">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Hero default · WDS 3.0 example</title>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap">
-  <link rel="stylesheet" href="/css/tokens.css">
-  <link rel="stylesheet" href="/css/wds.css">
-  <style>
-    html, body { margin: 0; }
-    body { background: var(--wds-bg-page); }
-    .demo-media { aspect-ratio: 21 / 9; border-radius: 24px; background: var(--wds-gradient-bg-ocean); }
-    [data-theme="dark"] .demo-media { background: var(--wds-gradient-magenta); }
-  </style>
-</head>
-<body class="wds">
-  <section class="wds-section wds-section--2x">
-    <div class="wds-container wds-stack-centre">
-      <p class="wds-overline wds-text-secondary" style="margin:0 0 16px">Automotive retail platform</p>
-      <h1 class="wds-headline-1 wds-h1-centre">Run your whole dealership on one connected platform</h1>
-      <p class="wds-body-1-reg wds-p-centre wds-title-gap wds-text-secondary">Sales, service, parts and accounting share one record of every customer and vehicle, so teams spend less time re-keying and more time selling.</p>
-      <div class="wds-actions wds-cta-gap">
-        <a class="wds-btn wds-btn--primary" href="#">Book a demo</a>
-        <a class="wds-btn wds-btn--secondary" href="#">See the platform</a>
-      </div>
-    </div>
-    <div class="wds-container wds-image-gap">
-      <div class="demo-media" role="img" aria-label="Placeholder for hero image"></div>
-    </div>
-  </section>
-</body>
-</html>
+<!--meta {"layout": "example", "title": "Hero · default"} -->
+<section class="wds-hero" aria-labelledby="hero-title">
+  <div class="wds-hero__inner">
+    <p class="wds-body-4-reg wds-head__eyebrow">Automotive Retail Cloud</p>
+    <h1 class="wds-headline-1" id="hero-title">The AI-Native Platform for Modern Automotive Retail</h1>
+    <p class="wds-body-1-reg wds-hero__sub">Unify your entire dealership on one intelligent operating system — the only one built with complete operational context.</p>
+    <div class="wds-actions wds-cta-gap"><a class="wds-btn wds-btn--primary" href="#">See AI in Action</a></div>
+    <ul class="wds-hero__stats">
+      <li><b class="wds-statistics">90%+</b><span class="wds-body-3-medium">Dealer Adoption Across Service Teams</span></li>
+      <li><b class="wds-statistics">88%+</b><span class="wds-body-3-medium">AI Recommendation Acceptance</span></li>
+    </ul>
+    <div class="wds-hero__media"><div role="img" aria-label="Product screenshot placeholder" style="background:linear-gradient(135deg,var(--wds-bg-recessed),var(--wds-bg-subtle))"></div></div>
+  </div>
+</section>

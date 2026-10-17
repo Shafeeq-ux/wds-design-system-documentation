@@ -136,7 +136,9 @@
     const frame = el.querySelector('iframe');
     const size = el.querySelector('.pv-size');
     let vp = 'desktop';
-    let pt = 'site';
+    // data-theme on the preview sets its starting theme (the Figma default for that section)
+    let pt = el.dataset.theme || 'site';
+    el.querySelectorAll('[data-pt]').forEach((x) => x.setAttribute('aria-pressed', String(x.dataset.pt === pt)));
 
     function applyTheme() {
       const doc = frame.contentDocument;
@@ -192,4 +194,16 @@ document.querySelectorAll('[data-filter]').forEach((input) => {
     const q = input.value.trim().toLowerCase();
     rows.forEach((r) => { r.hidden = q && !r.textContent.toLowerCase().includes(q); });
   });
+});
+
+// ---------- Live character counters ----------
+document.querySelectorAll('input[data-limit]').forEach((input) => {
+  const out = document.querySelector(`output[for="${input.id}"]`);
+  const limit = Number(input.dataset.limit);
+  const update = () => {
+    const n = [...input.value].length;
+    out.textContent = `${n} / ${limit}`;
+    out.classList.toggle('over', n > limit);
+  };
+  input.addEventListener('input', update);
 });

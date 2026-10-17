@@ -1,0 +1,39 @@
+<!--meta {"status": "Stable", "figma": "70-436"} -->
+<h2>Section overview</h2>
+<p>The hero is the first section of a page. It states what the page is about in one headline, backs it up with a sentence and leads to one main action. Figma has seven hero variants for different page types.</p>
+<div class="meta-grid">
+  <div><h3>Recommended placement</h3><p>First section on every landing and product page, directly under the header. Use only one hero per page.</p></div>
+  <div><h3>Audience</h3><p>Every visitor, most of whom decide in a few seconds whether to keep reading.</p></div>
+  <div><h3>Goal</h3><p>Make the value clear and start the main conversion path (usually a demo request).</p></div>
+</div>
+
+<h2>Variants</h2>
+<p>Use <strong>default</strong> or <strong>img 21:9</strong> for product pages, <strong>variant 1</strong> when trust is the main concern, <strong>content group</strong> for inner pages that don't need media, <strong>image 1:1</strong> for promotions, and <strong>3-column</strong> when the page explains a process.</p>
+<ul class="variant-index"><li><a href="#variant-hero-default">default</a></li><li><a href="#variant-hero-img21-9">img21 9</a></li><li><a href="#variant-hero-img4-1-5">img4 1 5</a></li><li><a href="#variant-hero-variant1">variant1</a></li><li><a href="#variant-hero-content-group">content group</a></li><li><a href="#variant-hero-image1-1">image1 1</a></li><li><a href="#variant-hero-3-column">3 column</a></li></ul>
+<h3>Live example</h3>
+<p>Switch the viewport and theme to see how the section adapts.</p>
+<div class="doc-preview" data-src="/examples/hero-default.html" data-title="Hero · default"></div>
+<!--wds:section-sets hero-->
+
+<h2>Content structure and character limits</h2>
+<p>Limits are calculated from each slot's text style and its maximum width in Figma, so copy fits without breaking the layout. Type your copy into the last column to check it. Limits are <strong>proposed</strong> until Marketing signs them off.</p>
+<!--wds:section-limits hero-->
+
+<h2>Responsive layout behaviour</h2>
+<ul><li>The headline drops from 56px to 40px on tablet and 28px on mobile, using the same style.</li><li>Stats sit side by side at every size. On mobile their labels move below the number.</li><li>Media keeps its aspect ratio and fills the container. 21:9 media can be cropped to 16:9 on mobile if the subject would get too small.</li><li>Two CTAs stack full width on mobile, with the primary first.</li></ul>
+<p>Section padding, gaps and widths come from the <a href="/foundations/grid.html">breakpoint tokens</a>, so the spacing changes automatically at each breakpoint.</p>
+
+<h2>Light and dark theme</h2>
+<p>All hero variants are light in Figma. A dark hero works with the same tokens, but check that media and stat accents still have enough contrast.</p>
+
+<h2>Design guidance</h2>
+<div class="do-dont">
+  <div class="do"><h3>Do</h3><ul><li>Pick the variant that fits the content, rather than forcing content into a variant.</li><li>Keep copy within the limits at mobile width, not just desktop.</li></ul></div>
+  <div class="dont"><h3>Don't</h3><ul><li>Use two primary buttons.</li><li>Put essential text inside the hero image.</li><li>Use a carousel as the hero.</li></ul></div>
+</div>
+
+<h2>Accessibility</h2>
+<ul><li>The hero headline is the page's only <code>h1</code>.</li><li>The eyebrow is a paragraph, not a heading.</li><li>Media needs alt text that describes what it shows, or empty alt text if it's decorative.</li><li>Background video must have a pause control and never autoplay with sound.</li></ul>
+
+<h2>Marketing handoff checklist</h2>
+<ul><li>One H1, within 60 characters.</li><li>Media supplied at 2× for desktop, plus a mobile crop if needed.</li><li>Stat values checked and sourced.</li><li>Section and variant chosen from Figma, with its node link.</li><li>Copy within every character limit on this page, checked at mobile width.</li><li>Eyebrow, H2 and description follow the <a href="/content/headings.html">heading rules</a>.</li><li>Images supplied at 2× with alt text.</li><li>Reviewed in light and dark if the page supports both.</li></ul>

@@ -1,0 +1,978 @@
+{
+ "_note": "Section sets and content slots from the Figma section pages (inventoried 2026-10-17). Slot = [label, text style, desktop width px, max lines on desktop]. Limits are calculated by scripts/shortcodes.mjs.",
+ "hero": {
+  "sets": [
+   [
+    "hero-default",
+    "70-436",
+    "light",
+    "Default: headline, copy, one CTA, two stats and a media frame"
+   ],
+   [
+    "hero-img21-9",
+    "704-44",
+    "light",
+    "Wide 21:9 media below two CTAs"
+   ],
+   [
+    "hero-img4-1-5",
+    "722-5840",
+    "light",
+    "Panoramic 4:1.5 media below two CTAs"
+   ],
+   [
+    "hero-variant1",
+    "251-7145",
+    "light",
+    "Two CTAs with a trust strip of compliance badges"
+   ],
+   [
+    "hero-content-group",
+    "618-5911",
+    "light",
+    "Text only: eyebrow, H2 and copy, for inner pages"
+   ],
+   [
+    "hero-image1-1",
+    "965-345",
+    "light",
+    "Square image beside a promotional offer"
+   ],
+   [
+    "hero-3-column",
+    "970-5738",
+    "light",
+    "Headline and CTAs above three numbered steps"
+   ]
+  ],
+  "slots": [
+   [
+    "Eyebrow",
+    "body-4-reg",
+    940,
+    1,
+    40
+   ],
+   [
+    "Headline (H1)",
+    "headline-1",
+    940,
+    2
+   ],
+   [
+    "Supporting copy",
+    "body-1-reg",
+    720,
+    3
+   ],
+   [
+    "CTA label",
+    "button",
+    0,
+    1
+   ],
+   [
+    "Stat value",
+    "statistics",
+    160,
+    1,
+    10
+   ],
+   [
+    "Stat label",
+    "body-3-medium",
+    178,
+    2
+   ],
+   [
+    "Trust strip label",
+    "overline",
+    618,
+    1,
+    45
+   ]
+  ]
+ },
+ "card-grid": {
+  "sets": [
+   [
+    "card-grid-4-column",
+    "255-2510",
+    "dark",
+    "Four product cards with image, label, copy and link"
+   ],
+   [
+    "card-grid-3-column",
+    "269-9558",
+    "dark",
+    "Three benefit cards and a trust row with CTA"
+   ],
+   [
+    "card-grid-grid6",
+    "618-5453",
+    "dark",
+    "Six benefit cards in a 3 × 2 grid"
+   ],
+   [
+    "card-grid-grid8",
+    "760-12004",
+    "dark",
+    "Eight benefit cards in a 4 × 2 grid"
+   ],
+   [
+    "card-grid-card-6-img",
+    "618-8426",
+    "light",
+    "Six image cards in a 3 × 2 grid"
+   ],
+   [
+    "card-grid-cards-2",
+    "505-13273",
+    "dark",
+    "Two large cards side by side"
+   ],
+   [
+    "card-grid-explore-more",
+    "505-13265",
+    "dark",
+    "Three content cards (testimonial, news, blog)"
+   ],
+   [
+    "card-grid-industry-stats",
+    "505-13269",
+    "dark",
+    "Stat cards grouped under overlines"
+   ],
+   [
+    "card-grid-bento-grid-3",
+    "618-8240",
+    "light",
+    "Three icon cards in a bento layout"
+   ],
+   [
+    "card-grid-video-grid5",
+    "1115-447",
+    "dark",
+    "One featured video and four smaller ones"
+   ],
+   [
+    "card-grid-video-grid4",
+    "1115-485",
+    "light",
+    "One featured item and three cards"
+   ]
+  ],
+  "slots": [
+   [
+    "Section title (H2)",
+    "headline-2",
+    720,
+    2
+   ],
+   [
+    "Section description",
+    "body-1-reg",
+    720,
+    3
+   ],
+   [
+    "Card label",
+    "body-3-reg",
+    180,
+    1,
+    25
+   ],
+   [
+    "Card title, 3 columns",
+    "headline-4",
+    393,
+    2
+   ],
+   [
+    "Card title, 4 columns",
+    "headline-4",
+    291,
+    2
+   ],
+   [
+    "Card body, 3 columns",
+    "body-3-reg",
+    393,
+    4
+   ],
+   [
+    "Card body, 4 columns",
+    "body-3-reg",
+    291,
+    4
+   ],
+   [
+    "Card link",
+    "button",
+    0,
+    1
+   ]
+  ]
+ },
+ "feature": {
+  "sets": [
+   [
+    "feature-platform-architecture",
+    "505-13285",
+    "dark",
+    "Platform diagram with three described products and links"
+   ],
+   [
+    "feature-content-group-reg",
+    "1190-899",
+    "light",
+    "A single large statement in Headline 2 Regular"
+   ]
+  ],
+  "slots": [
+   [
+    "Section title (H2)",
+    "headline-2",
+    720,
+    2
+   ],
+   [
+    "Section description",
+    "body-1-reg",
+    720,
+    3
+   ],
+   [
+    "Product description",
+    "body-3-bold",
+    426,
+    3
+   ],
+   [
+    "Product link",
+    "button",
+    0,
+    1
+   ],
+   [
+    "Statement",
+    "headline-2-reg",
+    720,
+    4
+   ]
+  ]
+ },
+ "accordion": {
+  "sets": [
+   [
+    "accordion-right-image",
+    "269-4350",
+    "dark",
+    "Ask / Decide / Act rows with the image on the right"
+   ],
+   [
+    "accordion-left-image",
+    "269-7036",
+    "light",
+    "Rows on the right, image on the left"
+   ],
+   [
+    "accordion-variant",
+    "618-5932",
+    "light",
+    "Role-based rows that open into icon lists"
+   ]
+  ],
+  "slots": [
+   [
+    "Section title (H2)",
+    "headline-2",
+    720,
+    2
+   ],
+   [
+    "Section description",
+    "body-1-reg",
+    720,
+    2
+   ],
+   [
+    "Row label",
+    "body-4-reg",
+    120,
+    1,
+    25
+   ],
+   [
+    "Row title",
+    "headline-4",
+    550,
+    2
+   ],
+   [
+    "Row body",
+    "body-2-reg",
+    550,
+    4
+   ]
+  ]
+ },
+ "carousel": {
+  "sets": [
+   [
+    "carousel-ai-video",
+    "505-13281",
+    "dark",
+    "Video with a list of AI agents that switches the video"
+   ],
+   [
+    "carousel-card-6-img",
+    "1115-440",
+    "light",
+    "Photo carousel with captions"
+   ],
+   [
+    "carousel-variant",
+    "1174-638",
+    "light",
+    "Feature cards that scroll sideways"
+   ]
+  ],
+  "slots": [
+   [
+    "Section title (H2)",
+    "headline-2",
+    720,
+    2
+   ],
+   [
+    "Section description",
+    "body-1-reg",
+    720,
+    2
+   ],
+   [
+    "Slide caption",
+    "body-1-reg",
+    433,
+    2
+   ],
+   [
+    "Card title",
+    "headline-4",
+    356,
+    2
+   ],
+   [
+    "Card bullet",
+    "body-3-medium",
+    328,
+    2
+   ]
+  ]
+ },
+ "tabbed": {
+  "sets": [
+   [
+    "tabbed-ui",
+    "505-13076",
+    "dark",
+    "Product UI with Ask / Decide / Act tabs"
+   ],
+   [
+    "tabbed-2-column",
+    "618-8685",
+    "dark",
+    "Tabs that compare without and with the product"
+   ]
+  ],
+  "slots": [
+   [
+    "Section title (H2)",
+    "headline-2",
+    720,
+    2
+   ],
+   [
+    "Section description",
+    "body-1-reg",
+    720,
+    3
+   ],
+   [
+    "Tab label",
+    "body-3-medium",
+    164,
+    1
+   ],
+   [
+    "Panel heading",
+    "body-4-bold",
+    160,
+    1
+   ],
+   [
+    "Panel body",
+    "body-1-reg",
+    550,
+    4
+   ]
+  ]
+ },
+ "comparison": {
+  "sets": [
+   [
+    "comparison",
+    "701-665",
+    "dark",
+    "Before and after cards side by side"
+   ]
+  ],
+  "slots": [
+   [
+    "Section title (H2)",
+    "headline-2",
+    720,
+    2
+   ],
+   [
+    "Section description",
+    "body-1-reg",
+    720,
+    3
+   ],
+   [
+    "Card label",
+    "body-4-medium",
+    120,
+    1,
+    25
+   ],
+   [
+    "Card title",
+    "headline-4",
+    334,
+    2
+   ],
+   [
+    "Card body",
+    "body-4-reg",
+    443,
+    4
+   ]
+  ]
+ },
+ "video": {
+  "sets": [
+   [
+    "video-ai-single",
+    "618-9293",
+    "light",
+    "Title and description above one video"
+   ],
+   [
+    "video-player",
+    "618-8345",
+    "light",
+    "Video player only, with controls"
+   ]
+  ],
+  "slots": [
+   [
+    "Section title (H2)",
+    "headline-2",
+    720,
+    2
+   ],
+   [
+    "Section description",
+    "body-1-reg",
+    720,
+    2
+   ]
+  ]
+ },
+ "bento": {
+  "sets": [
+   [
+    "bento-5-image",
+    "502-13495",
+    "dark",
+    "Five tiles with images and short statements"
+   ],
+   [
+    "bento-5",
+    "505-2630",
+    "dark",
+    "Numbered steps in a bento layout"
+   ],
+   [
+    "bento-6-1",
+    "618-8941",
+    "light",
+    "Six process tiles and one highlight tile"
+   ],
+   [
+    "bento-4-1",
+    "1213-2484",
+    "light",
+    "One intro tile with CTA and four feature tiles"
+   ]
+  ],
+  "slots": [
+   [
+    "Section title (H2)",
+    "headline-2",
+    720,
+    2
+   ],
+   [
+    "Section description",
+    "body-1-reg",
+    720,
+    3
+   ],
+   [
+    "Intro tile title",
+    "headline-3",
+    394,
+    3
+   ],
+   [
+    "Tile title",
+    "headline-4",
+    377,
+    2
+   ],
+   [
+    "Tile body",
+    "body-3-reg",
+    377,
+    4
+   ],
+   [
+    "Tile statement",
+    "body-3-reg",
+    275,
+    5
+   ]
+  ]
+ },
+ "testimonial": {
+  "sets": [
+   [
+    "testimonial-default",
+    "269-12347",
+    "light",
+    "Featured quote with video, outcome stats and more quotes"
+   ],
+   [
+    "testimonial-text",
+    "1115-451",
+    "light",
+    "A grid of short text quotes"
+   ]
+  ],
+  "slots": [
+   [
+    "Section title (H2)",
+    "headline-2",
+    720,
+    2
+   ],
+   [
+    "Featured quote",
+    "body-1-reg",
+    548,
+    6
+   ],
+   [
+    "Short quote",
+    "body-1-reg",
+    394,
+    5
+   ],
+   [
+    "Person name",
+    "body-1-bold",
+    427,
+    1
+   ],
+   [
+    "Role and company",
+    "body-3-reg",
+    427,
+    1
+   ],
+   [
+    "Outcome stat",
+    "statistics",
+    117,
+    1,
+    10
+   ],
+   [
+    "Outcome label",
+    "body-1-reg",
+    204,
+    2
+   ]
+  ]
+ },
+ "stats": {
+  "sets": [
+   [
+    "stats-platform",
+    "505-13277",
+    "dark",
+    "Title and four large stats"
+   ],
+   [
+    "stats-community",
+    "1115-436",
+    "light",
+    "Title and five stats in one row"
+   ],
+   [
+    "stats-platform3",
+    "1190-990",
+    "light",
+    "Three stats and a results disclaimer"
+   ],
+   [
+    "stats-4-column",
+    "269-5855",
+    "dark",
+    "Four outcome statements under an overline"
+   ],
+   [
+    "stats-metrics-icon4",
+    "505-13289",
+    "dark",
+    "Four icon statements"
+   ],
+   [
+    "stats-marquee",
+    "505-13293",
+    "dark",
+    "One stat beside scrolling customer logos"
+   ],
+   [
+    "stats-security",
+    "347-3387",
+    "dark",
+    "Security statement, compliance badges and CTA"
+   ]
+  ],
+  "slots": [
+   [
+    "Section title (H2)",
+    "headline-2",
+    580,
+    2
+   ],
+   [
+    "Section description",
+    "body-1-reg",
+    700,
+    3
+   ],
+   [
+    "Stat value",
+    "statistics",
+    180,
+    1,
+    10
+   ],
+   [
+    "Stat label",
+    "body-3-medium",
+    315,
+    2
+   ],
+   [
+    "Outcome title",
+    "body-3-medium",
+    231,
+    2
+   ],
+   [
+    "Outcome contrast line",
+    "body-4-reg",
+    216,
+    1
+   ],
+   [
+    "Disclaimer",
+    "body-4-reg",
+    720,
+    2
+   ]
+  ]
+ },
+ "faq": {
+  "sets": [
+   [
+    "faq",
+    "505-4687",
+    "dark",
+    "Title beside a list of expandable questions"
+   ]
+  ],
+  "slots": [
+   [
+    "Section title (H2)",
+    "headline-2",
+    960,
+    1
+   ],
+   [
+    "Question",
+    "headline-6",
+    700,
+    2
+   ],
+   [
+    "Answer",
+    "body-3-medium",
+    700,
+    6
+   ]
+  ]
+ },
+ "footer": {
+  "sets": [
+   [
+    "footer",
+    "503-13811",
+    "dark",
+    "Closing CTA band, product links, three link columns and legal"
+   ]
+  ],
+  "slots": [
+   [
+    "CTA title (H2)",
+    "headline-2",
+    720,
+    1
+   ],
+   [
+    "CTA description",
+    "body-1-reg",
+    720,
+    2
+   ],
+   [
+    "CTA label",
+    "button",
+    0,
+    1
+   ],
+   [
+    "Product link",
+    "body-3-medium",
+    180,
+    1
+   ],
+   [
+    "Column heading",
+    "headline-5",
+    222,
+    1
+   ],
+   [
+    "Footer link",
+    "body-4-medium",
+    222,
+    1
+   ]
+  ]
+ },
+ "pop-up": {
+  "sets": [
+   [
+    "pop-up-video-carousel",
+    "618-5201",
+    "dark",
+    "Video with agent details and a CTA"
+   ],
+   [
+    "pop-up-testimonial",
+    "1132-4301",
+    "dark",
+    "Video testimonial with quote and outcome stats"
+   ],
+   [
+    "pop-up-video",
+    "1207-735",
+    "dark",
+    "Session video with title and description"
+   ],
+   [
+    "pop-up-card",
+    "1245-10075",
+    "dark",
+    "Long-form product overview with feature blocks"
+   ],
+   [
+    "pop-up-content-image",
+    "1245-10079",
+    "dark",
+    "Product overview with stats and an image"
+   ]
+  ],
+  "slots": [
+   [
+    "Pop-up title",
+    "headline-3",
+    600,
+    2
+   ],
+   [
+    "Pop-up description",
+    "body-3-reg",
+    600,
+    3
+   ],
+   [
+    "Block title",
+    "headline-5",
+    630,
+    1
+   ],
+   [
+    "Block body",
+    "body-3-reg",
+    594,
+    3
+   ],
+   [
+    "Stat value",
+    "headline-3-reg",
+    275,
+    1,
+    10
+   ],
+   [
+    "Stat label",
+    "body-4-reg",
+    275,
+    1
+   ],
+   [
+    "Quote",
+    "body-1-reg",
+    884,
+    4
+   ]
+  ]
+ },
+ "legal-content": {
+  "sets": [
+   [
+    "legal-detail",
+    "1024-731",
+    "light",
+    "Terms page with numbered clauses"
+   ],
+   [
+    "legal-implementation-terms",
+    "1123-3089",
+    "light",
+    "Long-form terms with sections"
+   ],
+   [
+    "legal-disclaimer",
+    "1190-1004",
+    "light",
+    "A full-width disclaimer line"
+   ]
+  ],
+  "slots": [
+   [
+    "Page title",
+    "headline-3",
+    960,
+    1
+   ],
+   [
+    "Introduction",
+    "body-2-reg",
+    960,
+    4
+   ],
+   [
+    "Section heading",
+    "headline-4",
+    960,
+    1
+   ],
+   [
+    "Clause",
+    "body-3-reg",
+    908,
+    8
+   ],
+   [
+    "Disclaimer",
+    "body-4-reg",
+    1420,
+    2
+   ]
+  ]
+ },
+ "form": {
+  "sets": [
+   [
+    "form-content",
+    "1115-501",
+    "dark",
+    "Content blocks beside a sign-up form card"
+   ]
+  ],
+  "slots": [
+   [
+    "Form title",
+    "headline-2",
+    630,
+    2
+   ],
+   [
+    "Form subtitle",
+    "headline-4",
+    452,
+    2
+   ],
+   [
+    "Form description",
+    "body-3-reg",
+    452,
+    3
+   ],
+   [
+    "Field label",
+    "body-3-medium",
+    273,
+    1
+   ],
+   [
+    "Error message",
+    "body-5-reg",
+    307,
+    1
+   ],
+   [
+    "Side block title",
+    "headline-4",
+    550,
+    1
+   ],
+   [
+    "Side block body",
+    "body-1-reg",
+    550,
+    4
+   ]
+  ]
+ }
+}

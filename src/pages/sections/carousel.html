@@ -1,0 +1,36 @@
+<!--meta {"status": "WIP", "figma": "505-13281"} -->
+<h2>Section overview</h2>
+<p>Carousels show a series of videos, photos or cards one after another in the same space. Figma has an AI video carousel, a photo carousel with captions and a sideways card scroller.</p>
+<div class="meta-grid">
+  <div><h3>Recommended placement</h3><p>Mid-page, for content people browse rather than read in full: event photos, agent videos, feature cards.</p></div>
+  <div><h3>Audience</h3><p>Visitors browsing examples.</p></div>
+  <div><h3>Goal</h3><p>Show breadth without making the page long.</p></div>
+</div>
+
+<h2>Variants</h2>
+<p><strong>AI video</strong> switches the video from a list of agents. <strong>Card 6 image</strong> is a photo carousel. <strong>Variant</strong> scrolls feature cards sideways.</p>
+<ul class="variant-index"><li><a href="#variant-carousel-ai-video">ai video</a></li><li><a href="#variant-carousel-card-6-img">card 6 img</a></li><li><a href="#variant-carousel-variant">variant</a></li></ul>
+<!--wds:section-sets carousel-->
+
+<h2>Content structure and character limits</h2>
+<p>Limits are calculated from each slot's text style and its maximum width in Figma, so copy fits without breaking the layout. Type your copy into the last column to check it. Limits are <strong>proposed</strong> until Marketing signs them off.</p>
+<!--wds:section-limits carousel-->
+
+<h2>Responsive layout behaviour</h2>
+<ul><li>On mobile, carousels become a swipeable row with the next item peeking in.</li><li>Arrows use the icon-small button; on touch devices, swiping also works.</li></ul>
+<p>Section padding, gaps and widths come from the <a href="/foundations/grid.html">breakpoint tokens</a>, so the spacing changes automatically at each breakpoint.</p>
+
+<h2>Light and dark theme</h2>
+<p>The AI video carousel is dark; the others are light.</p>
+
+<h2>Design guidance</h2>
+<div class="do-dont">
+  <div class="do"><h3>Do</h3><ul><li>Pick the variant that fits the content, rather than forcing content into a variant.</li><li>Keep copy within the limits at mobile width, not just desktop.</li></ul></div>
+  <div class="dont"><h3>Don't</h3><ul><li>Put essential content only in later slides.</li><li>Use a carousel as the hero.</li></ul></div>
+</div>
+
+<h2>Accessibility</h2>
+<ul><li>Don't autoplay. If you must, add a visible pause button and stop on hover and focus (WCAG 2.2.2).</li><li>Previous and next buttons need accessible names, and the current position should be announced ("Slide 2 of 6").</li><li>Every slide must be reachable by keyboard.</li></ul>
+
+<h2>Marketing handoff checklist</h2>
+<ul><li>Number of slides and their order.</li><li>Captions within 2 lines.</li><li>Whether it autoplays (avoid).</li><li>Section and variant chosen from Figma, with its node link.</li><li>Copy within every character limit on this page, checked at mobile width.</li><li>Eyebrow, H2 and description follow the <a href="/content/headings.html">heading rules</a>.</li><li>Images supplied at 2× with alt text.</li><li>Reviewed in light and dark if the page supports both.</li></ul>
