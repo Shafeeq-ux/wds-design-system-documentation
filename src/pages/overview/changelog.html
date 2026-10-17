@@ -3,11 +3,15 @@
 
 <h2>3.0.1 · 17 October 2026</h2>
 <ul>
+  <li><strong>Token map</strong> (pilot) on Hero, Card grid and Button: the Figma render with every layer's colour, type, spacing and border variables, their CSS names and values per breakpoint and theme, padding and gap overlays, CSS for each layer, and untokenised values flagged as issues.</li>
   <li><strong>Figma to Webflow</strong>: a new page explaining how designs are converted into Webflow with the Figma to Webflow plugin, and the three variable collections (breakpoint, typography, theme) every section applies.</li>
   <li><strong>Variable modes</strong> section added to every section page, with a Figma audit of all 174 section, header and banner variants.</li>
 </ul>
 <h3>Open issues found</h3>
 <ul>
+  <li>Hero default: the gap between each stat value and its label is a hardcoded 8px.</li>
+  <li>Card grid 4-column: the gaps inside cards (64, 37 and 80px) aren't tokenised, and the card copy has no single text style.</li>
+  <li>Button: the tertiary icon circle has a hardcoded 6px padding.</li>
   <li>Accordion left-image: Desktop and Tablet variants don't set breakpoint or typography modes.</li>
   <li>Legal implementation terms: the Tablet variant uses the desktop typography mode.</li>
   <li>Legal disclaimer: the Desktop variant sets no modes.</li>

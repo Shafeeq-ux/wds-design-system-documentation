@@ -12,6 +12,7 @@ import { readFileSync, readdirSync } from 'node:fs';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { cssName } from './build-tokens.mjs';
+import { tokenMap } from './token-map.mjs';
 
 const root = join(dirname(fileURLToPath(import.meta.url)), '..');
 const data = JSON.parse(readFileSync(join(root, 'tokens/wds-tokens.json'), 'utf8'));
@@ -332,7 +333,7 @@ function auditIa() {
   return `<div class="ia-legend">${legend}</div><div class="ia-frame" data-ia-frame>${tools}<div class="ia-wrap" role="region" tabindex="0" aria-label="Sitemap, scrollable"><svg class="ia" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="group" aria-label="Sitemap of tekion.com: home, then ${SECTIONS.join(', ')}, with each page coloured by WDS version. The full list is in the table below.">${g}</svg></div></div>`;
 }
 
-const CODES = { 'audit-stats': auditStats, 'audit-list': auditList, 'audit-templates': auditTemplates, 'audit-table': auditTable, 'audit-ia': auditIa, 'section-modes': sectionModes, 'modes-audit': modesAudit, 'limit-calculator': limitCalculator, 'section-sets': sectionSets, 'section-limits': sectionLimits, 'all-limits': allLimits, pairs, icons, 'icon-keywords': iconKeywords, ramp, theme, 'type-scale': typeScale, scale, responsive, radii, borders, gradients };
+const CODES = { 'token-map': tokenMap, 'audit-stats': auditStats, 'audit-list': auditList, 'audit-templates': auditTemplates, 'audit-table': auditTable, 'audit-ia': auditIa, 'section-modes': sectionModes, 'modes-audit': modesAudit, 'limit-calculator': limitCalculator, 'section-sets': sectionSets, 'section-limits': sectionLimits, 'all-limits': allLimits, pairs, icons, 'icon-keywords': iconKeywords, ramp, theme, 'type-scale': typeScale, scale, responsive, radii, borders, gradients };
 
 export function applyShortcodes(html) {
   return html.replace(/<!--wds:([\w-]+)\s*([^>]*?)-->/g, (all, name, arg) => {

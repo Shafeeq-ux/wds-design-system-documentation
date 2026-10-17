@@ -332,3 +332,97 @@ document.querySelectorAll('[data-ia-frame]').forEach((frame) => {
     apply(zoom * (e.deltaY < 0 ? 1.1 : 0.9));
   }, { passive: false });
 });
+
+// Token inspector: select a layer to see its variables; padding and gaps are drawn on the image
+document.querySelectorAll('[data-tm]').forEach((tm) => {
+  const data = JSON.parse(tm.querySelector('.tm-data').textContent);
+  const detail = tm.querySelector('.tm-detail');
+  const hint = detail.innerHTML;
+  let view = 0, sel = null, filter = 'all';
+  const esc = (s) => String(s ?? '').replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+  const els = (sel2) => [...tm.querySelectorAll(sel2)];
+  const cur = (attr) => tm.querySelector(`${attr}[data-tm-v="${view}"]`);
+  const pct = (a, t) => `${(a / t) * 100}%`;
+  const box = (b, cls, label) => {
+    const V = data[view];
+    let h = `<i class="${cls}" style="left:${pct(b[0], V.w)};top:${pct(b[1], V.h)};width:${pct(Math.max(b[2], 1), V.w)};height:${pct(Math.max(b[3], 1), V.h)}"></i>`;
+    if (label) h += `<b style="left:${pct(b[0] + b[2] / 2, V.w)};top:${pct(b[1] + b[3] / 2, V.h)}">${label}</b>`;
+    return h;
+  };
+  const ICON = { color: (r) => `<span class="ico" style="background:${r.grad ? `linear-gradient(90deg,${r.grad.join(',')})` : /^#|^rgb/.test(r.swatch || '') ? r.swatch.split(' ')[0] : 'transparent'}"></span>`, type: () => '<span class="ico type">Aa</span>', space: () => '<span class="ico space"></span>', border: () => '<span class="ico border"></span>', none: () => '<span class="ico"></span>' };
+  function draw(n) {
+    const ov = cur('.tm-view').querySelector('.tm-ov');
+    if (!n) { ov.innerHTML = ''; return; }
+    let h = '';
+    if (n.pad) {
+      const [t, r, b, l] = n.pad, [x, y, w, hh] = n.b;
+      if (t) h += box([x, y, w, t], 'p', t);
+      if (b) h += box([x, y + hh - b, w, b], 'p', b);
+      if (l) h += box([x, y + t, l, hh - t - b], 'p', l);
+      if (r) h += box([x + w - r, y + t, r, hh - t - b], 'p', r);
+    }
+    for (const g of n.bands || []) h += box(g, 'g', Math.round(g[2] < g[3] ? g[2] : g[3]));
+    h += box(n.b, 'sel');
+    ov.innerHTML = h;
+  }
+  function pick(i, scroll) {
+    const V = data[view];
+    let n = V.nodes[i];
+    sel = i;
+    els('.tm-hot').forEach((h) => h.classList.toggle('is-sel', h.closest('[data-tm-v]').dataset.tmV == view && +h.dataset.i === i));
+    const base = n.dup != null ? n.dup : i;
+    els('[data-tm-pick]').forEach((b) => b.setAttribute('aria-current', String(b.closest('[data-tm-v]').dataset.tmV == view && +b.dataset.tmPick === base)));
+    if (scroll) cur('.tm-layers').querySelector(`[data-tm-pick="${base}"]`)?.scrollIntoView({ block: 'nearest' });
+    draw(n);
+    const rows = n.rows.map((r) => `<li>${(ICON[r.cat] || ICON.none)(r)}<span class="k">${esc(r.prop)}</span><span class="v"><code>${esc(r.figma)}</code>${r.css ? ` → <code>${esc(r.css)}</code>` : ''}</span><span class="v${r.hard ? ' hard' : ''}">${esc(r.value)}${r.hard ? ' · not tokenised' : ''}${r.across && r.across !== r.value ? `<br><small>${esc(r.across)}</small>` : ''}${r.ref ? `<br><small>Alias of ${esc(r.ref)}</small>` : ''}</span></li>`).join('');
+    detail.innerHTML = `<h3>${esc(n.name)}</h3><p class="tm-type">${esc(n.type.toLowerCase())} · ${n.b[2]} × ${n.b[3]}${n.text ? ` · “${esc(n.text.trim())}”` : ''}</p>${n.issues.length ? `<ul class="tm-issues">${n.issues.map((s) => `<li>${esc(s)}</li>`).join('')}</ul>` : ''}<ul class="tm-rows">${rows}</ul>${n.css.length ? `<pre tabindex="0" aria-label="CSS for ${esc(n.name)}"><code>${esc(n.css.join('\n'))}</code></pre>` : ''}`;
+  }
+  function applyFilter() {
+    tm.dataset.filter = filter;
+    els('.tm-hot').forEach((h) => h.classList.toggle('is-off', filter !== 'all' && !h.dataset.cats.split(' ').includes(filter)));
+    els('.tm-layers li').forEach((li) => { li.hidden = filter !== 'all' && !li.dataset.cats.split(' ').includes(filter); });
+  }
+  let zoom = 'fit';
+  const applyZoom = () => els('.tm-canvas').forEach((c, k) => {
+    const on = zoom !== 'fit';
+    c.classList.toggle('is-zoomed', on);
+    c.style.width = on ? `${data[k].w * +zoom}px` : '';
+  });
+  const fullBtn = tm.querySelector('[data-tm-full]');
+  const setFull = (on) => {
+    tm.classList.toggle('is-full', on);
+    document.documentElement.classList.toggle('ia-lock', on);
+    fullBtn.setAttribute('aria-pressed', String(on));
+    fullBtn.textContent = on ? 'Exit full screen' : 'Full screen';
+  };
+  document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && tm.classList.contains('is-full')) { setFull(false); fullBtn.focus(); } });
+  tm.addEventListener('click', (e) => {
+    const hot = e.target.closest('.tm-hot');
+    if (hot) { pick(+hot.dataset.i, true); return; }
+    const p = e.target.closest('[data-tm-pick]');
+    if (p) { pick(+p.dataset.tmPick); return; }
+    const v = e.target.closest('[data-tm-view]');
+    if (v) {
+      view = +v.dataset.tmView;
+      els('[data-tm-view]').forEach((b) => b.setAttribute('aria-pressed', String(b === v)));
+      els('.tm-view, .tm-layers').forEach((el) => { el.hidden = +el.dataset.tmV !== view; });
+      els('.tm-ov').forEach((o) => { o.innerHTML = ''; });
+      sel = null; detail.innerHTML = hint;
+      return;
+    }
+    const z = e.target.closest('[data-tm-zoom]');
+    if (z) {
+      els('[data-tm-zoom]').forEach((b) => b.setAttribute('aria-pressed', String(b === z)));
+      zoom = z.dataset.tmZoom;
+      applyZoom();
+      return;
+    }
+    if (e.target.closest('[data-tm-full]')) { setFull(!tm.classList.contains('is-full')); return; }
+    const f = e.target.closest('[data-tm-filter]');
+    if (f) {
+      filter = f.dataset.tmFilter;
+      els('[data-tm-filter]').forEach((b) => b.setAttribute('aria-pressed', String(b === f)));
+      applyFilter();
+    }
+  });
+});
