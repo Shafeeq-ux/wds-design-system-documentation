@@ -1,0 +1,21 @@
+<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="48" height="48" fill="#F5F5F5"/>
+<g id="icon-enterprise-for-all">
+<g id="Group 2087327702">
+<g id="Group 2087327657">
+<path id="Rectangle 34626219" d="M25.1936 24.3281H35.8928V40.3965H25.1936V24.3281Z" fill="url(#paint0_linear_152_173)"/>
+<path id="Vector" d="M25.1942 40.3957V8.97001C25.194 8.72273 25.1268 8.48013 24.9996 8.26806C24.8724 8.056 24.6901 7.88243 24.472 7.76585C24.2539 7.64928 24.0083 7.59407 23.7613 7.60611C23.5143 7.61816 23.2753 7.697 23.0696 7.83424L9.40659 16.9426C9.21918 17.0676 9.0656 17.237 8.95953 17.4358C8.85345 17.6345 8.79816 17.8564 8.79859 18.0817V40.3957" stroke="#8A9099" stroke-width="2"/>
+<path id="Vector_2" d="M7.90186 40.3965H36.2261" stroke="#8A9099" stroke-width="1.5" stroke-linecap="round"/>
+</g>
+</g>
+</g>
+<defs>
+<linearGradient id="paint0_linear_152_173" x1="34.5001" y1="20.5005" x2="43.3815" y2="36.0015" gradientUnits="userSpaceOnUse">
+<stop offset="0.0144231" stop-color="#2CD0AC"/>
+<stop offset="0.21639" stop-color="#04C3B6"/>
+<stop offset="0.520179" stop-color="#5082EF"/>
+<stop offset="0.838605" stop-color="#5D5BED"/>
+<stop offset="1" stop-color="#9A75FA"/>
+</linearGradient>
+</defs>
+</svg>

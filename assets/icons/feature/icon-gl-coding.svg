@@ -1,0 +1,17 @@
+<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="48" height="48" fill="#F5F5F5"/>
+<g id="icon-gl-coding">
+<path id="Rectangle 34626292" d="M30 17V12C30 9.79086 28.2091 8 26 8H6C4.89543 8 4 8.89543 4 10V38C4 39.1046 4.89543 40 6 40H26C28.2091 40 30 38.2091 30 36V31" stroke="#8A9099" stroke-width="2" stroke-linecap="round"/>
+<path id="Vector 4048" d="M11.2754 15.6514V32.3484" stroke="#8A9099" stroke-width="2" stroke-linecap="round"/>
+<path id="Rectangle 34626293" d="M26.8536 29.3183C26.5386 29.6333 26 29.4102 26 28.9648L26 21.1719C26 20.6196 26.4477 20.1719 27 20.1719L33 20.1719C33.5523 20.1719 34 20.6196 34 21.1719L34 28.9648C34 29.4102 33.4614 29.6333 33.1464 29.3183L30.3536 26.5254C30.1583 26.3302 29.8417 26.3302 29.6464 26.5254L26.8536 29.3183Z" fill="url(#paint0_linear_152_173)"/>
+</g>
+<defs>
+<linearGradient id="paint0_linear_152_173" x1="25.8446" y1="31.6619" x2="34.4022" y2="26.1149" gradientUnits="userSpaceOnUse">
+<stop offset="0.0144231" stop-color="#2CD0AC"/>
+<stop offset="0.21639" stop-color="#04C3B6"/>
+<stop offset="0.520179" stop-color="#5082EF"/>
+<stop offset="0.838605" stop-color="#5D5BED"/>
+<stop offset="1" stop-color="#9A75FA"/>
+</linearGradient>
+</defs>
+</svg>

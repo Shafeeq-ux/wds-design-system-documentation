@@ -75,6 +75,14 @@
 </div>
 <p>Limits are proposed, based on the Figma widths, and need Marketing sign-off.</p>
 
+<h2>Token map</h2>
+<p>Every layer in this component that uses a Figma variable, taken from the Figma file. Select a layer on the image, or in the list, to see its colour, text, spacing and border variables, their CSS names and values, and the CSS to use. Padding is shaded pink and gaps are striped. Use <strong>Issues</strong> to find values that aren't tokenised yet.</p>
+<p>Found in Figma: the 12px gap, the 6px padding on the icon circle and the 16px (text banner, Mobile) and 24px (image banner) vertical padding aren't tokenised, and the image banner artwork uses gradient stops that aren't bound to variables.</p>
+<h3>Text banner</h3>
+<!--wds:token-map banner-text-->
+<h3>Image banner</h3>
+<!--wds:token-map banner-image-->
+
 <h2>Developer implementation</h2>
 <pre><code>&lt;div class="wds-banner"&gt;
   &lt;p class="wds-headline-6"&gt;Want to read the fine print?&lt;/p&gt;

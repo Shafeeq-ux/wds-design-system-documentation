@@ -1,0 +1,19 @@
+<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="48" height="48" fill="#F5F5F5"/>
+<g id="icon-vendor-match">
+<g id="Group 2087328006">
+<path id="Rectangle 34626289" d="M16 16V12C16 10.8954 15.1046 10 14 10H6C4.89543 10 4 10.8954 4 12V36C4 37.1046 4.89543 38 6 38H14C15.1046 38 16 37.1046 16 36V32" stroke="#8A9099" stroke-width="2" stroke-linecap="round"/>
+<path id="Rectangle 34626291" d="M20.7153 16V12C20.7153 10.8954 21.6108 10 22.7153 10H38.7153C39.8199 10 40.7153 10.8954 40.7153 12V36C40.7153 37.1046 39.8199 38 38.7153 38H22.7153C21.6108 38 20.7153 37.1046 20.7153 36V32" stroke="#8A9099" stroke-width="2" stroke-linecap="round"/>
+</g>
+<circle id="Ellipse 7552" cx="18.4774" cy="24.0001" r="5.52258" fill="url(#paint0_linear_152_173)"/>
+</g>
+<defs>
+<linearGradient id="paint0_linear_152_173" x1="15.7271" y1="18.263" x2="23.9344" y2="28.3923" gradientUnits="userSpaceOnUse">
+<stop offset="0.0144231" stop-color="#2CD0AC"/>
+<stop offset="0.21639" stop-color="#04C3B6"/>
+<stop offset="0.520179" stop-color="#5082EF"/>
+<stop offset="0.838605" stop-color="#5D5BED"/>
+<stop offset="1" stop-color="#9A75FA"/>
+</linearGradient>
+</defs>
+</svg>

@@ -60,6 +60,20 @@
   <li><strong>Dropdown options</strong>: 30 characters max each, in a logical or alphabetical order.</li>
 </ul>
 
+<h2>Token map</h2>
+<p>Every layer in this component that uses a Figma variable, taken from the Figma file. Select a layer on the image, or in the list, to see its colour, text, spacing and border variables, their CSS names and values, and the CSS to use. Padding is shaded pink and gaps are striped. Use <strong>Issues</strong> to find values that aren't tokenised yet.</p>
+<p>Found in Figma: the field's 12px and 16px padding, the 8px gap between the field text and its icon, and the 4px gap above the error message aren't tokenised. The same values repeat in all five inputs.</p>
+<h3>Text field</h3>
+<!--wds:token-map input-textfield-->
+<h3>Dropdown</h3>
+<!--wds:token-map input-dropdown-->
+<h3>Phone</h3>
+<!--wds:token-map input-phone-->
+<h3>Email</h3>
+<!--wds:token-map input-email-->
+<h3>Textarea</h3>
+<!--wds:token-map input-textarea-->
+
 <h2>Developer implementation</h2>
 <pre><code>&lt;div class="wds-field"&gt;
   &lt;label class="wds-field__label" for="email"&gt;Work email&lt;/label&gt;

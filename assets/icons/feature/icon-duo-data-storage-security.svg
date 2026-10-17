@@ -1,0 +1,20 @@
+<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="48" height="48" fill="#F5F5F5"/>
+<g id="icon-duo-data-storage-security">
+<path id="Vector 101" d="M31.0294 22.5136V18.7192C31.0294 18.4167 30.7953 18.1659 30.4936 18.1451C28.5723 18.0123 26.7151 17.3995 25.092 16.3629L24.4823 15.9735C24.2498 15.825 23.9526 15.823 23.7181 15.9685L23.0929 16.3564C21.414 17.398 19.5053 18.0119 17.534 18.1443C17.2168 18.1655 16.9705 18.429 16.9705 18.7468V22.3321C16.9705 26.6389 19.6142 30.5092 23.6233 32.0826C23.9303 32.203 24.2721 32.2015 24.5779 32.078C28.4768 30.5029 31.0294 26.7187 31.0294 22.5136Z" fill="url(#paint0_linear_152_173)"/>
+<path id="Ellipse 126" d="M19.5898 6.87731C13.3175 8.48803 8.39095 13.4542 6.83691 19.749M28.2338 6.83301C34.4889 8.37046 39.435 13.2374 41.0856 19.4472M6.92235 28.5837C8.4926 34.4492 13.0042 39.1119 18.7797 40.8945M41.0892 28.54C39.5077 34.509 34.8819 39.2394 28.9743 40.9684" stroke="#8A9099" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<circle id="Ellipse 127" cx="24.0001" cy="6.32282" r="0.8" fill="#8A9099" stroke="#8A9099" stroke-width="1.24486"/>
+<circle id="Ellipse 128" cx="6.32233" cy="23.9996" r="0.8" fill="#8A9099" stroke="#8A9099" stroke-width="1.24486"/>
+<circle id="Ellipse 129" cx="41.6776" cy="23.7838" r="0.8" fill="#8A9099" stroke="#8A9099" stroke-width="1.24486"/>
+<circle id="Ellipse 130" cx="23.877" cy="41.6773" r="0.8" fill="#8A9099" stroke="#8A9099" stroke-width="1.24486"/>
+</g>
+<defs>
+<linearGradient id="paint0_linear_152_173" x1="20.4992" y1="15.4091" x2="33.0481" y2="28.5738" gradientUnits="userSpaceOnUse">
+<stop offset="0.0144231" stop-color="#2CD0AC"/>
+<stop offset="0.21639" stop-color="#04C3B6"/>
+<stop offset="0.520179" stop-color="#5082EF"/>
+<stop offset="0.838605" stop-color="#5D5BED"/>
+<stop offset="1" stop-color="#9A75FA"/>
+</linearGradient>
+</defs>
+</svg>

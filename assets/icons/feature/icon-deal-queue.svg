@@ -1,0 +1,22 @@
+<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="48" height="48" fill="#F5F5F5"/>
+<g id="icon-deal-queue">
+<path id="Vector" d="M9.58984 23.8145L23.6756 32.0312L37.7614 23.8145" stroke="#8A9099" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<g id="Vector_2">
+<path d="M11.0706 15.9076C10.4091 16.2935 10.4091 17.2493 11.0706 17.6352L23.1718 24.6942C23.4831 24.8758 23.8681 24.8758 24.1795 24.6942L36.2806 17.6352C36.9421 17.2493 36.9421 16.2935 36.2806 15.9076L24.1795 8.84861C23.8681 8.66698 23.4831 8.66698 23.1718 8.84861L11.0706 15.9076Z" fill="#8A9099"/>
+<path d="M11.0706 15.9076C10.4091 16.2935 10.4091 17.2493 11.0706 17.6352L23.1718 24.6942C23.4831 24.8758 23.8681 24.8758 24.1795 24.6942L36.2806 17.6352C36.9421 17.2493 36.9421 16.2935 36.2806 15.9076L24.1795 8.84861C23.8681 8.66698 23.4831 8.66698 23.1718 8.84861L11.0706 15.9076Z" fill="url(#paint0_linear_152_173)"/>
+</g>
+<path id="Vector_3" d="M9.58984 30.8564L23.6756 39.0731L26.0233 37.7042" stroke="#8A9099" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_4" d="M36.8691 42.5439L36.8691 30.8281" stroke="#8A9099" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_5" d="M31.5859 34.3266L36.8681 30.8281L42.1503 34.3266" stroke="#8A9099" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<defs>
+<linearGradient id="paint0_linear_152_173" x1="12.3445" y1="7.84617" x2="25.0434" y2="29.8724" gradientUnits="userSpaceOnUse">
+<stop offset="0.0144231" stop-color="#2CD0AC"/>
+<stop offset="0.21639" stop-color="#04C3B6"/>
+<stop offset="0.520179" stop-color="#5082EF"/>
+<stop offset="0.838605" stop-color="#5D5BED"/>
+<stop offset="1" stop-color="#9A75FA"/>
+</linearGradient>
+</defs>
+</svg>

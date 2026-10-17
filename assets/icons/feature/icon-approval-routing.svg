@@ -1,0 +1,23 @@
+<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="48" height="48" fill="#F5F5F5"/>
+<g id="icon-approval-routing">
+<g id="Group 2087328004">
+<g id="Group 2087327656">
+<path id="Vector 4035" d="M9.5 26.4519H11.1907C14.346 26.4519 17.2065 24.5973 18.4942 21.7167L20.0566 18.2215C21.3443 15.3409 24.2048 13.4863 27.3601 13.4863H30.2958" stroke="#8A9099" stroke-width="2" stroke-linecap="round"/>
+<path id="Vector 4036" d="M9.5 26.4524H11.1907C14.346 26.4524 17.2065 28.307 18.4942 31.1876L20.0566 34.6828C21.3443 37.5633 24.2048 39.418 27.3601 39.418H32.6011" stroke="#8A9099" stroke-width="2" stroke-linecap="round"/>
+</g>
+<path id="Vector 4034" d="M32.2959 21.3881V5.58398L40.8018 13.4899L32.2959 21.3881Z" fill="url(#paint0_linear_152_173)"/>
+<circle id="Ellipse 7548" cx="35.9187" cy="39.417" r="3" stroke="#8A9099" stroke-width="2" stroke-linecap="round"/>
+<circle id="Ellipse 7549" cx="6.5" cy="26.4512" r="3" stroke="#8A9099" stroke-width="2" stroke-linecap="round"/>
+</g>
+</g>
+<defs>
+<linearGradient id="paint0_linear_152_173" x1="38.6668" y1="5.27694" x2="27.6013" y2="12.6272" gradientUnits="userSpaceOnUse">
+<stop offset="0.0144231" stop-color="#2CD0AC"/>
+<stop offset="0.21639" stop-color="#04C3B6"/>
+<stop offset="0.520179" stop-color="#5082EF"/>
+<stop offset="0.838605" stop-color="#5D5BED"/>
+<stop offset="1" stop-color="#9A75FA"/>
+</linearGradient>
+</defs>
+</svg>

@@ -1,0 +1,33 @@
+<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="48" height="48" fill="#F5F5F5"/>
+<g id="icon-voice-inventory-lookup">
+<path id="Vector" d="M27.4392 11.8613V36.5844M6.50073 36.5844V11.8613M27.4392 36.7143C27.4392 38.5173 22.752 39.9789 16.97 39.9789C11.188 39.9789 6.50073 38.5173 6.50073 36.7143M27.4392 28.4726C27.4392 30.2755 22.752 31.7372 16.97 31.7372C11.188 31.7372 6.50073 30.2755 6.50073 28.4726" stroke="#8A9099" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_2" d="M32.1121 18.9961C32.7775 19.7516 33.1446 20.7239 33.1446 21.7307C33.1446 22.7375 32.7775 23.7098 32.1121 24.4653" stroke="#8A9099" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_3" d="M34.9167 15.5225C36.4433 17.2292 37.2873 19.4388 37.2873 21.7287C37.2873 24.0185 36.4433 26.2281 34.9167 27.9348" stroke="#8A9099" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_4" d="M38.5476 12.9619C40.7039 15.3728 41.8961 18.4938 41.8961 21.7283C41.8961 24.9628 40.7039 28.0838 38.5476 30.4947" stroke="#8A9099" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<circle id="Ellipse 23657" cx="13.9587" cy="35.7138" r="1.03022" fill="#8A9099"/>
+<circle id="Ellipse 23658" cx="19.404" cy="35.7138" r="1.03022" fill="#8A9099"/>
+<g id="Ellipse 23654">
+<ellipse cx="16.97" cy="11.913" rx="10.4693" ry="3.26459" fill="#8A9099"/>
+<ellipse cx="16.97" cy="11.913" rx="10.4693" ry="3.26459" fill="url(#paint0_linear_152_173)"/>
+<ellipse cx="16.97" cy="11.913" rx="10.4693" ry="3.26459" stroke="#8A9099" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<ellipse cx="16.97" cy="11.913" rx="10.4693" ry="3.26459" stroke="url(#paint1_linear_152_173)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+</g>
+<defs>
+<linearGradient id="paint0_linear_152_173" x1="8.54817" y1="8.36693" x2="11.83" y2="19.0156" gradientUnits="userSpaceOnUse">
+<stop offset="0.0144231" stop-color="#2CD0AC"/>
+<stop offset="0.21639" stop-color="#04C3B6"/>
+<stop offset="0.520179" stop-color="#5082EF"/>
+<stop offset="0.838605" stop-color="#5D5BED"/>
+<stop offset="1" stop-color="#9A75FA"/>
+</linearGradient>
+<linearGradient id="paint1_linear_152_173" x1="8.54817" y1="8.36693" x2="11.83" y2="19.0156" gradientUnits="userSpaceOnUse">
+<stop offset="0.0144231" stop-color="#2CD0AC"/>
+<stop offset="0.21639" stop-color="#04C3B6"/>
+<stop offset="0.520179" stop-color="#5082EF"/>
+<stop offset="0.838605" stop-color="#5D5BED"/>
+<stop offset="1" stop-color="#9A75FA"/>
+</linearGradient>
+</defs>
+</svg>

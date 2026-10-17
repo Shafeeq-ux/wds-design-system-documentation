@@ -1,0 +1,21 @@
+<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="48" height="48" fill="#F5F5F5"/>
+<g id="icon-industry-momentum">
+<g id="Group 1">
+<g id="Group 2087327735">
+<path id="Vector" d="M37.4522 20.1695C42.2637 15.358 42.5644 9.63429 42.4141 7.0822C42.3891 6.69322 42.2232 6.32667 41.9476 6.05106C41.672 5.77545 41.3055 5.60964 40.9165 5.58462C38.3644 5.43426 32.6447 5.73097 27.8292 10.5465L15.177 23.1987L24.8 32.8217L37.4522 20.1695Z" stroke="#8A9099" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_2" d="M26.4043 11.9717H14.0448C13.62 11.9719 13.2126 12.1406 12.9121 12.4408L6.02564 19.3273C5.81538 19.538 5.66792 19.803 5.59975 20.0928C5.53158 20.3826 5.5454 20.6856 5.63966 20.9679C5.73391 21.2503 5.90489 21.5008 6.13345 21.6915C6.36201 21.8823 6.63914 22.0056 6.93381 22.0478L15.1775 23.1985" stroke="#8A9099" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_3" d="M36.0261 21.5947V33.9543C36.0259 34.379 35.8572 34.7864 35.557 35.087L28.6706 41.9734C28.4598 42.1837 28.1948 42.3311 27.905 42.3993C27.6152 42.4675 27.3122 42.4536 27.0299 42.3594C26.7475 42.2651 26.497 42.0942 26.3063 41.8656C26.1156 41.637 25.9922 41.3599 25.9501 41.0652L24.7993 32.8215" stroke="#8A9099" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_4" d="M18.0961 35.191C17.3202 36.893 14.706 40.8405 7.15796 40.8405C7.15796 33.2924 11.1054 30.6782 12.8075 29.9023" stroke="url(#paint0_linear_152_173)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+</g>
+</g>
+<defs>
+<linearGradient id="paint0_linear_152_173" x1="7.15796" y1="28.7215" x2="7.22889" y2="43.1188" gradientUnits="userSpaceOnUse">
+<stop stop-color="#56CEF7"/>
+<stop offset="0.371632" stop-color="#5082EF"/>
+<stop offset="0.838605" stop-color="#5D5BED"/>
+<stop offset="1" stop-color="#9A75FA"/>
+</linearGradient>
+</defs>
+</svg>

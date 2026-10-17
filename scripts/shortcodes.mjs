@@ -131,17 +131,26 @@ function icons() {
   const files = readdirSync(dir).filter((f) => f.endsWith('.svg')).sort();
   return `<ul class="icon-grid">${files.map((f) => {
     const name = f.replace('.svg', '');
-    const svg = readFileSync(join(dir, f), 'utf8').replace('<svg ', '<svg aria-hidden="true" focusable="false" ');
-    return `<li><span class="icon-tile">${svg}</span><a href="/assets/icons/${f}" download>icon/${name}</a></li>`;
+    const raw = readFileSync(join(dir, f), 'utf8').trim();
+    const svg = raw.replace('<svg ', '<svg aria-hidden="true" focusable="false" ');
+    return `<li><span class="icon-tile">${svg}</span><span class="icon-name">icon/${name}</span><span class="icon-actions"><a class="icon-dl" href="/assets/icons/${f}" download aria-label="Download icon/${name} SVG">Download</a><button type="button" class="icon-dl" data-copy="${esc(raw)}" aria-label="Copy icon/${name} SVG code">Copy SVG</button></span></li>`;
   }).join('')}</ul>`;
 }
 
-// 48px feature icons: names and search keywords from the Figma Icon Documentation frame
+// 48px feature icons: SVGs exported from Figma (light version), keywords from the Icon Documentation frame
 function iconKeywords() {
   const d = JSON.parse(readFileSync(join(root, 'src/data/icons.json'), 'utf8'));
-  return `<label class="filter"><span>Filter icons</span><input type="search" data-filter="#icon-table" placeholder="Try “invoice” or “ai”" autocomplete="off"></label>`
-    + table(['Name', 'Keywords'], d.documented.map(([n, k]) => `<tr><td><code>${esc(n)}</code></td><td>${esc(k)}</td></tr>`)).replace('<table class="">', '<table id="icon-table">')
-    + `<p>Another ${d.undocumented.length} feature icons exist in Figma without keywords yet:</p><p class="tag-list">${d.undocumented.map((n) => `<code>${esc(n)}</code>`).join(' ')}</p>`;
+  const kw = Object.fromEntries(d.documented);
+  const dir = join(root, 'assets/icons/feature');
+  const files = readdirSync(dir).filter((f) => f.endsWith('.svg')).sort();
+  return `<label class="filter"><span>Filter icons</span><input type="search" data-filter="#feature-icons" data-filter-items="#feature-icons > li" placeholder="Try “invoice” or “ai”" autocomplete="off"></label>`
+    + `<ul class="icon-grid icon-grid-feature" id="feature-icons">${files.map((f) => {
+      const name = f.replace('.svg', '');
+      const raw = readFileSync(join(dir, f), 'utf8').trim();
+      // Prefix ids so gradients and clip paths from different inlined icons can't clash
+      const svg = raw.replace(/\bid="([^"]+)"/g, `id="${name}-$1"`).replace(/url\(#([^)]+)\)/g, `url(#${name}-$1)`).replace(/href="#([^"]+)"/g, `href="#${name}-$1"`).replace('<svg ', '<svg aria-hidden="true" focusable="false" ');
+      return `<li data-q="${esc(`${name} ${kw[name] || ''}`.toLowerCase())}"><span class="icon-tile">${svg}</span><span class="icon-name">${esc(name)}</span>${kw[name] ? `<small class="icon-kw">${esc(kw[name])}</small>` : ''}<span class="icon-actions"><a class="icon-dl" href="/assets/icons/feature/${f}" download aria-label="Download ${esc(name)} SVG">Download</a><button type="button" class="icon-dl" data-copy="${esc(raw)}" aria-label="Copy ${esc(name)} SVG code">Copy SVG</button></span></li>`;
+    }).join('')}</ul><p><small>${files.length} feature icons. ${d.documented.length} have search keywords; the rest don't have keywords in Figma yet.</small></p>`;
 }
 
 

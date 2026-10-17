@@ -1,0 +1,25 @@
+<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="48" height="48" fill="#F5F5F5"/>
+<g id="icon-live-online-sessions">
+<g id="Group 2147227356">
+<g id="Group 2147227358">
+<path id="Vector" d="M24 10H5.66667C4.74619 10 4 10.6268 4 11.4L4 35.6C4 36.3732 4.74619 37 5.66667 37H42.3333C43.2538 37 44 36.3732 44 35.6V11.4C44 10.6268 43.2538 10 42.3333 10H39.75" stroke="#8A9099" stroke-width="2" stroke-linecap="round"/>
+<circle id="Ellipse 7552" cx="32" cy="10" r="5" fill="url(#paint0_linear_152_173)"/>
+<g id="Group 2147227357">
+<path id="Vector_2" d="M23.9998 29.7038C26.9348 29.7038 29.3141 27.3245 29.3141 24.3895C29.3141 21.4545 26.9348 19.0752 23.9998 19.0752C21.0648 19.0752 18.6855 21.4545 18.6855 24.3895C18.6855 27.3245 21.0648 29.7038 23.9998 29.7038Z" stroke="#8A9099" stroke-width="2" stroke-linecap="round"/>
+<path id="Vector_3" d="M14.979 36.0811C15.6374 34.2145 16.8586 32.598 18.4743 31.4547C20.0901 30.3113 22.0207 29.6973 24 29.6973C25.9794 29.6973 27.91 30.3113 29.5257 31.4547C31.1414 32.598 32.3626 34.2145 33.021 36.0811" stroke="#8A9099" stroke-width="2" stroke-linecap="round"/>
+</g>
+</g>
+</g>
+<path id="Vector 27608" d="M18.5698 41H29.4302" stroke="#8A9099" stroke-width="2" stroke-linecap="round"/>
+</g>
+<defs>
+<linearGradient id="paint0_linear_152_173" x1="29.51" y1="4.80572" x2="36.9406" y2="13.9766" gradientUnits="userSpaceOnUse">
+<stop offset="0.0144231" stop-color="#2CD0AC"/>
+<stop offset="0.21639" stop-color="#04C3B6"/>
+<stop offset="0.520179" stop-color="#5082EF"/>
+<stop offset="0.838605" stop-color="#5D5BED"/>
+<stop offset="1" stop-color="#9A75FA"/>
+</linearGradient>
+</defs>
+</svg>

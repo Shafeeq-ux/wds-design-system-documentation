@@ -262,14 +262,17 @@
    "path": "/faq",
    "title": "FAQ",
    "section": "Get started",
-   "version": "Mixed",
-   "confidence": "medium",
+   "version": "2.0",
+   "confidence": "reviewed",
    "basis": "rendered",
    "boxes": 5,
    "rounded": 2,
    "sharp": 3,
    "outlined": 2,
-   "radii": "0x3 24x2"
+   "radii": "0x3 24x2",
+   "measured_as": "Mixed",
+   "note": "The scan measured 2 rounded and 3 sharp boxes and read the page as Mixed.",
+   "reviewed": "Design review, 17 Oct 2026"
   },
   {
    "path": "/events",
@@ -328,14 +331,17 @@
    "path": "/trust-portal/privacy",
    "title": "Tekion Privacy | How We Protect Dealership Data",
    "section": "Trust & legal",
-   "version": "Mixed",
-   "confidence": "high",
+   "version": "2.0",
+   "confidence": "reviewed",
    "basis": "rendered",
    "boxes": 16,
    "rounded": 11,
    "sharp": 5,
    "outlined": 5,
-   "radii": "24x11 0x5"
+   "radii": "24x11 0x5",
+   "measured_as": "Mixed",
+   "note": "The scan measured 11 rounded and 5 sharp boxes and read the page as Mixed.",
+   "reviewed": "Design review, 17 Oct 2026"
   },
   {
    "path": "/job-openings",

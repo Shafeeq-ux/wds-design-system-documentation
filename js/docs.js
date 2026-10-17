@@ -191,10 +191,10 @@ document.addEventListener('click', async (e) => {
 
 // ---------- Filter a table by typing ----------
 document.querySelectorAll('[data-filter]').forEach((input) => {
-  const rows = [...document.querySelectorAll(`${input.dataset.filter} tbody tr`)];
+  const rows = [...document.querySelectorAll(input.dataset.filterItems || `${input.dataset.filter} tbody tr`)];
   input.addEventListener('input', () => {
     const q = input.value.trim().toLowerCase();
-    rows.forEach((r) => { r.dataset.qhide = q && !r.textContent.toLowerCase().includes(q) ? '1' : ''; r.hidden = !!r.dataset.qhide || !!r.dataset.vhide; });
+    rows.forEach((r) => { r.dataset.qhide = q && !(r.dataset.q || r.textContent).toLowerCase().includes(q) ? '1' : ''; r.hidden = !!r.dataset.qhide || !!r.dataset.vhide; });
   });
 });
 

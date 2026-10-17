@@ -1,0 +1,19 @@
+<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="48" height="48" fill="#F5F5F5"/>
+<g id="icon-duo-chat" clip-path="url(#clip0_152_173)">
+<path id="Vector 2" d="M38.5 36L33.5525 32H21.5C21.2348 32 20.9804 31.8946 20.7929 31.7071C20.6054 31.5196 20.5 31.2652 20.5 31V25.5H31.2368V19H37.5C37.7652 19 38.0196 19.1054 38.2071 19.2929C38.3946 19.4804 38.5 19.7348 38.5 20V36Z" fill="url(#paint0_linear_152_173)"/>
+<path id="Vector 3" d="M7.5 8.5H31.5C31.6326 8.5 31.7597 8.55272 31.8535 8.64648C31.9473 8.74025 32 8.86739 32 9V25.5C32 25.6326 31.9473 25.7597 31.8535 25.8535C31.7597 25.9473 31.6326 26 31.5 26H13.0674L12.793 26.2227L7 30.9053V9C7 8.86739 7.05272 8.74025 7.14648 8.64648C7.21689 8.57608 7.30611 8.52894 7.40234 8.50977L7.5 8.5Z" stroke="#8A9099" stroke-width="2"/>
+</g>
+<defs>
+<linearGradient id="paint0_linear_152_173" x1="20" y1="24.5" x2="35.4353" y2="42.9778" gradientUnits="userSpaceOnUse">
+<stop offset="0.0144231" stop-color="#2CD0AC"/>
+<stop offset="0.21639" stop-color="#04C3B6"/>
+<stop offset="0.520179" stop-color="#5082EF"/>
+<stop offset="0.838605" stop-color="#5D5BED"/>
+<stop offset="1" stop-color="#9A75FA"/>
+</linearGradient>
+<clipPath id="clip0_152_173">
+<rect width="48" height="48" fill="white"/>
+</clipPath>
+</defs>
+</svg>

@@ -1,0 +1,18 @@
+<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="48" height="48" fill="#F5F5F5"/>
+<g id="icon-field-extraction">
+<path id="Vector 4040" d="M32.4723 40H8C5.79086 40 4 38.2091 4 36V12C4 9.79086 5.79086 8 8 8L24.2626 8C26.4717 8 28.2626 9.79086 28.2626 12V36.2581C28.2626 38.3247 29.9379 40 32.0045 40C34.0711 40 35.7464 38.3247 35.7464 36.2581V32.4184C35.7464 30.2093 33.9555 28.4184 31.7464 28.4184H28.58" stroke="#8A9099" stroke-width="2" stroke-linecap="round"/>
+<path id="Vector 4039" d="M9.51538 16.8848H22.7461" stroke="#8A9099" stroke-width="2" stroke-linecap="round"/>
+<path id="Rectangle 34626219" d="M8.81348 20.8848H23.448V27.8848H8.81348V20.8848Z" fill="url(#paint0_linear_152_173)"/>
+<path id="Vector 4041" d="M9.51538 31.8848H18.6877" stroke="#8A9099" stroke-width="2" stroke-linecap="round"/>
+</g>
+<defs>
+<linearGradient id="paint0_linear_152_173" x1="21.543" y1="19.2173" x2="23.1271" y2="27.8979" gradientUnits="userSpaceOnUse">
+<stop offset="0.0144231" stop-color="#2CD0AC"/>
+<stop offset="0.21639" stop-color="#04C3B6"/>
+<stop offset="0.520179" stop-color="#5082EF"/>
+<stop offset="0.838605" stop-color="#5D5BED"/>
+<stop offset="1" stop-color="#9A75FA"/>
+</linearGradient>
+</defs>
+</svg>

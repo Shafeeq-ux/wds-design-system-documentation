@@ -1,0 +1,19 @@
+<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="48" height="48" fill="#F5F5F5"/>
+<g id="icon-audit-trail">
+<g id="Group 2087328006">
+<path id="Rectangle 34626289" d="M4 20.2881C4 19.1835 4.89543 18.2881 6 18.2881H38C39.1046 18.2881 40 19.1835 40 20.2881V36.2881C40 37.3927 39.1046 38.2881 38 38.2881H6C4.89543 38.2881 4 37.3927 4 36.2881V20.2881Z" stroke="#8A9099" stroke-width="2"/>
+<path id="Rectangle 34626291" d="M35.0984 18.2881V14.2881C35.0984 13.1835 34.203 12.2881 33.0984 12.2881H10.9016C9.79704 12.2881 8.90161 13.1835 8.90161 14.2881L8.90161 18.2881" stroke="#8A9099" stroke-width="2"/>
+<rect id="Rectangle 34626290" x="23.7397" y="24.2363" width="11.9756" height="8.10303" rx="1" fill="url(#paint0_linear_152_173)"/>
+</g>
+</g>
+<defs>
+<linearGradient id="paint0_linear_152_173" x1="26.7456" y1="24.0789" x2="31.9346" y2="33.5438" gradientUnits="userSpaceOnUse">
+<stop offset="0.0144231" stop-color="#2CD0AC"/>
+<stop offset="0.21639" stop-color="#04C3B6"/>
+<stop offset="0.520179" stop-color="#5082EF"/>
+<stop offset="0.838605" stop-color="#5D5BED"/>
+<stop offset="1" stop-color="#9A75FA"/>
+</linearGradient>
+</defs>
+</svg>

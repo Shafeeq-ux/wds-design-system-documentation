@@ -1,0 +1,21 @@
+<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="48" height="48" fill="#F5F5F5"/>
+<g id="icon-end-to-end-platform">
+<g id="Group 2087327697">
+<g id="Group 2087327656">
+<path id="Vector" d="M11.8613 36.2699C14.4842 36.2699 16.6104 34.1436 16.6104 31.5207C16.6104 28.8978 14.4842 26.7715 11.8613 26.7715C9.23835 26.7715 7.11206 28.8978 7.11206 31.5207C7.11206 34.1436 9.23835 36.2699 11.8613 36.2699Z" fill="url(#paint0_linear_152_173)"/>
+<path id="Vector_2" d="M36.6628 11.7314L40.8843 16.4806L36.6628 21.7575" stroke="#8A9099" stroke-width="2" stroke-linecap="round"/>
+<path id="Vector_3" d="M16.6135 31.2557C29.964 31.2557 22.6819 16.4805 36.0325 16.4805H40.8872" stroke="#8A9099" stroke-width="2"/>
+</g>
+</g>
+</g>
+<defs>
+<linearGradient id="paint0_linear_152_173" x1="9.49612" y1="26.5869" x2="16.554" y2="35.2978" gradientUnits="userSpaceOnUse">
+<stop offset="0.0144231" stop-color="#2CD0AC"/>
+<stop offset="0.21639" stop-color="#04C3B6"/>
+<stop offset="0.520179" stop-color="#5082EF"/>
+<stop offset="0.838605" stop-color="#5D5BED"/>
+<stop offset="1" stop-color="#9A75FA"/>
+</linearGradient>
+</defs>
+</svg>

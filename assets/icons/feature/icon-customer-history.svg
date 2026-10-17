@@ -1,0 +1,25 @@
+<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="48" height="48" fill="#F5F5F5"/>
+<g id="icon-customer-history">
+<g id="Group 2087328299">
+<path id="Vector 4325" d="M10.0176 21.0342H13.0742" stroke="#8A9099" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Rectangle 34626586" d="M34.6836 23.0376H12.8652L15.7583 16.1562H23.7744" stroke="#8A9099" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Rectangle 34626587" d="M9.84961 25.248C9.84961 25.248 11.9904 23.248 13.3621 23.248C14.7338 23.248 16.8745 23.248 16.8745 23.248H23.8994H30.9243H34.4368L37.9492 25.248V34.0112H9.84961V25.248Z" stroke="#8A9099" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Rectangle 34626588" d="M18.2715 29.5088H29.5508L30.5508 30.8882V32.2676V34.0264H17.2715V32.2676V30.8882L18.2715 29.5088Z" stroke="#8A9099" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Rectangle 34626589" d="M9.86328 34.0977H14.4688V38.0815H9.86328V34.0977Z" stroke="#8A9099" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Rectangle 34626591" d="M33.3262 34.0977H37.9316V38.0815H33.3262V34.0977Z" stroke="#8A9099" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<g id="Group 2087328300">
+<path id="Subtract" d="M32.8203 7.35547C36.4404 7.35547 39.375 10.2901 39.375 13.9102C39.375 17.5302 36.4404 20.4648 32.8203 20.4648C29.2003 20.4648 26.2656 17.5302 26.2656 13.9102C26.2656 10.2901 29.2003 7.35547 32.8203 7.35547ZM32.5527 9.57617C32.1385 9.57617 31.8027 9.91196 31.8027 10.3262V14.1494C31.8027 14.5636 32.1385 14.8994 32.5527 14.8994H36.376C36.7902 14.8994 37.126 14.5636 37.126 14.1494C37.1258 13.7354 36.7901 13.3994 36.376 13.3994H33.3027V10.3262C33.3027 9.91196 32.9669 9.57617 32.5527 9.57617Z" fill="url(#paint0_linear_152_173)"/>
+</g>
+</g>
+<defs>
+<linearGradient id="paint0_linear_152_173" x1="27.5475" y1="6.79026" x2="39.2524" y2="18.6332" gradientUnits="userSpaceOnUse">
+<stop offset="0.0144231" stop-color="#2CD0AC"/>
+<stop offset="0.21639" stop-color="#04C3B6"/>
+<stop offset="0.520179" stop-color="#5082EF"/>
+<stop offset="0.838605" stop-color="#5D5BED"/>
+<stop offset="1" stop-color="#9A75FA"/>
+</linearGradient>
+</defs>
+</svg>

@@ -1,0 +1,22 @@
+<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="48" height="48" fill="#F5F5F5"/>
+<g id="icon-coaching-signals">
+<path id="Vector" d="M35.6029 16.2014C36.9016 18.1335 37.7058 20.3725 37.9217 22.72C38.2234 26.0008 37.3567 29.2828 35.4745 31.9868C33.5922 34.6908 30.8154 36.6432 27.634 37.4994C24.4526 38.3556 21.071 38.0607 18.0858 36.6666C17.5959 36.4806 17.0635 36.436 16.5495 36.538L11.7783 37.9331C11.5481 37.9942 11.3062 37.9955 11.0754 37.9368C10.8446 37.8782 10.6326 37.7616 10.4595 37.598C10.2865 37.4345 10.158 37.2294 10.0864 37.0023C10.0148 36.7752 10.0024 36.5336 10.0504 36.3003L11.5392 31.7011C11.6591 31.1564 11.6134 30.5882 11.4078 30.0697C9.97739 27.1018 9.64117 23.724 10.4585 20.5324C11.2758 17.3407 13.194 14.5403 15.8749 12.6252C17.6155 11.3817 19.605 10.5633 21.6854 10.2139" stroke="#8A9099" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<g id="Group 2087328315">
+<path id="Vector_2" d="M18.4441 22.5215V26.007" stroke="#8A9099" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_3" d="M22.2996 19.0352V29.4917" stroke="#8A9099" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_4" d="M30.0105 21.375L30.0105 27.1527" stroke="#8A9099" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_5" d="M26.1343 22.5215V26.007" stroke="#8A9099" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<path id="Vector_6" d="M30.9963 3.23251C31.1482 2.77666 31.793 2.77666 31.945 3.23251L33.1544 6.8608C33.3535 7.45801 33.8221 7.92664 34.4193 8.12571L38.0476 9.33514C38.5034 9.48709 38.5034 10.1319 38.0476 10.2838L34.4193 11.4933C33.8221 11.6923 33.3535 12.161 33.1544 12.7582L31.945 16.3865C31.793 16.8423 31.1482 16.8423 30.9963 16.3865L29.7868 12.7582C29.5878 12.161 29.1191 11.6923 28.5219 11.4933L24.8936 10.2838C24.4378 10.1319 24.4378 9.48709 24.8936 9.33514L28.5219 8.12571C29.1191 7.92664 29.5878 7.45801 29.7868 6.8608L30.9963 3.23251Z" fill="url(#paint0_linear_152_173)"/>
+</g>
+<defs>
+<linearGradient id="paint0_linear_152_173" x1="25.0352" y1="1.11965" x2="39.3209" y2="15.574" gradientUnits="userSpaceOnUse">
+<stop offset="0.0144231" stop-color="#2CD0AC"/>
+<stop offset="0.21639" stop-color="#04C3B6"/>
+<stop offset="0.520179" stop-color="#5082EF"/>
+<stop offset="0.838605" stop-color="#5D5BED"/>
+<stop offset="1" stop-color="#9A75FA"/>
+</linearGradient>
+</defs>
+</svg>

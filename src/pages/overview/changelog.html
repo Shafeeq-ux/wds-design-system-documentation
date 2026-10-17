@@ -3,7 +3,9 @@
 
 <h2>3.0.1 · 17 October 2026</h2>
 <ul>
-  <li><strong>Token map</strong> (pilot) on Hero, Card grid and Button: the Figma render with every layer's colour, type, spacing and border variables, their CSS names and values per breakpoint and theme, padding and gap overlays, CSS for each layer, and untokenised values flagged as issues.</li>
+  <li><strong>Token map</strong> on every section page and on Button, Input, Checkbox, Header and Banner (Radio button has no Figma component yet): the Figma render with every layer's colour, type, spacing and border variables, their CSS names and values per breakpoint and theme, padding and gap overlays, CSS for each layer, and untokenised values flagged as issues.</li>
+  <li><strong>Icons</strong>: every utility icon and all 65 feature icons (light versions, exported from Figma) can be downloaded as SVG files or copied as SVG code. The feature icons replace the Icon Library image.</li>
+  <li><strong>About</strong>: a Team section. <strong>Site audit</strong>: Design confirmed /faq and /trust-portal/privacy as WDS 2.0.</li>
   <li><strong>Figma to Webflow</strong>: a new page explaining how designs are converted into Webflow with the Figma to Webflow plugin, and the three variable collections (breakpoint, typography, theme) every section applies.</li>
   <li><strong>Variable modes</strong> section added to every section page, with a Figma audit of all 174 section, header and banner variants.</li>
 </ul>
@@ -12,6 +14,23 @@
   <li>Hero default: the gap between each stat value and its label is a hardcoded 8px.</li>
   <li>Card grid 4-column: the gaps inside cards (64, 37 and 80px) aren't tokenised, and the card copy has no single text style.</li>
   <li>Button: the tertiary icon circle has a hardcoded 6px padding.</li>
+  <li>Feature platform architecture: the 16px card and icon-row gaps, the 6px icon-circle padding and the 32px Mobile container padding aren't tokenised.</li>
+  <li>Accordion right-image: the list gaps (4 to 48px) and the 80px image gap aren't tokenised, and the decorative gradients aren't bound to variables.</li>
+  <li>Carousel AI video: the container's 60px padding and 80px gap, the image-group gaps and the control pills' fills, strokes, padding and radii aren't tokenised, and the control label has no text style.</li>
+  <li>Tabbed UI: the tab bar and tab buttons (padding, radii, strokes, gradient) aren't tokenised, the tab labels have no text style, and Mobile has a hardcoded 70px column gap.</li>
+  <li>Comparison: the cards' 48px padding (24px on Mobile) and 16px gap aren't tokenised.</li>
+  <li>Video AI single and Pop-up video carousel: the video player controls use hardcoded fills, radii and padding with an unbound gradient, and "Video duration" has no text style.</li>
+  <li>Pop-up video carousel: the card padding, the row and column gaps and the 61px bottom padding aren't tokenised.</li>
+  <li>Bento five-image: the card padding (40px Desktop, 32px Tablet and Mobile) and 40px gap aren't tokenised, and the card copy has no single text style.</li>
+  <li>Testimonial default: most card padding and gaps (2 to 120px) are hardcoded, and the card overlays' gradients aren't bound to variables.</li>
+  <li>Stats platform: the gap between stats (140px Desktop, 24px Tablet and Mobile) and each stat's 24px top padding and 8px inner gap are hardcoded.</li>
+  <li>FAQ: the question-list gaps (4 to 49px) aren't tokenised.</li>
+  <li>Footer: most gaps aren't tokenised, including the navigation lists (8 to 32px), the social icons (16 to 48px) and a 616px spacer gap on Desktop.</li>
+  <li>Legal detail: the background and table cells use a hardcoded #ffffff fill, and the table and list padding and gaps aren't tokenised.</li>
+  <li>Form content: the form card's #000000 fill, #5671ad stroke, padding and gap, the input padding and the #b2dafa decorative ellipses aren't tokenised, one text layer has no text style, and the icon tiles' radii and gradients aren't tokenised.</li>
+  <li>Header: the 269px container gap and the navigation items' padding and gaps aren't tokenised, and the Mobile variant sets no typography mode.</li>
+  <li>Banner: the 12px gap, 6px icon padding and the vertical padding aren't tokenised, and the image banner artwork's gradients aren't bound to variables.</li>
+  <li>Inputs (all five): the field's 12px and 16px padding, the 8px icon gap and the 4px error-message gap aren't tokenised.</li>
   <li>Accordion left-image: Desktop and Tablet variants don't set breakpoint or typography modes.</li>
   <li>Legal implementation terms: the Tablet variant uses the desktop typography mode.</li>
   <li>Legal disclaimer: the Desktop variant sets no modes.</li>

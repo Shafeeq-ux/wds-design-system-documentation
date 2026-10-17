@@ -143,7 +143,7 @@ export function tokenMap(key) {
     html.push(`<p class="tm-meta">Modes: ${Object.entries(v.modes).map(([k, m]) => `<code>${esc(k)}: ${esc(m)}</code>`).join(' ')} · <a href="${FIGMA}${v.id.replace(':', '-')}" target="_blank" rel="noopener">Open in Figma</a></p></div>`);
   }
   html.push('</div>');
-  html.push(`<aside class="tm-panel" aria-label="Layer tokens"><div class="tm-detail" aria-live="polite"><p class="tm-hint">Select a layer on the image or in the list to see its variables, values and CSS.</p></div>`);
+  html.push(`<aside class="tm-panel" aria-label="Layer tokens: ${esc(d.name)}"><div class="tm-detail" aria-live="polite"><p class="tm-hint">Select a layer on the image or in the list to see its variables, values and CSS.</p></div>`);
   for (const v of views) {
     html.push(`<div class="tm-layers" data-tm-v="${v.vi}"${v.vi ? ' hidden' : ''}><h3>Layers</h3><ul>${v.nodes.filter((n) => n.dup == null).map((n) => {
       const count = v.nodes.filter((m) => m.dup === n.i).length;
