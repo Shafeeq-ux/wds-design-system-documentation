@@ -37,8 +37,10 @@
   sidebar?.querySelector('[aria-current]')?.scrollIntoView({ block: 'center' });
 
   // Highlight the top-nav section for the current page
-  const section = location.pathname.split('/')[1];
-  document.querySelectorAll('.topnav a').forEach((a) => { if (a.pathname.split('/')[1] === section) a.setAttribute('aria-current', 'true'); });
+  const base = document.documentElement.dataset.base || '';
+  const part = (path) => (path.startsWith(base) ? path.slice(base.length) : path).split('/')[1];
+  const section = part(location.pathname);
+  document.querySelectorAll('.topnav a').forEach((a) => { if (part(a.pathname) === section) a.setAttribute('aria-current', 'true'); });
 
   // ---------- TOC scroll-spy ----------
   const tocLinks = [...document.querySelectorAll('.toc a')];
@@ -66,7 +68,7 @@
     input.value = '';
     input.focus();
     if (!index) {
-      try { index = await (await fetch('/search-index.json')).json(); } catch { index = []; }
+      try { index = await (await fetch(`${document.documentElement.dataset.base || ''}/search-index.json`)).json(); } catch { index = []; }
     }
     renderResults('');
   }

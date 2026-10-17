@@ -97,3 +97,9 @@ To refresh tokens after a Figma change, run `scripts/figma-export.js` in the Fig
 ## Deploy
 
 Vercel builds with `npm run build` and serves `dist/` (see `vercel.json`). Every pull request gets a preview URL, and `main` deploys to production.
+
+GitHub Pages also publishes `main` at https://shafeeq-ux.github.io/wds-design-system-documentation/ (see `.github/workflows/pages.yml`). Pages serves the site from a subfolder, so the workflow builds with `BASE_PATH=/wds-design-system-documentation`, which prefixes every root-relative URL. Code samples in `<pre>` keep their real paths. To test a subfolder build locally:
+
+```bash
+BASE_PATH=/wds-design-system-documentation npm run build
+```

@@ -3,6 +3,8 @@
 //   2. Wraps every src/pages/**/*.html in the shared layout (header, sidebar, page meta)
 //   3. Generates a "planned" stub for every nav item that has no page yet
 //   4. Copies css/, js/, assets/ and tokens/ and writes search-index.json
+//   5. With BASE_PATH set (e.g. /wds-design-system-documentation for GitHub Pages),
+//      prefixes every root-relative URL so the site works from a subfolder
 //
 // A page starts with an optional meta comment:
 //   <!--meta {"title": "Colour", "status": "WIP", "layout": "doc"} -->
@@ -174,4 +176,22 @@ for (const [href, item] of navByHref) {
 
 for (const d of ['css', 'js', 'assets', 'tokens']) if (existsSync(join(root, d))) cpSync(join(root, d), join(DIST, d), { recursive: true });
 writeFileSync(join(DIST, 'search-index.json'), JSON.stringify(index));
-console.log(`Built ${built.size} pages + ${navByHref.size - [...navByHref.keys()].filter((h) => built.has(h)).length} stubs into dist/`);
+// ---------- base path (GitHub Pages project sites live under /<repo>/) ----------
+const BASE = (process.env.BASE_PATH || '').replace(/\/+$/, '');
+if (BASE) {
+  const files = (d) => readdirSync(d).flatMap((f) => { const p = join(d, f); return statSync(p).isDirectory() ? files(p) : [p]; });
+  const attr = /(\s(?:href|src|data-src|action|poster)=")\/(?!\/)/g;
+  for (const f of files(DIST)) {
+    if (f.endsWith('.html')) {
+      // Leave code samples alone: they show the real site paths
+      const html = readFileSync(f, 'utf8').split(/(<pre[\s\S]*?<\/pre>)/).map((part, i) => (i % 2 ? part : part.replace(attr, `$1${BASE}/`))).join('');
+      writeFileSync(f, html.replace(/<html(\s|>)/, `<html data-base="${BASE}"$1`));
+    } else if (f.endsWith('.css')) {
+      writeFileSync(f, readFileSync(f, 'utf8').replace(/url\((["']?)\/(?!\/)/g, `url($1${BASE}/`));
+    }
+  }
+  writeFileSync(join(DIST, 'search-index.json'), JSON.stringify(index.map((e) => ({ ...e, href: BASE + e.href }))));
+  writeFileSync(join(DIST, '.nojekyll'), '');
+}
+
+console.log(`Built ${built.size} pages + ${navByHref.size - [...navByHref.keys()].filter((h) => built.has(h)).length} stubs into dist/${BASE ? ` (base path ${BASE})` : ''}`);
