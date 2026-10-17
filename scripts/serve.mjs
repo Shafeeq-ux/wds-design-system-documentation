@@ -15,7 +15,7 @@ const build = () => spawnSync(process.execPath, [join(root, 'scripts/build.mjs')
 build();
 
 let timer;
-for (const d of ['src', 'css', 'js', 'assets', 'tokens']) {
+for (const d of ['src', 'css', 'js', 'assets', 'tokens', 'scripts']) {
   watch(join(root, d), { recursive: true }, (_e, file) => {
     // Files the build generates itself: watching them would rebuild forever
     if ((d === 'css' && file === 'tokens.css') || (d === 'tokens' && file === 'wds-css-variables.json')) return;

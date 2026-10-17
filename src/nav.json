@@ -16,6 +16,13 @@
           "desc": "Purpose, scope and the principles behind the Website Design System."
         },
         {
+          "title": "tekion.com audit",
+          "href": "/overview/site-audit.html",
+          "type": "foundation",
+          "phase": 7,
+          "desc": "Which tekion.com pages use WDS 1.0, 2.0 and 3.0, with a sitemap of the whole site."
+        },
+        {
           "title": "Accessibility",
           "href": "/overview/accessibility.html",
           "type": "foundation",

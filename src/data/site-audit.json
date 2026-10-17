@@ -1,0 +1,4606 @@
+{
+ "scanned": "2026-10-17",
+ "source": "https://tekion.com/sitemap.xml plus header menu links",
+ "viewport": "1440 × 900",
+ "method": "Each page is rendered and every card-like box in the content area (180 × 100px or larger, with a background or border, outside the header, footer, menus and pop-ups) is measured. Corner radius 8px or more counts as rounded (WDS 2.0); under 8px counts as sharp (WDS 3.0). A page is 2.0 at 70% rounded or more, 3.0 at 30% or less, and Mixed in between or when it has both an all-rounded and an all-sharp section. WDS 1.0 is identified by its legacy shell rather than corner radius: those pages are served from tekion.ai, use Inter instead of Tekion Sans, and contain none of the tekion-design-system components that every tekion.com page has.",
+ "counts": {
+  "2.0": 370,
+  "Mixed": 17,
+  "Redirect": 5,
+  "Text only": 54,
+  "3.0": 13,
+  "1.0": 3
+ },
+ "templates": [
+  {
+   "key": "/blog/*",
+   "label": "Blog posts",
+   "count": 139,
+   "version": "2.0",
+   "samples": [
+    "/blog/3-000-features-in-one-year-what-that-means-for-dealers-using-tekion",
+    "/blog/5-cybersecurity-questions-every-dealer-must-ask-their-ai-provider",
+    "/blog/tekion-founder-ceo-jay-vijayan-keynote-address-nada-2024",
+    "/blog/tekion-unveils-new-ai-agents-and-t1-pro-its-ai-interface-and-agent-orchestrator"
+   ],
+   "votes": {
+    "2.0": 12,
+    "Mixed": 4
+   }
+  },
+  {
+   "key": "/news/*",
+   "label": "News articles",
+   "count": 74,
+   "version": "2.0",
+   "samples": [
+    "/news/a-new-dms-can-i-interest-you-in-an-automotive-retail-cloud",
+    "/news/acura-tool-that-makes-buying-painless-enters-phase-2"
+   ],
+   "votes": {
+    "2.0": 6
+   }
+  },
+  {
+   "key": "/legal/*",
+   "label": "Legal documents",
+   "count": 52,
+   "version": "Text only",
+   "samples": [
+    "/legal/api-license-and-data-sharing-agreement",
+    "/legal/applicant-and-candidate-privacy-notice"
+   ],
+   "votes": {
+    "Text only": 2
+   }
+  },
+  {
+   "key": "/events/*",
+   "label": "Event pages",
+   "count": 47,
+   "version": "2.0",
+   "samples": [
+    "/events/a-deep-dive-into-tekions-cybersecurity-protocols-and-protections",
+    "/events/2024-nada-show-on-demand"
+   ],
+   "votes": {
+    "2.0": 12
+   }
+  },
+  {
+   "key": "/resources/*",
+   "label": "Resources (ebooks, guides)",
+   "count": 33,
+   "version": "2.0",
+   "samples": [
+    "/resources/8-wastes-auto-retail-ebook",
+    "/resources/a-foundation-of-trust-tekions-approach-to-cloud-data-and-ai-protection"
+   ],
+   "votes": {
+    "2.0": 12
+   }
+  },
+  {
+   "key": "/testimonials/*",
+   "label": "Testimonial stories",
+   "count": 31,
+   "version": "2.0",
+   "samples": [
+    "/testimonials/30-years-of-guesswork-cleared-up-in-two-weeks",
+    "/testimonials/amg-paperless-tekion-dealer-management-system"
+   ],
+   "votes": {
+    "2.0": 6
+   }
+  },
+  {
+   "key": "/on-demand/*",
+   "label": "On-demand sessions",
+   "count": 20,
+   "version": "2.0",
+   "samples": [
+    "/on-demand/ai-orchestrated-customer-communications-inside-tekion",
+    "/on-demand/asbury-automotive-group-scaling-an-enterprise--and-the-efficiencies-that-follow"
+   ],
+   "votes": {
+    "2.0": 13
+   }
+  },
+  {
+   "key": "/nada-2026-recap/*",
+   "label": "NADA 2026 recap sessions",
+   "count": 14,
+   "version": "Mixed",
+   "samples": [
+    "/nada-2026-recap/ai-you-can-trust-security-governance-compliance-for-modern-dealerships",
+    "/nada-2026-recap/beyond-automation-building-the-ai-native-dealership"
+   ],
+   "votes": {
+    "Mixed": 6,
+    "2.0": 5
+   }
+  },
+  {
+   "key": "/legal/privacy/*",
+   "label": "Privacy documents",
+   "count": 2,
+   "version": "3.0",
+   "samples": [
+    "/legal/privacy/privacy-policy",
+    "/legal/privacy/cookie-list"
+   ],
+   "votes": {
+    "Text only": 1,
+    "3.0": 52
+   }
+  }
+ ],
+ "pages": [
+  {
+   "path": "/products/aec",
+   "title": "Tekion AEC Platform | Automotive Enterprise Cloud Software",
+   "section": "Products",
+   "version": "2.0",
+   "confidence": "high",
+   "basis": "rendered",
+   "boxes": 18,
+   "rounded": 14,
+   "sharp": 4,
+   "outlined": 1,
+   "radii": "24x14 0x4"
+  },
+  {
+   "path": "/products/apc",
+   "title": "Tekion Automotive Partner Cloud | Dealership Integrations & Partner Programs",
+   "section": "Products",
+   "version": "2.0",
+   "confidence": "high",
+   "basis": "rendered",
+   "boxes": 15,
+   "rounded": 11,
+   "sharp": 4,
+   "outlined": 1,
+   "radii": "24x11 0x4"
+  },
+  {
+   "path": "/testimonials",
+   "title": "Tekion Testimonials | Dealer Reviews & Success Stories",
+   "section": "Testimonials",
+   "version": "2.0",
+   "confidence": "high",
+   "basis": "rendered",
+   "boxes": 31,
+   "rounded": 30,
+   "sharp": 1,
+   "outlined": 0,
+   "radii": "24x30 0x1"
+  },
+  {
+   "path": "/blog",
+   "title": "Tekion Blog | Automotive Industry News & Dealership Best Practices",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "high",
+   "basis": "rendered",
+   "boxes": 32,
+   "rounded": 31,
+   "sharp": 1,
+   "outlined": 0,
+   "radii": "24x31 0x1"
+  },
+  {
+   "path": "/news",
+   "title": "Tekion News | Official Updates, Media & Press Releases",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "high",
+   "basis": "rendered",
+   "boxes": 31,
+   "rounded": 30,
+   "sharp": 1,
+   "outlined": 0,
+   "radii": "24x30 0x1"
+  },
+  {
+   "path": "/products/dms",
+   "title": "Tekion DMS | AI-Native Dealer Management System",
+   "section": "Products",
+   "version": "2.0",
+   "confidence": "high",
+   "basis": "rendered",
+   "boxes": 19,
+   "rounded": 18,
+   "sharp": 1,
+   "outlined": 1,
+   "radii": "24x15 22x3 0x1"
+  },
+  {
+   "path": "/resources",
+   "title": "Tekion Resource Center | Dealer Resources, Guides, Ebooks & Templates",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "high",
+   "basis": "rendered",
+   "boxes": 31,
+   "rounded": 30,
+   "sharp": 1,
+   "outlined": 0,
+   "radii": "24x30 0x1"
+  },
+  {
+   "path": "/request-demo",
+   "title": "Request a Demo | See Tekion's AI-Native Dealership Platform in Action",
+   "section": "Get started",
+   "version": "2.0",
+   "confidence": "high",
+   "basis": "rendered",
+   "boxes": 10,
+   "rounded": 10,
+   "sharp": 0,
+   "outlined": 0,
+   "radii": "22x9 32x1"
+  },
+  {
+   "path": "/careers",
+   "title": "Tekion Careers | Tech Jobs, Innovative Culture & Career Growth",
+   "section": "Company",
+   "version": "2.0",
+   "confidence": "high",
+   "basis": "rendered",
+   "boxes": 28,
+   "rounded": 24,
+   "sharp": 4,
+   "outlined": 3,
+   "radii": "24x24 0x4"
+  },
+  {
+   "path": "/faq",
+   "title": "FAQ",
+   "section": "Get started",
+   "version": "Mixed",
+   "confidence": "medium",
+   "basis": "rendered",
+   "boxes": 5,
+   "rounded": 2,
+   "sharp": 3,
+   "outlined": 2,
+   "radii": "0x3 24x2"
+  },
+  {
+   "path": "/events",
+   "title": "Tekion Events | Automotive Retail Conferences, Events & Webinars",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "high",
+   "basis": "rendered",
+   "boxes": 31,
+   "rounded": 30,
+   "sharp": 1,
+   "outlined": 0,
+   "radii": "24x30 0x1"
+  },
+  {
+   "path": "/about-us",
+   "title": "About Tekion | Our Company, Vision & Industry Leadership",
+   "section": "Company",
+   "version": "2.0",
+   "confidence": "high",
+   "basis": "rendered",
+   "boxes": 31,
+   "rounded": 30,
+   "sharp": 1,
+   "outlined": 0,
+   "radii": "24x30 0x1"
+  },
+  {
+   "path": "/job-openings/job",
+   "title": "Job",
+   "section": "Company",
+   "version": "Redirect",
+   "confidence": "high",
+   "basis": "rendered",
+   "boxes": 0,
+   "rounded": 0,
+   "sharp": 0,
+   "outlined": 0,
+   "radii": "",
+   "note": "Redirects to /job-openings in the browser"
+  },
+  {
+   "path": "/trust-portal",
+   "title": "Tekion Trust Portal | Security, Privacy & Compliance",
+   "section": "Trust & legal",
+   "version": "2.0",
+   "confidence": "high",
+   "basis": "rendered",
+   "boxes": 15,
+   "rounded": 15,
+   "sharp": 0,
+   "outlined": 0,
+   "radii": "24x15"
+  },
+  {
+   "path": "/trust-portal/privacy",
+   "title": "Tekion Privacy | How We Protect Dealership Data",
+   "section": "Trust & legal",
+   "version": "Mixed",
+   "confidence": "high",
+   "basis": "rendered",
+   "boxes": 16,
+   "rounded": 11,
+   "sharp": 5,
+   "outlined": 5,
+   "radii": "24x11 0x5"
+  },
+  {
+   "path": "/job-openings",
+   "title": "Job Listing",
+   "section": "Company",
+   "version": "Text only",
+   "confidence": "n/a",
+   "basis": "rendered",
+   "boxes": 0,
+   "rounded": 0,
+   "sharp": 0,
+   "outlined": 0,
+   "radii": "",
+   "note": "Job listings load from an external board; no cards to measure"
+  },
+  {
+   "path": "/trust-portal/compliance",
+   "title": "Tekion Compliance | GLBA, GDPR, SOC & ISO Certified",
+   "section": "Trust & legal",
+   "version": "2.0",
+   "confidence": "high",
+   "basis": "rendered",
+   "boxes": 16,
+   "rounded": 13,
+   "sharp": 3,
+   "outlined": 3,
+   "radii": "24x13 0x3"
+  },
+  {
+   "path": "/legal",
+   "title": "Legal",
+   "section": "Trust & legal",
+   "version": "2.0",
+   "confidence": "medium",
+   "basis": "rendered",
+   "boxes": 4,
+   "rounded": 4,
+   "sharp": 0,
+   "outlined": 0,
+   "radii": "24x4"
+  },
+  {
+   "path": "/products/arc/crm",
+   "title": "Tekion CRM | AI-Powered Automotive CRM | Intelligent Lead Management",
+   "section": "Products",
+   "version": "2.0",
+   "confidence": "high",
+   "basis": "rendered",
+   "boxes": 44,
+   "rounded": 42,
+   "sharp": 2,
+   "outlined": 1,
+   "radii": "24x39 22x3 0x2"
+  },
+  {
+   "path": "/trust-portal/security",
+   "title": "Tekion Security | Enterprise-Grade Data Protection",
+   "section": "Trust & legal",
+   "version": "2.0",
+   "confidence": "high",
+   "basis": "rendered",
+   "boxes": 17,
+   "rounded": 14,
+   "sharp": 3,
+   "outlined": 3,
+   "radii": "24x14 0x3"
+  },
+  {
+   "path": "/products/arc/tekion-pay",
+   "title": "Tekion Pay | Embedded Dealership Payment Processing",
+   "section": "Products",
+   "version": "2.0",
+   "confidence": "high",
+   "basis": "rendered",
+   "boxes": 19,
+   "rounded": 18,
+   "sharp": 1,
+   "outlined": 0,
+   "radii": "24x17 0x1 22x1"
+  },
+  {
+   "path": "/products/arc/payroll",
+   "title": "Tekion Payroll | Dealership Payroll Software Built Into Your DMS",
+   "section": "Products",
+   "version": "2.0",
+   "confidence": "high",
+   "basis": "rendered",
+   "boxes": 12,
+   "rounded": 11,
+   "sharp": 1,
+   "outlined": 0,
+   "radii": "24x11 0x1"
+  },
+  {
+   "path": "/products/arc/dse",
+   "title": "Tekion Digital Service Experience | AI-Powered Fixed Operations Software",
+   "section": "Products",
+   "version": "2.0",
+   "confidence": "high",
+   "basis": "rendered",
+   "boxes": 22,
+   "rounded": 20,
+   "sharp": 2,
+   "outlined": 2,
+   "radii": "24x17 22x3 0x2"
+  },
+  {
+   "path": "/products/virtual-to-visit",
+   "title": "Tekion Virtual to Visit | Virtual Sales & Service Dealership Experiences",
+   "section": "Products",
+   "version": "2.0",
+   "confidence": "high",
+   "basis": "rendered",
+   "boxes": 25,
+   "rounded": 25,
+   "sharp": 0,
+   "outlined": 0,
+   "radii": "24x22 22x3"
+  },
+  {
+   "path": "/oem-partners",
+   "title": "oem-partners",
+   "section": "Company",
+   "version": "2.0",
+   "confidence": "low",
+   "basis": "rendered",
+   "boxes": 1,
+   "rounded": 1,
+   "sharp": 0,
+   "outlined": 0,
+   "radii": "32x1"
+  },
+  {
+   "path": "/powered-by-tekion",
+   "title": "Powered By Tekion",
+   "section": "Company",
+   "version": "3.0",
+   "confidence": "high",
+   "basis": "rendered",
+   "boxes": 8,
+   "rounded": 0,
+   "sharp": 8,
+   "outlined": 1,
+   "radii": "0x8"
+  },
+  {
+   "path": "/tekionone/on-demand",
+   "title": "Tekion One 2026 On-Demand | Automotive's Premiere Date & AI Event",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "high",
+   "basis": "rendered",
+   "boxes": 27,
+   "rounded": 26,
+   "sharp": 1,
+   "outlined": 0,
+   "radii": "24x26 0x1"
+  },
+  {
+   "path": "/service-ai",
+   "title": "Tekion AI Agent for Service | AI For Dealership Service Department",
+   "section": "Tekion AI",
+   "version": "2.0",
+   "confidence": "high",
+   "basis": "rendered",
+   "boxes": 34,
+   "rounded": 30,
+   "sharp": 4,
+   "outlined": 0,
+   "radii": "24x27 0x4 22x3"
+  },
+  {
+   "path": "/t1",
+   "title": "T1 by Tekion | Conversational AI for Automotive Dealerships",
+   "section": "Tekion AI",
+   "version": "3.0",
+   "confidence": "high",
+   "basis": "rendered",
+   "boxes": 23,
+   "rounded": 0,
+   "sharp": 23,
+   "outlined": 20,
+   "radii": "0x23"
+  },
+  {
+   "path": "/about-us/our-leaders",
+   "title": "Tekion Leadership | Meet the Leadership Team Behind Tekion's AI-Native Platform",
+   "section": "Company",
+   "version": "2.0",
+   "confidence": "high",
+   "basis": "rendered",
+   "boxes": 18,
+   "rounded": 18,
+   "sharp": 0,
+   "outlined": 0,
+   "radii": "24x18"
+  },
+  {
+   "path": "/technology-partners",
+   "title": "Technology Partners",
+   "section": "Company",
+   "version": "2.0",
+   "confidence": "high",
+   "basis": "rendered",
+   "boxes": 100,
+   "rounded": 100,
+   "sharp": 0,
+   "outlined": 0,
+   "radii": "24x100",
+   "note": "Measured in the feasibility test"
+  },
+  {
+   "path": "/trust-portal/responsible-ai",
+   "title": "Tekion Responsible AI | Trustworthy, Transparent AI for Automotive",
+   "section": "Trust & legal",
+   "version": "2.0",
+   "confidence": "high",
+   "basis": "rendered",
+   "boxes": 9,
+   "rounded": 8,
+   "sharp": 1,
+   "outlined": 1,
+   "radii": "24x8 0x1"
+  },
+  {
+   "path": "/",
+   "title": "Tekion | End-to-End AI-Native Automotive Retail Platform",
+   "section": "Home",
+   "version": "3.0",
+   "confidence": "high",
+   "basis": "rendered",
+   "boxes": 21,
+   "rounded": 0,
+   "sharp": 21,
+   "outlined": 20,
+   "radii": "0x21"
+  },
+  {
+   "path": "/crm-ai",
+   "title": "Automotive CRM with AI Agents",
+   "section": "Tekion AI",
+   "version": "3.0",
+   "confidence": "high",
+   "basis": "rendered",
+   "boxes": 17,
+   "rounded": 0,
+   "sharp": 17,
+   "outlined": 14,
+   "radii": "0x17"
+  },
+  {
+   "path": "/products/arc",
+   "title": "Tekion ARC | AI-Native Automotive Retail Cloud Platform",
+   "section": "Products",
+   "version": "3.0",
+   "confidence": "high",
+   "basis": "rendered",
+   "boxes": 35,
+   "rounded": 0,
+   "sharp": 35,
+   "outlined": 34,
+   "radii": "0x35"
+  },
+  {
+   "path": "/inventory-ai",
+   "title": "Inventory Management AI Built Into Your CRM",
+   "section": "Tekion AI",
+   "version": "Redirect",
+   "confidence": "high",
+   "basis": "rendered",
+   "boxes": 0,
+   "rounded": 0,
+   "sharp": 0,
+   "outlined": 0,
+   "radii": "",
+   "note": "Redirects to the home page in the browser"
+  },
+  {
+   "path": "/refer",
+   "title": "Tekion | End-to-End AI-Native Automotive Retail Platform",
+   "section": "Get started",
+   "version": "3.0",
+   "confidence": "medium",
+   "basis": "rendered",
+   "boxes": 3,
+   "rounded": 0,
+   "sharp": 3,
+   "outlined": 3,
+   "radii": "0x3"
+  },
+  {
+   "path": "/nada2026/recap",
+   "title": "NADA 2026 Innovation Stage On-Demand Presentations from Tekion",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "high",
+   "basis": "rendered",
+   "boxes": 19,
+   "rounded": 18,
+   "sharp": 1,
+   "outlined": 0,
+   "radii": "24x18 0x1"
+  },
+  {
+   "path": "/refer/terms",
+   "title": "Tekion | End-to-End AI-Native Automotive Retail Platform",
+   "section": "Get started",
+   "version": "3.0",
+   "confidence": "low",
+   "basis": "rendered",
+   "boxes": 1,
+   "rounded": 0,
+   "sharp": 1,
+   "outlined": 1,
+   "radii": "0x1"
+  },
+  {
+   "path": "/implementation",
+   "title": "Implementation Terms",
+   "section": "Trust & legal",
+   "version": "3.0",
+   "confidence": "low",
+   "basis": "rendered",
+   "boxes": 1,
+   "rounded": 0,
+   "sharp": 1,
+   "outlined": 0,
+   "radii": "0x1"
+  },
+  {
+   "path": "/accounting-ai",
+   "title": "Tekion Accounting AI | Accounts Payable AI for Auto Dealers",
+   "section": "Tekion AI",
+   "version": "3.0",
+   "confidence": "high",
+   "basis": "rendered",
+   "boxes": 23,
+   "rounded": 0,
+   "sharp": 23,
+   "outlined": 13,
+   "radii": "0x23"
+  },
+  {
+   "path": "/testimonials/30-years-of-guesswork-cleared-up-in-two-weeks",
+   "title": "30 Years of Guesswork, Cleared Up in Two Weeks",
+   "section": "Testimonials",
+   "version": "2.0",
+   "confidence": "low",
+   "basis": "rendered",
+   "boxes": 2,
+   "rounded": 2,
+   "sharp": 0,
+   "outlined": 0,
+   "radii": "24x2",
+   "template": "/testimonials/*"
+  },
+  {
+   "path": "/testimonials/amg-paperless-tekion-dealer-management-system",
+   "title": "Embracing Digital Transformation: Tekion's Enables Paperless Processes for Dealerships",
+   "section": "Testimonials",
+   "version": "2.0",
+   "confidence": "medium",
+   "basis": "rendered",
+   "boxes": 4,
+   "rounded": 3,
+   "sharp": 1,
+   "outlined": 0,
+   "radii": "24x3 0x1",
+   "template": "/testimonials/*"
+  },
+  {
+   "path": "/products/arc/advanced-analytics",
+   "title": "Tekion Advanced Analytics | Delivering Powerful Insights",
+   "section": "Products",
+   "version": "3.0",
+   "confidence": "high",
+   "basis": "rendered",
+   "boxes": 15,
+   "rounded": 0,
+   "sharp": 15,
+   "outlined": 13,
+   "radii": "0x15"
+  },
+  {
+   "path": "/testimonials/amg-reviews-dealer-management-system",
+   "title": "Revolutionizing Dealer Group Operations: American Motors Group's Experience with Tekion",
+   "section": "Testimonials",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/testimonials/*"
+  },
+  {
+   "path": "/testimonials/burns-chevrolet-next-gen-dealer-management-system",
+   "title": "A Next-Gen Dealer Management System for Burns Chevrolet of Gaffney",
+   "section": "Testimonials",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/testimonials/*"
+  },
+  {
+   "path": "/refer/welcome",
+   "title": "Tekion | End-to-End AI-Native Automotive Retail Platform",
+   "section": "Get started",
+   "version": "3.0",
+   "confidence": "low",
+   "basis": "rendered",
+   "boxes": 1,
+   "rounded": 0,
+   "sharp": 1,
+   "outlined": 0,
+   "radii": "0x1"
+  },
+  {
+   "path": "/testimonials/bowman-dealer-management-system-success",
+   "title": "Six Months Later: Bowman Auto Group's Successful Adoption of Tekion",
+   "section": "Testimonials",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/testimonials/*"
+  },
+  {
+   "path": "/testimonials/car-group-prioritizes-csi-tekion-dms",
+   "title": "Revolutionizing Customer Satisfaction: California Automotive Retailing Group's Experience",
+   "section": "Testimonials",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/testimonials/*"
+  },
+  {
+   "path": "/testimonials/carl-black-enhances-dealership-dms-crm",
+   "title": "Carl Black Automotive Group Enhances Multi-Rooftop Efficiency with Tekion",
+   "section": "Testimonials",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/testimonials/*"
+  },
+  {
+   "path": "/testimonials/capital-buick-gmc-tekion-success-review",
+   "title": "Capital Buick GMC: From Skepticism to 113% Profitability Growth",
+   "section": "Testimonials",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/testimonials/*"
+  },
+  {
+   "path": "/testimonials/capital-tekion-leader-dealership-management-system",
+   "title": "Capital GMC Buick Increases Effective Labor and Eliminates System Fragmentation with Cloud",
+   "section": "Testimonials",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/testimonials/*"
+  },
+  {
+   "path": "/testimonials/dealers-review-tekion-compilation",
+   "title": "Dealer Partners Share Tekion's Impact on Dealership Management",
+   "section": "Testimonials",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/testimonials/*"
+  },
+  {
+   "path": "/testimonials/bowman-auto-group-dealer-management-implementation",
+   "title": "Bowman Auto Group Quickly Realizes Benefits of Modern Tech with Tekion's DMS Implementatio",
+   "section": "Testimonials",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/testimonials/*"
+  },
+  {
+   "path": "/testimonials/dutch-miller-auto-group-unified-tekion-platform",
+   "title": "Tekion Helps Dutch Miller Group Save $1M While Cutting Repair Order Processing by 15 Minut",
+   "section": "Testimonials",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/testimonials/*"
+  },
+  {
+   "path": "/testimonials/customer-centric-dealer-management-system",
+   "title": "Leveling Up Customer and Dealership Experiences with Tekion",
+   "section": "Testimonials",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/testimonials/*"
+  },
+  {
+   "path": "/testimonials/country-auto-dms-crm-consolidation",
+   "title": "Streamlining Operations: Country Auto Group's Full Adoption of Tekion",
+   "section": "Testimonials",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/testimonials/*"
+  },
+  {
+   "path": "/testimonials/garage-isla-verde-reviews-tekion-platform",
+   "title": "How Garage Isla Verde Scaled from 1,800 to 2,400 Annual Sales with a Unified DMS Platform",
+   "section": "Testimonials",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/testimonials/*"
+  },
+  {
+   "path": "/testimonials/lake-auto-shifts-dealer-management-system",
+   "title": "Transformative Efficiency: Lake Auto Group's Shift to Tekion's DMS",
+   "section": "Testimonials",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/testimonials/*"
+  },
+  {
+   "path": "/testimonials/ingersoll-revolutionary-dealer-management-system",
+   "title": "Ingersoll Auto Group Embraces Tekion for a Revolutionary DMS Experience",
+   "section": "Testimonials",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/testimonials/*"
+  },
+  {
+   "path": "/testimonials/from-fragmented-to-unified-how-banister-dealership-achieved-60-show-ratio-lift-with-tekion",
+   "title": "From Fragmented to Unified: How Banister Automotive Achieved 60% Show Ratio Lift with Teki",
+   "section": "Testimonials",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/testimonials/*"
+  },
+  {
+   "path": "/testimonials/financial-benefits-tekion-dealer-management-system",
+   "title": "Boosting Dealership Profits: The Financial Benefits of Tekion Dealer Management System",
+   "section": "Testimonials",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/testimonials/*"
+  },
+  {
+   "path": "/testimonials/phaeton-selects-tekion-dealer-management-system",
+   "title": "Phaeton Automotive Group selects Dealer Management System for Enhanced Experience",
+   "section": "Testimonials",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/testimonials/*"
+  },
+  {
+   "path": "/testimonials/marine-chevrolet-tekion-dms-exceeds-expectations",
+   "title": "Transforming Automotive Retail: Marine Chevrolet's Success with Tekion",
+   "section": "Testimonials",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/testimonials/*"
+  },
+  {
+   "path": "/testimonials/power-ford-dealership-switch-crm-dms",
+   "title": "Power Ford's Endorsement of Tekion: Transforming Dealership Management",
+   "section": "Testimonials",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/testimonials/*"
+  },
+  {
+   "path": "/testimonials/mcdonald-auto-group-tekion-dms-review",
+   "title": "McDonald Automotive's Shift to Tekion: Staying Competitive When Others Couldn't",
+   "section": "Testimonials",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/testimonials/*"
+  },
+  {
+   "path": "/testimonials/scvw-tekion-dealer-management-system-review",
+   "title": "Stevens Creek Volkswagen Embraces Tekion's Digital Transformation",
+   "section": "Testimonials",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/testimonials/*"
+  },
+  {
+   "path": "/testimonials/thor-motors-dealership-new-dms-crm-tekion-review",
+   "title": "How Thor Motors Unlocked $30–40K in Monthly Gross Profit with a Unified Platform",
+   "section": "Testimonials",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/testimonials/*"
+  },
+  {
+   "path": "/testimonials/ewing-reviews-tekion-dealer-management-system",
+   "title": "Ewing Automotive Group Streamlines Operations with Tekion",
+   "section": "Testimonials",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/testimonials/*"
+  },
+  {
+   "path": "/testimonials/tony-group-hawaii-dealership-reviews-tekion",
+   "title": "Tekion Helps Tony Group Cut End-of-Day Deposits by 78% While Eliminating Two-Thirds of Thi",
+   "section": "Testimonials",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/testimonials/*"
+  },
+  {
+   "path": "/blog/3-000-features-in-one-year-what-that-means-for-dealers-using-tekion",
+   "title": "3,000 Features in One Year: What That Means for Dealers Using Tekion",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "medium",
+   "basis": "rendered",
+   "boxes": 5,
+   "rounded": 4,
+   "sharp": 1,
+   "outlined": 0,
+   "radii": "24x3 0x1 12x1",
+   "template": "/blog/*"
+  },
+  {
+   "path": "/testimonials/sir-water-chevrolet-reviews-tekion-dms-crm",
+   "title": "Sir Walter Chevrolet: From Fragmented Systems to 42% Faster Reconditioning",
+   "section": "Testimonials",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/testimonials/*"
+  },
+  {
+   "path": "/testimonials/longo-toyota-dealership-experience-enchanced",
+   "title": "Enhancing Customer and Employee Experiences at Longo Toyota with Tekion",
+   "section": "Testimonials",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/testimonials/*"
+  },
+  {
+   "path": "/testimonials/winton-emulates-apple-selecting-dealer-management-system",
+   "title": "Enhancing Dealership Operations: Winton Auto Group's Success with Tekion",
+   "section": "Testimonials",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/testimonials/*"
+  },
+  {
+   "path": "/blog/5-cybersecurity-questions-every-dealer-must-ask-their-ai-provider",
+   "title": "5 Cybersecurity Questions Every Dealer Must Ask Their AI Provider",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "medium",
+   "basis": "rendered",
+   "boxes": 7,
+   "rounded": 6,
+   "sharp": 1,
+   "outlined": 0,
+   "radii": "24x4 0x1 12x1 32x1",
+   "template": "/blog/*"
+  },
+  {
+   "path": "/testimonials/walt-massey-streamlines-tekion-dealer-management-system",
+   "title": "Walt Massey Automotive Group's Enhances Operational Oversight and Streamlines Experiences",
+   "section": "Testimonials",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/testimonials/*"
+  },
+  {
+   "path": "/refer/form",
+   "title": "",
+   "section": "Get started",
+   "version": "1.0",
+   "confidence": "high",
+   "basis": "rendered",
+   "boxes": 3,
+   "rounded": 3,
+   "sharp": 0,
+   "outlined": 0,
+   "radii": "24x3",
+   "note": "Redirects to tekion.ai/refer/form, the legacy WDS 1.0 site (separate build, Inter font, no WDS components)",
+   "offsite": "https://tekion.ai/refer/form"
+  },
+  {
+   "path": "/blog/a-day-in-the-service-lane-with-t1",
+   "title": "A Day in the Service Lane with T1",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/blog/*"
+  },
+  {
+   "path": "/blog/a-new-era-of-dealer-controlled-tech-automotive-partner-cloud-2-grows-40x-since-launch",
+   "title": "A New Era of Dealer-Controlled Tech: Automotive Partner Cloud 2.0 Grows 40x Since Launch",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/blog/*"
+  },
+  {
+   "path": "/blog/a-new-era-in-automotive-fixed-operations-tekion-and-sunbit",
+   "title": "A New Era in Automotive Fixed Operations: The Synergy of Tekion and Sunbit",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/blog/*"
+  },
+  {
+   "path": "/blog/a-year-of-momentum-tekion-2025-awards-and-recognitions",
+   "title": "A Year of Momentum: Tekion’s 2025 Awards and Recognitions",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/blog/*"
+  },
+  {
+   "path": "/blog/ai-ml-possibilities-that-are-endless",
+   "title": "AI/ML: Possibilities that are truly endless",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/blog/*"
+  },
+  {
+   "path": "/blog/automotive-news-helps-spread-tekions-recent-launches",
+   "title": "Automotive News on Tekion's Automotive Retail solutions",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/blog/*"
+  },
+  {
+   "path": "/blog/autosuccess-executive-spotlight-with-tekions-guru-sankararaman",
+   "title": "AutoSuccess Executive Spotlight with Tekion's Guru Sankararaman",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/blog/*"
+  },
+  {
+   "path": "/blog/automotive-partner-cloud-enhancing-collaboration-in-auto-retail",
+   "title": "Automotive Partner Cloud: enhancing collaboration in auto retail",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/blog/*"
+  },
+  {
+   "path": "/blog/behind-the-playbook-what-a-ford-dealers-f-i-turnaround-taught-us-about-sales-concierge",
+   "title": "Behind the Playbook: What a Ford Dealer's F&I Turnaround Taught Us About Sales Concierge",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/blog/*"
+  },
+  {
+   "path": "/blog/ai-agents-vs-ai-add-ons-why-dealerships-are-rethinking-point-solutions",
+   "title": "AI Agents vs. AI Add-Ons: Why Dealerships Are Rethinking Point Solutions",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/blog/*"
+  },
+  {
+   "path": "/blog/blog-post-digital-service-experience",
+   "title": "Tech Bringing Connected Digital Experience To Automotive",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/blog/*"
+  },
+  {
+   "path": "/blog/blog-post-advent-leads--150m",
+   "title": "Advent $150M Series C in Tekion at $1B+ valuation",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/blog/*"
+  },
+  {
+   "path": "/blog/blog-post-disruptv-podcast",
+   "title": "DisrupTV Features Jay Vijayan, CEO of Tekion",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/blog/*"
+  },
+  {
+   "path": "/blog/blog-post-automotive-retail-cloud",
+   "title": "Tekion Launches The First Cloud-Native Automotive Retail Platform",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/blog/*"
+  },
+  {
+   "path": "/blog/asbury-sees-productivity-gains-with-tekion-dms-pilot",
+   "title": "Asbury Sees Productivity Gains with Tekion DMS Pilot",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/blog/*"
+  },
+  {
+   "path": "/blog/blog-post-tekion-as-integrated-technology-provider-by-fca",
+   "title": "Tekion Named as Integrated Technology Provider by FCA",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/blog/*"
+  },
+  {
+   "path": "/blog/bsc-supply-joins-the-tekion-strategic-partner-program-to-streamline-dealership-supply-management-and-print-services",
+   "title": "BSC Supply Joins the Tekion Strategic Partner Program to Streamline Dealership Supply Mana",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/blog/*"
+  },
+  {
+   "path": "/blog/callrevu-joins-tekions-strategic-partner-program-to-enhance-dealership-communication-experiences",
+   "title": "CallRevu Joins Tekion’s Strategic Partner Program",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/blog/*"
+  },
+  {
+   "path": "/blog/blog-post-zero-contact-digital-sales-and-services",
+   "title": "Tekion Launches Remote Sales and Service",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/blog/*"
+  },
+  {
+   "path": "/blog/capital-gmc-buicks-success-story-highlighted-in-jay-vijayans-nada-keynote",
+   "title": "Dealership Success Story in Jay Vijayan’s NADA Keynote",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/blog/*"
+  },
+  {
+   "path": "/blog/blog-post-bmwiventures",
+   "title": "Taking Automotive Retail and customer experience to new heights",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/blog/*"
+  },
+  {
+   "path": "/blog/connected-scheduling-the-competitive-edge-most-dealerships-miss",
+   "title": "Connected Scheduling: The Competitive Edge Most Dealerships Miss",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/blog/*"
+  },
+  {
+   "path": "/blog/doug-eroh-and-david-spisak-discuss-efficiency-and-consumer-satisfaction",
+   "title": "Doug Eroh and David Spisak talk consumer satisfaction",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/blog/*"
+  },
+  {
+   "path": "/blog/dont-let-your-dealership-become-a-data-leak-why-personal-ai-tools-put-your-customers-at-risk",
+   "title": "Don’t Let Your Dealership Become a Data Leak: Why Personal AI Tools Put Your Customers at",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/blog/*"
+  },
+  {
+   "path": "/blog/contactless-service-here-to-stay-revolution",
+   "title": "Contactless Service: The Here-to-Stay Revolution",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/blog/*"
+  },
+  {
+   "path": "/blog/cloud-and-ai-native-platform-vs-legacy-dms-the-performance-metrics-dealers-need-to-see",
+   "title": "Cloud and AI-Native Platform vs. Legacy DMS: The Performance Metrics Dealers Need to See",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/blog/*"
+  },
+  {
+   "path": "/blog/blog-post-smarter-technology",
+   "title": "Smarter technology to run your dealership operations",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/blog/*"
+  },
+  {
+   "path": "/blog/field-of-dreams-strategy",
+   "title": "The Field of Dreams Strategy",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/blog/*"
+  },
+  {
+   "path": "/blog/from-compliance-to-competitive-edge-why-responsible-ai-matters-to-your-dealership",
+   "title": "From Compliance to Competitive Edge: Why Responsible AI Matters to Your Dealership",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/blog/*"
+  },
+  {
+   "path": "/blog/goto-joins-the-tekion-automotive-partner-cloud-program-to-provide-seamless-communications-for-automotive-retailers",
+   "title": "GoTo Joins the Tekion Automotive Partner Cloud Program",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/blog/*"
+  },
+  {
+   "path": "/blog/ai-vehicle-inspection-software-for-dealerships-the-complete-buyers-guide",
+   "title": "AI Vehicle Inspection Software for Dealerships: The Complete Buyer’s Guide",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/blog/*"
+  },
+  {
+   "path": "/blog/helping-our-dealer-partners-check-the-glba-boxes",
+   "title": "Helping our Dealer Partners check the GLBA boxes",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/blog/*"
+  },
+  {
+   "path": "/blog/hartwell-selects-tekions-ai-powered-automotive-retail-cloud-to-transform-its-uk-dealerships",
+   "title": "Hartwell Selects Tekion’s AI-Powered Automotive Retail Cloud to Transform Its UK Dealershi",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/blog/*"
+  },
+  {
+   "path": "/blog/how-ai-transforms-dealership-service-customer-satisfaction-index-csi",
+   "title": "How AI Transforms Dealership Service Customer Satisfaction Index (CSI)",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/blog/*"
+  },
+  {
+   "path": "/blog/driving-change-consumer-behavior-analysis",
+   "title": "Driving Change vs Adapting to Change",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/blog/*"
+  },
+  {
+   "path": "/blog/how-autobahn-dealership-group-streamlined-invoice-processing-with-accounts-payable-ai",
+   "title": "How Autobahn Dealership Group Streamlined Invoice Processing with Accounts Payable AI",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/blog/*"
+  },
+  {
+   "path": "/blog/how-asbury-automotive-proves-the-roi-of-a-unified-platform",
+   "title": "How Asbury Automotive Proves the ROI of a Unified Platform",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/blog/*"
+  },
+  {
+   "path": "/blog/how-marine-chevrolet-boosted-market-share-and-why-crm-was-part-of-the-equation",
+   "title": "How Marine Chevrolet Boosted Market Share—and Why CRM Was Part of the Equation",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/blog/*"
+  },
+  {
+   "path": "/blog/jay-vijayan-introducestekion-ai-copilot-for-service-live-at-nada-2025",
+   "title": "Introducing Tekion AI Copilot for Service",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/blog/*"
+  },
+  {
+   "path": "/blog/how-service-advisor-ai-improved-efficiency-and-drove-revenue-for-ken-garff-automotive-group",
+   "title": "How Service AI Improved Efficiency and Drove Revenue for Ken Garff Automotive Group",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/blog/*"
+  },
+  {
+   "path": "/blog/how-jack-burford-chevrolet-simplified-warranty-audits-with-tekion",
+   "title": "How Jack Burford Chevrolet Simplified Warranty Audits with Tekion",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/blog/*"
+  },
+  {
+   "path": "/blog/iso-iec-42001-explained-and-how-tekion-is-leading-responsible-ai",
+   "title": "ISO/IEC 42001 Explained–And How Tekion is Leading Responsible AI",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/blog/*"
+  },
+  {
+   "path": "/blog/jay-vijayan-on-bloombergs-the-tape-podcast",
+   "title": "Jay Vijayan on Bloomberg's The Tape Podcast",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/blog/*"
+  },
+  {
+   "path": "/blog/nada-2026-recap-momentum-community-and-the-ai-native-future",
+   "title": "NADA 2026 Recap: Momentum, Community, and the AI-Native Future",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/blog/*"
+  },
+  {
+   "path": "/blog/nada-2024-wrap-up",
+   "title": "NADA 2024 Wrap-Up",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/blog/*"
+  },
+  {
+   "path": "/blog/nada-2023-its-a-wrap",
+   "title": "NADA 2023: It’s a Wrap!",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/blog/*"
+  },
+  {
+   "path": "/blog/nada-2025-wrap-up",
+   "title": "NADA 2025 Wrap-Up",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/blog/*"
+  },
+  {
+   "path": "/blog/new-standard-agentic-ai-automotive-retail-nada-2026",
+   "title": "Tekion, the AI-Native Platform, Sets a New Standard for Agentic AI in Automotive Retail at",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/blog/*"
+  },
+  {
+   "path": "/blog/nada-2026-preview-where-ai--trust--and-real-results-come-together",
+   "title": "NADA 2026 Preview: Where AI, Trust, and Real Results Come Together",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/blog/*"
+  },
+  {
+   "path": "/blog/news-tekion-approved-tmna-dms",
+   "title": "Tekion approved for TMNA Toyota DMS integration program",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/blog/*"
+  },
+  {
+   "path": "/blog/is-your-service-business-ready-for-the-ev-impact",
+   "title": "Is your service business ready for the EV impact?",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/blog/*"
+  },
+  {
+   "path": "/blog/news-tekion-seriesd-funding",
+   "title": "Auto Industry and Investors Boosts Tekion Value to $3.5B",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/blog/*"
+  },
+  {
+   "path": "/blog/how-t1-pro-helps-sales-teams-sell-smarter----not-just-faster",
+   "title": "How T1 Pro Helps Sales Teams Sell Smarter—Not Just Faster",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/blog/*"
+  },
+  {
+   "path": "/blog/paperless-workflows-fuel-car-dealership-digital-transformation",
+   "title": "Paperless Excellence in Action",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/blog/*"
+  },
+  {
+   "path": "/blog/repay-joins-the-tekion-strategic-partner-program-to-streamline-vendor-payments-for-automotive-dealers",
+   "title": "REPAY Joins the Tekion Strategic Partner Program to Streamline Vendor Payments for Automot",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/blog/*"
+  },
+  {
+   "path": "/blog/preparing-for-cars-act-and-ftc-pricing-compliance-what-dealers-need-to-know",
+   "title": "Preparing for CARS Act and FTC Pricing Compliance: What Dealers Need to Know",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/blog/*"
+  },
+  {
+   "path": "/blog/ken-garff-auto-group-selects-tekion-to-create-the-best-customer-experiences",
+   "title": "Ken Garff Selects Tekion to Elevate Customer Experiences",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/blog/*"
+  },
+  {
+   "path": "/blog/sharebox-joins-the-tekion-strategic-partner-program-to-streamline-secure-key-management-for-dealerships",
+   "title": "Sharebox Joins the Tekion Strategic Partner Program",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/blog/*"
+  },
+  {
+   "path": "/blog/snap-on-joins-tekion-strategic-partner-program",
+   "title": "Snap-on Joins the Tekion Strategic Partner Program to Streamline Parts Lookup and Ordering",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/blog/*"
+  },
+  {
+   "path": "/blog/securing-ai-at-scale-why-cloud-native-trust-not-just-code-is-the-strongest-defense",
+   "title": "Securing AI at Scale: Why Cloud-Native Trust, Not Just Code, is the Strongest Defense",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/blog/*"
+  },
+  {
+   "path": "/blog/tech-challenges-preventing-change",
+   "title": "Tech Challenges Preventing Change?",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/blog/*"
+  },
+  {
+   "path": "/blog/original-equipment-manufacturer-digital-retail-success",
+   "title": "The 5 Pillars of Original Equipment Manufacturer (OEM) Digital Retailing Success",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/blog/*"
+  },
+  {
+   "path": "/blog/setting-a-new-dms-standard-tekions-groundbreaking-iso-certifications",
+   "title": "Tekion’s groundbreaking ISO certifications",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/blog/*"
+  },
+  {
+   "path": "/blog/seamless-experiences-that-transform-the-consumer-journey",
+   "title": "Seamless experiences that transform the consumer journey",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/blog/*"
+  },
+  {
+   "path": "/blog/tekion-acquires-five64-interstate-and-state-vehicle-registration-solutions-provider",
+   "title": "Tekion Acquires Five64, Interstate and State Vehicle Registration Solutions Provider",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/blog/*"
+  },
+  {
+   "path": "/blog/smarter-service-how-tekion-ai-agents-are-changing-the-game",
+   "title": "Smarter Service Starts Here: How AI Agents Are Changing the Game",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/blog/*"
+  },
+  {
+   "path": "/blog/tekion-announces-toyota-smartpath-monogram-desking-integration",
+   "title": "Tekion Announces Toyota SmartPath/MONOGRAM Desking Integration",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/blog/*"
+  },
+  {
+   "path": "/blog/tekion-appoints-new-chief-financial-officer-and-chief-revenue-officer",
+   "title": "Tekion Appoints New CFO and CRO",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/blog/*"
+  },
+  {
+   "path": "/blog/tekion-appoints-binu-mathew-chief-technology-officer",
+   "title": "Tekion Appoints Binu Mathew as Chief Technology Officer",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/blog/*"
+  },
+  {
+   "path": "/blog/tekion-and-sunbit-partner-to-offer-access-to-flexible-payment-options",
+   "title": "Tekion and Sunbit partner to address payment options",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/blog/*"
+  },
+  {
+   "path": "/blog/tekion-certified-as-volkswagen-online-service-scheduling-oss-provider",
+   "title": "Tekion Certified as Volkswagen Online Service Scheduling (OSS) Provider",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/blog/*"
+  },
+  {
+   "path": "/blog/tekion-ai-agent-for-service-named-personalized-ai-agent-solution-of-the-year-in-ai-breakthrough-awards-program",
+   "title": "Tekion AI Agent For Service Named “Personalized AI Agent Solution of the Year” in 8th Annu",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/blog/*"
+  },
+  {
+   "path": "/blog/tekion-and-polly-partner-to-enhance-consumer-car-buying-experience",
+   "title": "Tekion and Polly partner to enhance consumer car buying experience",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/blog/*"
+  },
+  {
+   "path": "/blog/tekion-founder--ceo-jay-vijayan-talks-ai-security-and-dealer-innovation-on-automotive-news-daily-drive-podcast",
+   "title": "Tekion Founder & CEO, Jay Vijayan, Talks AI Security and Dealer Innovation on Automotive N",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/blog/*"
+  },
+  {
+   "path": "/blog/tekion-founder-ceo-jay-vijayan-keynote-address-nada-2024",
+   "title": "Tekion's Founder & CEO, Jay Vijayan, delivers keynote address at NADA 2024",
+   "section": "Learning",
+   "version": "Mixed",
+   "confidence": "low",
+   "basis": "rendered",
+   "boxes": 2,
+   "rounded": 1,
+   "sharp": 1,
+   "outlined": 0,
+   "radii": "0x1 12x1",
+   "template": "/blog/*"
+  },
+  {
+   "path": "/blog/tekion-earns-great-place-to-work-certification",
+   "title": "Tekion Earns Great Place To Work® Certification",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/blog/*"
+  },
+  {
+   "path": "/blog/tekion-corpay-partner-to-enhance-vendor-payment-processes-for-auto-dealers",
+   "title": "Corpay Joins the Tekion Strategic Partner Program",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/blog/*"
+  },
+  {
+   "path": "/blog/tekion-hires-a-new-leader-for-customer-support-and-makes-big-investments-showcasing-its-commitment-to-dealer-success",
+   "title": "Tekion hires support leader and invests big in dealer success",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/blog/*"
+  },
+  {
+   "path": "/blog/tekion-dealer-partner-goes-paperless-in-their-service-department",
+   "title": "Tekion Dealer Partner Goes Paperless in Their Service Department",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/blog/*"
+  },
+  {
+   "path": "/blog/tekion-files-lawsuit-against-cdk-globals-anticompetitive-practices",
+   "title": "Tekion Files Lawsuit Against CDK Global's Anticompetitive Practices",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/blog/*"
+  },
+  {
+   "path": "/blog/tekion-expands-cloud-hosting-options-with-microsoft-azure",
+   "title": "Tekion Expands Cloud Hosting Options with Microsoft Azure",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/blog/*"
+  },
+  {
+   "path": "/blog/tekion-honored-by-goldman-sachs-second-consecutive-year",
+   "title": "Tekion honored by Goldman Sachs for second consecutitve year",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/blog/*"
+  },
+  {
+   "path": "/blog/tekion-in-the-spotlight-following-triumphant-week-at-nada-expo",
+   "title": "Tekion in the spotlight following triumphant week at NADA Expo",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/blog/*"
+  },
+  {
+   "path": "/blog/tekion-is-named-to-the-forbes-cloud-100",
+   "title": "Tekion is Named to the Forbes Cloud 100",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/blog/*"
+  },
+  {
+   "path": "/blog/tekion-expands-oem-dms-certifications-in-canada-announcing-partnership-with-kia",
+   "title": "Tekion Expands OEM DMS Certifications in Canada, Announcing Partnership with Kia",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/blog/*"
+  },
+  {
+   "path": "/blog/tekion-honored-by-goldman-sachs-for-fourth-consecutive-year",
+   "title": "Tekion Honored by Goldman Sachs for Fourth Consecutive Year",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/blog/*"
+  },
+  {
+   "path": "/blog/tekion-launches-automotive-enterprise-cloud",
+   "title": "Tekion Launches Automotive Enterprise Cloud",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/blog/*"
+  },
+  {
+   "path": "/blog/tekion-launches-ai-agents-on-its-platform-boosting-business-value-for-automotive-retail",
+   "title": "Tekion Launches AI Agents on Its Platform, Boosting Business Value for Automotive Retail",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/blog/*"
+  },
+  {
+   "path": "/blog/tekion-launches-crm-ai-powered-sales-performance-management",
+   "title": "Tekion Launches Game-Changing AI-Powered CRM",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/blog/*"
+  },
+  {
+   "path": "/blog/tekion-honored-by-goldman-sachs-for-entrepreneurship",
+   "title": "Tekion Honored by Goldman Sachs for Entrepreneurship",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/blog/*"
+  },
+  {
+   "path": "/blog/tekion-looks-to-build-a-better-mousetrap",
+   "title": "Tekion looks to build a better mousetrap",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/blog/*"
+  },
+  {
+   "path": "/blog/tekion-launches-its-trust-portal",
+   "title": "Tekion Launches its Trust Portal",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/blog/*"
+  },
+  {
+   "path": "/blog/tekion-named-as-an-approved-toyota-smartpath-monogram-crm-provider",
+   "title": "Tekion Named as an Approved Toyota SmartPath/MONOGRAM CRM Provider,  Expanding Dealer Opti",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/blog/*"
+  },
+  {
+   "path": "/blog/tekion-honored-by-goldman-sachs-for-third-consecutive-year",
+   "title": "Tekion Honored by Goldman Sachs for Third Consecutive Year",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/blog/*"
+  },
+  {
+   "path": "/blog/tekion-ranked--fastest-growing-company-in-north-america-on-the-2025-deloitte-technology-fast-500",
+   "title": "Tekion Ranked One of the Fastest-Growing Companies in North America on the 2025 Deloitte T",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/blog/*"
+  },
+  {
+   "path": "/blog/tekion-pay-buy-now-pay-later-turning-flexible-payments-into-measurable-revenue",
+   "title": "Tekion Pay + Buy Now Pay Later: Turning Flexible Payments into Measurable Revenue",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/blog/*"
+  },
+  {
+   "path": "/blog/tekion-one-2026-recap-three-days-that-changed-the-conversation-in-automotive-retail",
+   "title": "Tekion One 2026 Recap: Three Days That Changed the Conversation in Automotive Retail",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/blog/*"
+  },
+  {
+   "path": "/blog/tekion-secures--200-million-in-growth-capital-from-dragoneer-investment-group",
+   "title": "Tekion Secures $200M from Dragoneer Investment Group",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/blog/*"
+  },
+  {
+   "path": "/blog/tekion-named-to-forbes-americas-best-startup-employers-2026",
+   "title": "Tekion Named to Forbes America’s Best Startup Employers 2026",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/blog/*"
+  },
+  {
+   "path": "/blog/tekion-proud-to-partner-with-acura",
+   "title": "Tekion proud to partner with Acura",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/blog/*"
+  },
+  {
+   "path": "/blog/tekion-selected-by-asbury-automotive-group",
+   "title": "Tekion Selected by Asbury Automotive Group",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/blog/*"
+  },
+  {
+   "path": "/blog/tekion-spp-integrate-to-provide-interest-free-payment-plans",
+   "title": "Tekion and SPP partner for interest-free F&I payment plans",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/blog/*"
+  },
+  {
+   "path": "/blog/tekion-unveils-new-ai-agents-and-t1-pro-its-ai-interface-and-agent-orchestrator",
+   "title": "Tekion Unveils New AI Agents and T1 Pro, Its AI Interface and Agent Orchestrator",
+   "section": "Learning",
+   "version": "Mixed",
+   "confidence": "low",
+   "basis": "rendered",
+   "boxes": 2,
+   "rounded": 1,
+   "sharp": 1,
+   "outlined": 0,
+   "radii": "0x1 32x1",
+   "template": "/blog/*"
+  },
+  {
+   "path": "/blog/tekion-named-to-fast-companys-2025-best-workplaces-for-innovators",
+   "title": "Tekion Named to Fast Company’s 2025 Best Workplaces for Innovators",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/blog/*"
+  },
+  {
+   "path": "/blog/ten-principles-for-production-ai-systems",
+   "title": "Ten Principles for Production AI Systems",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/blog/*"
+  },
+  {
+   "path": "/blog/the-9-ways-agentic-ai-systems-fail",
+   "title": "The 9 Ways Agentic AI Systems Fail",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/blog/*"
+  },
+  {
+   "path": "/blog/the-ai-native-dealership-why-automotive-retail-now-runs-on-agents",
+   "title": "The AI-Native Dealership: Why Automotive Retail Now Runs on Agents",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/blog/*"
+  },
+  {
+   "path": "/blog/the-complete-guide-to-ai-voice-agents-for-dealership-service-departments",
+   "title": "The Complete Guide to AI Voice Agents for Dealership Service Departments",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/blog/*"
+  },
+  {
+   "path": "/blog/tekion-unveils-enhanced-ai-engine",
+   "title": "Introducing Tekion AI, the company's advanced AI engine",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/blog/*"
+  },
+  {
+   "path": "/blog/tekions-automotive-retail-cloud-now-a-strategic-dms-partner-with-hyundai-auto-canada",
+   "title": "Tekion is now a DMS partner with Hyundai Auto Canada",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/blog/*"
+  },
+  {
+   "path": "/blog/the-david-spisak-show-welcomes-andy-wright-of-vinart-dealerships",
+   "title": "The David Spisak Show welcomes Andy Wright of Vinart Dealerships",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/blog/*"
+  },
+  {
+   "path": "/blog/the-dealers-guide-to-choosing-a-dms-in-2026",
+   "title": "The Dealer's Guide to Choosing a DMS in 2026",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/blog/*"
+  },
+  {
+   "path": "/blog/the-fight-for-fair-competition",
+   "title": "The Fight for Fair Competition",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/blog/*"
+  },
+  {
+   "path": "/blog/the-connected-service-experience-why-your-dealership-needs-all-three-channels",
+   "title": "The Connected Service Experience: Why Your Dealership Needs All Three Channels",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/blog/*"
+  },
+  {
+   "path": "/blog/the-future-of-automotive-retail-creating-a-win-win-ecosystem",
+   "title": "The Future of Automotive Retail: Creating a Win-Win Ecosystem",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/blog/*"
+  },
+  {
+   "path": "/blog/the-power-of-tekion-in-fixed-ops-automotive-innovation",
+   "title": "The power of Tekion in Fixed Ops for consumers, dealers and OEMs",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/blog/*"
+  },
+  {
+   "path": "/blog/timeline-to-success-what-dealerships-should-expect-when-moving-to-a-modern-dms-2",
+   "title": "Implementation Timeline to Success: What Dealerships Should Expect When Moving to a Modern",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/blog/*"
+  },
+  {
+   "path": "/blog/the-tekion-lyft-partnership-advantage",
+   "title": "The Tekion/Lyft Partnership Advantage",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/blog/*"
+  },
+  {
+   "path": "/blog/tips-for-building-a-cybersecurity-aware-workforce-in-your-dealership",
+   "title": "Building a Cybersecurity-Aware Workforce",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/blog/*"
+  },
+  {
+   "path": "/blog/unlocking-the-power-of-live-user-feedback-in-automotive-retail",
+   "title": "Unlocking the Power of Live User Feedback",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/blog/*"
+  },
+  {
+   "path": "/blog/what-is-accounts-payable-ai-the-invoice-automation-workflow-your-dealership-needs",
+   "title": "What is Accounts Payable AI? The Invoice Automation Workflow Your Dealership Needs",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/blog/*"
+  },
+  {
+   "path": "/blog/what-is-a-crm-in-automotive-retail",
+   "title": "What Is a CRM in Automotive Retail? And Why Every Dealership Needs One.",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/blog/*"
+  },
+  {
+   "path": "/blog/uveye-and-tekion-partner-to-enhance-the-dealership-customer-service-experience",
+   "title": "UVeye and Tekion partner to enhance dealership customer service",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/blog/*"
+  },
+  {
+   "path": "/blog/the-ai-tax-why-ai-native-companies-are-overpaying-for-intelligence-and-how-to-fix-it",
+   "title": "The AI Tax: Why AI-Native Companies Are Overpaying for Intelligence—and How to Fix It",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/blog/*"
+  },
+  {
+   "path": "/blog/we-love-our-automotive-retail-partners",
+   "title": "We love our Dealer Partners - turns out, they love us too",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/blog/*"
+  },
+  {
+   "path": "/blog/what-is-an-ai-native-dms-inside-tekions-approach-to-dealership-ai",
+   "title": "What Is an AI-Native DMS? Inside Tekion’s Approach to Dealership AI",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/blog/*"
+  },
+  {
+   "path": "/blog/top-10-customer-experience-trends-in-automotive-industry-fixed-ops",
+   "title": "Turn the top 10 Fixed Ops fumbles into 10 ways to win with Tekion",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/blog/*"
+  },
+  {
+   "path": "/blog/what-tekions-team-said-about-ai-responsibility-at-asotu-con",
+   "title": "What Tekion's Team Said About AI Responsibility at ASOTU CON",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/blog/*"
+  },
+  {
+   "path": "/blog/unleashing-human-potential-and-tekions-approach-to-efficiency",
+   "title": "Unleashing human potential and Tekion’s approach to efficiency",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/blog/*"
+  },
+  {
+   "path": "/blog/what-is-an-ai-native-dms-for-automotive-retail",
+   "title": "What Is an AI-Native DMS for Automotive Retail?",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/blog/*"
+  },
+  {
+   "path": "/resources/8-wastes-auto-retail-ebook",
+   "title": "Streamline for Success: Eliminating the 8 Wastes in Automotive Retail",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "medium",
+   "basis": "rendered",
+   "boxes": 6,
+   "rounded": 5,
+   "sharp": 1,
+   "outlined": 0,
+   "radii": "24x4 0x1 32x1",
+   "template": "/resources/*"
+  },
+  {
+   "path": "/blog/why-attend-tekion-one-2026-what-to-expect-at-automotives-premier-data-ai-conference",
+   "title": "Why Attend Tekion One 2026: What to Expect at Automotive’s Premier Data & AI Conference",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/blog/*"
+  },
+  {
+   "path": "/resources/a-foundation-of-trust-tekions-approach-to-cloud-data-and-ai-protection",
+   "title": "A Foundation of Trust: Tekion’s Approach to Cloud, Data, and AI Protection",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "medium",
+   "basis": "rendered",
+   "boxes": 6,
+   "rounded": 5,
+   "sharp": 1,
+   "outlined": 0,
+   "radii": "24x4 0x1 32x1",
+   "template": "/resources/*"
+  },
+  {
+   "path": "/blog/what-is-agentic-ai-for-dealerships-a-brief-guide",
+   "title": "What is Agentic AI for Dealerships? A Brief Guide",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/blog/*"
+  },
+  {
+   "path": "/blog/what-is-tekion-t1-the-ai-native-interface-built-into-every-dealership-workflow",
+   "title": "What Is Tekion T1? The AI-Native Interface Built Into Every Dealership Workflow",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/blog/*"
+  },
+  {
+   "path": "/blog/whats-new-with-tekion-recent-platform-updates-designed-to-help-dealers-work-smarter",
+   "title": "What's New with Tekion: Recent Platform Updates Designed to Help Dealers Work Smarter",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/blog/*"
+  },
+  {
+   "path": "/blog/whats-new-with-tekion--recent-platform-updates",
+   "title": "What's New with Tekion: Recent Platform Updates",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/blog/*"
+  },
+  {
+   "path": "/resources/accounts-payable-ai-from-invoice-to-approval--without-the-manual-work",
+   "title": "Accounts Payable AI: From Invoice to Approval—Without the Manual Work",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/resources/*"
+  },
+  {
+   "path": "/blog/whats-new-with-tekion-recent-platform-updates",
+   "title": "What's New with Tekion: Recent Platform Updates",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/blog/*"
+  },
+  {
+   "path": "/resources/apc-video",
+   "title": "Automotive Partner Cloud (APC) - Your Streamlined Partner Experience",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/resources/*"
+  },
+  {
+   "path": "/resources/amg-case-study",
+   "title": "Fixed Ops Director brings vehicle service into the digital age",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/resources/*"
+  },
+  {
+   "path": "/blog/what-is-a-dealership-management-system--dms--a-complete-guide",
+   "title": "What Is a Dealership Management System (DMS)? A Complete Guide.",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/blog/*"
+  },
+  {
+   "path": "/resources/automotive-third-party-risk-assessment-questionnaire",
+   "title": "Automotive Vendor Risk Assessment Questionnaire",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/resources/*"
+  },
+  {
+   "path": "/resources/cpra-compliance",
+   "title": "CPRA compliance and how Tekion is helping",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/resources/*"
+  },
+  {
+   "path": "/resources/holistic-data-security-certifications-factsheet",
+   "title": "Tekion’s Holistic Approach and Commitment to Data Security",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/resources/*"
+  },
+  {
+   "path": "/resources/guidance-for-dealerships-on-ftc-safegaurds-glba",
+   "title": "Dealership Guidance: Safeguards Rule (FTC) and Privacy Rule (GLBA)",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/resources/*"
+  },
+  {
+   "path": "/resources/ai-ml-video",
+   "title": "AI & ML: Possibilities that are truly endless",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/resources/*"
+  },
+  {
+   "path": "/resources/iso-42001-tekion-responsible-ai",
+   "title": "Responsible AI, Built Into the Platform That Runs Automotive Retail",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/resources/*"
+  },
+  {
+   "path": "/resources/germain-tcp-testimonial",
+   "title": "Germain Motor Company: Tekion Certified Professional Testimonial",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/resources/*"
+  },
+  {
+   "path": "/resources/mercedes-benz-of-plano-drives-revenue-gains-with-service-advisor-ai",
+   "title": "Mercedes-Benz of Plano Drives Revenue Gains with Service Advisor AI",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/resources/*"
+  },
+  {
+   "path": "/resources/spisak-doug-eroh-podcast",
+   "title": "Efficiency and Consumer Satisfaction with David Spisak and Doug Eroh",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/resources/*"
+  },
+  {
+   "path": "/resources/scheduler-ai-video",
+   "title": "Scheduler AI: 24/7 Service Scheduling Across Every Channel",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/resources/*"
+  },
+  {
+   "path": "/resources/glba-checklist",
+   "title": "Helping our Dealer Partners check the GLBA boxes",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/resources/*"
+  },
+  {
+   "path": "/resources/spisak-andy-wright-podcast",
+   "title": "The David Spisak Show welcomes Andy Wright of Vinart Dealerships",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/resources/*"
+  },
+  {
+   "path": "/resources/salesperson-ai-your-crm-now-with-a-tireless-wingman",
+   "title": "Salesperson AI: Your CRM, Now With a Tireless Wingman",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/resources/*"
+  },
+  {
+   "path": "/resources/mastering-crm-strategies-ebook",
+   "title": "Mastering CRM Strategies for Optimized Dealership Performance",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/resources/*"
+  },
+  {
+   "path": "/resources/lehigh-valley-hyundai-case-study",
+   "title": "Lehigh Valley Hyundai Accelerates Sales Process with Tekion's Automotive Retail Cloud",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/resources/*"
+  },
+  {
+   "path": "/resources/t1-overview",
+   "title": "T1: One AI Interface for Your Entire Dealership",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/resources/*"
+  },
+  {
+   "path": "/resources/t1-pro-tekions-unified-ai-interface-and-agent-orchestration-layer-within-its-ai-native-automotive-retail-cloud-arc-platform",
+   "title": "T1 Pro: Tekion’s unified AI interface and agent orchestration layer within its AI-native A",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/resources/*"
+  },
+  {
+   "path": "/resources/sales-concierge-pro-video",
+   "title": "Sales Concierge Pro: Bringing the human connection to a completely digital experience",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/resources/*"
+  },
+  {
+   "path": "/resources/tekion-ai-agents-service",
+   "title": "Tekion AI Agents: Smarter Workflows, Better Decisions, Seamless Experiences",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/resources/*"
+  },
+  {
+   "path": "/resources/tekion-ai-whitepaper",
+   "title": "Tekion AI and Its Significance in Automotive Retail",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/resources/*"
+  },
+  {
+   "path": "/resources/tekion-pay-dolan-auto-group-case-study",
+   "title": "Transforming Retail Experiences: Dolan Auto Group Redefines Operational Efficiency and Sav",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/resources/*"
+  },
+  {
+   "path": "/resources/tekion-dealership-ai-video",
+   "title": "Tekion AI: Innovating at full speed",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/resources/*"
+  },
+  {
+   "path": "/resources/tekion-certified-professional-testimonial-universal",
+   "title": "Universal Nissan, Hyundai, Genesis: Tekion Certified Professional Testimonial",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/resources/*"
+  },
+  {
+   "path": "/resources/technician-ai-video",
+   "title": "Technician AI: Elevate Every Inspection with Rich Insights",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/resources/*"
+  },
+  {
+   "path": "/events/a-deep-dive-into-tekions-cybersecurity-protocols-and-protections",
+   "title": "A Deep Dive Into Tekion's Cybersecurity Protocols and Protections",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "medium",
+   "basis": "rendered",
+   "boxes": 6,
+   "rounded": 5,
+   "sharp": 1,
+   "outlined": 0,
+   "radii": "24x4 0x1 32x1",
+   "template": "/events/*"
+  },
+  {
+   "path": "/events/2024-nada-show-on-demand",
+   "title": "2024 NADA Show On-Demand",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "medium",
+   "basis": "rendered",
+   "boxes": 6,
+   "rounded": 5,
+   "sharp": 1,
+   "outlined": 0,
+   "radii": "24x4 0x1 32x1",
+   "template": "/events/*"
+  },
+  {
+   "path": "/resources/tcp-jack-carter",
+   "title": "Tekion Certified Professional Program Testimonial",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/resources/*"
+  },
+  {
+   "path": "/resources/walser-lyft-case-study",
+   "title": "Walser Buick GMC Bloomington saves 3 hours a day with Tekion and Lyft",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/resources/*"
+  },
+  {
+   "path": "/resources/tekion-support-video",
+   "title": "Elevating Dealer Success: Tekion’s Proactive, High-Impact Support Model",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/resources/*"
+  },
+  {
+   "path": "/events/automotive-management-live",
+   "title": "Automotive Management Live",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/events/*"
+  },
+  {
+   "path": "/events/cyber-defense-for-dealershipsmodern-solutions-for-modern-threats",
+   "title": "Cyber Defense for Dealerships:\u0003Modern Solutions for Modern Threats",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/events/*"
+  },
+  {
+   "path": "/events/california-new-car-dealers-association-dealer-day",
+   "title": "California New Car Dealers Association Dealer Day",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/events/*"
+  },
+  {
+   "path": "/events/automotive-conference-and-expo-ace",
+   "title": "Automotive Conference and Expo (ACE)",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/events/*"
+  },
+  {
+   "path": "/resources/tekion-pay-video",
+   "title": "Tekion Pay Overview",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/resources/*"
+  },
+  {
+   "path": "/events/capitalize-on-the-long-distance-buying-trend-and-support-out-of-state-buyers-with-tekion-digital-processing",
+   "title": "Capitalize on the long-distance buying trend and support out of state buyers with Tekion D",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/events/*"
+  },
+  {
+   "path": "/events/denver-meet-greet",
+   "title": "Denver Meet & Greet",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/events/*"
+  },
+  {
+   "path": "/events/cmda-summer-membership-meeting-40th-anniversary-celebration",
+   "title": "CMDA Summer Membership Meeting & 40th Anniversary Celebration",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/events/*"
+  },
+  {
+   "path": "/events/cadex-2026",
+   "title": "CADEX 2026",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/events/*"
+  },
+  {
+   "path": "/events/montana-auto-dealers-association-convention",
+   "title": "Montana Auto Dealers Association Convention",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/events/*"
+  },
+  {
+   "path": "/events/gnyada-charity-golf-pickleball-outing",
+   "title": "GNYADA Charity Golf & Pickleball Outing",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/events/*"
+  },
+  {
+   "path": "/events/gada-annual-convention",
+   "title": "GADA Annual Convention",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/events/*"
+  },
+  {
+   "path": "/events/ncada-convention",
+   "title": "NCADA Convention",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/events/*"
+  },
+  {
+   "path": "/events/mada-nextgen-committee-sporting-clay-shoots",
+   "title": "MADA NextGEN Committee Sporting Clay Shoots",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/events/*"
+  },
+  {
+   "path": "/events/northwood-university-auto-show",
+   "title": "Northwood University Auto Show",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/events/*"
+  },
+  {
+   "path": "/events/nada-show-2025",
+   "title": "NADA Show 2025",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/events/*"
+  },
+  {
+   "path": "/events/on-demand-how-marine-chevrolet-boosted-market-share-and-why-crm-was-part-of-the-equation",
+   "title": "On-Demand: How Marine Chevrolet Boosted Market Share — and Why CRM Was Part of the Equatio",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/events/*"
+  },
+  {
+   "path": "/events/nada-show-2026",
+   "title": "NADA Show 2026",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/events/*"
+  },
+  {
+   "path": "/events/paa-fall-conference",
+   "title": "PAA Fall Conference",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/events/*"
+  },
+  {
+   "path": "/events/namad",
+   "title": "NAMAD",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/events/*"
+  },
+  {
+   "path": "/events/ocada-annual-golf-tournament",
+   "title": "OCADA Annual Golf Tournament",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/events/*"
+  },
+  {
+   "path": "/events/on-demand-webinar-why-responsible-ai-matters-to-your-dealership",
+   "title": "On-Demand Webinar: Why Responsible AI Matters to your Dealership",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/events/*"
+  },
+  {
+   "path": "/events/nada-2023-innovation-stage-recordings",
+   "title": "NADA 2023 Innovation Stage Recordings",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/events/*"
+  },
+  {
+   "path": "/events/tekion-ai-solutions-for-a-modern-and-efficient-dealership",
+   "title": "Tekion AI: Solutions for a Modern and Efficient Dealership",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/events/*"
+  },
+  {
+   "path": "/events/southeast-comptrollers-association-meeting",
+   "title": "Southeast Comptrollers' Association Meeting",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/events/*"
+  },
+  {
+   "path": "/events/philadelphia-meet-greet",
+   "title": "Philadelphia Meet & Greet",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/events/*"
+  },
+  {
+   "path": "/events/paperless-excellence-real-world-success-in-digital-dealerships",
+   "title": "Paperless Excellence: Real-World Success in Digital Dealerships",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/events/*"
+  },
+  {
+   "path": "/events/webinar-how-rohrman-auto-group-leverages-technology-to-build-value-and-increase-efficiency-in-their-service-departments",
+   "title": "Webinar: How Rohrman Auto Group leverages technology to build value and increase efficienc",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/events/*"
+  },
+  {
+   "path": "/events/webinar-crm-strategies-for-optimized-performance",
+   "title": "Webinar: CRM Strategies for Optimized Performance",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/events/*"
+  },
+  {
+   "path": "/events/scada-convention",
+   "title": "SCADA Convention",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/events/*"
+  },
+  {
+   "path": "/events/smarter-service-starts-here-how-ai-agents-are-changing-the-game",
+   "title": "Smarter Service Starts Here: How AI Agents Are Changing the Game",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/events/*"
+  },
+  {
+   "path": "/events/tekion-one-2026-on-demand",
+   "title": "Tekion One 2026 On-Demand",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/events/*"
+  },
+  {
+   "path": "/events/vada-convention",
+   "title": "VADA Convention",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/events/*"
+  },
+  {
+   "path": "/events/video-la-auto-show",
+   "title": "Video: LA Auto Show",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/events/*"
+  },
+  {
+   "path": "/events/vincue-unleashed",
+   "title": "VINCUE: UNLEASHED",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/events/*"
+  },
+  {
+   "path": "/events/webinar-tekions-latest-ai-innovations-built-for-real-dealership-workflows",
+   "title": "[On-Demand Webinar] Tekion's Latest AI Innovations: Built for Real Dealership Workflows",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/events/*"
+  },
+  {
+   "path": "/events/webinar-the-power-of-a-connected-dealership",
+   "title": "Webinar: The Power of a Connected Dealership",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/events/*"
+  },
+  {
+   "path": "/events/webinar-tekion-pay-buy-now-pay-later",
+   "title": "On-Demand Webinar: Tekion Pay + Buy Now Pay Later",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/events/*"
+  },
+  {
+   "path": "/events/webinar-top-10-fixed-ops-fumbles",
+   "title": "Webinar: Top 10 Fixed Ops Fumbles",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/events/*"
+  },
+  {
+   "path": "/events/webinar-legal-perspectives-and-tekions-approach-to-cybersecurity",
+   "title": "Webinar: Legal Perspectives and Tekion's Approach to Cybersecurity",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/events/*"
+  },
+  {
+   "path": "/events/webinar-navigating-the-ftc-safeguards-rule",
+   "title": "Webinar: Navigating the FTC Safeguards Rule",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/events/*"
+  },
+  {
+   "path": "/events/webinar-modernizing-the-transactional-experience-for-car-buyers-with-sales-concierge",
+   "title": "Webinar: Modernizing the Transactional Experience for Car Buyers with Sales Concierge",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/events/*"
+  },
+  {
+   "path": "/events/western-canadian-dealer-summit",
+   "title": "Western Canadian Dealer Summit",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/events/*"
+  },
+  {
+   "path": "/news/a-new-dms-can-i-interest-you-in-an-automotive-retail-cloud",
+   "title": "A new DMS? Can I interest you in an AUTOMOTIVE RETAIL CLOUD?",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "medium",
+   "basis": "rendered",
+   "boxes": 3,
+   "rounded": 3,
+   "sharp": 0,
+   "outlined": 0,
+   "radii": "24x2 32x1",
+   "template": "/news/*"
+  },
+  {
+   "path": "/events/webinar-streamlined-accounting-and-elevated-payment-processing-with-tekion-pay",
+   "title": "Webinar: Streamlined Accounting and Elevated Payment Processing with Tekion Pay",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/events/*"
+  },
+  {
+   "path": "/news/acura-tool-that-makes-buying-painless-enters-phase-2",
+   "title": "Acura tool that makes buying ‘painless' enters Phase 2",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "medium",
+   "basis": "rendered",
+   "boxes": 3,
+   "rounded": 3,
+   "sharp": 0,
+   "outlined": 0,
+   "radii": "24x2 32x1",
+   "template": "/news/*"
+  },
+  {
+   "path": "/events/women-in-automotive-conference",
+   "title": "Women In Automotive Conference",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/events/*"
+  },
+  {
+   "path": "/events/wsada-2026-convention",
+   "title": "WSADA 2026 Convention",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/events/*"
+  },
+  {
+   "path": "/news/asbury-automotives-big-dms-switch-hits-the-home-stretch",
+   "title": "Asbury Automotive’s big DMS switch hits the home stretch",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/news/*"
+  },
+  {
+   "path": "/news/automotive-news-2023-all-stars-includes-tekions-jay-vijayan",
+   "title": "Automotive News 2023 All-Stars includes Tekion's Jay Vijayan",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/news/*"
+  },
+  {
+   "path": "/news/asburys-tekion-pilot-could-precede-companywide-switch-by-2026",
+   "title": "Asbury's Tekion pilot could precede companywide switch by 2026",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/news/*"
+  },
+  {
+   "path": "/news/automotive-news-video-tekion-doubles-down-on-generative-ai",
+   "title": "Automotive News Video: Tekion doubles down on generative AI",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/news/*"
+  },
+  {
+   "path": "/news/daily-drive-podcast---tekion-ceo-jay-vijayan-interview-infiniti-stores-combine-with-nissan",
+   "title": "Daily Drive Podcast - Tekion CEO Jay Vijayan interview; Infiniti stores combine with Nissa",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/news/*"
+  },
+  {
+   "path": "/news/asbury-sees-productivity-gains-with-tekion-dms-pilot",
+   "title": "Asbury Sees Productivity Gains with Tekion DMS Pilot",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/news/*"
+  },
+  {
+   "path": "/news/ceo-poises-tekion-as-a-disrupter-to-dms-market",
+   "title": "CEO poises Tekion as a disrupter to DMS market",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/news/*"
+  },
+  {
+   "path": "/news/dealerware-tekion-partnership-saves-time-with-self-service-check-in-automated-repair-order-tracking",
+   "title": "Dealerware, Tekion partnership saves time with self-service check-in, automated repair ord",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/news/*"
+  },
+  {
+   "path": "/news/car-dealership-guy-podcast-with-tekion-founder-ceo-jay-vijayan",
+   "title": "Car Dealership Guy Podcast with Tekion Founder & CEO Jay Vijayan",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/news/*"
+  },
+  {
+   "path": "/news/ceo-jay-vijayan-sits-down-with-the-toronto-star",
+   "title": "CEO Jay Vijayan Sits Down with The Toronto Star",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/news/*"
+  },
+  {
+   "path": "/news/bsc-supply-joins-the-tekion-strategic-partner-program-to-streamline-dealership-supply-management-and-print-services",
+   "title": "BSC Supply Joins the Tekion Strategic Partner Program to Streamline Dealership Supply Mana",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/news/*"
+  },
+  {
+   "path": "/news/dms-provider-tekion-raises-150-million-from-investors",
+   "title": "DMS provider Tekion raises $150 million from investors",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/news/*"
+  },
+  {
+   "path": "/news/dms-disrupted-not-just-2-giants-now",
+   "title": "DMS disrupted? Not just 2 giants now",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/news/*"
+  },
+  {
+   "path": "/news/ex-tesla-cio-jay-vijayan-builds-tekion-to-improve-car-buying-experience",
+   "title": "Ex Tesla CIO Jay Vijayan builds Tekion to improve car buying experience",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/news/*"
+  },
+  {
+   "path": "/news/ex-tesla-cios-auto-retail-startup-turns-unicorn-in-new-funding",
+   "title": "Ex-Tesla CIO’s Auto Retail Startup Turns Unicorn in New Funding",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/news/*"
+  },
+  {
+   "path": "/news/driving-innovation-how-ai-is-transforming-automotive-retail",
+   "title": "Driving Innovation: How AI is Transforming Automotive Retail",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/news/*"
+  },
+  {
+   "path": "/news/funding-alert-ex-tesla-cio-founded-tekion-enters-the-unicorn-club-with-150m-series-c-round",
+   "title": "[Funding alert] Ex-Tesla CIO founded Tekion enters the unicorn club with $150M Series C ro",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/news/*"
+  },
+  {
+   "path": "/news/evolve-or-else-why-transforming-the-customer-experience-should-be-a-top-priority",
+   "title": "Evolve or Else: Why Transforming the Customer Experience Should Be a Top Priority",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/news/*"
+  },
+  {
+   "path": "/news/gm-to-launch-ev-digital-retail-tool-powered-by-tekion",
+   "title": "GM to launch EV digital retail tool powered by Tekion",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/news/*"
+  },
+  {
+   "path": "/news/former-tesla-cio-jay-vijayans-tekion-turns-a-unicorn-with-150-million-funding",
+   "title": "Former Tesla CIO Jay Vijayan's Tekion turns a unicorn with $150 million funding",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/news/*"
+  },
+  {
+   "path": "/news/former-tesla-cios-software-startup-tekion-valued-at-over-1-billion-in-new-fundraise",
+   "title": "Former Tesla CIO’s Software Startup Tekion Valued At Over $1 Billion In New Fundraise",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/news/*"
+  },
+  {
+   "path": "/news/hartwell-selects-tekions-ai-powered-automotive-retail-cloud-to-transform-its-uk-dealerships",
+   "title": "Hartwell Selects Tekion’s AI-Powered Automotive Retail Cloud to Transform Its UK Dealershi",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/news/*"
+  },
+  {
+   "path": "/news/gm-uses-dealer-feedback-to-implement-online-sales-platform",
+   "title": "GM uses dealer feedback to implement online sales platform",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/news/*"
+  },
+  {
+   "path": "/news/how-tekion-others-learned-by-thinking-outside-the-box",
+   "title": "How Tekion, others learned by thinking outside the box",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/news/*"
+  },
+  {
+   "path": "/news/innovative-cloud-native-open-api-platforms-allow-dealerships-to-leverage-tools-best-suited-to-their",
+   "title": "Innovative cloud-native, open API platforms allow dealerships to leverage tools best suite",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/news/*"
+  },
+  {
+   "path": "/news/jay-vijayan-tekion-ceo-a-fortt-knox-conversation",
+   "title": "Jay Vijayan, Tekion CEO: A Fortt Knox Conversation",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/news/*"
+  },
+  {
+   "path": "/news/jon-fortt-talks-to-jay-vijayan-about-200-million-funding-announcement-on-cnbc",
+   "title": "Jon Fortt Talks to Jay Vijayan About $200 Million Funding Announcement on CNBC",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/news/*"
+  },
+  {
+   "path": "/news/jay-vijayan-discusses-installation-backlog-ipo-rumors",
+   "title": "Jay Vijayan discusses installation backlog, IPO rumors",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/news/*"
+  },
+  {
+   "path": "/news/jay-vijayan-on-bloombergs-the-tape-podcast",
+   "title": "Jay Vijayan on Bloomberg's The Tape Podcast",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/news/*"
+  },
+  {
+   "path": "/news/presidio-groups-full-throttle-podcast-with-jay-vijayan",
+   "title": "Presidio Group's Full Throttle Podcast with Jay Vijayan",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/news/*"
+  },
+  {
+   "path": "/news/inchcape-to-roll-out-tekion-dms-across-dealerships",
+   "title": "Inchcape to roll out Tekion DMS across dealerships",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/news/*"
+  },
+  {
+   "path": "/news/ken-garff-auto-group-selects-tekion-to-create-the-best-customer-experiences",
+   "title": "Ken Garff Auto Group Selects Tekion to Create the Best Customer Experiences",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/news/*"
+  },
+  {
+   "path": "/news/integrating-ai-for-efficient-dealership-processes-with-robert-pedro",
+   "title": "Integrating AI for Efficient Dealership Processes with Robert Pedro",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/news/*"
+  },
+  {
+   "path": "/news/natfluence-an-interview-with-jay-vijayan",
+   "title": "Natfluence: An interview with Jay Vijayan",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/news/*"
+  },
+  {
+   "path": "/news/national-franchised-dealers-association-nfda-interview-with-jay-vijayan",
+   "title": "National Franchised Dealers Association (NFDA) Interview with Jay Vijayan",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/news/*"
+  },
+  {
+   "path": "/news/snap-on-joins-the-tekion-strategic-partner-program-to-streamline-parts-lookup-and-ordering-with-epc-integration",
+   "title": "Snap-on Joins the Tekion Strategic Partner Program to Streamline Parts Lookup and Ordering",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/news/*"
+  },
+  {
+   "path": "/news/nasdaq-tradetalks-jill-malandrino-visits-with-tekions-jay-vijayan",
+   "title": "Nasdaq TradeTalks' Jill Malandrino visits with Tekion's Jay Vijayan",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/news/*"
+  },
+  {
+   "path": "/news/saas-unicorn-tekion-eyes-80-growth-in-revenue-this-year",
+   "title": "SAAS Unicorn Tekion eyes 80% growth in revenue this year",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/news/*"
+  },
+  {
+   "path": "/news/tekion-and-polly-partner-to-enhance-consumer-car-buying-experience",
+   "title": "Tekion and Polly partner to enhance consumer car buying experience",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/news/*"
+  },
+  {
+   "path": "/news/repay-joins-the-tekion-strategic-partner-program-to-streamline-vendor-payments-for-automotive-dealers",
+   "title": "REPAY Joins the Tekion Strategic Partner Program to Streamline Vendor Payments for Automot",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/news/*"
+  },
+  {
+   "path": "/news/tekion-ai-agent-for-service-named-personalized-ai-agent-solution-of-the-year-in-8th-annual-ai-breakt",
+   "title": "Tekion AI Agent For Service Named “Personalized AI Agent Solution of the Year” in 8th Annu",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/news/*"
+  },
+  {
+   "path": "/news/tekion-announces-toyota-smartpathmonogram-desking-integration",
+   "title": "Tekion Announces Toyota SmartPath/MONOGRAM Desking Integration",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/news/*"
+  },
+  {
+   "path": "/news/tekion-appoints-new-chief-financial-officer-and-chief-revenue-officer",
+   "title": "Tekion Appoints New Chief Financial Officer and Chief Revenue Officer",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/news/*"
+  },
+  {
+   "path": "/news/tekion-appoints-binu-mathew-as-chief-technology-officer",
+   "title": "Tekion Appoints Binu Mathew as Chief Technology Officer",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/news/*"
+  },
+  {
+   "path": "/news/tekion-ceo-predicts-profitability-by-early-2026",
+   "title": "Tekion CEO predicts profitability by early 2026",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/news/*"
+  },
+  {
+   "path": "/news/tekion-founder-jay-vijayan-discusses-the-companys-latest-partnership-with-gm",
+   "title": "Tekion founder Jay Vijayan discusses the company’s latest partnership with GM",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/news/*"
+  },
+  {
+   "path": "/news/tekion-cdk-lawsuit-over-data-access-amounts-to-bullying",
+   "title": "Tekion: CDK lawsuit over data access amounts to ‘bullying’",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/news/*"
+  },
+  {
+   "path": "/news/tekion-ceo-jay-vijayan-emphasizes-cybersecurity-vigilance-and-customer-trust-amid-industry-cyberatta",
+   "title": "Tekion CEO Jay Vijayan emphasizes cybersecurity vigilance and customer trust amid industry",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/news/*"
+  },
+  {
+   "path": "/news/tekion-certified-as-volkswagen-online-service-scheduling-oss-provider",
+   "title": "Tekion Certified as Volkswagen Online Service Scheduling (OSS) Provider",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/news/*"
+  },
+  {
+   "path": "/news/tekion-files-lawsuit-against-cdk-globals-anticompetitive-practices",
+   "title": "Tekion Files Lawsuit Against CDK Global's Anticompetitive Practices",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/news/*"
+  },
+  {
+   "path": "/news/tekion-launches-game-changing-ai-powered-crm",
+   "title": "Tekion Launches Game-Changing AI-Powered CRM",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/news/*"
+  },
+  {
+   "path": "/news/tekion-launches-ai-agents-on-its-platform-boosting-business-value-for-automotive-retail",
+   "title": "Tekion Launches AI Agents on Its Platform,   Boosting Business Value for Automotive Retail",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/news/*"
+  },
+  {
+   "path": "/news/tekion-is-named-to-the-forbes-cloud-100",
+   "title": "Tekion is Named to the Forbes Cloud 100",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/news/*"
+  },
+  {
+   "path": "/news/tekion-proud-to-partner-with-acura",
+   "title": "Tekion proud to partner with Acura",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/news/*"
+  },
+  {
+   "path": "/news/tekion-looks-to-build-a-better-mousetrap",
+   "title": "Tekion looks to build a better mousetrap",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/news/*"
+  },
+  {
+   "path": "/news/tekion-honored-by-goldman-sachs-for-third-consecutive-year",
+   "title": "Tekion Honored by Goldman Sachs for Third Consecutive Year",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/news/*"
+  },
+  {
+   "path": "/news/tekion-lands-over-4-billion-valuation-in-new-dragoneer-deal",
+   "title": "Tekion Lands Over $4 Billion Valuation in New Dragoneer Deal",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/news/*"
+  },
+  {
+   "path": "/news/tekion-launches-automotive-enterprise-cloud",
+   "title": "Tekion Launches Automotive Enterprise Cloud",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/news/*"
+  },
+  {
+   "path": "/news/tekion-the-ai-native-platform-sets-a-new-standard-for-agentic-ai-in-automotive-retail-at-nada-2026",
+   "title": "Tekion, the AI-Native Platform, Sets a New Standard for Agentic AI in Automotive Retail at",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/news/*"
+  },
+  {
+   "path": "/news/tekion-wins-auto-dealership-technology-of-the-year-from-autotech-breakthrough",
+   "title": "Tekion Wins Auto Dealership Technology of the Year from AutoTech Breakthrough",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/news/*"
+  },
+  {
+   "path": "/news/tekion-secures-200-million-in-growth-capital-from-dragoneer-investment-group",
+   "title": "Tekion Secures $200 Million in Growth Capital from Dragoneer Investment Group",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/news/*"
+  },
+  {
+   "path": "/news/tekion-unveils-enhanced-ai-engine-tekion-ai-with-generative-ai-capabilities-in-its-automotive-retail",
+   "title": "Tekion Unveils Enhanced AI Engine, Tekion AI, with Generative AI Capabilities in its Autom",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/news/*"
+  },
+  {
+   "path": "/news/tekions-automotive-retail-cloud-now-a-strategic-dms-partner-with-hyundai-auto-canada",
+   "title": "Tekion's Automotive Retail Cloud now a strategic DMS partner with Hyundai Auto Canada",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/news/*"
+  },
+  {
+   "path": "/news/tekion-ranked-one-of-the-fastest-growing-companies-in-north-america-on-the-2025-deloitte-technology",
+   "title": "Tekion Ranked One of the Fastest-Growing Companies in North America on the 2025 Deloitte T",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/news/*"
+  },
+  {
+   "path": "/news/tekion-selected-by-asbury-automotive-group",
+   "title": "Tekion Selected by Asbury Automotive Group",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/news/*"
+  },
+  {
+   "path": "/news/tekion-solving-software-complexities-for-dealers",
+   "title": "Tekion: Solving software complexities for dealers",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/news/*"
+  },
+  {
+   "path": "/news/tekions-big-dealership-experiment-is-a-big-win",
+   "title": "Tekion's big dealership experiment is a big win",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/news/*"
+  },
+  {
+   "path": "/news/tekion-unveils-new-ai-agents-and-t1-pro-its-ai-interface-and-agent-orchestrator",
+   "title": "Tekion Unveils New AI Agents and T1 Pro, Its AI Interface and Agent Orchestrator",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/news/*"
+  },
+  {
+   "path": "/news/to-the-point-with-marcus-amick-talking-tekion",
+   "title": "To the Point with Marcus Amick: Talking Tekion",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/news/*"
+  },
+  {
+   "path": "/legal/api-license-and-data-sharing-agreement",
+   "title": "API License and Data Sharing Agreement",
+   "section": "Trust & legal",
+   "version": "Text only",
+   "confidence": "n/a",
+   "basis": "rendered",
+   "boxes": 0,
+   "rounded": 0,
+   "sharp": 0,
+   "outlined": 0,
+   "radii": "",
+   "template": "/legal/*"
+  },
+  {
+   "path": "/news/this-former-tesla-cio-just-raised-150-million-more-to-pull-car-dealers-into-the-21st-century",
+   "title": "This former Tesla CIO just raised $150 million more to pull car dealers into the 21st cent",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/news/*"
+  },
+  {
+   "path": "/news/which-dealership-stock-im-betting-on-in-the-digital-era",
+   "title": "Which Dealership Stock I’m Betting On in the Digital Era",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/news/*"
+  },
+  {
+   "path": "/legal/applicant-and-candidate-privacy-notice",
+   "title": "Applicant and Candidate Privacy Notice",
+   "section": "Trust & legal",
+   "version": "Text only",
+   "confidence": "n/a",
+   "basis": "rendered",
+   "boxes": 0,
+   "rounded": 0,
+   "sharp": 0,
+   "outlined": 0,
+   "radii": "",
+   "template": "/legal/*"
+  },
+  {
+   "path": "/legal/ca-arc-msa",
+   "title": "Master Subscription Agreement - Canada",
+   "section": "Trust & legal",
+   "version": "Text only",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/legal/*"
+  },
+  {
+   "path": "/news/why-dms-market-disruption-is-good-news-for-dealers",
+   "title": "Why DMS market disruption is good news for dealers",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/news/*"
+  },
+  {
+   "path": "/legal/applicant-and-candidate-privacy-notice-11-01-2024",
+   "title": "Applicant and Candidate Privacy Notice - November 1, 2024",
+   "section": "Trust & legal",
+   "version": "Text only",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/legal/*"
+  },
+  {
+   "path": "/legal/applicant-and-candidate-privacy-notice-01-10-2023",
+   "title": "Applicant and Candidate Privacy Notice - January 10, 2023",
+   "section": "Trust & legal",
+   "version": "Text only",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/legal/*"
+  },
+  {
+   "path": "/legal/ca-arc-msa-01-01-2020",
+   "title": "Master Subscription Agreement - Canada - January 1, 2020",
+   "section": "Trust & legal",
+   "version": "Text only",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/legal/*"
+  },
+  {
+   "path": "/legal/ca-arc-msa-30-06-2022",
+   "title": "Master Subscription Agreement - Canada - June 30, 2022",
+   "section": "Trust & legal",
+   "version": "Text only",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/legal/*"
+  },
+  {
+   "path": "/legal/cookie-list",
+   "title": "Tekion® Cookie List",
+   "section": "Trust & legal",
+   "version": "Text only",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/legal/*"
+  },
+  {
+   "path": "/legal/cookie-list-04-04-2021",
+   "title": "Tekion® Cookie List - April 04, 2021",
+   "section": "Trust & legal",
+   "version": "Text only",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/legal/*"
+  },
+  {
+   "path": "/legal/ca-psa-fr",
+   "title": "Professional Services Agreement - Canada (French)",
+   "section": "Trust & legal",
+   "version": "Text only",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/legal/*"
+  },
+  {
+   "path": "/legal/cookie-list-08-06-2023",
+   "title": "Tekion® Cookie List - June 8, 2023",
+   "section": "Trust & legal",
+   "version": "Text only",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/legal/*"
+  },
+  {
+   "path": "/legal/ccpa-metrics",
+   "title": "California Consumer Rights Act (CCPA): Metric Disclosure",
+   "section": "Trust & legal",
+   "version": "Text only",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/legal/*"
+  },
+  {
+   "path": "/legal/ca-arc-msa-22-06-2021",
+   "title": "Master Subscription Agreement - Canada - June 22, 2021",
+   "section": "Trust & legal",
+   "version": "Text only",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/legal/*"
+  },
+  {
+   "path": "/legal/cookie-list-09-09-2021",
+   "title": "Tekion® Cookie List - September 9, 2021",
+   "section": "Trust & legal",
+   "version": "Text only",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/legal/*"
+  },
+  {
+   "path": "/legal/crm",
+   "title": "CRM",
+   "section": "Trust & legal",
+   "version": "Text only",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/legal/*"
+  },
+  {
+   "path": "/legal/ca-psa",
+   "title": "Professional Services Agreement - Canada",
+   "section": "Trust & legal",
+   "version": "Text only",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/legal/*"
+  },
+  {
+   "path": "/legal/cookie-list-11-01-2024",
+   "title": "Tekion® Cookie List - November 1, 2024",
+   "section": "Trust & legal",
+   "version": "Text only",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/legal/*"
+  },
+  {
+   "path": "/legal/crm-accelerated",
+   "title": "Product Terms – Terms and Conditions for Tekion® CRM (\"Accelerated\")",
+   "section": "Trust & legal",
+   "version": "Text only",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/legal/*"
+  },
+  {
+   "path": "/legal/dpa",
+   "title": "Data Processing Agreement",
+   "section": "Trust & legal",
+   "version": "Text only",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/legal/*"
+  },
+  {
+   "path": "/legal/digital-processing-services",
+   "title": "Digital Processing Services",
+   "section": "Trust & legal",
+   "version": "Text only",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/legal/*"
+  },
+  {
+   "path": "/legal/fr-ca-arc-msa",
+   "title": "ENTENTE-CADRE DE SOUSCRIPTION",
+   "section": "Trust & legal",
+   "version": "Text only",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/legal/*"
+  },
+  {
+   "path": "/legal/generative-ai-04-09-2025",
+   "title": "Tekion® AI - September 4, 2025",
+   "section": "Trust & legal",
+   "version": "Text only",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/legal/*"
+  },
+  {
+   "path": "/legal/generative-ai",
+   "title": "Tekion® AI",
+   "section": "Trust & legal",
+   "version": "Text only",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/legal/*"
+  },
+  {
+   "path": "/legal/paytek",
+   "title": "PayTek",
+   "section": "Trust & legal",
+   "version": "Text only",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/legal/*"
+  },
+  {
+   "path": "/legal/fr-ca-arc-msa-30-06-2022",
+   "title": "ENTENTE-CADRE DE SOUSCRIPTION - June 30, 2022",
+   "section": "Trust & legal",
+   "version": "Text only",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/legal/*"
+  },
+  {
+   "path": "/legal/privacy-policy-03-18-2021",
+   "title": "Privacy Policy - March 18, 2021",
+   "section": "Trust & legal",
+   "version": "Text only",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/legal/*"
+  },
+  {
+   "path": "/legal/privacy-policy-01-11-2024",
+   "title": "Privacy Policy - November 1, 2024",
+   "section": "Trust & legal",
+   "version": "Text only",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/legal/*"
+  },
+  {
+   "path": "/legal/fr-ca-arc-msa-01-01-2020",
+   "title": "ENTENTE-CADRE DE SOUSCRIPTION - January 1, 2020",
+   "section": "Trust & legal",
+   "version": "Text only",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/legal/*"
+  },
+  {
+   "path": "/legal/fr-ca-arc-msa-22-06-2021",
+   "title": "ENTENTE-CADRE DE SERVICES - June 22, 2021",
+   "section": "Trust & legal",
+   "version": "Text only",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/legal/*"
+  },
+  {
+   "path": "/legal/privacy-policy",
+   "title": "Privacy Policy",
+   "section": "Trust & legal",
+   "version": "Text only",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/legal/*"
+  },
+  {
+   "path": "/legal/privacy-policy-08-06-2023",
+   "title": "Privacy Policy - June 8, 2023",
+   "section": "Trust & legal",
+   "version": "Text only",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/legal/*"
+  },
+  {
+   "path": "/legal/privacy-policy-09-05-2025",
+   "title": "Privacy Policy - May 9, 2025",
+   "section": "Trust & legal",
+   "version": "Text only",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/legal/*"
+  },
+  {
+   "path": "/legal/marketscan-flow-down",
+   "title": "Market Scan Data Access Agreement",
+   "section": "Trust & legal",
+   "version": "Text only",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/legal/*"
+  },
+  {
+   "path": "/legal/privacy-policy-09-09-2021",
+   "title": "Privacy Policy - September 9, 2021",
+   "section": "Trust & legal",
+   "version": "Text only",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/legal/*"
+  },
+  {
+   "path": "/legal/sms-messaging-terms-of-use",
+   "title": "SMS Messaging Terms of Use – 10DLC Compliance",
+   "section": "Trust & legal",
+   "version": "Text only",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/legal/*"
+  },
+  {
+   "path": "/legal/privacy-policy-10-28-2017",
+   "title": "Privacy Policy - October 28, 2017",
+   "section": "Trust & legal",
+   "version": "Text only",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/legal/*"
+  },
+  {
+   "path": "/legal/privacy-policy-12-31-2020",
+   "title": "Privacy Policy - December 31, 2020",
+   "section": "Trust & legal",
+   "version": "Text only",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/legal/*"
+  },
+  {
+   "path": "/legal/t1-browser-extension-privacy-notice",
+   "title": "T1 Browser Extension Privacy Notice",
+   "section": "Trust & legal",
+   "version": "Text only",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/legal/*"
+  },
+  {
+   "path": "/legal/tekion-forms",
+   "title": "Tekion® Forms",
+   "section": "Trust & legal",
+   "version": "Text only",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/legal/*"
+  },
+  {
+   "path": "/legal/tekion-forms-store",
+   "title": "Tekion® Forms Store Terms",
+   "section": "Trust & legal",
+   "version": "Text only",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/legal/*"
+  },
+  {
+   "path": "/legal/tekion-pay",
+   "title": "Tekion® Pay",
+   "section": "Trust & legal",
+   "version": "Text only",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/legal/*"
+  },
+  {
+   "path": "/legal/privacy-policy-04-04-2022",
+   "title": "Privacy Policy - April 4, 2022",
+   "section": "Trust & legal",
+   "version": "Text only",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/legal/*"
+  },
+  {
+   "path": "/legal/us-arc-msa",
+   "title": "Master Subscription Agreement - US",
+   "section": "Trust & legal",
+   "version": "Text only",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/legal/*"
+  },
+  {
+   "path": "/legal/tekion-payroll",
+   "title": "Tekion® Payroll",
+   "section": "Trust & legal",
+   "version": "Text only",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/legal/*"
+  },
+  {
+   "path": "/legal/tekion-service-level-agreement",
+   "title": "Production Support and Service Level Availability Policy",
+   "section": "Trust & legal",
+   "version": "Text only",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/legal/*"
+  },
+  {
+   "path": "/on-demand/ai-orchestrated-customer-communications-inside-tekion",
+   "title": "AI Orchestrated Customer Communications Inside Tekion",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "medium",
+   "basis": "rendered",
+   "boxes": 6,
+   "rounded": 5,
+   "sharp": 1,
+   "outlined": 0,
+   "radii": "24x5 0x1",
+   "template": "/on-demand/*"
+  },
+  {
+   "path": "/legal/us-psa",
+   "title": "Professional Services Agreement - US",
+   "section": "Trust & legal",
+   "version": "Text only",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/legal/*"
+  },
+  {
+   "path": "/legal/uk-arc-msa-10-26-2024",
+   "title": "Master Subscription Agreement - UK - October 26, 2024",
+   "section": "Trust & legal",
+   "version": "Text only",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/legal/*"
+  },
+  {
+   "path": "/legal/uk-arc-msa",
+   "title": "Master Subscription Agreement - UK",
+   "section": "Trust & legal",
+   "version": "Text only",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/legal/*"
+  },
+  {
+   "path": "/legal/us-arc-msa-04-03-2024",
+   "title": "Master Subscription Agreement - US - March 3, 2024",
+   "section": "Trust & legal",
+   "version": "Text only",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/legal/*"
+  },
+  {
+   "path": "/legal/us-arc-msa-05-10-2022",
+   "title": "Master Subscription Agreement - US - May 10, 2022",
+   "section": "Trust & legal",
+   "version": "Text only",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/legal/*"
+  },
+  {
+   "path": "/on-demand/asbury-automotive-group-scaling-an-enterprise--and-the-efficiencies-that-follow",
+   "title": "Asbury Automotive Group: Scaling an Enterprise—and the Efficiencies That Follow",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "medium",
+   "basis": "rendered",
+   "boxes": 7,
+   "rounded": 5,
+   "sharp": 2,
+   "outlined": 1,
+   "radii": "24x5 0x2",
+   "template": "/on-demand/*"
+  },
+  {
+   "path": "/legal/uk-psa",
+   "title": "Professional Services Agreement - UK",
+   "section": "Trust & legal",
+   "version": "Text only",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/legal/*"
+  },
+  {
+   "path": "/on-demand/dealership-performance-starts-with-inventory-intelligence",
+   "title": "Dealership Performance Starts With Inventory Intelligence",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/on-demand/*"
+  },
+  {
+   "path": "/legal/us-arc-msa-01-01-2020",
+   "title": "Master Subscription Agreement - US - January 1, 2020",
+   "section": "Trust & legal",
+   "version": "Text only",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/legal/*"
+  },
+  {
+   "path": "/on-demand/jay-tekionone-keynote",
+   "title": "One Community. One Platform. One Bold Future.",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/on-demand/*"
+  },
+  {
+   "path": "/on-demand/how-enterprise-dealers-are-thinking-about-their-tech-stack-today",
+   "title": "How Enterprise Dealers Are Thinking About Their Tech Stack Today",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/on-demand/*"
+  },
+  {
+   "path": "/on-demand/dealers-leading-change-growth-and-scale-in-automotive-retail-a-leadership-perspective",
+   "title": "Dealers Leading Change, Growth, and Scale in Automotive Retail: A Leadership Perspective",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/on-demand/*"
+  },
+  {
+   "path": "/on-demand/from-implementation-to-impact-build-a-data-ready-dealership-with-baker-tilly",
+   "title": "From Implementation to Impact: Build a Data-Ready Dealership with Baker Tilly",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/on-demand/*"
+  },
+  {
+   "path": "/on-demand/how-tekion-delivers-measurable-value-to-dealers",
+   "title": "How Tekion Delivers Measurable Value to Dealers",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/on-demand/*"
+  },
+  {
+   "path": "/on-demand/economic-outlook-ai-disruption-your-workforce-whats-actually-coming-for-your-dealership",
+   "title": "Economic Outlook, AI Disruption & Your Workforce: What's Actually Coming for Your Dealersh",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/on-demand/*"
+  },
+  {
+   "path": "/on-demand/how-modern-technology-powers-the-ai-native-dealership",
+   "title": "How Modern Technology Powers the AI-Native Dealership",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/on-demand/*"
+  },
+  {
+   "path": "/on-demand/performance-innovation-and-insights-from-iconic-brands",
+   "title": "Performance, Innovation, and Insights from Iconic Brands",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/on-demand/*"
+  },
+  {
+   "path": "/on-demand/the-inflection-point-where-the-new-vehicle-market-is--and-where-dealers-win-next",
+   "title": "The Inflection Point: Where the New Vehicle Market Is—and Where Dealers Win Next",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/on-demand/*"
+  },
+  {
+   "path": "/on-demand/powering-the-future-of-automotive-payments-tekion-stripe",
+   "title": "Powering the Future of Automotive Payments: Tekion + Stripe",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/on-demand/*"
+  },
+  {
+   "path": "/on-demand/what-powers-ai-at-scale-inside-the-technology-behind-tekion-ai",
+   "title": "What Powers AI at Scale: Inside the Technology Behind Tekion AI",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/on-demand/*"
+  },
+  {
+   "path": "/on-demand/the-algorithm-a-proven-framework-to-scale-simplify-and-accelerate-your-business",
+   "title": "The Algorithm: A Proven Framework to Scale, Simplify, and Accelerate Your Business",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/on-demand/*"
+  },
+  {
+   "path": "/nada-2026-recap/ai-you-can-trust-security-governance-compliance-for-modern-dealerships",
+   "title": "AI You Can Trust: Security, Governance & Compliance for Modern Dealerships",
+   "section": "Learning",
+   "version": "Mixed",
+   "confidence": "medium",
+   "basis": "rendered",
+   "boxes": 6,
+   "rounded": 4,
+   "sharp": 2,
+   "outlined": 1,
+   "radii": "24x4 0x2",
+   "template": "/nada-2026-recap/*"
+  },
+  {
+   "path": "/on-demand/delivering-guest-experience-at-scale-a-conversation-with-doug-eroh",
+   "title": "Delivering Guest Experience at Scale: A Conversation with Doug Eroh",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/on-demand/*"
+  },
+  {
+   "path": "/on-demand/leading-the-shift-ken-garff-on-ai-and-automotive-retail-transformation",
+   "title": "Leading the Shift: Ken Garff on AI and Automotive Retail Transformation",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/on-demand/*"
+  },
+  {
+   "path": "/nada-2026-recap/beyond-automation-building-the-ai-native-dealership",
+   "title": "Beyond Automation: Building the AI-Native Dealership",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "medium",
+   "basis": "rendered",
+   "boxes": 5,
+   "rounded": 4,
+   "sharp": 1,
+   "outlined": 0,
+   "radii": "24x4 0x1",
+   "template": "/nada-2026-recap/*"
+  },
+  {
+   "path": "/on-demand/powering-the-ai-native-dealership",
+   "title": "Powering the AI-Native Dealership",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/on-demand/*"
+  },
+  {
+   "path": "/on-demand/the-rise-of-responsible-ai-perspectives-with-anthropic",
+   "title": "The Rise of Responsible AI: Perspectives with Anthropic",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/on-demand/*"
+  },
+  {
+   "path": "/nada-2026-recap/ceo-keynote-ai-you-can-trust-innovation-you-can-count-on-and-the-future-you-can-be-excited-about",
+   "title": "CEO Keynote: AI You Can Trust, Innovation You Can Count On, and the Future You Can Be Exci",
+   "section": "Learning",
+   "version": "Mixed",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/nada-2026-recap/*"
+  },
+  {
+   "path": "/nada-2026-recap/dealer-success-unlocked-real-stories-with-advanced-analytics",
+   "title": "Dealer Success Unlocked: Real Stories with Advanced Analytics",
+   "section": "Learning",
+   "version": "Mixed",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/nada-2026-recap/*"
+  },
+  {
+   "path": "/nada-2026-recap/extreme-ownership-in-dealership-support",
+   "title": "Extreme Ownership in Dealership Support",
+   "section": "Learning",
+   "version": "Mixed",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/nada-2026-recap/*"
+  },
+  {
+   "path": "/on-demand/what-high-performing-leaders-do-differently",
+   "title": "What High-Performing Leaders Do Differently",
+   "section": "Learning",
+   "version": "2.0",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/on-demand/*"
+  },
+  {
+   "path": "/nada-2026-recap/playbooks-pitfalls-proven-dms-change-management-strategies",
+   "title": "Playbooks, Pitfalls & Proven DMS Change Management Strategies",
+   "section": "Learning",
+   "version": "Mixed",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/nada-2026-recap/*"
+  },
+  {
+   "path": "/nada-2026-recap/how-automotive-partner-cloud-is-shaping-the-next-era-of-integrations",
+   "title": "How Automotive Partner Cloud is Shaping the Next Era of Integrations",
+   "section": "Learning",
+   "version": "Mixed",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/nada-2026-recap/*"
+  },
+  {
+   "path": "/nada-2026-recap/one-ai-native-platform-zero-chaos",
+   "title": "One AI-Native Platform, Zero Chaos",
+   "section": "Learning",
+   "version": "Mixed",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/nada-2026-recap/*"
+  },
+  {
+   "path": "/nada-2026-recap/removing-friction-from-the-end-to-end-sales-experience",
+   "title": "Removing Friction From the End-to-End Sales Experience",
+   "section": "Learning",
+   "version": "Mixed",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/nada-2026-recap/*"
+  },
+  {
+   "path": "/nada-2026-recap/tekion-global-scaling-the-future-of-ai-driven-automotive-retail",
+   "title": "Tekion Global: Scaling the Future of AI-Driven Automotive Retail",
+   "section": "Learning",
+   "version": "Mixed",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/nada-2026-recap/*"
+  },
+  {
+   "path": "/nada-2026-recap/the-industry-leading-crm-for-todays-industry-leading-dealer",
+   "title": "The Industry-Leading CRM for Today's Industry-Leading Dealer",
+   "section": "Learning",
+   "version": "Mixed",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/nada-2026-recap/*"
+  },
+  {
+   "path": "/fi-ai",
+   "title": "Tekion F&I AI | Deal Validation & Compliance Automation",
+   "section": "Tekion AI",
+   "version": "3.0",
+   "confidence": "high",
+   "basis": "rendered",
+   "boxes": 15,
+   "rounded": 0,
+   "sharp": 15,
+   "outlined": 15,
+   "radii": "0x15"
+  },
+  {
+   "path": "/nada-2026-recap/the-modern-service-department-mastering-foundations-for-ai-success",
+   "title": "The Modern Service Department: Mastering Foundations for AI Success",
+   "section": "Learning",
+   "version": "Mixed",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/nada-2026-recap/*"
+  },
+  {
+   "path": "/nada-2026-recap/the-state-of-automotive-retail-and-what-comes-next",
+   "title": "The State of Automotive Retail and What Comes Next",
+   "section": "Learning",
+   "version": "Mixed",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/nada-2026-recap/*"
+  },
+  {
+   "path": "/legal/privacy/privacy-policy",
+   "title": "Privacy Policy",
+   "section": "Trust & legal",
+   "version": "Text only",
+   "confidence": "n/a",
+   "basis": "rendered",
+   "boxes": 0,
+   "rounded": 0,
+   "sharp": 0,
+   "outlined": 0,
+   "radii": "",
+   "template": "/legal/privacy/*"
+  },
+  {
+   "path": "/legal/privacy/cookie-list",
+   "title": "Tekion® Cookie List",
+   "section": "Trust & legal",
+   "version": "3.0",
+   "confidence": "high",
+   "basis": "rendered",
+   "boxes": 52,
+   "rounded": 0,
+   "sharp": 52,
+   "outlined": 52,
+   "radii": "0x52",
+   "template": "/legal/privacy/*"
+  },
+  {
+   "path": "/nada-2026-recap/nada-2026-recap-momentum-community-and-the-ai-native-future",
+   "title": "NADA 2026 Recap: Momentum, Community, and the AI-Native Future",
+   "section": "Learning",
+   "version": "Mixed",
+   "confidence": "template",
+   "basis": "template",
+   "template": "/nada-2026-recap/*"
+  },
+  {
+   "path": "/products/automotive-partner-cloud",
+   "title": "Tekion Automotive Partner Cloud | Dealership Integrations & Partner Programs",
+   "section": "Products",
+   "version": "Redirect",
+   "confidence": "high",
+   "basis": "redirect",
+   "note": "Redirects to /products/apc"
+  },
+  {
+   "path": "/products/automotive-retail-cloud",
+   "title": "Tekion ARC | AI-Native Automotive Retail Cloud Platform",
+   "section": "Products",
+   "version": "Redirect",
+   "confidence": "high",
+   "basis": "redirect",
+   "note": "Redirects to /products/arc"
+  },
+  {
+   "path": "/products/automotive-enterprise-cloud",
+   "title": "Tekion AEC Platform | Automotive Enterprise Cloud Software",
+   "section": "Products",
+   "version": "Redirect",
+   "confidence": "high",
+   "basis": "redirect",
+   "note": "Redirects to /products/aec"
+  },
+  {
+   "path": "/products/tekion-ai",
+   "title": "",
+   "section": "Products",
+   "version": "1.0",
+   "confidence": "high",
+   "basis": "rendered",
+   "boxes": 15,
+   "rounded": 15,
+   "sharp": 0,
+   "outlined": 0,
+   "radii": "24x8 40x5 20x2",
+   "note": "Redirects to tekion.ai/products/tekion-ai, the legacy WDS 1.0 site (separate build, Inter font, no WDS components)",
+   "offsite": "https://tekion.ai/products/tekion-ai"
+  },
+  {
+   "path": "/products/digital-retail",
+   "title": "Tekion Digital Retail",
+   "section": "Products",
+   "version": "1.0",
+   "confidence": "high",
+   "basis": "rendered",
+   "boxes": 3,
+   "rounded": 0,
+   "sharp": 3,
+   "outlined": 3,
+   "radii": "0x3",
+   "note": "Redirects to tekion.ai/products/digital-retail, the legacy WDS 1.0 site (separate build, Inter font, no WDS components)",
+   "offsite": "https://tekion.ai/products/digital-retail"
+  }
+ ],
+ "legacy": {
+  "host": "tekion.ai",
+  "signals": [
+   "Served from tekion.ai, not tekion.com",
+   "Header built from different component classes (for example Header_Header__sa2xn), not the tekion-design-system components",
+   "Inter font instead of Tekion Sans",
+   "No tekion-design-system classes at all (tekion.com pages have 545 or more)",
+   "Square-cornered boxes and buttons, so corner radius alone would misread it as 3.0"
+  ]
+ }
+}

@@ -192,7 +192,7 @@ document.querySelectorAll('[data-filter]').forEach((input) => {
   const rows = [...document.querySelectorAll(`${input.dataset.filter} tbody tr`)];
   input.addEventListener('input', () => {
     const q = input.value.trim().toLowerCase();
-    rows.forEach((r) => { r.hidden = q && !r.textContent.toLowerCase().includes(q); });
+    rows.forEach((r) => { r.dataset.qhide = q && !r.textContent.toLowerCase().includes(q) ? '1' : ''; r.hidden = !!r.dataset.qhide || !!r.dataset.vhide; });
   });
 });
 
@@ -262,3 +262,12 @@ function markScrollable() {
 }
 markScrollable();
 window.addEventListener('resize', () => { clearTimeout(markScrollable.t); markScrollable.t = setTimeout(markScrollable, 200); });
+
+// ---------- Audit table version chips ----------
+document.querySelectorAll('[data-vfilter]').forEach((chip, _, all) => {
+  chip.addEventListener('click', () => {
+    all.forEach((c) => c.setAttribute('aria-pressed', String(c === chip)));
+    const v = chip.dataset.vfilter;
+    document.querySelectorAll('#audit-table tbody tr').forEach((tr) => { tr.dataset.vhide = v !== 'All' && tr.dataset.v !== v ? '1' : ''; tr.hidden = !!tr.dataset.vhide || !!tr.dataset.qhide; });
+  });
+});

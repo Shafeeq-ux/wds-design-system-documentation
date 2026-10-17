@@ -238,7 +238,99 @@ function modesAudit() {
     + table(['Section', 'Component set', 'Variant', 'Problem', 'Impact', ''], rows);
 }
 
-const CODES = { 'section-modes': sectionModes, 'modes-audit': modesAudit, 'limit-calculator': limitCalculator, 'section-sets': sectionSets, 'section-limits': sectionLimits, 'all-limits': allLimits, pairs, icons, 'icon-keywords': iconKeywords, ramp, theme, 'type-scale': typeScale, scale, responsive, radii, borders, gradients };
+// ---------- tekion.com WDS audit ----------
+const AUDIT = JSON.parse(readFileSync(join(root, 'src/data/site-audit.json'), 'utf8'));
+const VCLASS = { '3.0': 'v3', '2.0': 'v2', '1.0': 'v1', Mixed: 'vmix', 'Text only': 'vtext', Redirect: 'vredir', Unknown: 'vtext' };
+const isV = (v) => v === '3.0' || v === '2.0' || v === '1.0';
+const vbadge = (v) => `<span class="vbadge ${VCLASS[v]}">${isV(v) ? 'WDS ' + v : v}</span>`;
+const ORDER = ['3.0', 'Mixed', '2.0', '1.0', 'Text only', 'Redirect'];
+
+function auditStats() {
+  const c = AUDIT.counts; const total = AUDIT.pages.length;
+  const tiles = ORDER.filter((v) => c[v]).map((v) => `<div class="astat ${VCLASS[v]}"><b>${c[v]}</b><span>${isV(v) ? 'WDS ' + v : v}</span></div>`).join('');
+  const bar = ORDER.filter((v) => c[v]).map((v) => `<span class="${VCLASS[v]}" style="flex:${c[v]}" title="${v}: ${c[v]} pages"></span>`).join('');
+  return `<div class="astats">${tiles}</div><div class="abar" role="img" aria-label="${ORDER.filter((v) => c[v]).map((v) => `${v}: ${c[v]} of ${total} pages`).join(', ')}">${bar}</div><p class="abar-cap">${total} URLs scanned on ${AUDIT.scanned}.</p>`;
+}
+
+function auditList(version) {
+  const list = AUDIT.pages.filter((p) => p.version === version && p.basis !== 'template' && !p.template);
+  const tpls = AUDIT.templates.filter((t) => t.version === version);
+  return `<ul class="alist">${list.map((p) => `<li><a href="https://tekion.com${p.path}" target="_blank" rel="noopener">${esc(p.path)}</a> <small>${esc(p.title)}</small></li>`).join('')}${tpls.map((t) => `<li><strong>${esc(t.label)}</strong> <small>${t.count} pages in <code>${esc(t.key)}</code> (CMS collection)</small></li>`).join('')}</ul>`;
+}
+
+function auditTemplates() {
+  return table(['CMS collection', 'Pages', 'Version', 'Samples measured'], AUDIT.templates.map((t) => `<tr><td><strong>${esc(t.label)}</strong><br><code>${esc(t.key)}</code></td><td class="num">${t.count}</td><td>${vbadge(t.version)}</td><td><ul class="sample-links">${t.samples.map((s) => `<li><a href="https://tekion.com${s}" target="_blank" rel="noopener">${esc(s.split('/').pop().slice(0, 40))}</a></li>`).join('')}</ul></td></tr>`));
+}
+
+function auditTable() {
+  const rows = AUDIT.pages.map((p) => {
+    const how = p.basis === 'rendered' ? `Measured: ${p.boxes} boxes, ${p.rounded} rounded, ${p.sharp} sharp` : p.basis === 'template' ? `Same template as ${esc(AUDIT.templates.find((t) => t.key === p.template)?.label || p.template)}` : esc(p.note || '');
+    return `<tr data-v="${esc(p.version)}"><td><a href="https://tekion.com${p.path}" target="_blank" rel="noopener">${esc(p.path)}</a><small class="figma-path">${esc(p.title)}</small></td><td>${esc(p.section)}</td><td>${vbadge(p.version)}</td><td><small>${how}${p.note && p.basis === 'rendered' ? '. ' + esc(p.note) : ''}</small></td></tr>`;
+  });
+  const chips = ['All', ...ORDER].map((v, i) => `<button type="button" class="chip-filter" data-vfilter="${v}" aria-pressed="${i === 0}">${isV(v) ? 'WDS ' + v : v}${v === 'All' ? '' : ` <small>${AUDIT.counts[v] || 0}</small>`}</button>`).join('');
+  return `<div class="afilters"><label class="filter"><span>Search pages</span><input type="search" data-filter="#audit-table" placeholder="Try “/products” or “blog”" autocomplete="off"></label><div class="chips" role="group" aria-label="Filter by version">${chips}</div></div>`
+    + table(['Page', 'Section', 'Version', 'How it was decided'], rows).replace('<table class="">', '<table id="audit-table">');
+}
+
+// Sitemap flowchart: one column per top-level section, coloured by WDS version.
+function auditIa() {
+  const SECTIONS = ['Products', 'Tekion AI', 'Learning', 'Testimonials', 'Company', 'Trust & legal', 'Get started'];
+  const home = AUDIT.pages.find((p) => p.path === '/');
+  const tplMeta = Object.fromEntries(AUDIT.templates.map((t) => [t.key, t]));
+  const NAMES = { '/nada2026/recap': 'NADA 2026 Recap', '/tekionone/on-demand': 'Tekion One On-Demand', '/job-openings/job': 'Job (redirect)', '/about-us/our-leaders': 'Our Leaders', '/legal/privacy/cookie-list': 'Cookie List', '/legal/privacy/privacy-policy': 'Privacy Policy' };
+  const short = (p) => {
+    if (NAMES[p.path]) return NAMES[p.path];
+    const last = p.path.split('/').filter(Boolean).pop() || 'home';
+    const name = { arc: 'ARC', aec: 'AEC', apc: 'APC', dms: 'DMS', crm: 'CRM', dse: 'DSE', t1: 'T1', 'fi-ai': 'F&I AI', 'crm-ai': 'CRM AI', faq: 'FAQ' }[last];
+    return name || last.replace(/-/g, ' ').replace(/\b\w/g, (m) => m.toUpperCase()).replace(/ Ai\b/, ' AI');
+  };
+  const cols = SECTIONS.map((sec) => {
+    const items = AUDIT.pages.filter((p) => p.section === sec);
+    // CMS items (including the ones sampled for measurement) are shown as one collection box
+    const unique = items.filter((p) => p.basis !== 'template' && !p.template).sort((a, b) => a.path.localeCompare(b.path));
+    const nodes = [];
+    const tplDone = new Set();
+    for (const p of unique) {
+      const depth = Math.min(p.path.split('/').filter(Boolean).length - 1, 2);
+      nodes.push({ label: short(p), v: p.version, depth, href: p.path, title: `${p.path} · ${p.version}` });
+      for (const t of AUDIT.templates) {
+        if (tplDone.has(t.key)) continue;
+        const parent = t.key.replace('/*', '');
+        if (parent === p.path) { tplDone.add(t.key); nodes.push({ label: `${t.label.split(' (')[0]} ×${t.count}`, v: t.version, depth: depth + 1, tpl: true, title: `${t.key} · ${t.count} pages · ${t.version}` }); }
+      }
+    }
+    for (const t of AUDIT.templates) if (!tplDone.has(t.key) && items.some((p) => p.template === t.key)) nodes.push({ label: `${t.label.split(' (')[0]} ×${t.count}`, v: t.version, depth: 1, tpl: true, title: `${t.key} · ${t.count} pages · ${t.version}` });
+    return { sec, nodes, count: items.length };
+  });
+  const CW = 178, GAP = 18, NH = 30, NG = 8, TOP = 120, X0 = 10;
+  const W = X0 * 2 + cols.length * CW + (cols.length - 1) * GAP;
+  const H = TOP + 56 + Math.max(...cols.map((c) => c.nodes.length)) * (NH + NG) + 20;
+  const rootX = W / 2 - 90;
+  let g = `<g class="ia-root"><a href="https://tekion.com/" target="_blank"><rect class="ia-node ${VCLASS[home.version]}" x="${rootX}" y="16" width="180" height="40" rx="0"/><text x="${W / 2}" y="41" text-anchor="middle" class="ia-label ia-strong">tekion.com · Home</text></a></g>`;
+  const busY = 84;
+  g += `<path class="ia-line" d="M${W / 2} 56 V${busY}"/>`;
+  cols.forEach((c, i) => {
+    const x = X0 + i * (CW + GAP);
+    const cx = x + CW / 2;
+    g += `<path class="ia-line" d="M${W / 2} ${busY} H${cx} V${TOP}"/>`;
+    g += `<rect class="ia-sec" x="${x}" y="${TOP}" width="${CW}" height="40"/><text x="${cx}" y="${TOP + 18}" text-anchor="middle" class="ia-label ia-strong">${esc(c.sec)}</text><text x="${cx}" y="${TOP + 32}" text-anchor="middle" class="ia-label ia-sub">${c.count} pages</text>`;
+    const spineX = x + 10;
+    const y0 = TOP + 56;
+    if (c.nodes.length) g += `<path class="ia-line" d="M${spineX} ${TOP + 40} V${y0 + (c.nodes.length - 1) * (NH + NG) + NH / 2}"/>`;
+    c.nodes.forEach((n, j) => {
+      const y = y0 + j * (NH + NG);
+      const nx = x + 18 + n.depth * 12;
+      const nw = CW - 18 - n.depth * 12;
+      g += `<path class="ia-line" d="M${spineX} ${y + NH / 2} H${nx}"/>`;
+      const inner = `<rect class="ia-node ${VCLASS[n.v]}${n.tpl ? ' ia-tpl' : ''}" x="${nx}" y="${y}" width="${nw}" height="${NH}"/><text x="${nx + 8}" y="${y + 19}" class="ia-label">${esc(n.label.length > 22 ? n.label.slice(0, 21) + '…' : n.label)}</text><title>${esc(n.title)}</title>`;
+      g += n.href ? `<a href="https://tekion.com${n.href}" target="_blank">${inner}</a>` : inner;
+    });
+  });
+  const legend = ORDER.map((v) => `<span><i class="${VCLASS[v]}"></i>${isV(v) ? 'WDS ' + v : v}</span>`).join('') + '<span><i class="ia-tpl-key"></i>CMS collection (one template)</span>';
+  return `<div class="ia-legend">${legend}</div><div class="ia-wrap"><svg class="ia" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="group" aria-label="Sitemap of tekion.com: home, then ${SECTIONS.join(', ')}, with each page coloured by WDS version. The full list is in the table below.">${g}</svg></div>`;
+}
+
+const CODES = { 'audit-stats': auditStats, 'audit-list': auditList, 'audit-templates': auditTemplates, 'audit-table': auditTable, 'audit-ia': auditIa, 'section-modes': sectionModes, 'modes-audit': modesAudit, 'limit-calculator': limitCalculator, 'section-sets': sectionSets, 'section-limits': sectionLimits, 'all-limits': allLimits, pairs, icons, 'icon-keywords': iconKeywords, ramp, theme, 'type-scale': typeScale, scale, responsive, radii, borders, gradients };
 
 export function applyShortcodes(html) {
   return html.replace(/<!--wds:([\w-]+)\s*([^>]*?)-->/g, (all, name, arg) => {

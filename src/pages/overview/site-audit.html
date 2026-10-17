@@ -1,0 +1,78 @@
+<!--meta {"status": "Stable", "owner": "Design · Marketing", "updated": "2026-10-17"} -->
+<h2>Summary</h2>
+<p>tekion.com currently mixes three generations of the design system:</p>
+<ul>
+  <li><strong>WDS 3.0</strong>: sharp corners and thin outlines on cards and containers.</li>
+  <li><strong>WDS 2.0</strong>: rounded corners, mostly 24px, on cards and containers.</li>
+  <li><strong>WDS 1.0</strong>: the legacy site on <strong>tekion.ai</strong>. Some tekion.com menu links still redirect there.</li>
+</ul>
+<p>This audit checked every page in the sitemap, plus the pages linked from the header menu, and sorted them by which system their content uses.</p>
+<!--wds:audit-stats-->
+<div class="callout"><p><strong>The shared shell is already 3.0.</strong> The header, mega menu and footer come from the same WDS components on every page, so the audit looks only at each page's content.</p></div>
+
+<h3>Pages on WDS 3.0</h3>
+<!--wds:audit-list 3.0-->
+
+<h3>Pages still on WDS 1.0</h3>
+<p>These tekion.com links redirect to the legacy tekion.ai site. Visitors who pick them in the menu leave the WDS 2.0/3.0 experience entirely, so they're the first to rebuild.</p>
+<!--wds:audit-list 1.0-->
+
+<h3>Pages with both systems</h3>
+<p>These pages have some 3.0 sections and some 2.0 sections. They're the quickest to finish, because part of the work is done.</p>
+<!--wds:audit-list Mixed-->
+
+<h2>CMS collections</h2>
+<p>About 410 of the pages are items in Webflow CMS collections, such as blog posts and news articles. Every item in a collection uses the same template, so two items from each were measured and the result applied to the rest. Migrating one template moves every page in that collection at once.</p>
+<!--wds:audit-templates-->
+
+<h2>Where to migrate next</h2>
+<p>Proposed order, based on reach (how many pages change) and visibility (how prominent the page is in the menu):</p>
+<ol class="outline">
+  <li><strong>The WDS 1.0 pages.</strong> Digital Retail and Tekion AI are in the Products menu but send visitors to tekion.ai. Rebuild them on tekion.com with 3.0 sections, along with the referral form.</li>
+  <li><strong>The listing pages and their detail templates.</strong> Blog, News, Events, Resources, Testimonials and On-demand. Rebuilding the shared card-grid section and the related-content cards moves about 345 pages to 3.0.</li>
+  <li><strong>Product pages in the main menu.</strong> AEC, APC, DMS, CRM, Tekion Pay, Payroll, DSE and Virtual to Visit, so all products match ARC, which is already 3.0.</li>
+  <li><strong>Service AI.</strong> It's the only page in the Tekion AI menu that's still 2.0.</li>
+  <li><strong>Company and trust pages.</strong> About Us, Our Leaders, Careers, Trust Portal (and its four sub-pages), Request Demo and the partner pages.</li>
+  <li><strong>Legal documents.</strong> They have no cards, so they read as neutral. Check their side menu and type styles against the 3.0 <a href="/sections/legal-content.html">Legal content</a> section.</li>
+</ol>
+
+<h2>Sitemap</h2>
+<p>A bird's-eye view of tekion.com. Each box is a page, coloured by its WDS version. A box with a heavier bottom edge stands for a whole CMS collection, with its page count. Select a box to open the page. The chart scrolls sideways on small screens.</p>
+<!--wds:audit-ia-->
+<h3>How the site is organised</h3>
+<div class="table-wrap">
+  <table>
+    <thead><tr><th scope="col">Section</th><th scope="col">What's in it</th><th scope="col">Header menu</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Products</strong></td><td>The three clouds (ARC, AEC, APC) and individual products. ARC has five product sub-pages.</td><td>Products</td></tr>
+      <tr><td><strong>Tekion AI</strong></td><td>T1 and the AI agents: Accounting, CRM, Service and F&amp;I.</td><td>Tekion AI Agents</td></tr>
+      <tr><td><strong>Learning</strong></td><td>Blog, News, Resources and Events, plus on-demand sessions from Tekion One and NADA.</td><td>Learning</td></tr>
+      <tr><td><strong>Testimonials</strong></td><td>The testimonials listing and 31 customer stories.</td><td>Testimonials</td></tr>
+      <tr><td><strong>Company</strong></td><td>About, leadership, careers and job openings, and partner programs.</td><td>Company</td></tr>
+      <tr><td><strong>Trust &amp; legal</strong></td><td>The Trust Portal (privacy, compliance, security, responsible AI), 52 legal documents and implementation terms.</td><td>Company › Legal, Security &amp; Compliance</td></tr>
+      <tr><td><strong>Get started</strong></td><td>Request Demo, the referral program and the FAQ.</td><td>Request Demo button</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<h2>How pages were classified</h2>
+<ol class="outline">
+  <li><strong>Inventory.</strong> All 455 URLs in <code>tekion.com/sitemap.xml</code>, plus 7 linked from the header menu but missing from the sitemap. <code>/search</code> is excluded because robots.txt blocks it.</li>
+  <li><strong>Grouping.</strong> Every page's HTML was fetched and its section structure compared, to separate one-off pages from CMS template items.</li>
+  <li><strong>Measurement.</strong> Each one-off page, and two items per CMS template, was opened at 1440 × 900. Every card-like box in the content area was measured: 180 × 100px or larger, with a background or a border, and outside the header, footer, menus and pop-ups.</li>
+  <li><strong>WDS 1.0 check.</strong> Pages that end up on tekion.ai are WDS 1.0. That site is a separate build: a different header, the Inter font, and none of the WDS components that every tekion.com page has. Its boxes are also square-cornered, so corner radius can't be used to tell 1.0 from 3.0.</li>
+  <li><strong>Decision.</strong> For tekion.com pages, a corner radius of 8px or more counts as rounded (2.0), and less than 8px as sharp (3.0). A page is 2.0 when at least 70% of its boxes are rounded, 3.0 when 30% or fewer are, and Mixed in between. It's also Mixed when it has one section that's all rounded and another that's all sharp.</li>
+</ol>
+<h3>Limitations</h3>
+<ul>
+  <li><strong>A snapshot.</strong> Results reflect tekion.com on 17 October 2026. Re-run the audit after each migration.</li>
+  <li><strong>Text-only pages</strong>, such as legal documents and the job board, have no cards to measure, so they're listed as "Text only" rather than given a version.</li>
+  <li><strong>Pages with few boxes</strong> (fewer than 3) are classified with low confidence: FAQ, OEM Partners and the Refer sub-pages.</li>
+  <li><strong>CMS items are sampled</strong>, not individually measured. An item with custom content blocks could differ from its template.</li>
+  <li><strong>tekion.ai wasn't crawled.</strong> Only the three tekion.ai pages that tekion.com links to are included. The rest of tekion.ai is assumed to be WDS 1.0.</li>
+  <li><strong>Corner radius is the only signal.</strong> Pages can match on radius and still differ in type, spacing or colour.</li>
+</ul>
+
+<h2>All pages</h2>
+<p>Search by path or title, or filter by version. Every path opens the live page.</p>
+<!--wds:audit-table-->
