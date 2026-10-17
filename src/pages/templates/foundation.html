@@ -1,0 +1,38 @@
+<!--meta {"status": "Stable"} -->
+<h2>How to use this template</h2>
+<ol class="outline">
+  <li>Add the page to <code>src/nav.json</code> under foundation, with its title, description, owner and Figma node.</li>
+  <li>Create <code>src/pages/foundations/your-page.html</code> and paste the HTML below.</li>
+  <li>Fill in every section. Remove a section only if it truly doesn't apply, and say why.</li>
+  <li>Leave the status as Proposed until the page has been reviewed (see <a href="/overview/governance.html">Governance</a>).</li>
+  <li>Run <code>npm run check</code> to build and check links.</li>
+</ol>
+<p>Use this template to document a new foundation such as elevation or motion.</p>
+
+<h2>Template outline</h2>
+<ol class="outline"><li><strong>Overview</strong>: What this foundation is, and the layers it has (primitive, semantic, component).</li><li><strong>Tokens</strong>: Generated tables, for example &lt;!--wds:theme background/--&gt; or &lt;!--wds:scale spacing/gap/g---&gt;.</li><li><strong>Usage guidance</strong>: Do and don&#x27;t, with examples.</li><li><strong>Responsive behaviour</strong>: How values change at tablet and mobile, or &quot;Doesn&#x27;t change&quot;.</li><li><strong>Light and dark theme</strong>: Differences between themes.</li><li><strong>Accessibility</strong>: Contrast, motion or sizing rules, with WCAG references.</li><li><strong>Figma references</strong>: Links to the Figma page and variables.</li></ol>
+
+<h2>Copyable HTML</h2>
+<div class="code-copy"><button type="button" class="wds-btn wds-btn--secondary copy-block" data-copy-from="#tpl-foundation">Copy HTML</button></div>
+<pre id="tpl-foundation"><code>&lt;!--meta {&quot;status&quot;: &quot;Proposed&quot;} --&gt;
+&lt;h2&gt;Overview&lt;/h2&gt;
+&lt;p&gt;What this foundation is, and the layers it has (primitive, semantic, component).&lt;/p&gt;
+
+&lt;h2&gt;Tokens&lt;/h2&gt;
+&lt;p&gt;Generated tables, for example &lt;!--wds:theme background/--&gt; or &lt;!--wds:scale spacing/gap/g---&gt;.&lt;/p&gt;
+
+&lt;h2&gt;Usage guidance&lt;/h2&gt;
+&lt;p&gt;Do and don&#x27;t, with examples.&lt;/p&gt;
+
+&lt;h2&gt;Responsive behaviour&lt;/h2&gt;
+&lt;p&gt;How values change at tablet and mobile, or &quot;Doesn&#x27;t change&quot;.&lt;/p&gt;
+
+&lt;h2&gt;Light and dark theme&lt;/h2&gt;
+&lt;p&gt;Differences between themes.&lt;/p&gt;
+
+&lt;h2&gt;Accessibility&lt;/h2&gt;
+&lt;p&gt;Contrast, motion or sizing rules, with WCAG references.&lt;/p&gt;
+
+&lt;h2&gt;Figma references&lt;/h2&gt;
+&lt;p&gt;Links to the Figma page and variables.&lt;/p&gt;
+</code></pre>

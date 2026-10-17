@@ -17,11 +17,11 @@
     .box { padding: 16px; border-radius: 12px; background: var(--wds-bg-recessed); outline: 1px dashed var(--wds-border-strong); }
     .cards { display: grid; gap: var(--wds-gap-g-24); }
     .cards > div { border-radius: 16px; background: var(--wds-bg-recessed); min-height: 120px; display: grid; place-items: center; color: var(--wds-text-secondary); }
-    .c3 { grid-template-columns: repeat(auto-fit, minmax(var(--wds-width-3-col-card-min-width), 1fr)); }
+    .c3 { grid-template-columns: repeat(auto-fit, minmax(min(var(--wds-width-3-col-card-min-width), 100%), 1fr)); }
     .c3 > div { max-width: var(--wds-width-3-col-card-max-width); padding: var(--wds-width-3-col-card-top-bottom-padding) var(--wds-width-3-col-card-right-left-padding); }
-    .c5 { grid-template-columns: repeat(auto-fit, minmax(var(--wds-width-5-col-card-min-width), 1fr)); }
+    .c5 { grid-template-columns: repeat(auto-fit, minmax(min(var(--wds-width-5-col-card-min-width), 100%), 1fr)); }
     .c5 > div { max-width: var(--wds-width-5-col-card-max-width); min-height: 80px; }
-    @media (max-width: 767px) { .c5 { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 767px) { .c5 { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
   </style>
 </head>
 <body class="wds">

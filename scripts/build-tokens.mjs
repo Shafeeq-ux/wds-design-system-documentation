@@ -113,4 +113,17 @@ for (const name of Object.keys(C.typography.styles)) {
 }
 
 writeFileSync(join(root, 'css/tokens.css'), out.join('\n') + '\n');
+
+// Flat export for other tools: every CSS variable with its value per mode.
+const flat = {};
+for (const [p, [v]] of C.primitives.tokens) flat[cssName(p)] = { value: cssValue(p, v), figma: p };
+for (const [p, [v]] of C.dimensions.tokens) flat[cssName(p)] = { value: cssValue(p, v), figma: p };
+for (const [p, [l, d]] of C.theme.tokens) flat[cssName(p)] = { light: l, dark: d, figma: p };
+for (const [p, vals] of C.breakpoint.tokens) flat[cssName(p)] = { desktop: cssValue(p, vals[0]), tablet: cssValue(p, vals[1]), mobile: cssValue(p, vals[2]), figma: p };
+for (const [n, st] of Object.entries(C.typography.styles)) {
+  flat[`--wds-${n}-font-size`] = { desktop: `${st.size[0]}px`, tablet: `${st.size[1]}px`, mobile: `${st.size[2]}px`, figma: `${n}/font-size` };
+  flat[`--wds-${n}-line-height`] = { desktop: `${st.lh[0]}px`, tablet: `${st.lh[1]}px`, mobile: `${st.lh[2]}px`, figma: `${n}/line-height` };
+}
+writeFileSync(join(root, 'tokens/wds-css-variables.json'), JSON.stringify({ breakpoints: BREAKPOINTS, variables: flat }, null, 1) + '\n');
+console.log(`wds-css-variables.json: ${Object.keys(flat).length} variables`);
 console.log(`tokens.css: ${out.length} lines`);

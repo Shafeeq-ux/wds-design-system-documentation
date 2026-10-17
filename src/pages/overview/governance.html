@@ -1,0 +1,56 @@
+<!--meta {"status": "Stable"} -->
+<h2>Ownership</h2>
+<div class="table-wrap">
+  <table>
+    <thead><tr><th scope="col">Team</th><th scope="col">Owns</th><th scope="col">Keeps up to date</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Design</strong></td><td>The system, foundations, visual rules, interaction principles and approved patterns</td><td>Figma file and variables, component anatomy, states, accessibility expectations</td></tr>
+      <tr><td><strong>Development</strong></td><td>Implementation of components, sections and tokens</td><td>Developer sections, responsive and theme handling, known limitations, accessibility implementation notes</td></tr>
+      <tr><td><strong>Marketing</strong></td><td>Section usage, content guidelines and character limits</td><td>Approved examples, CTA guidance, content hierarchy, asset usage notes</td></tr>
+    </tbody>
+  </table>
+</div>
+<p>Each page shows its owner in the header strip.</p>
+
+<h2>Review rules</h2>
+<div class="callout"><p><strong>Governance note.</strong> Update the relevant page before releasing any WDS 3.0 change broadly. Cross-functional review is required when a change affects visual design, behaviour, accessibility or content limits.</p></div>
+<div class="table-wrap">
+  <table>
+    <thead><tr><th scope="col">Change</th><th scope="col">Reviewers</th></tr></thead>
+    <tbody>
+      <tr><td>Typo or wording fix in the docs</td><td>Page owner</td></tr>
+      <tr><td>New example or clarification</td><td>Page owner</td></tr>
+      <tr><td>Token value change</td><td>Design + Development</td></tr>
+      <tr><td>New or changed component or section</td><td>Design + Development + Marketing</td></tr>
+      <tr><td>Accessibility-affecting change</td><td>Design + Development, with an accessibility check</td></tr>
+      <tr><td>Character limit change</td><td>Marketing + Design</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<h2>Page status</h2>
+<div class="table-wrap">
+  <table>
+    <thead><tr><th scope="col">Status</th><th scope="col">Meaning</th><th scope="col">Can it ship?</th></tr></thead>
+    <tbody>
+      <tr><td><span class="badge badge-ok">Stable</span></td><td>Matches Figma and reviewed</td><td>Yes</td></tr>
+      <tr><td><span class="badge badge-warn">WIP</span></td><td>Still changing in Figma</td><td>With care; check before launch</td></tr>
+      <tr><td><span class="badge badge-info">Proposed</span></td><td>Waiting for sign-off</td><td>Only with the owner's agreement</td></tr>
+      <tr><td><span class="badge badge-muted">Not defined</span></td><td>Not designed yet</td><td>No</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<h2>Versioning</h2>
+<p>WDS uses semantic versioning: <code>major.minor.patch</code>. The current version is <strong>3.0.0</strong>.</p>
+<div class="table-wrap">
+  <table>
+    <thead><tr><th scope="col">Bump</th><th scope="col">When</th><th scope="col">Example</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Major</strong> (4.0.0)</td><td>Breaking: renamed or removed tokens, classes or sections</td><td>Renaming <code>--wds-bg-page</code></td></tr>
+      <tr><td><strong>Minor</strong> (3.1.0)</td><td>New components, sections, variants or tokens</td><td>Adding the Radio button component</td></tr>
+      <tr><td><strong>Patch</strong> (3.0.1)</td><td>Fixes that don't change the API</td><td>Fixing a token's dark value</td></tr>
+    </tbody>
+  </table>
+</div>
+<p>Every release gets a <a href="/overview/changelog.html">Changelog</a> entry. Breaking changes are announced to all three teams before release.</p>

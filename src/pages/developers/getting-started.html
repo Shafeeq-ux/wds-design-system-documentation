@@ -1,0 +1,57 @@
+<!--meta {"status": "Stable"} -->
+<h2>Overview</h2>
+<p>WDS ships as three files: the tokens, the component and section styles, and a small script for interactive behaviour. There's no framework and no build step required to use them.</p>
+<div class="table-wrap">
+  <table>
+    <thead><tr><th scope="col">File</th><th scope="col">What it is</th><th scope="col">Size</th></tr></thead>
+    <tbody>
+      <tr><td><a href="/css/tokens.css"><code>css/tokens.css</code></a></td><td>Every design token as a CSS custom property, plus the 27 text style classes</td><td>59 KB, 7 KB gzipped</td></tr>
+      <tr><td><a href="/css/wds.css"><code>css/wds.css</code></a></td><td>Layout, components and sections</td><td>33 KB, 6 KB gzipped</td></tr>
+      <tr><td><a href="/js/wds.js"><code>js/wds.js</code></a></td><td>Primary button hover and disclosure menus</td><td>Under 2 KB</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<h2>Setup</h2>
+<h3>1. Add the files</h3>
+<pre><code>&lt;link rel="stylesheet" href="/css/tokens.css"&gt;
+&lt;link rel="stylesheet" href="/css/wds.css"&gt;
+&lt;script src="/js/wds.js" defer&gt;&lt;/script&gt;</code></pre>
+<h3>2. Load the font</h3>
+<p>Self-host the Tekion Sans variable WOFF2 files (see <a href="/foundations/type-in-use.html#web-delivery">Type in use</a>) and declare them under the family name the tokens use:</p>
+<pre><code>@font-face {
+  font-family: "Tekion Sans";
+  src: url("/fonts/TekionSans-VF.woff2") format("woff2-variations");
+  font-weight: 200 900;
+  font-stretch: 75% 125%;
+  font-display: swap;
+}</code></pre>
+<p>Without the font, text falls back to Inter and then the system font.</p>
+<h3>3. Start a page</h3>
+<pre><code>&lt;!doctype html&gt;
+&lt;html lang="en-US"&gt;
+&lt;head&gt;…&lt;/head&gt;
+&lt;body class="wds"&gt;
+  &lt;a class="skip-link" href="#main"&gt;Skip to content&lt;/a&gt;
+  &lt;header class="wds-header" data-theme="dark"&gt;…&lt;/header&gt;
+  &lt;main id="main"&gt;
+    &lt;section class="wds-hero"&gt;…&lt;/section&gt;
+  &lt;/main&gt;
+  &lt;footer class="wds-footer" data-theme="dark"&gt;…&lt;/footer&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+<p>The <code>.wds</code> class sets the font, text colour and page background. Copy each component's markup from its page, under Developer implementation.</p>
+
+<h2>Code examples</h2>
+<p>Every live example is a standalone page you can open and view the source of:</p>
+<ul>
+  <li><a href="/examples/buttons.html">Buttons</a> · <a href="/examples/inputs.html">Inputs</a> · <a href="/examples/checkbox.html">Checkbox</a> · <a href="/examples/radio.html">Radio</a> · <a href="/examples/header.html">Header</a> · <a href="/examples/banner.html">Banner</a></li>
+  <li><a href="/examples/hero-default.html">Hero</a> · <a href="/examples/card-grid.html">Card grid</a> · <a href="/examples/feature-statement.html">Feature</a> · <a href="/examples/stats.html">Stats</a> · <a href="/examples/faq.html">FAQ</a> · <a href="/examples/footer.html">Footer</a> · <a href="/examples/grid.html">Grid</a></li>
+</ul>
+
+<h2>Known limitations</h2>
+<ul>
+  <li>Accordion, Carousel, Tabbed, Pop-up and the header menus have no final interaction design yet. See their pages for status.</li>
+  <li>Section CSS covers the sections with live examples. The others are documented from Figma and need building.</li>
+  <li>The Tekion Sans font files aren't distributed through this public site.</li>
+</ul>

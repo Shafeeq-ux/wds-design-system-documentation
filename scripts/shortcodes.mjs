@@ -119,7 +119,7 @@ function pairs() {
   const T = Object.fromEntries(C.theme.tokens.map(([p, v]) => [p, v]));
   return table(['Pair', 'Use', 'Light', 'Dark'], PAIRS.map(([fg, bg, use]) => {
     const cell = (i) => { const bgHex = rgba(T[bg][i])[3] < 1 ? '#' + over(T[bg][i], pageBg[i]).map((v) => Math.round(v).toString(16).padStart(2, '0')).join('') : T[bg][i];
-      return `<td><span class="pair-demo" style="color:${T[fg][i]};background:${bgHex}">Aa</span> ${grade(contrast(T[fg][i], bgHex), fg.startsWith('border'))}</td>`; };
+      return `<td><svg class="pair-demo" viewBox="0 0 40 32" width="40" height="32" aria-hidden="true"><rect width="40" height="32" rx="8" fill="${bgHex}"/><text x="20" y="21" text-anchor="middle" font-size="15" font-weight="600" fill="${T[fg][i]}">Aa</text></svg> ${grade(contrast(T[fg][i], bgHex), fg.startsWith('border'))}</td>`; };
     return `<tr><td><code>${cssName(fg)}</code><br><small>on <code>${cssName(bg)}</code></small></td><td>${use}</td>${cell(0)}${cell(1)}</tr>`;
   }), 'pairs-table');
 }

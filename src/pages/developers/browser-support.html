@@ -1,0 +1,43 @@
+<!--meta {"status": "Stable"} -->
+<h2>Overview</h2>
+<p>WDS supports the last two major versions of evergreen browsers. Check tekion.com analytics before launch to confirm this covers your visitors. It lets the system use modern CSS without workarounds.</p>
+<div class="table-wrap">
+  <table>
+    <thead><tr><th scope="col">Browser</th><th scope="col">Supported</th></tr></thead>
+    <tbody>
+      <tr><td>Chrome, Edge</td><td>Last 2 versions</td></tr>
+      <tr><td>Safari (macOS and iOS)</td><td>16.4 and later</td></tr>
+      <tr><td>Firefox</td><td>Last 2 versions (121 and later)</td></tr>
+      <tr><td>Samsung Internet</td><td>Last 2 versions</td></tr>
+      <tr><td>Internet Explorer</td><td>Not supported</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<h2>Setup</h2>
+<p>The CSS features WDS depends on, and what happens without them:</p>
+<div class="table-wrap">
+  <table>
+    <thead><tr><th scope="col">Feature</th><th scope="col">Used for</th><th scope="col">Without it</th></tr></thead>
+    <tbody>
+      <tr><td>Custom properties</td><td>Every token</td><td>Required</td></tr>
+      <tr><td><code>:where()</code></td><td>Zero-specificity box sizing</td><td>Elements fall back to content-box sizing</td></tr>
+      <tr><td><code>:has()</code></td><td>Input error and disabled surfaces, checkbox labels</td><td>Use the <code>is-error</code> and <code>is-disabled</code> classes instead</td></tr>
+      <tr><td><code>backdrop-filter</code></td><td>Primary button hover blur, docs top bar</td><td>No blur; the button still works</td></tr>
+      <tr><td>CSS masks</td><td>Checkbox tick, FAQ plus/minus</td><td>Icons don't show (Safari 15.4+ supports them)</td></tr>
+      <tr><td><code>mix-blend-mode: plus-lighter</code></td><td>Primary button pointer glow</td><td>Glow is a plain overlay</td></tr>
+      <tr><td><code>font-stretch</code> with a variable font</td><td>Headline and body widths</td><td>Text renders at 100% width</td></tr>
+      <tr><td><code>&lt;details&gt;</code>, <code>&lt;dialog&gt;</code></td><td>FAQ, pop-ups</td><td>Required</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<h2>Code examples</h2>
+<p>If you need to support an older browser, add the state classes yourself, which the CSS already accepts:</p>
+<pre><code>&lt;div class="wds-input is-error"&gt;…&lt;/div&gt;</code></pre>
+
+<h2>Known limitations</h2>
+<ul>
+  <li>The primary button's hover blur is noticeably smoother in Chromium browsers than in Safari.</li>
+  <li>Firefox only supports <code>font-stretch</code> fully with variable fonts that declare a width axis, which Tekion Sans VF does.</li>
+</ul>

@@ -315,3 +315,17 @@ pre code { background: none; padding: 0; color: var(--wds-text-primary); }
 .calc-count { display: block; min-height: 20px; margin-top: 8px; font-size: 13px; font-variant-numeric: tabular-nums; color: var(--wds-status-success-text); }
 .calc-count.over { color: var(--wds-status-error-text); font-weight: 600; }
 @media (max-width: 767px) { .calc-inputs { grid-template-columns: 1fr 1fr; } .calc-inputs label:first-child { grid-column: 1 / -1; } }
+.code-copy { display: flex; justify-content: flex-end; margin: 16px 0 -8px; }
+.code-copy .wds-btn { min-height: 40px; }
+/* QA fixes */
+.sb-num { color: var(--wds-text-tertiary); }
+/* Teal accent that passes 4.5:1 in both themes (text-teal is only 2.2:1 on white) */
+:root { --doc-teal: var(--wds-color-teal-700); }
+[data-theme="dark"] { --doc-teal: var(--wds-color-teal-400); }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --doc-teal: var(--wds-color-teal-400); } }
+.crumb span, .doc-card .card-num { color: var(--doc-teal); }
+.cr-fail { color: var(--wds-status-error-text-strong); }
+.cr-pass { color: var(--wds-status-success-text-strong); }
+.pair-demo { display: inline-block; vertical-align: middle; margin-right: 6px; box-shadow: none; border-radius: 8px; outline: 1px solid #8a909933; }
+.pair-demo text { font-family: var(--doc-font); }
+.table-wrap { position: relative; } /* keeps absolutely positioned hidden labels inside the scroll area */

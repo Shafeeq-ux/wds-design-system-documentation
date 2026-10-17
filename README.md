@@ -23,11 +23,17 @@ This opens http://localhost:4321 and rebuilds whenever you change a file. `npm r
 | `css/tokens.css` | Generated from the JSON by `scripts/build-tokens.mjs`. Don't edit it. |
 | `css/wds.css` | WDS component and layout styles: the design system itself |
 | `css/docs.css` | Styles for the documentation site (shell, sidebar, previews, tables) |
-| `js/docs.js` | Theme switch, mobile nav, search, on-page contents and live previews |
+| `js/wds.js` | Component behaviour: primary button hover, header menus |
+| `js/docs.js` | Docs only: theme switch, mobile nav, search, contents, previews, counters, calculator |
+| `scripts/shortcodes.mjs` | Build-time tables generated from the token and section data |
+| `src/data/sections.json` | Every section variant (Figma node, theme) and content slot (style, width, lines) |
+| `src/data/icons.json` | Feature icon names and keywords |
+| `tokens/wds-css-variables.json` | Generated: every CSS variable with its value per theme or breakpoint |
 | `src/nav.json` | Sidebar structure: every page, its owner, status, phase and Figma node |
 | `src/partials/layout.html` | The shared page shell |
 | `src/pages/**.html` | Page content. Any page in `nav.json` without a file gets a "Planned" stub. |
-| `src/pages/examples/*.html` | Standalone demos (`"layout": "bare"`) that live previews load in an iframe |
+| `src/pages/examples/*.html` | Standalone demos that live previews load in an iframe. `"layout": "example"` adds the WDS head for you; `"bare"` is copied as-is. |
+| `assets/sections/` | Figma renders of every section variant (desktop, tablet, mobile) |
 
 ### Adding a page
 
@@ -39,13 +45,31 @@ This opens http://localhost:4321 and rebuilds whenever you change a file. `npm r
    ```
 3. Every `h2` appears in the "On this page" contents and in search.
 
+### Shortcodes
+
+Write these in a page and the build replaces them with generated HTML:
+
+| Shortcode | Output |
+|---|---|
+| `<!--wds:ramp color/gray-->` | Primitive colour ramp |
+| `<!--wds:theme text/-->` | Theme tokens under a path, light and dark, with contrast |
+| `<!--wds:pairs-->` | Foreground/background pairs checked in both themes |
+| `<!--wds:type-scale-->` | All 27 text styles at desktop, tablet and mobile |
+| `<!--wds:scale spacing/padding/p--->` | Size tokens as bars |
+| `<!--wds:responsive spacing/width/-->` | Breakpoint tokens per mode |
+| `<!--wds:radii-->`, `<!--wds:borders-->`, `<!--wds:gradients-->` | Previews |
+| `<!--wds:icons-->`, `<!--wds:icon-keywords-->` | Utility icons, feature icon table |
+| `<!--wds:section-sets hero-->` | Figma renders for a section |
+| `<!--wds:section-limits hero-->` | Character-limit table with live counters |
+| `<!--wds:all-limits-->`, `<!--wds:limit-calculator-->` | Every slot, and the calculator |
+
 ### Adding a live preview
 
 ```html
 <div class="doc-preview" data-src="/examples/hero-default.html" data-title="Hero · default"></div>
 ```
 
-The preview has Desktop (1440), Tablet (768) and Mobile (390) widths and its own Light/Dark switch. The iframe renders at the real width, so real media queries fire.
+The preview has Desktop (1440), Tablet (768) and Mobile (390) widths and its own Light/Dark switch. The iframe renders at the real width, so real media queries fire. Add `data-start-theme="dark"` to open it in dark.
 
 ## Tokens
 
@@ -63,6 +87,12 @@ CSS names come from the Figma path. A leading category group (`background`, `com
 The theme defaults to light. `[data-theme="dark"]` forces dark mode, and `prefers-color-scheme: dark` applies dark unless `data-theme="light"` is set. Typography and layout tokens use desktop values by default, tablet values at 1279px and below, and mobile values at 767px and below.
 
 To refresh tokens after a Figma change, run `scripts/figma-export.js` in the Figma file once per collection, update `tokens/wds-tokens.json` and rebuild.
+
+## Quality checks
+
+- `npm run check` builds the site and fails on any broken internal link or `#anchor`. Stop `npm run dev` first, or wait for it to finish rebuilding, so the two builds don't overwrite `dist/` at the same time.
+- Accessibility: run axe DevTools on new pages in both themes. The 3.0.0 release passed axe WCAG 2.2 AA rules on every page and example, in light and dark.
+- Responsive: check every new page at 390px and 320px for horizontal scrolling.
 
 ## Deploy
 

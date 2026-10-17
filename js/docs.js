@@ -136,8 +136,8 @@
     const frame = el.querySelector('iframe');
     const size = el.querySelector('.pv-size');
     let vp = 'desktop';
-    // data-theme on the preview sets its starting theme (the Figma default for that section)
-    let pt = el.dataset.theme || 'site';
+    // data-start-theme on the preview sets its starting theme (the Figma default for that section)
+    let pt = el.dataset.startTheme || 'site';
     el.querySelectorAll('[data-pt]').forEach((x) => x.setAttribute('aria-pressed', String(x.dataset.pt === pt)));
 
     function applyTheme() {
@@ -234,3 +234,31 @@ document.querySelectorAll('form.calc').forEach((form) => {
   form.addEventListener('input', (e) => (e.target.name === 'copy' ? countCopy() : calc()));
   calc();
 });
+
+// ---------- Copy a whole code block ----------
+document.querySelectorAll('[data-copy-from]').forEach((btn) => {
+  btn.addEventListener('click', async () => {
+    const src = document.querySelector(btn.dataset.copyFrom);
+    try { await navigator.clipboard.writeText(src.textContent); } catch { return; }
+    const label = btn.textContent;
+    btn.textContent = 'Copied';
+    setTimeout(() => { btn.textContent = label; }, 1500);
+  });
+});
+
+// ---------- Keyboard access to scrollable blocks (WCAG 2.1.1) ----------
+function markScrollable() {
+  document.querySelectorAll('pre, .table-wrap').forEach((el) => {
+    const scrolls = el.scrollWidth > el.clientWidth + 1;
+    if (scrolls && !el.hasAttribute('tabindex')) {
+      el.setAttribute('tabindex', '0');
+      el.setAttribute('role', 'region');
+      const label = el.matches('pre') ? 'Code example' : (el.previousElementSibling?.textContent?.trim().slice(0, 60) || 'Table');
+      el.setAttribute('aria-label', label + ' (scrolls sideways)');
+    } else if (!scrolls && el.getAttribute('role') === 'region') {
+      el.removeAttribute('tabindex'); el.removeAttribute('role'); el.removeAttribute('aria-label');
+    }
+  });
+}
+markScrollable();
+window.addEventListener('resize', () => { clearTimeout(markScrollable.t); markScrollable.t = setTimeout(markScrollable, 200); });

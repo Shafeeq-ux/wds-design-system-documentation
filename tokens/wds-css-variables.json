@@ -1,0 +1,2261 @@
+{
+ "breakpoints": {
+  "tablet": 1279,
+  "mobile": 767
+ },
+ "variables": {
+  "--wds-font-family-headline": {
+   "value": "\"Tekion Sans\"",
+   "figma": "font/font-family/headline"
+  },
+  "--wds-font-family-body": {
+   "value": "\"Tekion Sans\"",
+   "figma": "font/font-family/body"
+  },
+  "--wds-font-size-fs-12": {
+   "value": "12px",
+   "figma": "font/font-size/fs-12"
+  },
+  "--wds-font-size-fs-14": {
+   "value": "14px",
+   "figma": "font/font-size/fs-14"
+  },
+  "--wds-font-size-fs-16": {
+   "value": "16px",
+   "figma": "font/font-size/fs-16"
+  },
+  "--wds-font-size-fs-18": {
+   "value": "18px",
+   "figma": "font/font-size/fs-18"
+  },
+  "--wds-font-size-fs-20": {
+   "value": "20px",
+   "figma": "font/font-size/fs-20"
+  },
+  "--wds-font-size-fs-24": {
+   "value": "24px",
+   "figma": "font/font-size/fs-24"
+  },
+  "--wds-font-size-fs-28": {
+   "value": "28px",
+   "figma": "font/font-size/fs-28"
+  },
+  "--wds-font-size-fs-32": {
+   "value": "32px",
+   "figma": "font/font-size/fs-32"
+  },
+  "--wds-font-size-fs-36": {
+   "value": "36px",
+   "figma": "font/font-size/fs-36"
+  },
+  "--wds-font-size-fs-40": {
+   "value": "40px",
+   "figma": "font/font-size/fs-40"
+  },
+  "--wds-font-size-fs-48": {
+   "value": "48px",
+   "figma": "font/font-size/fs-48"
+  },
+  "--wds-font-size-fs-56": {
+   "value": "56px",
+   "figma": "font/font-size/fs-56"
+  },
+  "--wds-font-size-fs-64": {
+   "value": "64px",
+   "figma": "font/font-size/fs-64"
+  },
+  "--wds-font-weight-fw-300": {
+   "value": "300",
+   "figma": "font/font-weight/fw-300"
+  },
+  "--wds-font-weight-fw-400": {
+   "value": "400",
+   "figma": "font/font-weight/fw-400"
+  },
+  "--wds-font-weight-fw-500": {
+   "value": "500",
+   "figma": "font/font-weight/fw-500"
+  },
+  "--wds-font-weight-fw-600": {
+   "value": "600",
+   "figma": "font/font-weight/fw-600"
+  },
+  "--wds-font-stretch-fst-105": {
+   "value": "105%",
+   "figma": "font/font-stretch/fst-105"
+  },
+  "--wds-font-stretch-fst-110": {
+   "value": "110%",
+   "figma": "font/font-stretch/fst-110"
+  },
+  "--wds-font-stretch-fst-125": {
+   "value": "125%",
+   "figma": "font/font-stretch/fst-125"
+  },
+  "--wds-font-line-height-lh-16": {
+   "value": "16px",
+   "figma": "font/line-height/lh-16"
+  },
+  "--wds-font-line-height-lh-18": {
+   "value": "18px",
+   "figma": "font/line-height/lh-18"
+  },
+  "--wds-font-line-height-lh-20": {
+   "value": "20px",
+   "figma": "font/line-height/lh-20"
+  },
+  "--wds-font-line-height-lh-22": {
+   "value": "22px",
+   "figma": "font/line-height/lh-22"
+  },
+  "--wds-font-line-height-lh-24": {
+   "value": "24px",
+   "figma": "font/line-height/lh-24"
+  },
+  "--wds-font-line-height-lh-26": {
+   "value": "26px",
+   "figma": "font/line-height/lh-26"
+  },
+  "--wds-font-line-height-lh-28": {
+   "value": "28px",
+   "figma": "font/line-height/lh-28"
+  },
+  "--wds-font-line-height-lh-32": {
+   "value": "32px",
+   "figma": "font/line-height/lh-32"
+  },
+  "--wds-font-line-height-lh-36": {
+   "value": "36px",
+   "figma": "font/line-height/lh-36"
+  },
+  "--wds-font-line-height-lh-38": {
+   "value": "38px",
+   "figma": "font/line-height/lh-38"
+  },
+  "--wds-font-line-height-lh-40": {
+   "value": "40px",
+   "figma": "font/line-height/lh-40"
+  },
+  "--wds-font-line-height-lh-44": {
+   "value": "44px",
+   "figma": "font/line-height/lh-44"
+  },
+  "--wds-font-line-height-lh-48": {
+   "value": "48px",
+   "figma": "font/line-height/lh-48"
+  },
+  "--wds-font-line-height-lh-52": {
+   "value": "52px",
+   "figma": "font/line-height/lh-52"
+  },
+  "--wds-font-line-height-lh-64": {
+   "value": "64px",
+   "figma": "font/line-height/lh-64"
+  },
+  "--wds-font-line-height-lh-68": {
+   "value": "68px",
+   "figma": "font/line-height/lh-68"
+  },
+  "--wds-font-letter-spacing-ls-neg-1": {
+   "value": "-1px",
+   "figma": "font/letter-spacing/ls-neg-1"
+  },
+  "--wds-font-letter-spacing-ls-neg-0-5": {
+   "value": "-0.5px",
+   "figma": "font/letter-spacing/ls-neg-0-5"
+  },
+  "--wds-font-letter-spacing-ls-0": {
+   "value": "0",
+   "figma": "font/letter-spacing/ls-0"
+  },
+  "--wds-font-letter-spacing-ls-0-5": {
+   "value": "0.5px",
+   "figma": "font/letter-spacing/ls-0-5"
+  },
+  "--wds-font-letter-spacing-ls-1-2": {
+   "value": "1.2px",
+   "figma": "font/letter-spacing/ls-1-2"
+  },
+  "--wds-color-gray-0": {
+   "value": "#ffffff",
+   "figma": "color/gray/gray-0"
+  },
+  "--wds-color-gray-50": {
+   "value": "#f5f7fa",
+   "figma": "color/gray/gray-50"
+  },
+  "--wds-color-gray-100": {
+   "value": "#eceef3",
+   "figma": "color/gray/gray-100"
+  },
+  "--wds-color-gray-200": {
+   "value": "#dadce1",
+   "figma": "color/gray/gray-200"
+  },
+  "--wds-color-gray-300": {
+   "value": "#bbc0cc",
+   "figma": "color/gray/gray-300"
+  },
+  "--wds-color-gray-400": {
+   "value": "#8a9099",
+   "figma": "color/gray/gray-400"
+  },
+  "--wds-color-gray-500": {
+   "value": "#636b78",
+   "figma": "color/gray/gray-500"
+  },
+  "--wds-color-gray-600": {
+   "value": "#454b56",
+   "figma": "color/gray/gray-600"
+  },
+  "--wds-color-gray-700": {
+   "value": "#32363f",
+   "figma": "color/gray/gray-700"
+  },
+  "--wds-color-gray-800": {
+   "value": "#222630",
+   "figma": "color/gray/gray-800"
+  },
+  "--wds-color-gray-850": {
+   "value": "#1e2230",
+   "figma": "color/gray/gray-850"
+  },
+  "--wds-color-gray-900": {
+   "value": "#141820",
+   "figma": "color/gray/gray-900"
+  },
+  "--wds-color-gray-950": {
+   "value": "#0a0c10",
+   "figma": "color/gray/gray-950"
+  },
+  "--wds-color-teal-50": {
+   "value": "#e5fafb",
+   "figma": "color/teal/teal-50"
+  },
+  "--wds-color-teal-100": {
+   "value": "#cbfaf7",
+   "figma": "color/teal/teal-100"
+  },
+  "--wds-color-teal-200": {
+   "value": "#96f5ee",
+   "figma": "color/teal/teal-200"
+  },
+  "--wds-color-teal-300": {
+   "value": "#5de2d9",
+   "figma": "color/teal/teal-300"
+  },
+  "--wds-color-teal-400": {
+   "value": "#1edcd3",
+   "figma": "color/teal/teal-400"
+  },
+  "--wds-color-teal-500": {
+   "value": "#00c3b4",
+   "figma": "color/teal/teal-500"
+  },
+  "--wds-color-teal-600": {
+   "value": "#009b8e",
+   "figma": "color/teal/teal-600"
+  },
+  "--wds-color-teal-700": {
+   "value": "#007468",
+   "figma": "color/teal/teal-700"
+  },
+  "--wds-color-teal-800": {
+   "value": "#004d45",
+   "figma": "color/teal/teal-800"
+  },
+  "--wds-color-teal-900": {
+   "value": "#002723",
+   "figma": "color/teal/teal-900"
+  },
+  "--wds-color-static-black": {
+   "value": "#000000",
+   "figma": "color/static/static-black"
+  },
+  "--wds-color-static-white": {
+   "value": "#ffffff",
+   "figma": "color/static/static-white"
+  },
+  "--wds-color-static-dark": {
+   "value": "#0a0c10",
+   "figma": "color/static/static-dark"
+  },
+  "--wds-color-static-light": {
+   "value": "#ffffff",
+   "figma": "color/static/static-light"
+  },
+  "--wds-color-status-green-50": {
+   "value": "#e8fdf5",
+   "figma": "color/status/green-50"
+  },
+  "--wds-color-status-green-200": {
+   "value": "#6ee7b7",
+   "figma": "color/status/green-200"
+  },
+  "--wds-color-status-green-500": {
+   "value": "#10b981",
+   "figma": "color/status/green-500"
+  },
+  "--wds-color-status-green-700": {
+   "value": "#047857",
+   "figma": "color/status/green-700"
+  },
+  "--wds-color-status-amber-50": {
+   "value": "#fffbeb",
+   "figma": "color/status/amber-50"
+  },
+  "--wds-color-status-amber-200": {
+   "value": "#fcd34d",
+   "figma": "color/status/amber-200"
+  },
+  "--wds-color-status-amber-500": {
+   "value": "#f59e0b",
+   "figma": "color/status/amber-500"
+  },
+  "--wds-color-status-amber-700": {
+   "value": "#b45309",
+   "figma": "color/status/amber-700"
+  },
+  "--wds-color-status-red-50": {
+   "value": "#fff1f0",
+   "figma": "color/status/red-50"
+  },
+  "--wds-color-status-red-200": {
+   "value": "#fecaca",
+   "figma": "color/status/red-200"
+  },
+  "--wds-color-status-red-500": {
+   "value": "#ef4444",
+   "figma": "color/status/red-500"
+  },
+  "--wds-color-status-red-600": {
+   "value": "#dc2626",
+   "figma": "color/status/red-600"
+  },
+  "--wds-size-0": {
+   "value": "0",
+   "figma": "core/size-0"
+  },
+  "--wds-size-1": {
+   "value": "1px",
+   "figma": "core/size-1"
+  },
+  "--wds-size-2": {
+   "value": "2px",
+   "figma": "core/size-2"
+  },
+  "--wds-size-3": {
+   "value": "3px",
+   "figma": "core/size-3"
+  },
+  "--wds-size-4": {
+   "value": "4px",
+   "figma": "core/size-4"
+  },
+  "--wds-size-6": {
+   "value": "6px",
+   "figma": "core/size-6"
+  },
+  "--wds-size-8": {
+   "value": "8px",
+   "figma": "core/size-8"
+  },
+  "--wds-size-12": {
+   "value": "12px",
+   "figma": "core/size-12"
+  },
+  "--wds-size-16": {
+   "value": "16px",
+   "figma": "core/size-16"
+  },
+  "--wds-size-20": {
+   "value": "20px",
+   "figma": "core/size-20"
+  },
+  "--wds-size-24": {
+   "value": "24px",
+   "figma": "core/size-24"
+  },
+  "--wds-size-28": {
+   "value": "28px",
+   "figma": "core/size-28"
+  },
+  "--wds-size-32": {
+   "value": "32px",
+   "figma": "core/size-32"
+  },
+  "--wds-size-36": {
+   "value": "36px",
+   "figma": "core/size-36"
+  },
+  "--wds-size-40": {
+   "value": "40px",
+   "figma": "core/size-40"
+  },
+  "--wds-size-44": {
+   "value": "44px",
+   "figma": "core/size-44"
+  },
+  "--wds-size-48": {
+   "value": "48px",
+   "figma": "core/size-48"
+  },
+  "--wds-size-52": {
+   "value": "52px",
+   "figma": "core/size-52"
+  },
+  "--wds-size-56": {
+   "value": "56px",
+   "figma": "core/size-56"
+  },
+  "--wds-size-60": {
+   "value": "60px",
+   "figma": "core/size-60"
+  },
+  "--wds-size-64": {
+   "value": "64px",
+   "figma": "core/size-64"
+  },
+  "--wds-size-68": {
+   "value": "68px",
+   "figma": "core/size-68"
+  },
+  "--wds-size-72": {
+   "value": "72px",
+   "figma": "core/size-72"
+  },
+  "--wds-size-76": {
+   "value": "76px",
+   "figma": "core/size-76"
+  },
+  "--wds-size-80": {
+   "value": "80px",
+   "figma": "core/size-80"
+  },
+  "--wds-size-84": {
+   "value": "84px",
+   "figma": "core/size-84"
+  },
+  "--wds-size-88": {
+   "value": "88px",
+   "figma": "core/size-88"
+  },
+  "--wds-size-92": {
+   "value": "92px",
+   "figma": "core/size-92"
+  },
+  "--wds-size-96": {
+   "value": "96px",
+   "figma": "core/size-96"
+  },
+  "--wds-size-100": {
+   "value": "100px",
+   "figma": "core/size-100"
+  },
+  "--wds-size-104": {
+   "value": "104px",
+   "figma": "core/size-104"
+  },
+  "--wds-size-108": {
+   "value": "108px",
+   "figma": "core/size-108"
+  },
+  "--wds-size-112": {
+   "value": "112px",
+   "figma": "core/size-112"
+  },
+  "--wds-size-116": {
+   "value": "116px",
+   "figma": "core/size-116"
+  },
+  "--wds-size-120": {
+   "value": "120px",
+   "figma": "core/size-120"
+  },
+  "--wds-size-124": {
+   "value": "124px",
+   "figma": "core/size-124"
+  },
+  "--wds-size-128": {
+   "value": "128px",
+   "figma": "core/size-128"
+  },
+  "--wds-size-132": {
+   "value": "132px",
+   "figma": "core/size-132"
+  },
+  "--wds-size-136": {
+   "value": "136px",
+   "figma": "core/size-136"
+  },
+  "--wds-size-140": {
+   "value": "140px",
+   "figma": "core/size-140"
+  },
+  "--wds-size-144": {
+   "value": "144px",
+   "figma": "core/size-144"
+  },
+  "--wds-size-148": {
+   "value": "148px",
+   "figma": "core/size-148"
+  },
+  "--wds-size-152": {
+   "value": "152px",
+   "figma": "core/size-152"
+  },
+  "--wds-size-156": {
+   "value": "156px",
+   "figma": "core/size-156"
+  },
+  "--wds-size-160": {
+   "value": "160px",
+   "figma": "core/size-160"
+  },
+  "--wds-size-164": {
+   "value": "164px",
+   "figma": "core/size-164"
+  },
+  "--wds-size-168": {
+   "value": "168px",
+   "figma": "core/size-168"
+  },
+  "--wds-size-172": {
+   "value": "172px",
+   "figma": "core/size-172"
+  },
+  "--wds-size-176": {
+   "value": "176px",
+   "figma": "core/size-176"
+  },
+  "--wds-size-180": {
+   "value": "180px",
+   "figma": "core/size-180"
+  },
+  "--wds-size-184": {
+   "value": "184px",
+   "figma": "core/size-184"
+  },
+  "--wds-size-188": {
+   "value": "188px",
+   "figma": "core/size-188"
+  },
+  "--wds-size-192": {
+   "value": "192px",
+   "figma": "core/size-192"
+  },
+  "--wds-size-196": {
+   "value": "196px",
+   "figma": "core/size-196"
+  },
+  "--wds-size-200": {
+   "value": "200px",
+   "figma": "core/size-200"
+  },
+  "--wds-size-9999": {
+   "value": "9999px",
+   "figma": "core/size-9999"
+  },
+  "--wds-padding-p-0": {
+   "value": "0",
+   "figma": "spacing/padding/p-0"
+  },
+  "--wds-padding-p-2": {
+   "value": "2px",
+   "figma": "spacing/padding/p-2"
+  },
+  "--wds-padding-p-4": {
+   "value": "4px",
+   "figma": "spacing/padding/p-4"
+  },
+  "--wds-padding-p-6": {
+   "value": "6px",
+   "figma": "spacing/padding/p-6"
+  },
+  "--wds-padding-p-8": {
+   "value": "8px",
+   "figma": "spacing/padding/p-8"
+  },
+  "--wds-padding-p-12": {
+   "value": "12px",
+   "figma": "spacing/padding/p-12"
+  },
+  "--wds-padding-p-16": {
+   "value": "16px",
+   "figma": "spacing/padding/p-16"
+  },
+  "--wds-padding-p-20": {
+   "value": "20px",
+   "figma": "spacing/padding/p-20"
+  },
+  "--wds-padding-p-24": {
+   "value": "24px",
+   "figma": "spacing/padding/p-24"
+  },
+  "--wds-padding-p-32": {
+   "value": "32px",
+   "figma": "spacing/padding/p-32"
+  },
+  "--wds-padding-p-40": {
+   "value": "40px",
+   "figma": "spacing/padding/p-40"
+  },
+  "--wds-padding-p-48": {
+   "value": "48px",
+   "figma": "spacing/padding/p-48"
+  },
+  "--wds-padding-p-60": {
+   "value": "60px",
+   "figma": "spacing/padding/p-60"
+  },
+  "--wds-padding-p-64": {
+   "value": "64px",
+   "figma": "spacing/padding/p-64"
+  },
+  "--wds-padding-p-80": {
+   "value": "80px",
+   "figma": "spacing/padding/p-80"
+  },
+  "--wds-padding-p-120": {
+   "value": "120px",
+   "figma": "spacing/padding/p-120"
+  },
+  "--wds-padding-p-140": {
+   "value": "140px",
+   "figma": "spacing/padding/p-140"
+  },
+  "--wds-padding-p-200": {
+   "value": "200px",
+   "figma": "spacing/padding/p-200"
+  },
+  "--wds-padding-button-padding-x": {
+   "value": "24px",
+   "figma": "spacing/padding/button-padding-x"
+  },
+  "--wds-padding-button-padding-y": {
+   "value": "8px",
+   "figma": "spacing/padding/button-padding-y"
+  },
+  "--wds-padding-input-padding-x": {
+   "value": "16px",
+   "figma": "spacing/padding/input-padding-x"
+  },
+  "--wds-padding-input-padding-y": {
+   "value": "12px",
+   "figma": "spacing/padding/input-padding-y"
+  },
+  "--wds-gap-g-0": {
+   "value": "0",
+   "figma": "spacing/gap/g-0"
+  },
+  "--wds-gap-g-2": {
+   "value": "2px",
+   "figma": "spacing/gap/g-2"
+  },
+  "--wds-gap-g-4": {
+   "value": "4px",
+   "figma": "spacing/gap/g-4"
+  },
+  "--wds-gap-g-6": {
+   "value": "6px",
+   "figma": "spacing/gap/g-6"
+  },
+  "--wds-gap-g-8": {
+   "value": "8px",
+   "figma": "spacing/gap/g-8"
+  },
+  "--wds-gap-g-12": {
+   "value": "12px",
+   "figma": "spacing/gap/g-12"
+  },
+  "--wds-gap-g-16": {
+   "value": "16px",
+   "figma": "spacing/gap/g-16"
+  },
+  "--wds-gap-g-20": {
+   "value": "20px",
+   "figma": "spacing/gap/g-20"
+  },
+  "--wds-gap-g-24": {
+   "value": "24px",
+   "figma": "spacing/gap/g-24"
+  },
+  "--wds-gap-g-32": {
+   "value": "32px",
+   "figma": "spacing/gap/g-32"
+  },
+  "--wds-gap-g-40": {
+   "value": "40px",
+   "figma": "spacing/gap/g-40"
+  },
+  "--wds-gap-g-48": {
+   "value": "48px",
+   "figma": "spacing/gap/g-48"
+  },
+  "--wds-gap-g-60": {
+   "value": "60px",
+   "figma": "spacing/gap/g-60"
+  },
+  "--wds-gap-g-64": {
+   "value": "64px",
+   "figma": "spacing/gap/g-64"
+  },
+  "--wds-gap-g-80": {
+   "value": "80px",
+   "figma": "spacing/gap/g-80"
+  },
+  "--wds-gap-g-120": {
+   "value": "120px",
+   "figma": "spacing/gap/g-120"
+  },
+  "--wds-gap-g-140": {
+   "value": "140px",
+   "figma": "spacing/gap/g-140"
+  },
+  "--wds-gap-g-200": {
+   "value": "200px",
+   "figma": "spacing/gap/g-200"
+  },
+  "--wds-gap-button-icon-gap": {
+   "value": "6px",
+   "figma": "spacing/gap/button-icon-gap"
+  },
+  "--wds-gap-input-icon-gap": {
+   "value": "8px",
+   "figma": "spacing/gap/input-icon-gap"
+  },
+  "--wds-gap-checkbox-label-gap": {
+   "value": "12px",
+   "figma": "spacing/gap/checkbox-label-gap"
+  },
+  "--wds-gap-checkbox-size": {
+   "value": "20px",
+   "figma": "spacing/gap/checkbox-size"
+  },
+  "--wds-border-width-bw-0": {
+   "value": "0",
+   "figma": "border/border-width/bw-0"
+  },
+  "--wds-border-width-bw-1": {
+   "value": "1px",
+   "figma": "border/border-width/bw-1"
+  },
+  "--wds-border-width-bw-2": {
+   "value": "2px",
+   "figma": "border/border-width/bw-2"
+  },
+  "--wds-border-width-bw-3": {
+   "value": "3px",
+   "figma": "border/border-width/bw-3"
+  },
+  "--wds-border-width-button": {
+   "value": "2px",
+   "figma": "border/border-width/button"
+  },
+  "--wds-border-width-input": {
+   "value": "1px",
+   "figma": "border/border-width/input"
+  },
+  "--wds-border-width-input-focus": {
+   "value": "2px",
+   "figma": "border/border-width/input-focus"
+  },
+  "--wds-border-radius-br-0": {
+   "value": "0",
+   "figma": "border/border-radius/br-0"
+  },
+  "--wds-border-radius-br-4": {
+   "value": "4px",
+   "figma": "border/border-radius/br-4"
+  },
+  "--wds-border-radius-br-8": {
+   "value": "8px",
+   "figma": "border/border-radius/br-8"
+  },
+  "--wds-border-radius-br-12": {
+   "value": "12px",
+   "figma": "border/border-radius/br-12"
+  },
+  "--wds-border-radius-br-16": {
+   "value": "16px",
+   "figma": "border/border-radius/br-16"
+  },
+  "--wds-border-radius-br-20": {
+   "value": "20px",
+   "figma": "border/border-radius/br-20"
+  },
+  "--wds-border-radius-br-24": {
+   "value": "24px",
+   "figma": "border/border-radius/br-24"
+  },
+  "--wds-border-radius-br-32": {
+   "value": "32px",
+   "figma": "border/border-radius/br-32"
+  },
+  "--wds-border-radius-br-40": {
+   "value": "40px",
+   "figma": "border/border-radius/br-40"
+  },
+  "--wds-border-radius-br-9999": {
+   "value": "9999px",
+   "figma": "border/border-radius/br-9999"
+  },
+  "--wds-border-radius-button": {
+   "value": "9999px",
+   "figma": "border/border-radius/button"
+  },
+  "--wds-border-radius-full": {
+   "value": "9999px",
+   "figma": "border/border-radius/full"
+  },
+  "--wds-border-radius-bento-card": {
+   "value": "24px",
+   "figma": "border/border-radius/bento-card"
+  },
+  "--wds-border-radius-input": {
+   "value": "9999px",
+   "figma": "border/border-radius/input"
+  },
+  "--wds-border-radius-textarea": {
+   "value": "16px",
+   "figma": "border/border-radius/textarea"
+  },
+  "--wds-border-radius-checkbox": {
+   "value": "0",
+   "figma": "border/border-radius/checkbox"
+  },
+  "--wds-bg-page": {
+   "light": "#ffffff",
+   "dark": "#0a0c10",
+   "figma": "background/bg-page"
+  },
+  "--wds-bg-subtle": {
+   "light": "#f5f7fa",
+   "dark": "#141820",
+   "figma": "background/bg-subtle"
+  },
+  "--wds-bg-recessed": {
+   "light": "#eceef3",
+   "dark": "#1e2230",
+   "figma": "background/bg-recessed"
+  },
+  "--wds-bg-elevated": {
+   "light": "#ffffff",
+   "dark": "#141820",
+   "figma": "background/bg-elevated"
+  },
+  "--wds-bg-overlay": {
+   "light": "#ffffff",
+   "dark": "#141820",
+   "figma": "background/bg-overlay"
+  },
+  "--wds-bg-inverse": {
+   "light": "#0a0c10",
+   "dark": "#ffffff",
+   "figma": "background/bg-inverse"
+  },
+  "--wds-bg-disabled": {
+   "light": "#f5f7fa",
+   "dark": "#141820",
+   "figma": "background/bg-disabled"
+  },
+  "--wds-bg-tooltip": {
+   "light": "#222630",
+   "dark": "#32363f",
+   "figma": "background/bg-tooltip"
+  },
+  "--wds-bg-popup": {
+   "light": "#ffffffeb",
+   "dark": "#0e1220eb",
+   "figma": "background/bg-popup"
+  },
+  "--wds-text-primary": {
+   "light": "#222630",
+   "dark": "#ffffff",
+   "figma": "text/text-primary"
+  },
+  "--wds-text-secondary": {
+   "light": "#454b56",
+   "dark": "#bbc0cc",
+   "figma": "text/text-secondary"
+  },
+  "--wds-text-tertiary": {
+   "light": "#636b78",
+   "dark": "#8a9099",
+   "figma": "text/text-tertiary"
+  },
+  "--wds-text-disabled": {
+   "light": "#8a9099",
+   "dark": "#636b78",
+   "figma": "text/text-disabled"
+  },
+  "--wds-text-inverse": {
+   "light": "#ffffff",
+   "dark": "#222630",
+   "figma": "text/text-inverse"
+  },
+  "--wds-text-inverse-muted": {
+   "light": "#8a9099",
+   "dark": "#636b78",
+   "figma": "text/text-inverse-muted"
+  },
+  "--wds-text-link": {
+   "light": "#222630",
+   "dark": "#ffffff",
+   "figma": "text/text-link"
+  },
+  "--wds-text-on-dark": {
+   "light": "#ffffff",
+   "dark": "#ffffff",
+   "figma": "text/text-on-dark"
+  },
+  "--wds-text-teal": {
+   "light": "#00c3b4",
+   "dark": "#00c3b4",
+   "figma": "text/text-teal"
+  },
+  "--wds-icon-primary": {
+   "light": "#222630",
+   "dark": "#ffffff",
+   "figma": "icon/icon-primary"
+  },
+  "--wds-icon-secondary": {
+   "light": "#636b78",
+   "dark": "#8a9099",
+   "figma": "icon/icon-secondary"
+  },
+  "--wds-icon-tertiary": {
+   "light": "#8a9099",
+   "dark": "#636b78",
+   "figma": "icon/icon-tertiary"
+  },
+  "--wds-icon-disabled": {
+   "light": "#bbc0cc",
+   "dark": "#454b56",
+   "figma": "icon/icon-disabled"
+  },
+  "--wds-icon-inverse": {
+   "light": "#ffffff",
+   "dark": "#222630",
+   "figma": "icon/icon-inverse"
+  },
+  "--wds-icon-success": {
+   "light": "#10b981",
+   "dark": "#10b981",
+   "figma": "icon/icon-success"
+  },
+  "--wds-icon-warning": {
+   "light": "#f59e0b",
+   "dark": "#f59e0b",
+   "figma": "icon/icon-warning"
+  },
+  "--wds-icon-error": {
+   "light": "#ef4444",
+   "dark": "#ef4444",
+   "figma": "icon/icon-error"
+  },
+  "--wds-icon-teal": {
+   "light": "#00c3b4",
+   "dark": "#00c3b4",
+   "figma": "icon/icon-teal"
+  },
+  "--wds-border-subtle": {
+   "light": "#eceef3",
+   "dark": "#1e2230",
+   "figma": "border/border-subtle"
+  },
+  "--wds-border-default": {
+   "light": "#dadce1",
+   "dark": "#32363f",
+   "figma": "border/border-default"
+  },
+  "--wds-border-strong": {
+   "light": "#bbc0cc",
+   "dark": "#454b56",
+   "figma": "border/border-strong"
+  },
+  "--wds-border-focus": {
+   "light": "#222630",
+   "dark": "#ffffff",
+   "figma": "border/border-focus"
+  },
+  "--wds-border-disabled": {
+   "light": "#eceef3",
+   "dark": "#1e2230",
+   "figma": "border/border-disabled"
+  },
+  "--wds-border-error": {
+   "light": "#fecaca",
+   "dark": "#fca5a566",
+   "figma": "border/border-error"
+  },
+  "--wds-border-success": {
+   "light": "#6ee7b7",
+   "dark": "#6ee7b74d",
+   "figma": "border/border-success"
+  },
+  "--wds-status-success-bg": {
+   "light": "#e8fdf5",
+   "dark": "#10b9811f",
+   "figma": "status/status-success-bg"
+  },
+  "--wds-status-success-border": {
+   "light": "#6ee7b7",
+   "dark": "#6ee7b740",
+   "figma": "status/status-success-border"
+  },
+  "--wds-status-success-text": {
+   "light": "#047857",
+   "dark": "#6ee7b7",
+   "figma": "status/status-success-text"
+  },
+  "--wds-status-success-icon": {
+   "light": "#10b981",
+   "dark": "#10b981",
+   "figma": "status/status-success-icon"
+  },
+  "--wds-status-success-text-strong": {
+   "light": "#065f46",
+   "dark": "#a7f3d0",
+   "figma": "status/status-success-text-strong"
+  },
+  "--wds-status-warning-bg": {
+   "light": "#fffbeb",
+   "dark": "#f59e0b1f",
+   "figma": "status/status-warning-bg"
+  },
+  "--wds-status-warning-border": {
+   "light": "#fcd34d",
+   "dark": "#fcd34d40",
+   "figma": "status/status-warning-border"
+  },
+  "--wds-status-warning-text": {
+   "light": "#b45309",
+   "dark": "#fcd34d",
+   "figma": "status/status-warning-text"
+  },
+  "--wds-status-warning-icon": {
+   "light": "#f59e0b",
+   "dark": "#f59e0b",
+   "figma": "status/status-warning-icon"
+  },
+  "--wds-status-warning-text-strong": {
+   "light": "#92400e",
+   "dark": "#fde68a",
+   "figma": "status/status-warning-text-strong"
+  },
+  "--wds-status-error-bg": {
+   "light": "#fff1f0",
+   "dark": "#ef44441f",
+   "figma": "status/status-error-bg"
+  },
+  "--wds-status-error-border": {
+   "light": "#fecaca",
+   "dark": "#fca5a540",
+   "figma": "status/status-error-border"
+  },
+  "--wds-status-error-text": {
+   "light": "#dc2626",
+   "dark": "#fca5a5",
+   "figma": "status/status-error-text"
+  },
+  "--wds-status-error-icon": {
+   "light": "#ef4444",
+   "dark": "#ef4444",
+   "figma": "status/status-error-icon"
+  },
+  "--wds-status-error-text-strong": {
+   "light": "#991b1b",
+   "dark": "#fee2e2",
+   "figma": "status/status-error-text-strong"
+  },
+  "--wds-status-destructive-bg": {
+   "light": "#dc2626",
+   "dark": "#dc2626",
+   "figma": "status/status-destructive-bg"
+  },
+  "--wds-status-destructive-text": {
+   "light": "#ffffff",
+   "dark": "#ffffff",
+   "figma": "status/status-destructive-text"
+  },
+  "--wds-btn-primary-bg-default": {
+   "light": "#222630",
+   "dark": "#ffffff",
+   "figma": "components/button-primary/btn-primary-bg-default"
+  },
+  "--wds-btn-primary-bg-hover": {
+   "light": "#0a0c10",
+   "dark": "#f5f7fa",
+   "figma": "components/button-primary/btn-primary-bg-hover"
+  },
+  "--wds-btn-primary-bg-active": {
+   "light": "#000000",
+   "dark": "#eceef3",
+   "figma": "components/button-primary/btn-primary-bg-active"
+  },
+  "--wds-btn-primary-bg-disabled": {
+   "light": "#eceef3",
+   "dark": "#1e2230",
+   "figma": "components/button-primary/btn-primary-bg-disabled"
+  },
+  "--wds-btn-primary-text-default": {
+   "light": "#ffffff",
+   "dark": "#ffffff",
+   "figma": "components/button-primary/btn-primary-text-default"
+  },
+  "--wds-btn-primary-text-disabled": {
+   "light": "#8a9099",
+   "dark": "#636b78",
+   "figma": "components/button-primary/btn-primary-text-disabled"
+  },
+  "--wds-btn-primary-icon-default": {
+   "light": "#ffffff",
+   "dark": "#ffffff",
+   "figma": "components/button-primary/btn-primary-icon-default"
+  },
+  "--wds-btn-primary-border": {
+   "light": "#00000000",
+   "dark": "#00000000",
+   "figma": "components/button-primary/btn-primary-border"
+  },
+  "--wds-btn-secondary-bg": {
+   "light": "#00000000",
+   "dark": "#00000000",
+   "figma": "components/button-secondary/btn-secondary-bg"
+  },
+  "--wds-btn-secondary-bg-hover": {
+   "light": "#f5f7fa",
+   "dark": "#141820",
+   "figma": "components/button-secondary/btn-secondary-bg-hover"
+  },
+  "--wds-btn-secondary-bg-active": {
+   "light": "#eceef3",
+   "dark": "#1e2230",
+   "figma": "components/button-secondary/btn-secondary-bg-active"
+  },
+  "--wds-btn-secondary-bg-disabled": {
+   "light": "#00000000",
+   "dark": "#00000000",
+   "figma": "components/button-secondary/btn-secondary-bg-disabled"
+  },
+  "--wds-btn-secondary-border": {
+   "light": "#dadce1",
+   "dark": "#32363f",
+   "figma": "components/button-secondary/btn-secondary-border"
+  },
+  "--wds-btn-secondary-border-hover": {
+   "light": "#bbc0cc",
+   "dark": "#454b56",
+   "figma": "components/button-secondary/btn-secondary-border-hover"
+  },
+  "--wds-btn-secondary-border-disabled": {
+   "light": "#eceef3",
+   "dark": "#1e2230",
+   "figma": "components/button-secondary/btn-secondary-border-disabled"
+  },
+  "--wds-btn-secondary-text": {
+   "light": "#222630",
+   "dark": "#ffffff",
+   "figma": "components/button-secondary/btn-secondary-text"
+  },
+  "--wds-btn-secondary-text-disabled": {
+   "light": "#8a9099",
+   "dark": "#636b78",
+   "figma": "components/button-secondary/btn-secondary-text-disabled"
+  },
+  "--wds-btn-secondary-icon": {
+   "light": "#222630",
+   "dark": "#ffffff",
+   "figma": "components/button-secondary/btn-secondary-icon"
+  },
+  "--wds-btn-tertiary-text-default": {
+   "light": "#222630",
+   "dark": "#ffffff",
+   "figma": "components/button-tertiary/btn-tertiary-text-default"
+  },
+  "--wds-btn-tertiary-text-hover": {
+   "light": "#0a0c10",
+   "dark": "#f5f7fa",
+   "figma": "components/button-tertiary/btn-tertiary-text-hover"
+  },
+  "--wds-btn-tertiary-text-pressed": {
+   "light": "#0a0c10",
+   "dark": "#f5f7fa",
+   "figma": "components/button-tertiary/btn-tertiary-text-pressed"
+  },
+  "--wds-btn-tertiary-text-disabled": {
+   "light": "#bbc0cc",
+   "dark": "#32363f",
+   "figma": "components/button-tertiary/btn-tertiary-text-disabled"
+  },
+  "--wds-btn-tertiary-icon-default": {
+   "light": "#f5f7fa",
+   "dark": "#222630",
+   "figma": "components/button-tertiary/btn-tertiary-icon-default"
+  },
+  "--wds-btn-tertiary-icon-hover": {
+   "light": "#f5f7fa",
+   "dark": "#222630",
+   "figma": "components/button-tertiary/btn-tertiary-icon-hover"
+  },
+  "--wds-btn-tertiary-icon-pressed": {
+   "light": "#f5f7fa",
+   "dark": "#222630",
+   "figma": "components/button-tertiary/btn-tertiary-icon-pressed"
+  },
+  "--wds-btn-tertiary-icon-disabled": {
+   "light": "#bbc0cc",
+   "dark": "#141820",
+   "figma": "components/button-tertiary/btn-tertiary-icon-disabled"
+  },
+  "--wds-btn-tertiary-icon-bg-default": {
+   "light": "#141820",
+   "dark": "#f5f7fa",
+   "figma": "components/button-tertiary/btn-tertiary-icon-bg-default"
+  },
+  "--wds-btn-tertiary-icon-bg-hover": {
+   "light": "#141820",
+   "dark": "#f5f7fa",
+   "figma": "components/button-tertiary/btn-tertiary-icon-bg-hover"
+  },
+  "--wds-btn-tertiary-icon-bg-pressed": {
+   "light": "#141820",
+   "dark": "#f5f7fa",
+   "figma": "components/button-tertiary/btn-tertiary-icon-bg-pressed"
+  },
+  "--wds-btn-tertiary-icon-bg-disabled": {
+   "light": "#eceef3",
+   "dark": "#1e2230",
+   "figma": "components/button-tertiary/btn-tertiary-icon-bg-disabled"
+  },
+  "--wds-btn-link-text-default": {
+   "light": "#222630",
+   "dark": "#ffffff",
+   "figma": "components/button-link/btn-link-text-default"
+  },
+  "--wds-btn-link-text-hover": {
+   "light": "#0a0c10",
+   "dark": "#f5f7fa",
+   "figma": "components/button-link/btn-link-text-hover"
+  },
+  "--wds-btn-link-text-pressed": {
+   "light": "#0a0c10",
+   "dark": "#f5f7fa",
+   "figma": "components/button-link/btn-link-text-pressed"
+  },
+  "--wds-btn-link-text-disabled": {
+   "light": "#8a9099",
+   "dark": "#f5f7fa",
+   "figma": "components/button-link/btn-link-text-disabled"
+  },
+  "--wds-btn-link-icon-default": {
+   "light": "#222630",
+   "dark": "#ffffff",
+   "figma": "components/button-link/btn-link-icon-default"
+  },
+  "--wds-btn-link-icon-hover": {
+   "light": "#0a0c10",
+   "dark": "#f5f7fa",
+   "figma": "components/button-link/btn-link-icon-hover"
+  },
+  "--wds-btn-link-icon-pressed": {
+   "light": "#0a0c10",
+   "dark": "#f5f7fa",
+   "figma": "components/button-link/btn-link-icon-pressed"
+  },
+  "--wds-btn-link-icon-disabled": {
+   "light": "#8a9099",
+   "dark": "#f5f7fa",
+   "figma": "components/button-link/btn-link-icon-disabled"
+  },
+  "--wds-btn-icon-bg-default": {
+   "light": "#32363f",
+   "dark": "#f5f7fa",
+   "figma": "components/button-icon/btn-icon-bg-default"
+  },
+  "--wds-btn-icon-bg-hover": {
+   "light": "#32363f",
+   "dark": "#f5f7fa",
+   "figma": "components/button-icon/btn-icon-bg-hover"
+  },
+  "--wds-btn-icon-bg-active": {
+   "light": "#32363f",
+   "dark": "#f5f7fa",
+   "figma": "components/button-icon/btn-icon-bg-active"
+  },
+  "--wds-btn-icon-bg-disabled": {
+   "light": "#bbc0cc",
+   "dark": "#32363f",
+   "figma": "components/button-icon/btn-icon-bg-disabled"
+  },
+  "--wds-btn-icon-color-default": {
+   "light": "#f5f7fa",
+   "dark": "#32363f",
+   "figma": "components/button-icon/btn-icon-color-default"
+  },
+  "--wds-btn-icon-color-hover": {
+   "light": "#f5f7fa",
+   "dark": "#32363f",
+   "figma": "components/button-icon/btn-icon-color-hover"
+  },
+  "--wds-btn-icon-color-pressed": {
+   "light": "#f5f7fa",
+   "dark": "#32363f",
+   "figma": "components/button-icon/btn-icon-color-pressed"
+  },
+  "--wds-btn-icon-color-disabled": {
+   "light": "#f5f7fa",
+   "dark": "#454b56",
+   "figma": "components/button-icon/btn-icon-color-disabled"
+  },
+  "--wds-input-bg": {
+   "light": "#ffffff26",
+   "dark": "#14182026",
+   "figma": "components/input/input-bg"
+  },
+  "--wds-input-bg-hover": {
+   "light": "#f5f7fa26",
+   "dark": "#1e223026",
+   "figma": "components/input/input-bg-hover"
+  },
+  "--wds-input-bg-focused": {
+   "light": "#ffffff26",
+   "dark": "#14182026",
+   "figma": "components/input/input-bg-focused"
+  },
+  "--wds-input-bg-disabled": {
+   "light": "#f5f7fa",
+   "dark": "#141820",
+   "figma": "components/input/input-bg-disabled"
+  },
+  "--wds-input-bg-error": {
+   "light": "#fff1f0",
+   "dark": "#ef44440f",
+   "figma": "components/input/input-bg-error"
+  },
+  "--wds-input-border": {
+   "light": "#dadce1",
+   "dark": "#32363f",
+   "figma": "components/input/input-border"
+  },
+  "--wds-input-border-hover": {
+   "light": "#bbc0cc",
+   "dark": "#454b56",
+   "figma": "components/input/input-border-hover"
+  },
+  "--wds-input-border-focus": {
+   "light": "#222630",
+   "dark": "#ffffff",
+   "figma": "components/input/input-border-focus"
+  },
+  "--wds-input-border-error": {
+   "light": "#fecaca",
+   "dark": "#fca5a580",
+   "figma": "components/input/input-border-error"
+  },
+  "--wds-input-border-disabled": {
+   "light": "#eceef3",
+   "dark": "#1e2230",
+   "figma": "components/input/input-border-disabled"
+  },
+  "--wds-input-text": {
+   "light": "#222630",
+   "dark": "#ffffff",
+   "figma": "components/input/input-text"
+  },
+  "--wds-input-placeholder": {
+   "light": "#8a9099",
+   "dark": "#636b78",
+   "figma": "components/input/input-placeholder"
+  },
+  "--wds-input-text-disabled": {
+   "light": "#8a9099",
+   "dark": "#636b78",
+   "figma": "components/input/input-text-disabled"
+  },
+  "--wds-input-label": {
+   "light": "#222630",
+   "dark": "#ffffff",
+   "figma": "components/input/input-label"
+  },
+  "--wds-input-helper": {
+   "light": "#636b78",
+   "dark": "#8a9099",
+   "figma": "components/input/input-helper"
+  },
+  "--wds-input-helper-error": {
+   "light": "#dc2626",
+   "dark": "#fca5a5",
+   "figma": "components/input/input-helper-error"
+  },
+  "--wds-input-icon": {
+   "light": "#636b78",
+   "dark": "#8a9099",
+   "figma": "components/input/input-icon"
+  },
+  "--wds-input-icon-focus": {
+   "light": "#222630",
+   "dark": "#ffffff",
+   "figma": "components/input/input-icon-focus"
+  },
+  "--wds-input-icon-error": {
+   "light": "#ef4444",
+   "dark": "#ef4444",
+   "figma": "components/input/input-icon-error"
+  },
+  "--wds-input-icon-disabled": {
+   "light": "#bbc0cc",
+   "dark": "#454b56",
+   "figma": "components/input/input-icon-disabled"
+  },
+  "--wds-checkbox-bg-default": {
+   "light": "#ffffff26",
+   "dark": "#14182026",
+   "figma": "components/checkbox/checkbox-bg-default"
+  },
+  "--wds-checkbox-bg-focus": {
+   "light": "#ffffff26",
+   "dark": "#14182026",
+   "figma": "components/checkbox/checkbox-bg-focus"
+  },
+  "--wds-checkbox-bg-checked": {
+   "light": "#222630",
+   "dark": "#ffffff",
+   "figma": "components/checkbox/checkbox-bg-checked"
+  },
+  "--wds-checkbox-bg-disabled": {
+   "light": "#f5f7fa",
+   "dark": "#141820",
+   "figma": "components/checkbox/checkbox-bg-disabled"
+  },
+  "--wds-checkbox-border-default": {
+   "light": "#bbc0cc",
+   "dark": "#454b56",
+   "figma": "components/checkbox/checkbox-border-default"
+  },
+  "--wds-checkbox-border-focus": {
+   "light": "#222630",
+   "dark": "#ffffff",
+   "figma": "components/checkbox/checkbox-border-focus"
+  },
+  "--wds-checkbox-border-disabled": {
+   "light": "#eceef3",
+   "dark": "#1e2230",
+   "figma": "components/checkbox/checkbox-border-disabled"
+  },
+  "--wds-checkbox-border-checked-default": {
+   "light": "#222630",
+   "dark": "#ffffff",
+   "figma": "components/checkbox/checkbox-border-checked-default"
+  },
+  "--wds-checkbox-border-checked-disabled": {
+   "light": "#f5f7fa",
+   "dark": "#141820",
+   "figma": "components/checkbox/checkbox-border-checked-disabled"
+  },
+  "--wds-checkbox-icon-default": {
+   "light": "#ffffff",
+   "dark": "#0a0c10",
+   "figma": "components/checkbox/checkbox-icon-default"
+  },
+  "--wds-checkbox-icon-focus": {
+   "light": "#ffffff",
+   "dark": "#0a0c10",
+   "figma": "components/checkbox/checkbox-icon-focus"
+  },
+  "--wds-checkbox-icon-disabled": {
+   "light": "#ffffff",
+   "dark": "#0a0c10",
+   "figma": "components/checkbox/checkbox-icon-disabled"
+  },
+  "--wds-checkbox-icon-checked": {
+   "light": "#ffffff",
+   "dark": "#0a0c10",
+   "figma": "components/checkbox/checkbox-icon-checked"
+  },
+  "--wds-checkbox-icon-checked-disabled": {
+   "light": "#dadce1",
+   "dark": "#32363f",
+   "figma": "components/checkbox/checkbox-icon-checked-disabled"
+  },
+  "--wds-checkbox-label-default": {
+   "light": "#222630",
+   "dark": "#ffffff",
+   "figma": "components/checkbox/checkbox-label-default"
+  },
+  "--wds-checkbox-label-focus": {
+   "light": "#222630",
+   "dark": "#ffffff",
+   "figma": "components/checkbox/checkbox-label-focus"
+  },
+  "--wds-checkbox-label-disabled": {
+   "light": "#8a9099",
+   "dark": "#636b78",
+   "figma": "components/checkbox/checkbox-label-disabled"
+  },
+  "--wds-checkbox-label-checked": {
+   "light": "#222630",
+   "dark": "#ffffff",
+   "figma": "components/checkbox/checkbox-label-checked"
+  },
+  "--wds-gradientstop1-beach": {
+   "light": "#ffd7b2",
+   "dark": "#ffffff",
+   "figma": "gradient/gradient-bg-beach/gradientstop1-beach"
+  },
+  "--wds-gradientstop2-beach": {
+   "light": "#fdf0e1",
+   "dark": "#ffffff",
+   "figma": "gradient/gradient-bg-beach/gradientstop2-beach"
+  },
+  "--wds-gradientstop3-beach": {
+   "light": "#deedf9",
+   "dark": "#ffffff",
+   "figma": "gradient/gradient-bg-beach/gradientstop3-beach"
+  },
+  "--wds-gradientstop1-ocean": {
+   "light": "#76b9e2",
+   "dark": "#76b9e2",
+   "figma": "gradient/gradient-bg-ocean/gradientstop1-ocean"
+  },
+  "--wds-gradientstop2-ocean": {
+   "light": "#aeedf1",
+   "dark": "#aeedf1",
+   "figma": "gradient/gradient-bg-ocean/gradientstop2-ocean"
+  },
+  "--wds-gradientstop3-ocean": {
+   "light": "#dcf7ef",
+   "dark": "#dcf7ef",
+   "figma": "gradient/gradient-bg-ocean/gradientstop3-ocean"
+  },
+  "--wds-gradientstop1-purple": {
+   "light": "#d1bacf",
+   "dark": "#d1bacf",
+   "figma": "gradient/gradient-bg-purple/gradientstop1-purple"
+  },
+  "--wds-gradientstop2-purple": {
+   "light": "#e0cce5",
+   "dark": "#e0cce5",
+   "figma": "gradient/gradient-bg-purple/gradientstop2-purple"
+  },
+  "--wds-gradientstop3-purple": {
+   "light": "#e3e7ff",
+   "dark": "#e3e7ff",
+   "figma": "gradient/gradient-bg-purple/gradientstop3-purple"
+  },
+  "--wds-gradientstop4-purple": {
+   "light": "#e3f9ff",
+   "dark": "#e3f9ff",
+   "figma": "gradient/gradient-bg-purple/gradientstop4-purple"
+  },
+  "--wds-gradientstop1-violet": {
+   "light": "#cbc5dd",
+   "dark": "#cbc5dd",
+   "figma": "gradient/gradient-bg-violet/gradientstop1-violet"
+  },
+  "--wds-gradientstop2-violet": {
+   "light": "#dae2f5",
+   "dark": "#dae2f5",
+   "figma": "gradient/gradient-bg-violet/gradientstop2-violet"
+  },
+  "--wds-gradientstop3-violet": {
+   "light": "#ffffff",
+   "dark": "#ffffff",
+   "figma": "gradient/gradient-bg-violet/gradientstop3-violet"
+  },
+  "--wds-gradientstop1-sky": {
+   "light": "#00cbf7",
+   "dark": "#00cbf7",
+   "figma": "gradient/gradient-sky/gradientstop1-sky"
+  },
+  "--wds-gradientstop2-sky": {
+   "light": "#41a7ff",
+   "dark": "#41a7ff",
+   "figma": "gradient/gradient-sky/gradientstop2-sky"
+  },
+  "--wds-gradientstop3-sky": {
+   "light": "#1b1b1b",
+   "dark": "#ffffff",
+   "figma": "gradient/gradient-sky/gradientstop3-sky"
+  },
+  "--wds-gradientstop1-sunrise": {
+   "light": "#f08f35",
+   "dark": "#ff8719",
+   "figma": "gradient/gradient-sunrise/gradientstop1-sunrise"
+  },
+  "--wds-gradientstop2-sunrise": {
+   "light": "#52aaef",
+   "dark": "#79c1f9",
+   "figma": "gradient/gradient-sunrise/gradientstop2-sunrise"
+  },
+  "--wds-gradientstop3-sunrise": {
+   "light": "#000000",
+   "dark": "#ffffff",
+   "figma": "gradient/gradient-sunrise/gradientstop3-sunrise"
+  },
+  "--wds-gradientstop1-amethyst": {
+   "light": "#6943e2",
+   "dark": "#6943e2",
+   "figma": "gradient/gradient-amethyst/gradientstop1-amethyst"
+  },
+  "--wds-gradientstop2-amethyst": {
+   "light": "#7c9ffe",
+   "dark": "#7c9ffe",
+   "figma": "gradient/gradient-amethyst/gradientstop2-amethyst"
+  },
+  "--wds-gradientstop3-amethyst": {
+   "light": "#000000",
+   "dark": "#ffffff",
+   "figma": "gradient/gradient-amethyst/gradientstop3-amethyst"
+  },
+  "--wds-gradientstop1-ember": {
+   "light": "#e93b0d",
+   "dark": "#f15228",
+   "figma": "gradient/gradient-ember/gradientstop1-ember"
+  },
+  "--wds-gradientstop2-ember": {
+   "light": "#ff9b26",
+   "dark": "#ffa944",
+   "figma": "gradient/gradient-ember/gradientstop2-ember"
+  },
+  "--wds-gradientstop3-ember": {
+   "light": "#06080d",
+   "dark": "#ffffff",
+   "figma": "gradient/gradient-ember/gradientstop3-ember"
+  },
+  "--wds-gradientstop1-blush": {
+   "light": "#0f0d0e",
+   "dark": "#ffffff",
+   "figma": "gradient/gradient-blush/gradientstop1-blush"
+  },
+  "--wds-gradientstop2-blush": {
+   "light": "#ff5c7e",
+   "dark": "#ff9bb0",
+   "figma": "gradient/gradient-blush/gradientstop2-blush"
+  },
+  "--wds-gradientstop3-blush": {
+   "light": "#c96fe7",
+   "dark": "#c79bd6",
+   "figma": "gradient/gradient-blush/gradientstop3-blush"
+  },
+  "--wds-gradientstop1-aurora": {
+   "light": "#0d0c0e",
+   "dark": "#ffffff",
+   "figma": "gradient/gradient-aurora/gradientstop1-aurora"
+  },
+  "--wds-gradientstop2-aurora": {
+   "light": "#50c3fc",
+   "dark": "#a9ddf7",
+   "figma": "gradient/gradient-aurora/gradientstop2-aurora"
+  },
+  "--wds-gradientstop3-aurora": {
+   "light": "#e72f2f",
+   "dark": "#e34646",
+   "figma": "gradient/gradient-aurora/gradientstop3-aurora"
+  },
+  "--wds-gradientstop1-neon": {
+   "light": "#0d0c0e",
+   "dark": "#ffffff",
+   "figma": "gradient/gradient-neon/gradientstop1-neon"
+  },
+  "--wds-gradientstop2-neon": {
+   "light": "#c2c636",
+   "dark": "#f4f7a9",
+   "figma": "gradient/gradient-neon/gradientstop2-neon"
+  },
+  "--wds-gradientstop3-neon": {
+   "light": "#27c7cf",
+   "dark": "#46dbe3",
+   "figma": "gradient/gradient-neon/gradientstop3-neon"
+  },
+  "--wds-gradientstop1-pulse": {
+   "light": "#0d0c0e",
+   "dark": "#ffffff",
+   "figma": "gradient/gradient-pulse/gradientstop1-pulse"
+  },
+  "--wds-gradientstop2-pulse": {
+   "light": "#b153ff",
+   "dark": "#e1bdff",
+   "figma": "gradient/gradient-pulse/gradientstop2-pulse"
+  },
+  "--wds-gradientstop3-pulse": {
+   "light": "#0d0c0e",
+   "dark": "#ffffff",
+   "figma": "gradient/gradient-pulse/gradientstop3-pulse"
+  },
+  "--wds-gradientstop1-magenta": {
+   "light": "#0d0c0e",
+   "dark": "#ffffff",
+   "figma": "gradient/gradient-magenta/gradientstop1-magenta"
+  },
+  "--wds-gradientstop2-magenta": {
+   "light": "#8651ff",
+   "dark": "#a781ff",
+   "figma": "gradient/gradient-magenta/gradientstop2-magenta"
+  },
+  "--wds-gradientstop3-magenta": {
+   "light": "#ff003e",
+   "dark": "#ff2056",
+   "figma": "gradient/gradient-magenta/gradientstop3-magenta"
+  },
+  "--wds-gap-title-description-gap": {
+   "desktop": "24px",
+   "tablet": "16px",
+   "mobile": "16px",
+   "figma": "spacing/gap/title-description-gap"
+  },
+  "--wds-gap-content-cta-gap": {
+   "desktop": "40px",
+   "tablet": "32px",
+   "mobile": "24px",
+   "figma": "spacing/gap/content-cta-gap"
+  },
+  "--wds-gap-content-image-gap": {
+   "desktop": "80px",
+   "tablet": "64px",
+   "mobile": "48px",
+   "figma": "spacing/gap/content-image-gap"
+  },
+  "--wds-padding-section-top-padding-none": {
+   "desktop": "0",
+   "tablet": "0",
+   "mobile": "0",
+   "figma": "spacing/padding/section-top-padding-none"
+  },
+  "--wds-padding-section-top-padding-default": {
+   "desktop": "60px",
+   "tablet": "32px",
+   "mobile": "24px",
+   "figma": "spacing/padding/section-top-padding-default"
+  },
+  "--wds-padding-section-top-padding-2x": {
+   "desktop": "120px",
+   "tablet": "64px",
+   "mobile": "48px",
+   "figma": "spacing/padding/section-top-padding-2x"
+  },
+  "--wds-padding-section-bottom-padding-none": {
+   "desktop": "0",
+   "tablet": "0",
+   "mobile": "0",
+   "figma": "spacing/padding/section-bottom-padding-none"
+  },
+  "--wds-padding-section-bottom-padding-default": {
+   "desktop": "60px",
+   "tablet": "32px",
+   "mobile": "24px",
+   "figma": "spacing/padding/section-bottom-padding-default"
+  },
+  "--wds-padding-section-bottom-padding-2x": {
+   "desktop": "120px",
+   "tablet": "64px",
+   "mobile": "48px",
+   "figma": "spacing/padding/section-bottom-padding-2x"
+  },
+  "--wds-padding-section-right-left-padding-none": {
+   "desktop": "0",
+   "tablet": "0",
+   "mobile": "0",
+   "figma": "spacing/padding/section-right-left-padding-none"
+  },
+  "--wds-padding-section-right-left-padding-default": {
+   "desktop": "64px",
+   "tablet": "64px",
+   "mobile": "24px",
+   "figma": "spacing/padding/section-right-left-padding-default"
+  },
+  "--wds-padding-image-border-padding": {
+   "desktop": "16px",
+   "tablet": "16px",
+   "mobile": "8px",
+   "figma": "spacing/padding/image-border-padding"
+  },
+  "--wds-padding-video-player-control-padding-top-bottom": {
+   "desktop": "24px",
+   "tablet": "20px",
+   "mobile": "8px",
+   "figma": "spacing/padding/video-player-control-padding-top-bottom"
+  },
+  "--wds-padding-video-player-control-padding-right-left": {
+   "desktop": "24px",
+   "tablet": "20px",
+   "mobile": "8px",
+   "figma": "spacing/padding/video-player-control-padding-right-left"
+  },
+  "--wds-padding-video-player-control-inbetween-gap": {
+   "desktop": "20px",
+   "tablet": "16px",
+   "mobile": "8px",
+   "figma": "spacing/padding/video-player-control-inbetween-gap"
+  },
+  "--wds-width-h1-width-centre": {
+   "desktop": "940px",
+   "tablet": "640px",
+   "mobile": "342px",
+   "figma": "spacing/width/h1-width-centre"
+  },
+  "--wds-width-h2-width-centre": {
+   "desktop": "720px",
+   "tablet": "640px",
+   "mobile": "342px",
+   "figma": "spacing/width/h2-width-centre"
+  },
+  "--wds-width-h2-width-left": {
+   "desktop": "580px",
+   "tablet": "580px",
+   "mobile": "342px",
+   "figma": "spacing/width/h2-width-left"
+  },
+  "--wds-width-p-width-centre": {
+   "desktop": "720px",
+   "tablet": "640px",
+   "mobile": "342px",
+   "figma": "spacing/width/p-width-centre"
+  },
+  "--wds-width-device-width": {
+   "desktop": "1920px",
+   "tablet": "768px",
+   "mobile": "390px",
+   "figma": "spacing/width/device-width"
+  },
+  "--wds-width-container-max-width": {
+   "desktop": "1420px",
+   "tablet": "640px",
+   "mobile": "342px",
+   "figma": "spacing/width/container-max-width"
+  },
+  "--wds-width-offset-max-width": {
+   "desktop": "1180px",
+   "tablet": "640px",
+   "mobile": "342px",
+   "figma": "spacing/width/offset-max-width"
+  },
+  "--wds-width-offset2x-max-width": {
+   "desktop": "960px",
+   "tablet": "640px",
+   "mobile": "342px",
+   "figma": "spacing/width/offset2x-max-width"
+  },
+  "--wds-width-5-col-card-max-width": {
+   "desktop": "222px",
+   "tablet": "200px",
+   "mobile": "342px",
+   "figma": "spacing/width/5-col-card-max-width"
+  },
+  "--wds-width-5-col-card-min-width": {
+   "desktop": "170px",
+   "tablet": "170px",
+   "mobile": "156px",
+   "figma": "spacing/width/5-col-card-min-width"
+  },
+  "--wds-width-4-col-card-max-width": {
+   "desktop": "355px",
+   "tablet": "320px",
+   "mobile": "342px",
+   "figma": "spacing/width/4-col-card-max-width"
+  },
+  "--wds-width-4-col-card-min-width": {
+   "desktop": "288px",
+   "tablet": "320px",
+   "mobile": "342px",
+   "figma": "spacing/width/4-col-card-min-width"
+  },
+  "--wds-width-4-col-card-right-left-padding": {
+   "desktop": "32px",
+   "tablet": "24px",
+   "mobile": "24px",
+   "figma": "spacing/width/4-col-card-right-left-padding"
+  },
+  "--wds-width-4-col-card-top-bottom-padding": {
+   "desktop": "32px",
+   "tablet": "24px",
+   "mobile": "24px",
+   "figma": "spacing/width/4-col-card-top-bottom-padding"
+  },
+  "--wds-width-3-col-card-max-width": {
+   "desktop": "474px",
+   "tablet": "320px",
+   "mobile": "342px",
+   "figma": "spacing/width/3-col-card-max-width"
+  },
+  "--wds-width-3-col-card-min-width": {
+   "desktop": "300px",
+   "tablet": "320px",
+   "mobile": "342px",
+   "figma": "spacing/width/3-col-card-min-width"
+  },
+  "--wds-width-3-col-card-right-left-padding": {
+   "desktop": "40px",
+   "tablet": "24px",
+   "mobile": "24px",
+   "figma": "spacing/width/3-col-card-right-left-padding"
+  },
+  "--wds-width-3-col-card-top-bottom-padding": {
+   "desktop": "40px",
+   "tablet": "24px",
+   "mobile": "24px",
+   "figma": "spacing/width/3-col-card-top-bottom-padding"
+  },
+  "--wds-width-2-col-card-max-width": {
+   "desktop": "710px",
+   "tablet": "640px",
+   "mobile": "342px",
+   "figma": "spacing/width/2-col-card-max-width"
+  },
+  "--wds-width-2-col-card-min-width": {
+   "desktop": "400px",
+   "tablet": "640px",
+   "mobile": "342px",
+   "figma": "spacing/width/2-col-card-min-width"
+  },
+  "--wds-width-2-col-card-right-left-padding": {
+   "desktop": "80px",
+   "tablet": "32px",
+   "mobile": "24px",
+   "figma": "spacing/width/2-col-card-right-left-padding"
+  },
+  "--wds-width-2-col-card-top-bottom-padding": {
+   "desktop": "48px",
+   "tablet": "32px",
+   "mobile": "24px",
+   "figma": "spacing/width/2-col-card-top-bottom-padding"
+  },
+  "--wds-width-1-col-card-right-left-padding": {
+   "desktop": "40px",
+   "tablet": "32px",
+   "mobile": "24px",
+   "figma": "spacing/width/1-col-card-right-left-padding"
+  },
+  "--wds-width-1-col-card-top-bottom-padding": {
+   "desktop": "40px",
+   "tablet": "32px",
+   "mobile": "24px",
+   "figma": "spacing/width/1-col-card-top-bottom-padding"
+  },
+  "--wds-headline-1-font-size": {
+   "desktop": "56px",
+   "tablet": "40px",
+   "mobile": "28px",
+   "figma": "headline-1/font-size"
+  },
+  "--wds-headline-1-line-height": {
+   "desktop": "64px",
+   "tablet": "44px",
+   "mobile": "32px",
+   "figma": "headline-1/line-height"
+  },
+  "--wds-headline-2-font-size": {
+   "desktop": "40px",
+   "tablet": "32px",
+   "mobile": "28px",
+   "figma": "headline-2/font-size"
+  },
+  "--wds-headline-2-line-height": {
+   "desktop": "48px",
+   "tablet": "40px",
+   "mobile": "36px",
+   "figma": "headline-2/line-height"
+  },
+  "--wds-headline-2-reg-font-size": {
+   "desktop": "40px",
+   "tablet": "32px",
+   "mobile": "28px",
+   "figma": "headline-2-reg/font-size"
+  },
+  "--wds-headline-2-reg-line-height": {
+   "desktop": "48px",
+   "tablet": "40px",
+   "mobile": "36px",
+   "figma": "headline-2-reg/line-height"
+  },
+  "--wds-headline-3-font-size": {
+   "desktop": "32px",
+   "tablet": "28px",
+   "mobile": "24px",
+   "figma": "headline-3/font-size"
+  },
+  "--wds-headline-3-line-height": {
+   "desktop": "38px",
+   "tablet": "36px",
+   "mobile": "32px",
+   "figma": "headline-3/line-height"
+  },
+  "--wds-headline-3-reg-font-size": {
+   "desktop": "32px",
+   "tablet": "28px",
+   "mobile": "24px",
+   "figma": "headline-3-reg/font-size"
+  },
+  "--wds-headline-3-reg-line-height": {
+   "desktop": "38px",
+   "tablet": "36px",
+   "mobile": "32px",
+   "figma": "headline-3-reg/line-height"
+  },
+  "--wds-headline-4-font-size": {
+   "desktop": "24px",
+   "tablet": "20px",
+   "mobile": "20px",
+   "figma": "headline-4/font-size"
+  },
+  "--wds-headline-4-line-height": {
+   "desktop": "28px",
+   "tablet": "28px",
+   "mobile": "28px",
+   "figma": "headline-4/line-height"
+  },
+  "--wds-headline-4-reg-font-size": {
+   "desktop": "24px",
+   "tablet": "20px",
+   "mobile": "20px",
+   "figma": "headline-4-reg/font-size"
+  },
+  "--wds-headline-4-reg-line-height": {
+   "desktop": "28px",
+   "tablet": "28px",
+   "mobile": "28px",
+   "figma": "headline-4-reg/line-height"
+  },
+  "--wds-headline-5-font-size": {
+   "desktop": "20px",
+   "tablet": "18px",
+   "mobile": "18px",
+   "figma": "headline-5/font-size"
+  },
+  "--wds-headline-5-line-height": {
+   "desktop": "26px",
+   "tablet": "24px",
+   "mobile": "24px",
+   "figma": "headline-5/line-height"
+  },
+  "--wds-headline-6-font-size": {
+   "desktop": "18px",
+   "tablet": "16px",
+   "mobile": "16px",
+   "figma": "headline-6/font-size"
+  },
+  "--wds-headline-6-line-height": {
+   "desktop": "24px",
+   "tablet": "22px",
+   "mobile": "22px",
+   "figma": "headline-6/line-height"
+  },
+  "--wds-statistics-font-size": {
+   "desktop": "48px",
+   "tablet": "36px",
+   "mobile": "32px",
+   "figma": "statistics/font-size"
+  },
+  "--wds-statistics-line-height": {
+   "desktop": "52px",
+   "tablet": "40px",
+   "mobile": "36px",
+   "figma": "statistics/line-height"
+  },
+  "--wds-body-1-reg-font-size": {
+   "desktop": "20px",
+   "tablet": "20px",
+   "mobile": "18px",
+   "figma": "body-1-reg/font-size"
+  },
+  "--wds-body-1-reg-line-height": {
+   "desktop": "28px",
+   "tablet": "28px",
+   "mobile": "26px",
+   "figma": "body-1-reg/line-height"
+  },
+  "--wds-body-1-medium-font-size": {
+   "desktop": "20px",
+   "tablet": "20px",
+   "mobile": "18px",
+   "figma": "body-1-medium/font-size"
+  },
+  "--wds-body-1-medium-line-height": {
+   "desktop": "28px",
+   "tablet": "28px",
+   "mobile": "26px",
+   "figma": "body-1-medium/line-height"
+  },
+  "--wds-body-1-bold-font-size": {
+   "desktop": "20px",
+   "tablet": "20px",
+   "mobile": "18px",
+   "figma": "body-1-bold/font-size"
+  },
+  "--wds-body-1-bold-line-height": {
+   "desktop": "28px",
+   "tablet": "28px",
+   "mobile": "26px",
+   "figma": "body-1-bold/line-height"
+  },
+  "--wds-body-2-reg-font-size": {
+   "desktop": "18px",
+   "tablet": "18px",
+   "mobile": "16px",
+   "figma": "body-2-reg/font-size"
+  },
+  "--wds-body-2-reg-line-height": {
+   "desktop": "26px",
+   "tablet": "26px",
+   "mobile": "26px",
+   "figma": "body-2-reg/line-height"
+  },
+  "--wds-body-2-medium-font-size": {
+   "desktop": "18px",
+   "tablet": "18px",
+   "mobile": "16px",
+   "figma": "body-2-medium/font-size"
+  },
+  "--wds-body-2-medium-line-height": {
+   "desktop": "26px",
+   "tablet": "26px",
+   "mobile": "26px",
+   "figma": "body-2-medium/line-height"
+  },
+  "--wds-body-2-bold-font-size": {
+   "desktop": "18px",
+   "tablet": "18px",
+   "mobile": "16px",
+   "figma": "body-2-bold/font-size"
+  },
+  "--wds-body-2-bold-line-height": {
+   "desktop": "26px",
+   "tablet": "26px",
+   "mobile": "26px",
+   "figma": "body-2-bold/line-height"
+  },
+  "--wds-body-3-reg-font-size": {
+   "desktop": "16px",
+   "tablet": "16px",
+   "mobile": "14px",
+   "figma": "body-3-reg/font-size"
+  },
+  "--wds-body-3-reg-line-height": {
+   "desktop": "24px",
+   "tablet": "24px",
+   "mobile": "22px",
+   "figma": "body-3-reg/line-height"
+  },
+  "--wds-body-3-medium-font-size": {
+   "desktop": "16px",
+   "tablet": "16px",
+   "mobile": "14px",
+   "figma": "body-3-medium/font-size"
+  },
+  "--wds-body-3-medium-line-height": {
+   "desktop": "24px",
+   "tablet": "24px",
+   "mobile": "24px",
+   "figma": "body-3-medium/line-height"
+  },
+  "--wds-body-3-bold-font-size": {
+   "desktop": "16px",
+   "tablet": "16px",
+   "mobile": "14px",
+   "figma": "body-3-bold/font-size"
+  },
+  "--wds-body-3-bold-line-height": {
+   "desktop": "24px",
+   "tablet": "20px",
+   "mobile": "20px",
+   "figma": "body-3-bold/line-height"
+  },
+  "--wds-body-4-reg-font-size": {
+   "desktop": "14px",
+   "tablet": "14px",
+   "mobile": "14px",
+   "figma": "body-4-reg/font-size"
+  },
+  "--wds-body-4-reg-line-height": {
+   "desktop": "22px",
+   "tablet": "22px",
+   "mobile": "22px",
+   "figma": "body-4-reg/line-height"
+  },
+  "--wds-body-4-medium-font-size": {
+   "desktop": "14px",
+   "tablet": "14px",
+   "mobile": "14px",
+   "figma": "body-4-medium/font-size"
+  },
+  "--wds-body-4-medium-line-height": {
+   "desktop": "22px",
+   "tablet": "22px",
+   "mobile": "22px",
+   "figma": "body-4-medium/line-height"
+  },
+  "--wds-body-4-bold-font-size": {
+   "desktop": "14px",
+   "tablet": "14px",
+   "mobile": "14px",
+   "figma": "body-4-bold/font-size"
+  },
+  "--wds-body-4-bold-line-height": {
+   "desktop": "22px",
+   "tablet": "22px",
+   "mobile": "22px",
+   "figma": "body-4-bold/line-height"
+  },
+  "--wds-body-5-reg-font-size": {
+   "desktop": "12px",
+   "tablet": "12px",
+   "mobile": "12px",
+   "figma": "body-5-reg/font-size"
+  },
+  "--wds-body-5-reg-line-height": {
+   "desktop": "18px",
+   "tablet": "18px",
+   "mobile": "18px",
+   "figma": "body-5-reg/line-height"
+  },
+  "--wds-body-5-medium-font-size": {
+   "desktop": "12px",
+   "tablet": "12px",
+   "mobile": "12px",
+   "figma": "body-5-medium/font-size"
+  },
+  "--wds-body-5-medium-line-height": {
+   "desktop": "18px",
+   "tablet": "18px",
+   "mobile": "18px",
+   "figma": "body-5-medium/line-height"
+  },
+  "--wds-body-5-bold-font-size": {
+   "desktop": "12px",
+   "tablet": "12px",
+   "mobile": "12px",
+   "figma": "body-5-bold/font-size"
+  },
+  "--wds-body-5-bold-line-height": {
+   "desktop": "18px",
+   "tablet": "18px",
+   "mobile": "18px",
+   "figma": "body-5-bold/line-height"
+  },
+  "--wds-overline-font-size": {
+   "desktop": "12px",
+   "tablet": "12px",
+   "mobile": "12px",
+   "figma": "overline/font-size"
+  },
+  "--wds-overline-line-height": {
+   "desktop": "16px",
+   "tablet": "16px",
+   "mobile": "16px",
+   "figma": "overline/line-height"
+  },
+  "--wds-button-font-size": {
+   "desktop": "14px",
+   "tablet": "14px",
+   "mobile": "14px",
+   "figma": "button/font-size"
+  },
+  "--wds-button-line-height": {
+   "desktop": "16px",
+   "tablet": "16px",
+   "mobile": "16px",
+   "figma": "button/line-height"
+  }
+ }
+}

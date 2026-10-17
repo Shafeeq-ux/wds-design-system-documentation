@@ -1,0 +1,28 @@
+<!--meta {"status": "Stable"} -->
+<h2>Who can contribute</h2>
+<p>Anyone in Design, Development or Marketing can propose a change. Design owns the system and makes the final call on visual and interaction changes; Marketing owns content limits; Development owns implementation.</p>
+
+<h2>How a change gets into WDS</h2>
+<ol class="outline">
+  <li><strong>Propose.</strong> Describe the need, the pages it affects and why an existing component or section doesn't work. Check the docs first: it may already exist.</li>
+  <li><strong>Design in Figma.</strong> Build it in the WDS 3.0 file using existing variables and text styles, with desktop, tablet and mobile variants and both themes.</li>
+  <li><strong>Document.</strong> Copy the matching <a href="/templates/component.html">page template</a> and fill in every section, including limits and the acceptance checklist. Mark it <span class="badge badge-info">Proposed</span>.</li>
+  <li><strong>Review.</strong> Get cross-functional review when the change affects visual design, behaviour, accessibility or content limits (see <a href="/overview/governance.html">Governance</a>).</li>
+  <li><strong>Build.</strong> Add the CSS to <code>css/wds.css</code> and a live example in <code>src/pages/examples</code>. Run <code>npm run check</code>.</li>
+  <li><strong>Release.</strong> Change the status to <span class="badge badge-ok">Stable</span>, add a <a href="/overview/changelog.html">Changelog</a> entry and merge.</li>
+</ol>
+
+<h2>Changing tokens</h2>
+<ol class="outline">
+  <li>Change the variable in Figma, never in <code>css/tokens.css</code>.</li>
+  <li>Re-export the collection with <code>scripts/figma-export.js</code> and update <code>tokens/wds-tokens.json</code>.</li>
+  <li>Run <code>npm run build</code>. The Colour page's contrast checks update automatically, so look for new failures.</li>
+  <li>Renaming or removing a token is a breaking change (see <a href="/overview/governance.html#versioning">Versioning</a>).</li>
+</ol>
+
+<h2>Working in this repository</h2>
+<ul>
+  <li>Branch from <code>main</code>, one change per pull request. Vercel builds a preview for every pull request.</li>
+  <li>Page content lives in <code>src/pages</code>. The sidebar is <code>src/nav.json</code>. See the <a href="https://github.com/Shafeeq-ux/wds-design-system-documentation#readme" target="_blank" rel="noopener">README</a> for structure and shortcodes.</li>
+  <li>Write in the voice described in <a href="/content/voice-and-tone.html">Voice &amp; tone</a>: plain, specific, second person.</li>
+</ul>

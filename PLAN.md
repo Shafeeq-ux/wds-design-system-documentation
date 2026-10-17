@@ -172,6 +172,10 @@ Plus: Title Case for headings, CTAs and field labels (matching the Figma copy) a
 
 ---
 
+## Status (17 Oct 2026)
+
+All phases (0–7) are complete. The site has 70 pages: 57 documentation pages (including the home and 404 pages) and 13 live examples. It passes axe WCAG 2.2 AA in both themes and has no horizontal scrolling at 390px or 320px. Open design decisions are listed in the site's Changelog under "Open issues".
+
 ## 6. Delivery phases
 
 | Phase | Deliverable | Est. |

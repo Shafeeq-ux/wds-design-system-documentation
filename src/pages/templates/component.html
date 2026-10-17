@@ -1,0 +1,50 @@
+<!--meta {"status": "Stable"} -->
+<h2>How to use this template</h2>
+<ol class="outline">
+  <li>Add the page to <code>src/nav.json</code> under component, with its title, description, owner and Figma node.</li>
+  <li>Create <code>src/pages/components/your-page.html</code> and paste the HTML below.</li>
+  <li>Fill in every section. Remove a section only if it truly doesn't apply, and say why.</li>
+  <li>Leave the status as Proposed until the page has been reviewed (see <a href="/overview/governance.html">Governance</a>).</li>
+  <li>Run <code>npm run check</code> to build and check links.</li>
+</ol>
+<p>Use this template to document a new component.</p>
+
+<h2>Template outline</h2>
+<ol class="outline"><li><strong>Overview</strong>: What it is, when to use it, and a table of its types.</li><li><strong>Variants and states</strong>: A live preview: &lt;div class=&quot;doc-preview&quot; data-src=&quot;/examples/NAME.html&quot; data-title=&quot;NAME&quot;&gt;&lt;/div&gt;</li><li><strong>Anatomy</strong>: A table of parts with sizes, spacing and tokens.</li><li><strong>Design guidance</strong>: Do and don&#x27;t.</li><li><strong>Responsive behaviour</strong>: What changes at tablet and mobile.</li><li><strong>Light and dark theme</strong>: How it looks in each theme, and any fixed theme.</li><li><strong>Microcopy and limits</strong>: A character-limit table for every text slot.</li><li><strong>Developer implementation</strong>: HTML, classes mapped to Figma variants, timing, and tokens: &lt;!--wds:theme components/NAME/--&gt;.</li><li><strong>Accessibility</strong>: Semantics, keyboard, focus, target size, contrast, with WCAG references.</li><li><strong>Figma, asset and code references</strong>: Figma node links, downloads, CSS and JS file sections.</li><li><strong>Acceptance checklist</strong>: What must be true before it ships.</li></ol>
+
+<h2>Copyable HTML</h2>
+<div class="code-copy"><button type="button" class="wds-btn wds-btn--secondary copy-block" data-copy-from="#tpl-component">Copy HTML</button></div>
+<pre id="tpl-component"><code>&lt;!--meta {&quot;status&quot;: &quot;Proposed&quot;} --&gt;
+&lt;h2&gt;Overview&lt;/h2&gt;
+&lt;p&gt;What it is, when to use it, and a table of its types.&lt;/p&gt;
+
+&lt;h2&gt;Variants and states&lt;/h2&gt;
+&lt;p&gt;A live preview: &lt;div class=&quot;doc-preview&quot; data-src=&quot;/examples/NAME.html&quot; data-title=&quot;NAME&quot;&gt;&lt;/div&gt;&lt;/p&gt;
+
+&lt;h2&gt;Anatomy&lt;/h2&gt;
+&lt;p&gt;A table of parts with sizes, spacing and tokens.&lt;/p&gt;
+
+&lt;h2&gt;Design guidance&lt;/h2&gt;
+&lt;p&gt;Do and don&#x27;t.&lt;/p&gt;
+
+&lt;h2&gt;Responsive behaviour&lt;/h2&gt;
+&lt;p&gt;What changes at tablet and mobile.&lt;/p&gt;
+
+&lt;h2&gt;Light and dark theme&lt;/h2&gt;
+&lt;p&gt;How it looks in each theme, and any fixed theme.&lt;/p&gt;
+
+&lt;h2&gt;Microcopy and limits&lt;/h2&gt;
+&lt;p&gt;A character-limit table for every text slot.&lt;/p&gt;
+
+&lt;h2&gt;Developer implementation&lt;/h2&gt;
+&lt;p&gt;HTML, classes mapped to Figma variants, timing, and tokens: &lt;!--wds:theme components/NAME/--&gt;.&lt;/p&gt;
+
+&lt;h2&gt;Accessibility&lt;/h2&gt;
+&lt;p&gt;Semantics, keyboard, focus, target size, contrast, with WCAG references.&lt;/p&gt;
+
+&lt;h2&gt;Figma, asset and code references&lt;/h2&gt;
+&lt;p&gt;Figma node links, downloads, CSS and JS file sections.&lt;/p&gt;
+
+&lt;h2&gt;Acceptance checklist&lt;/h2&gt;
+&lt;p&gt;What must be true before it ships.&lt;/p&gt;
+</code></pre>

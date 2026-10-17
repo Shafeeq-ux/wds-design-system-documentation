@@ -1,0 +1,70 @@
+<!--meta {"status": "Stable"} -->
+<h2>Overview</h2>
+<p>All 581 Figma variables are exported to JSON and compiled to CSS custom properties on every build. Use the CSS in the browser, and the JSON to feed other tools (a CMS theme, email templates, a native app).</p>
+
+<h2>Downloads</h2>
+<div class="table-wrap">
+  <table>
+    <thead><tr><th scope="col">File</th><th scope="col">Format</th><th scope="col">Use for</th></tr></thead>
+    <tbody>
+      <tr><td><a href="/css/tokens.css" download><code>tokens.css</code></a></td><td>CSS custom properties and text style classes</td><td>Web pages</td></tr>
+      <tr><td><a href="/tokens/wds-css-variables.json" download><code>wds-css-variables.json</code></a></td><td>Every CSS variable with its value per theme or breakpoint, and its Figma name</td><td>Other tools, audits, design-to-code checks</td></tr>
+      <tr><td><a href="/tokens/wds-tokens.json" download><code>wds-tokens.json</code></a></td><td>The raw Figma export: 5 collections, values per mode, aliases</td><td>Regenerating the CSS</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<h2>Setup</h2>
+<h3>Naming</h3>
+<p>CSS names follow the Figma path. A leading category (<code>background</code>, <code>components</code>, <code>gradient</code>, <code>spacing</code>, <code>core</code>) is dropped, and so is a segment the next one repeats.</p>
+<div class="table-wrap">
+  <table>
+    <thead><tr><th scope="col">Figma variable</th><th scope="col">CSS custom property</th></tr></thead>
+    <tbody>
+      <tr><td><code>background/bg-page</code></td><td><code>--wds-bg-page</code></td></tr>
+      <tr><td><code>text/text-primary</code></td><td><code>--wds-text-primary</code></td></tr>
+      <tr><td><code>color/gray/gray-800</code></td><td><code>--wds-color-gray-800</code></td></tr>
+      <tr><td><code>core/size-16</code></td><td><code>--wds-size-16</code></td></tr>
+      <tr><td><code>spacing/padding/p-24</code></td><td><code>--wds-padding-p-24</code></td></tr>
+      <tr><td><code>border/border-radius/button</code></td><td><code>--wds-border-radius-button</code></td></tr>
+      <tr><td><code>components/input/input-border</code></td><td><code>--wds-input-border</code></td></tr>
+      <tr><td><code>spacing/width/container-max-width</code></td><td><code>--wds-width-container-max-width</code></td></tr>
+      <tr><td><code>headline-1/font-size</code></td><td><code>--wds-headline-1-font-size</code></td></tr>
+      <tr><td>Text style <code>Headline/headline-1</code></td><td>Class <code>.wds-headline-1</code></td></tr>
+    </tbody>
+  </table>
+</div>
+<p>The build fails if two Figma variables would produce the same CSS name.</p>
+
+<h3>Which layer to use</h3>
+<ul>
+  <li><strong>Component tokens</strong> (<code>--wds-btn-*</code>, <code>--wds-input-*</code>) inside components.</li>
+  <li><strong>Semantic tokens</strong> (<code>--wds-bg-*</code>, <code>--wds-text-*</code>, <code>--wds-border-*</code>) everywhere else.</li>
+  <li><strong>Primitives</strong> (<code>--wds-color-*</code>, <code>--wds-size-*</code>) only when you're defining a new semantic token.</li>
+</ul>
+
+<h2>Code examples</h2>
+<pre><code>.promo-card {
+  padding: var(--wds-width-3-col-card-top-bottom-padding) var(--wds-width-3-col-card-right-left-padding);
+  border: var(--wds-border-width-bw-1) solid var(--wds-border-subtle);
+  border-radius: var(--wds-border-radius-bento-card);
+  background: var(--wds-bg-elevated);
+  color: var(--wds-text-primary);
+}
+.promo-card h3 { /* or add class="wds-headline-4" */
+  font-size: var(--wds-headline-4-font-size);
+  line-height: var(--wds-headline-4-line-height);
+}</code></pre>
+
+<h2>Updating tokens</h2>
+<ol class="outline">
+  <li>Change the variable in the WDS 3.0 Figma file.</li>
+  <li>Run <code>scripts/figma-export.js</code> in the file for each changed collection and paste the result into <code>tokens/wds-tokens.json</code>.</li>
+  <li>Run <code>npm run build</code>, then review the diff in <code>css/tokens.css</code> and the contrast results on the Colour page.</li>
+</ol>
+
+<h2>Known limitations</h2>
+<ul>
+  <li>Theme tokens are emitted as resolved values per theme, not as <code>var()</code> references to primitives. The alias is kept as a comment.</li>
+  <li>Four input and checkbox backgrounds are an alias with 15% opacity in Figma. They're exported as 8-digit hex.</li>
+</ul>

@@ -1,0 +1,41 @@
+<!--meta {"status": "Stable"} -->
+<h2>How to use this template</h2>
+<ol class="outline">
+  <li>Add the page to <code>src/nav.json</code> under section, with its title, description, owner and Figma node.</li>
+  <li>Create <code>src/pages/sections/your-page.html</code> and paste the HTML below.</li>
+  <li>Fill in every section. Remove a section only if it truly doesn't apply, and say why.</li>
+  <li>Leave the status as Proposed until the page has been reviewed (see <a href="/overview/governance.html">Governance</a>).</li>
+  <li>Run <code>npm run check</code> to build and check links.</li>
+</ol>
+<p>Use this template to document a new section layout.</p>
+
+<h2>Template outline</h2>
+<ol class="outline"><li><strong>Section overview</strong>: What it is for, plus a meta grid of placement, audience and goal.</li><li><strong>Variants</strong>: Add the section to src/data/sections.json, then use &lt;!--wds:section-sets KEY--&gt; for the Figma renders.</li><li><strong>Content structure and character limits</strong>: &lt;!--wds:section-limits KEY--&gt; builds the table from the slots in sections.json.</li><li><strong>Responsive layout behaviour</strong>: Desktop, tablet and mobile layout.</li><li><strong>Light and dark theme</strong>: The Figma default theme, and whether it works in the other.</li><li><strong>Design guidance</strong>: Do and don&#x27;t.</li><li><strong>Accessibility</strong>: Landmarks, headings, keyboard and media rules.</li><li><strong>Marketing handoff checklist</strong>: Everything Marketing must supply.</li></ol>
+
+<h2>Copyable HTML</h2>
+<div class="code-copy"><button type="button" class="wds-btn wds-btn--secondary copy-block" data-copy-from="#tpl-section">Copy HTML</button></div>
+<pre id="tpl-section"><code>&lt;!--meta {&quot;status&quot;: &quot;Proposed&quot;} --&gt;
+&lt;h2&gt;Section overview&lt;/h2&gt;
+&lt;p&gt;What it is for, plus a meta grid of placement, audience and goal.&lt;/p&gt;
+
+&lt;h2&gt;Variants&lt;/h2&gt;
+&lt;p&gt;Add the section to src/data/sections.json, then use &lt;!--wds:section-sets KEY--&gt; for the Figma renders.&lt;/p&gt;
+
+&lt;h2&gt;Content structure and character limits&lt;/h2&gt;
+&lt;p&gt;&lt;!--wds:section-limits KEY--&gt; builds the table from the slots in sections.json.&lt;/p&gt;
+
+&lt;h2&gt;Responsive layout behaviour&lt;/h2&gt;
+&lt;p&gt;Desktop, tablet and mobile layout.&lt;/p&gt;
+
+&lt;h2&gt;Light and dark theme&lt;/h2&gt;
+&lt;p&gt;The Figma default theme, and whether it works in the other.&lt;/p&gt;
+
+&lt;h2&gt;Design guidance&lt;/h2&gt;
+&lt;p&gt;Do and don&#x27;t.&lt;/p&gt;
+
+&lt;h2&gt;Accessibility&lt;/h2&gt;
+&lt;p&gt;Landmarks, headings, keyboard and media rules.&lt;/p&gt;
+
+&lt;h2&gt;Marketing handoff checklist&lt;/h2&gt;
+&lt;p&gt;Everything Marketing must supply.&lt;/p&gt;
+</code></pre>

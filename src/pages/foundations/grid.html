@@ -38,6 +38,7 @@
 <!--wds:responsive spacing/width/3-col-->
 <!--wds:responsive spacing/width/2-col-->
 <!--wds:responsive spacing/width/1-col-->
+<p>Card minimums assume a 390px phone. Wrap them in <code>min(…, 100%)</code> so cards never overflow on smaller screens: <code>grid-template-columns: repeat(auto-fit, minmax(min(var(--wds-width-3-col-card-min-width), 100%), 1fr))</code>.</p>
 <p>The space between cards isn't tokenised yet. The live example uses 24px (<code>g-24</code>) until Design confirms the value.</p>
 
 <h2>Section spacing</h2>

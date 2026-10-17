@@ -145,15 +145,16 @@
 .wds-input:focus-within svg { color: var(--wds-input-icon-focus); }
 .wds-input.is-error, .wds-input:has([aria-invalid="true"]) { --_bd: var(--wds-input-border-error); background: var(--wds-input-bg-error); }
 .wds-input.is-error svg, .wds-input:has([aria-invalid="true"]) svg { color: var(--wds-input-icon-error); }
-.wds-input.is-disabled, .wds-input:has(:disabled) { --_bd: var(--wds-input-border-disabled); background: var(--wds-input-bg-disabled); color: var(--wds-input-text-disabled); cursor: not-allowed; }
-.wds-input:has(:disabled) svg, .wds-input.is-disabled svg { color: var(--wds-input-icon-disabled); }
-.wds-input:has(:disabled) ::placeholder { color: var(--wds-input-text-disabled); }
+.wds-input.is-disabled, .wds-input:has(> :is(input, select, textarea):disabled) { --_bd: var(--wds-input-border-disabled); background: var(--wds-input-bg-disabled); color: var(--wds-input-text-disabled); cursor: not-allowed; }
+.wds-input:has(> :is(input, select, textarea):disabled) svg, .wds-input.is-disabled svg { color: var(--wds-input-icon-disabled); }
+.wds-input:has(> :is(input, select, textarea):disabled) ::placeholder { color: var(--wds-input-text-disabled); }
 .wds-input--textarea { align-items: flex-start; min-height: 120px; }
 .wds-input--textarea textarea { min-height: 96px; resize: vertical; }
 .wds-input--select { position: relative; }
 .wds-input--select select { appearance: none; -webkit-appearance: none; cursor: pointer; padding-right: 24px; }
 .wds-input--select svg { position: absolute; right: var(--wds-padding-input-padding-x); pointer-events: none; }
-.wds-input--select select:invalid { color: var(--wds-input-placeholder); }
+.wds-input--select select:invalid { color: var(--wds-text-tertiary); } /* prompt text is real text, so it needs 4.5:1; input-placeholder is only 3.22:1 */
+.wds-input--select option { color: var(--wds-input-text); background: var(--wds-bg-elevated); }
 .wds-input__prefix { color: var(--wds-input-text); font-size: var(--wds-body-3-medium-font-size); line-height: var(--wds-body-3-medium-line-height); font-weight: var(--wds-body-3-medium-font-weight); }
 .wds-field__msg { margin: -4px 0 0; min-height: 18px; font-size: var(--wds-body-5-reg-font-size); line-height: var(--wds-body-5-reg-line-height); color: var(--wds-input-helper); }
 .wds-field__msg.is-error { color: var(--wds-input-helper-error); }
@@ -386,3 +387,8 @@
   .wds-footer__brand img { width: 162px; height: 40px; }
   .wds-footer__legal { flex-direction: column; align-items: flex-start; }
 }
+
+/* Skip link: hidden until focused */
+.skip-link { position: absolute; left: 16px; top: -100px; z-index: 100; padding: 8px 16px; border-radius: 9999px; background: var(--wds-bg-inverse); color: var(--wds-text-inverse); }
+.skip-link:focus { top: 12px; }
+.visually-hidden { position: absolute !important; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }

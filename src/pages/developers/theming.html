@@ -1,0 +1,52 @@
+<!--meta {"status": "Stable"} -->
+<h2>Overview</h2>
+<p>The <code>theme</code> collection in Figma has a light and a dark mode, and <code>tokens.css</code> turns them into three layers of CSS. Components only ever use theme tokens, so switching the theme switches every component.</p>
+<pre><code>/* 1. Light by default */
+:root, [data-theme="light"] { --wds-bg-page: #ffffff; … }
+
+/* 2. Dark when forced */
+[data-theme="dark"] { --wds-bg-page: #0a0c10; … }
+
+/* 3. Dark when the OS asks for it, unless light is forced */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) { --wds-bg-page: #0a0c10; … }
+}</code></pre>
+
+<h2>Setup</h2>
+<div class="table-wrap">
+  <table>
+    <thead><tr><th scope="col">Goal</th><th scope="col">Do this</th></tr></thead>
+    <tbody>
+      <tr><td>Follow the visitor's OS setting</td><td>Nothing. It's the default.</td></tr>
+      <tr><td>Always light</td><td><code>&lt;html data-theme="light"&gt;</code></td></tr>
+      <tr><td>Always dark</td><td><code>&lt;html data-theme="dark"&gt;</code></td></tr>
+      <tr><td>One dark section on a light page</td><td><code>&lt;section data-theme="dark"&gt;</code>. Tokens re-resolve inside it.</td></tr>
+      <tr><td>One light card in a dark section</td><td><code>&lt;div data-theme="light"&gt;</code></td></tr>
+    </tbody>
+  </table>
+</div>
+<p>The scope also sets <code>color-scheme</code>, so native scrollbars and form controls match. Give the scoped element a background (<code>var(--wds-bg-page)</code>); the attribute only changes the tokens.</p>
+
+<h2>Code examples</h2>
+<h3>Fixed themes from Figma</h3>
+<ul>
+  <li><strong>Header and footer</strong> are always dark: <code>&lt;header class="wds-header" data-theme="dark"&gt;</code>.</li>
+  <li><strong>Image banner card</strong> is always light: <code>&lt;div class="wds-promo__card" data-theme="light"&gt;</code>.</li>
+  <li><strong>Sections</strong> have a default theme in Figma, listed on each section page. Set it with <code>data-theme</code> on the section.</li>
+</ul>
+<h3>A theme switch</h3>
+<pre><code>const root = document.documentElement;
+function setTheme(choice) {            // 'light' | 'dark' | 'system'
+  if (choice === 'system') root.removeAttribute('data-theme');
+  else root.setAttribute('data-theme', choice);
+  try { localStorage.setItem('theme', choice); } catch {}
+}
+// In &lt;head&gt;, before CSS, to avoid a flash:
+// try { const t = localStorage.getItem('theme'); if (t &amp;&amp; t !== 'system') document.documentElement.dataset.theme = t; } catch {}</code></pre>
+
+<h2>Known limitations</h2>
+<ul>
+  <li>Gradients redeclare under every <code>[data-theme]</code> so nested scopes pick up their own stops. Other composite values may need the same treatment.</li>
+  <li>The image banner gradient and the primary button image aren't tokenised, so they don't change with the theme.</li>
+  <li>Images and illustrations don't switch automatically. Use <code>&lt;picture&gt;</code> with <code>media="(prefers-color-scheme: dark)"</code> where a dark version exists.</li>
+</ul>

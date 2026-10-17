@@ -1,0 +1,42 @@
+<!--meta {"status": "Stable"} -->
+<h2>Overview</h2>
+<p>The <code>typography</code> and <code>breakpoint</code> collections in Figma each have desktop, tablet and mobile modes. <code>tokens.css</code> sets desktop values on <code>:root</code> and overrides them in two media queries, so components never need their own breakpoints for size and spacing.</p>
+<pre><code>:root { --wds-headline-1-font-size: 56px; --wds-width-container-max-width: 1420px; … }
+@media (max-width: 1279px) { :root { --wds-headline-1-font-size: 40px; --wds-width-container-max-width: 640px; … } }
+@media (max-width: 767px)  { :root { --wds-headline-1-font-size: 28px; --wds-width-container-max-width: 342px; … } }</code></pre>
+
+<h2>Setup</h2>
+<div class="table-wrap">
+  <table>
+    <thead><tr><th scope="col">Mode</th><th scope="col">Media query</th><th scope="col">Figma frame</th><th scope="col">Container</th></tr></thead>
+    <tbody>
+      <tr><td>Desktop</td><td>default (1280px and up)</td><td class="num">1920</td><td class="num">1420</td></tr>
+      <tr><td>Tablet</td><td><code>(max-width: 1279px)</code></td><td class="num">768</td><td class="num">640</td></tr>
+      <tr><td>Mobile</td><td><code>(max-width: 767px)</code></td><td class="num">390</td><td class="num">342</td></tr>
+    </tbody>
+  </table>
+</div>
+<p>Use the same two values when a layout itself needs to change (for example columns becoming rows). CSS custom properties can't be used inside media queries, so the numbers are written out in <code>wds.css</code>. The breakpoints are also in <code>wds-css-variables.json</code>.</p>
+
+<h2>Code examples</h2>
+<pre><code>/* Size and spacing: just use tokens, they switch on their own */
+.my-section {
+  padding: var(--wds-padding-section-top-padding-default) var(--wds-padding-section-right-left-padding-default);
+}
+
+/* Layout changes: use the WDS breakpoints */
+.my-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--wds-gap-g-24); }
+@media (max-width: 1279px) { .my-grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 767px)  { .my-grid { grid-template-columns: 1fr; } }</code></pre>
+<h3>Testing</h3>
+<ul>
+  <li>Use the viewport switch on any live preview in these docs. It renders the example at 1440, 768 and 390px, so real media queries fire.</li>
+  <li>Check the in-between widths too: 1024px (tablet tokens on a laptop) and 320px (smallest phones).</li>
+  <li>Check at 200% zoom, which triggers the tablet or mobile layout on most laptops.</li>
+</ul>
+
+<h2>Known limitations</h2>
+<ul>
+  <li>Between 768 and 1279px the content stays at the 640px tablet container. Wide tablets and small laptops show generous side space. Design should confirm whether a wider in-between container is wanted.</li>
+  <li>The CSS switch points are a development choice. Figma only defines the three frame widths.</li>
+</ul>
