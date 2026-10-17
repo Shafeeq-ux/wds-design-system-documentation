@@ -1,0 +1,31 @@
+<!--meta {"status": "WIP"} -->
+<h2>Overview</h2>
+<p>WDS has 13 gradients. Each one is a Figma paint style (the shape and stop positions) whose colours come from theme variables, so a gradient can change colour between light and dark.</p>
+<ul>
+  <li><strong>Background gradients</strong> (<code>gradient-bg-*</code>): soft, light washes behind heroes and feature sections.</li>
+  <li><strong>Accent gradients</strong>: saturated blends for campaign moments and product highlights. Most fade to near-black in light mode and to white in dark mode.</li>
+</ul>
+<div class="callout callout-warn"><p><strong>Work in progress.</strong> The Gradients page in Figma is still in progress. Usage rules below are proposed.</p></div>
+
+<h2>All gradients</h2>
+<p>Each gradient is shown in light and dark. Select a name to copy its CSS variable.</p>
+<!--wds:gradients-->
+
+<h2>Usage guidance</h2>
+<div class="do-dont">
+  <div class="do"><h3>Do</h3><ul><li>Use background gradients behind one hero or feature section per page.</li><li>Put text on the lightest part of the gradient, and check its contrast at that point.</li><li>Use the CSS variable so the gradient follows the theme.</li></ul></div>
+  <div class="dont"><h3>Don't</h3><ul><li>Put body copy over the saturated middle of an accent gradient.</li><li>Stack two gradient sections next to each other.</li><li>Recreate a gradient by hand with different stops.</li></ul></div>
+</div>
+
+<h2>Light and dark theme</h2>
+<p>In dark mode the beach gradient becomes plain white, and the accent gradients swap their dark end for white. Check any gradient-backed section in both themes before launch. A dark-mode gradient may need <code>text-primary</code> instead of <code>text-on-dark</code>.</p>
+
+<h2>Developer notes</h2>
+<pre><code>.hero { background: var(--wds-gradient-bg-ocean); }</code></pre>
+<p>Linear gradient angles are converted from the Figma paint styles. Figma radial gradients can be rotated ellipses, which CSS can't draw, so the radial centres are exact but their shapes are approximate. Compare against Figma when a radial gradient is a key visual.</p>
+
+<h2>Figma references</h2>
+<ul>
+  <li><a href="https://www.figma.com/design/lf5SOxUpWBtO8AIzXf6snw/WDS-3.0?node-id=2-2307" target="_blank" rel="noopener">Theme page</a>: gradient variables and styles in light and dark.</li>
+  <li><a href="https://www.figma.com/design/lf5SOxUpWBtO8AIzXf6snw/WDS-3.0?node-id=513-1322" target="_blank" rel="noopener">Gradients (WIP)</a></li>
+</ul>

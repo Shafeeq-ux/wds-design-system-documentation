@@ -11,6 +11,7 @@ import { readFileSync, writeFileSync, mkdirSync, rmSync, cpSync, readdirSync, st
 import { dirname, join, relative } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import './build-tokens.mjs';
+import { applyShortcodes } from './shortcodes.mjs';
 
 const root = join(dirname(fileURLToPath(import.meta.url)), '..');
 const SRC = join(root, 'src');
@@ -109,7 +110,7 @@ function render(href, meta, body) {
     title: item.title, desc: item.desc, owner: item.group?.owner, figma: item.figma,
     status: item.status || 'Stable', updated: TODAY, layout: 'doc', ...meta,
   };
-  const { html, headings } = addHeadingIds(body);
+  const { html, headings } = addHeadingIds(applyShortcodes(body));
   const crumb = item.group ? `<p class="crumb"><span>${item.group.number}</span> ${esc(item.group.title)}</p>` : '';
   const header = m.layout === 'doc' ? `<header class="page-head">${crumb}<h1>${esc(m.title)}</h1>${m.desc ? `<p class="lede">${esc(m.desc)}</p>` : ''}${pageMeta(m)}</header>` : '';
   const page = layout

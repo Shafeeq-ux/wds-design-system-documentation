@@ -1,0 +1,38 @@
+<!--meta {"status": "Stable"} -->
+<h2>Overview</h2>
+<p>WDS spacing is built on a <strong>4px scale</strong>. The <code>core/size</code> primitives (0–200, plus 9999 for pill shapes) feed two sets of tokens: <strong>padding</strong> (<code>p-*</code>) for space inside a container, and <strong>gap</strong> (<code>g-*</code>) for space between items. Both use the same values, so pick by intent, not by number.</p>
+<p>Section-level spacing that changes at each breakpoint, such as section padding and the gap between a title and its description, lives on the <a href="/foundations/grid.html">Grid & breakpoints</a> page.</p>
+
+<h2>Padding</h2>
+<!--wds:scale spacing/padding/p--->
+
+<h2>Gap</h2>
+<!--wds:scale spacing/gap/g--->
+
+<h2>Component spacing</h2>
+<p>Components alias the scale through their own tokens, so a component can change without moving every other use of that number.</p>
+<div class="table-wrap">
+  <table>
+    <thead><tr><th scope="col">Token</th><th scope="col">Value</th><th scope="col">Alias</th></tr></thead>
+    <tbody>
+      <tr><td><code>--wds-padding-button-padding-x</code></td><td class="num">24px</td><td><code>p-24</code></td></tr>
+      <tr><td><code>--wds-padding-button-padding-y</code></td><td class="num">8px</td><td><code>p-8</code></td></tr>
+      <tr><td><code>--wds-gap-button-icon-gap</code></td><td class="num">6px</td><td><code>p-6</code></td></tr>
+      <tr><td><code>--wds-padding-input-padding-x</code></td><td class="num">16px</td><td><code>p-16</code></td></tr>
+      <tr><td><code>--wds-padding-input-padding-y</code></td><td class="num">12px</td><td><code>p-12</code></td></tr>
+      <tr><td><code>--wds-gap-input-icon-gap</code></td><td class="num">8px</td><td><code>p-8</code></td></tr>
+      <tr><td><code>--wds-gap-checkbox-label-gap</code></td><td class="num">12px</td><td><code>p-12</code></td></tr>
+      <tr><td><code>--wds-gap-checkbox-size</code></td><td class="num">20px</td><td><code>p-20</code></td></tr>
+    </tbody>
+  </table>
+</div>
+
+<h2>Usage guidance</h2>
+<div class="do-dont">
+  <div class="do"><h3>Do</h3><ul><li>Use a token for every margin, padding and gap.</li><li>Use bigger steps between groups than within them, so related items read as one unit.</li><li>Use the responsive section tokens for space between sections.</li></ul></div>
+  <div class="dont"><h3>Don't</h3><ul><li>Use values that aren't on the scale, such as 10px or 18px.</li><li>Use a fixed desktop value for section padding. It won't shrink on mobile.</li></ul></div>
+</div>
+
+<h2>Primitive size scale</h2>
+<p>For reference, here's the full <code>core/size</code> scale that every spacing, radius and border token aliases. Use the padding and gap tokens in designs and code, not these directly.</p>
+<!--wds:scale core/size-->

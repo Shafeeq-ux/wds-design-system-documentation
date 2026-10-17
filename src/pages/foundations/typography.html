@@ -1,0 +1,85 @@
+<!--meta {"status": "Stable"} -->
+<h2>Overview</h2>
+<p>WDS uses one typeface, <strong>Tekion Sans</strong>, for every heading, paragraph, label and button. The system has 27 text styles in four families: headlines, statistics, body and labels. Each style has its own values for desktop, tablet and mobile, so a heading shrinks at the right breakpoint without anyone choosing a new style.</p>
+<div class="callout">
+  <p><strong>About the samples on this site.</strong> Tekion Sans is a licensed font and isn't served by this public site. If you have it installed, the samples use it. Otherwise they fall back to Inter, which is close in proportion but narrower.</p>
+</div>
+
+<h2>Type scale</h2>
+<p>Sizes are font size / line height in pixels. Select a class name to copy it. The samples use live tokens, so they render at your current breakpoint: resize the window to watch them change.</p>
+<!--wds:type-scale-->
+
+<h2>Headlines</h2>
+<p>Headlines are SemiBold (600) at 110% width. The <code>-reg</code> versions of headline 2, 3 and 4 are Regular (400). Use them for a quieter heading, or for a second line beneath a SemiBold one.</p>
+<div class="table-wrap">
+  <table>
+    <thead><tr><th scope="col">Style</th><th scope="col">HTML element</th><th scope="col">Use for</th></tr></thead>
+    <tbody>
+      <tr><td><code>.wds-headline-1</code></td><td><code>h1</code></td><td>The page title in a hero. Once per page.</td></tr>
+      <tr><td><code>.wds-headline-2</code></td><td><code>h2</code></td><td>Section titles.</td></tr>
+      <tr><td><code>.wds-headline-3</code></td><td><code>h2</code> or <code>h3</code></td><td>Sub-section titles and large feature titles.</td></tr>
+      <tr><td><code>.wds-headline-4</code></td><td><code>h3</code></td><td>Card titles in 2- and 3-column grids, tab titles.</td></tr>
+      <tr><td><code>.wds-headline-5</code></td><td><code>h3</code> or <code>h4</code></td><td>Card titles in 4-column grids, accordion rows.</td></tr>
+      <tr><td><code>.wds-headline-6</code></td><td><code>h4</code></td><td>Small card titles, FAQ questions, footer column headings.</td></tr>
+    </tbody>
+  </table>
+</div>
+<p>A style is a visual size, not a heading level. Pick the HTML level from the page outline (one <code>h1</code>, no skipped levels) and the style from the layout.</p>
+
+<h2>Statistics</h2>
+<p><code>.wds-statistics</code> (Figma: Headline/statistics) is Light (300) at 125% width, made for large numbers in the Stats section. Turn on tabular figures (<code>font-variant-numeric: tabular-nums</code>) when numbers sit in a row, so they line up.</p>
+<p class="wds-statistics">98% <span class="wds-body-3-reg wds-text-secondary">of dealers renew</span></p>
+
+<h2>Body</h2>
+<p>Body styles run from 20px (body 1) to 12px (body 5), each in Regular, Medium and SemiBold (named <code>-bold</code>). Body width is 105%.</p>
+<div class="table-wrap">
+  <table>
+    <thead><tr><th scope="col">Style</th><th scope="col">Use for</th></tr></thead>
+    <tbody>
+      <tr><td><code>.wds-body-1-*</code></td><td>Hero sub-copy and lead paragraphs.</td></tr>
+      <tr><td><code>.wds-body-2-*</code></td><td>Section descriptions and feature copy.</td></tr>
+      <tr><td><code>.wds-body-3-*</code></td><td>Default paragraph text, card body, form fields.</td></tr>
+      <tr><td><code>.wds-body-4-*</code></td><td>Captions, helper text, footer links, banner messages.</td></tr>
+      <tr><td><code>.wds-body-5-*</code></td><td>Legal small print and metadata. Never for anything people must read to complete a task.</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<h2>Labels</h2>
+<ul>
+  <li><strong><code>.wds-button</code></strong>: 14px Medium. Every button label.</li>
+  <li><strong><code>.wds-overline</code></strong>: 12px SemiBold, uppercase, 1.2px letter spacing. The eyebrow above a section title. Keep it to a few words.</li>
+</ul>
+<p class="wds-overline wds-text-secondary">Overline example</p>
+
+<h2>Responsive behaviour</h2>
+<p>The <code>typography</code> collection in Figma has three modes. The CSS switches values at the same breakpoints as the layout grid:</p>
+<div class="table-wrap">
+  <table>
+    <thead><tr><th scope="col">Mode</th><th scope="col">Viewport</th><th scope="col">Headline 1</th><th scope="col">Headline 2</th><th scope="col">Body 1</th></tr></thead>
+    <tbody>
+      <tr><td>Desktop</td><td>1280px and up</td><td class="num">56 / 64</td><td class="num">40 / 48</td><td class="num">20 / 28</td></tr>
+      <tr><td>Tablet</td><td>768–1279px</td><td class="num">40 / 44</td><td class="num">32 / 40</td><td class="num">20 / 28</td></tr>
+      <tr><td>Mobile</td><td>767px and below</td><td class="num">28 / 32</td><td class="num">28 / 36</td><td class="num">18 / 26</td></tr>
+    </tbody>
+  </table>
+</div>
+<p>Negative letter spacing on large headlines (−1px for headline 1 on desktop) relaxes to 0 on mobile, where tight tracking hurts legibility at small sizes.</p>
+<p>The mobile and tablet values come from Figma, but the exact switch points (767px and 1279px) are a development choice. Figma frames are drawn at 390, 768 and 1920px.</p>
+
+<h2>Light and dark theme</h2>
+<p>Text styles carry no colour. Pair them with a text token: <code>text-primary</code> for headings and body, <code>text-secondary</code> for supporting copy, and <code>text-tertiary</code> for captions. These are checked for contrast in both themes on the <a href="/foundations/colour.html#accessibility">Colour</a> page. Light (300) weights look thinner on dark backgrounds, so keep Statistics at 32px or larger in dark mode.</p>
+
+<h2>Accessibility</h2>
+<ul>
+  <li>Set sizes in the CSS with the tokens, and don't stop text from resizing. Pages must work at 200% zoom (WCAG 1.4.4) and with text spacing overridden (WCAG 1.4.12).</li>
+  <li>Keep paragraphs to about 60–80 characters per line. The <code>p-width-centre</code> token (720px) does this for body 1 and body 2.</li>
+  <li>Don't use uppercase for anything longer than an overline. It's harder to read and screen readers may spell it out.</li>
+  <li>Don't fake bold, italic or condensed. Use the real weights and the width axis.</li>
+</ul>
+
+<h2>Figma references</h2>
+<ul>
+  <li><a href="https://www.figma.com/design/lf5SOxUpWBtO8AIzXf6snw/WDS-3.0?node-id=0-1" target="_blank" rel="noopener">Typography page</a>: 162 variables in 3 modes, and the 27 text styles.</li>
+  <li><a href="/foundations/type-in-use.html">Type in use</a>: which font files to install and how fonts ship on the web.</li>
+</ul>

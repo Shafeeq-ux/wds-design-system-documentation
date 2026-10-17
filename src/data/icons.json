@@ -1,0 +1,194 @@
+{
+ "documented": [
+  [
+   "icon-cross-department-view",
+   "overview, dashboard, departments, performance"
+  ],
+  [
+   "icon-anomaly-detection",
+   "alert, warning, detect, monitor"
+  ],
+  [
+   "icon-unified-ai",
+   "ai, unified, investment, platform"
+  ],
+  [
+   "icon-pipeline-visibility",
+   "pipeline, funnel, visibility, sales"
+  ],
+  [
+   "icon-deal-risk",
+   "risk, deal, warning, opportunity"
+  ],
+  [
+   "icon-coaching-signals",
+   "coaching, conversation, feedback, training"
+  ],
+  [
+   "icon-customer-history",
+   "customer, history, vehicle, profile"
+  ],
+  [
+   "icon-voice-input",
+   "voice, microphone, dictation, record"
+  ],
+  [
+   "icon-upsell-flag",
+   "upsell, flag, service, revenue"
+  ],
+  [
+   "icon-deal-queue",
+   "queue, priority, urgency, compliance"
+  ],
+  [
+   "icon-documentation-alert",
+   "document, alert, pending, deadline"
+  ],
+  [
+   "icon-payment-context",
+   "payment, calculator, finance, scenario"
+  ],
+  [
+   "icon-voice-inventory-lookup",
+   "inventory, voice, search, lookup"
+  ],
+  [
+   "icon-instant-alternatives",
+   "alternatives, swap, stock, options"
+  ],
+  [
+   "icon-reorder-suggestions",
+   "reorder, suggestion, report, analytics"
+  ],
+  [
+   "icon-invoice-arrival",
+   "invoice, email, scan, capture"
+  ],
+  [
+   "icon-field-extraction",
+   "extract, fields, data, autofill"
+  ],
+  [
+   "icon-vendor-match",
+   "vendor, match, identity, verify"
+  ],
+  [
+   "icon-gl-coding",
+   "ledger, accounting, code, categorize"
+  ],
+  [
+   "icon-approval-routing",
+   "approval, routing, workflow, threshold"
+  ],
+  [
+   "icon-audit-trail",
+   "audit, trail, log, compliance"
+  ],
+  [
+   "icon-ai-native-foundation",
+   "ai, native, foundation, intelligent"
+  ],
+  [
+   "icon-secure-unified-data",
+   "secure, data, unified, protect"
+  ],
+  [
+   "icon-end-to-end-platform",
+   "end-to-end, platform, replace, system"
+  ],
+  [
+   "icon-role-based-intuitive-experience",
+   "role, intuitive, workflow, personalized"
+  ],
+  [
+   "icon-enterprise-for-all",
+   "enterprise, scale, adapt, grow"
+  ],
+  [
+   "icon-context",
+   "context, unified, data, grounded"
+  ],
+  [
+   "icon-clarity",
+   "clarity, insight, summary, role"
+  ],
+  [
+   "icon-action",
+   "action, automate, workflow, execute"
+  ],
+  [
+   "icon-responsible-ai",
+   "responsible, secure, certified, trust"
+  ],
+  [
+   "icon-industry-momentum",
+   "momentum, trend, industry, growth"
+  ],
+  [
+   "icon-intelligence-gap",
+   "intelligence, gap, insight, opportunity"
+  ],
+  [
+   "icon-cost-of-inaction",
+   "cost, inaction, risk, loss"
+  ],
+  [
+   "icon-unified-core",
+   "unified, core, integrated, platform"
+  ],
+  [
+   "icon-contextual-connection",
+   "contextual, connected, holistic, data"
+  ],
+  [
+   "icon-executes-actions",
+   "execute, automate, trigger, action"
+  ],
+  [
+   "icon-one-platform",
+   "platform, single, roles, consolidate"
+  ],
+  [
+   "icon-user-control",
+   "control, governance, approval, transparency"
+  ]
+ ],
+ "undocumented": [
+  "icon-duo-message",
+  "icon-duo-access",
+  "icon-duo-chat",
+  "icon-duo-ai-native-foundation",
+  "icon-duo-data-storage-security",
+  "icon-duo-secure-unified-data",
+  "icon-duo-role-based-intuitive-experience",
+  "icon-duo-continuous-check",
+  "icon-duo-platform-security",
+  "icon-automated-deal-completeness-checkpoints",
+  "icon-real-time-deal-health-score",
+  "icon-instant-id-verification",
+  "icon-ai-powered-insurance-card-validation",
+  "icon-configurable-validation-rules",
+  "icon-guided-fix-actions",
+  "icon-native-to-arc-no-integration-headaches",
+  "icon-complete-audit-trail",
+  "icon-sales-performance",
+  "icon-gross-profit",
+  "icon-accounts-receivable-management",
+  "icon-policy-chargeback",
+  "icon-inventory-health-analysis",
+  "icon-key-expenses",
+  "icon-integrated-tekion-ecosystem",
+  "icon-transparent-payment-calculator",
+  "icon-live-online-sessions",
+  "icon-sales-checkout-concierge"
+ ],
+ "products": [
+  "core-dms",
+  "crm",
+  "virtual-to-visit",
+  "dse",
+  "tekion-pay",
+  "advanced-analytics",
+  "payroll"
+ ]
+}

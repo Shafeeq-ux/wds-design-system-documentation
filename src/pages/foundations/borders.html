@@ -1,0 +1,31 @@
+<!--meta {"status": "Stable"} -->
+<h2>Overview</h2>
+<p>Border widths and corner radii follow the same pattern as spacing: a primitive scale, plus component tokens that alias it. WDS is a soft, rounded system. Buttons and single-line inputs are full pills, and cards use large radii.</p>
+
+<h2>Border radius</h2>
+<!--wds:radii-->
+<div class="table-wrap">
+  <table>
+    <thead><tr><th scope="col">Element</th><th scope="col">Token</th><th scope="col">Value</th></tr></thead>
+    <tbody>
+      <tr><td>Buttons</td><td><code>--wds-border-radius-button</code></td><td class="num">Full</td></tr>
+      <tr><td>Single-line inputs</td><td><code>--wds-border-radius-input</code></td><td class="num">Full</td></tr>
+      <tr><td>Text areas</td><td><code>--wds-border-radius-textarea</code></td><td class="num">16px</td></tr>
+      <tr><td>Bento cards</td><td><code>--wds-border-radius-bento-card</code></td><td class="num">24px</td></tr>
+      <tr><td>Checkboxes</td><td><code>--wds-border-radius-checkbox</code></td><td class="num">0 (square)</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<h2>Border width</h2>
+<!--wds:borders-->
+<p>Inputs use a 1px border that thickens to 2px on focus (<code>border-width-input-focus</code>). Swapping widths can shift the layout by 1px, so draw the extra pixel with an inset <code>box-shadow</code> or reserve it with padding.</p>
+
+<h2>Border colour</h2>
+<p>Border colours are theme tokens: <code>border-subtle</code>, <code>border-default</code>, <code>border-strong</code>, <code>border-focus</code>, <code>border-disabled</code>, <code>border-error</code> and <code>border-success</code>. See <a href="/foundations/colour.html#borders">Colour › Borders</a>.</p>
+
+<h2>Accessibility</h2>
+<ul>
+  <li>A border that's the only way to see a control, like an input outline, needs 3:1 contrast against its background (WCAG 1.4.11). <code>border-default</code> doesn't meet this today. See <a href="/foundations/colour.html#known-issues">Known issues</a>.</li>
+  <li>Focus rings use <code>border-focus</code> at 2px with a 2–3px offset, so they stay visible on any surface.</li>
+</ul>

@@ -1,0 +1,23 @@
+<!--meta {"status": "Not defined"} -->
+<h2>Overview</h2>
+<p>The WDS 3.0 Figma file has no shadow or effect styles yet. Until Design defines them, depth comes from surface colour:</p>
+<div class="table-wrap">
+  <table>
+    <thead><tr><th scope="col">Level</th><th scope="col">Token</th><th scope="col">Light</th><th scope="col">Dark</th></tr></thead>
+    <tbody>
+      <tr><td>Page</td><td><code>--wds-bg-page</code></td><td><code>#ffffff</code></td><td><code>#0a0c10</code></td></tr>
+      <tr><td>Subtle section</td><td><code>--wds-bg-subtle</code></td><td><code>#f5f7fa</code></td><td><code>#141820</code></td></tr>
+      <tr><td>Recessed</td><td><code>--wds-bg-recessed</code></td><td><code>#eceef3</code></td><td><code>#1e2230</code></td></tr>
+      <tr><td>Elevated (cards, menus)</td><td><code>--wds-bg-elevated</code></td><td><code>#ffffff</code></td><td><code>#141820</code></td></tr>
+      <tr><td>Overlay (pop-ups)</td><td><code>--wds-bg-overlay</code></td><td><code>#ffffff</code></td><td><code>#141820</code></td></tr>
+    </tbody>
+  </table>
+</div>
+<p>In light mode, elevated and overlay surfaces are the same white as the page. Separate them with <code>border-default</code> until shadows exist.</p>
+
+<h2>Needed from Design</h2>
+<ul>
+  <li>Shadow styles for at least three levels: raised cards, dropdowns and the header on scroll, and pop-ups.</li>
+  <li>Dark-mode guidance: whether shadows are dropped in favour of lighter surfaces.</li>
+  <li>A backdrop colour for the pop-up section's overlay.</li>
+</ul>

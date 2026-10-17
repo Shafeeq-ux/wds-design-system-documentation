@@ -1,0 +1,65 @@
+<!--meta {"status": "WIP"} -->
+<h2>Overview</h2>
+<p>WDS pages are designed at three widths. The <code>breakpoint</code> collection in Figma holds every value that changes between them: containers, text widths, card widths and section spacing. In CSS each token has one name, and its value switches automatically at the breakpoint.</p>
+<div class="callout callout-warn"><p><strong>Work in progress.</strong> The Responsive and Grids pages in Figma are still being drawn. The values below come from the variables, which are complete. A formal column grid hasn't been defined yet.</p></div>
+
+<h2>Breakpoints</h2>
+<div class="table-wrap">
+  <table>
+    <thead><tr><th scope="col">Mode</th><th scope="col">Figma frame</th><th scope="col">CSS range</th><th scope="col">Container</th><th scope="col">Side padding</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Desktop</strong></td><td class="num">1920px</td><td>1280px and up</td><td class="num">1420px max</td><td class="num">64px</td></tr>
+      <tr><td><strong>Tablet</strong></td><td class="num">768px</td><td>768–1279px</td><td class="num">640px</td><td class="num">64px</td></tr>
+      <tr><td><strong>Mobile</strong></td><td class="num">390px</td><td>767px and below</td><td class="num">342px</td><td class="num">24px</td></tr>
+    </tbody>
+  </table>
+</div>
+<p>The CSS switch points (1279px and 767px) are a development choice: Figma only defines the three frames. Between 768px and 1279px the content stays at the 640px tablet container and centres.</p>
+
+<h2>Live example</h2>
+<p>Switch the viewport to see the container, the centred heading width and the card columns change.</p>
+<div class="doc-preview" data-src="/examples/grid.html" data-title="Containers and card columns"></div>
+
+<h2>Containers</h2>
+<p>Use <code>container-max-width</code> for most sections. Offset containers narrow the content for editorial sections, forms and centred CTAs.</p>
+<!--wds:responsive spacing/width/container-->
+<!--wds:responsive spacing/width/offset-->
+<p>The <code>device-width</code> token records the Figma frame width (1920, 768, 390). It's for design reference, not layout.</p>
+
+<h2>Text widths</h2>
+<p>Headings and paragraphs have their own maximum widths so lines don't run too long on wide screens. On mobile they all match the 342px container.</p>
+<!--wds:responsive spacing/width/h-->
+<!--wds:responsive spacing/width/p-->
+
+<h2>Card columns</h2>
+<p>Card grids come in 1 to 5 columns. Each column count has a minimum and maximum card width plus its own inner padding, all of which change by breakpoint. On mobile, every grid becomes a single 342px column except the 5-column grid. Its 156px minimum lets two cards sit side by side, which the live example uses.</p>
+<!--wds:responsive spacing/width/5-col-->
+<!--wds:responsive spacing/width/4-col-->
+<!--wds:responsive spacing/width/3-col-->
+<!--wds:responsive spacing/width/2-col-->
+<!--wds:responsive spacing/width/1-col-->
+<p>The space between cards isn't tokenised yet. The live example uses 24px (<code>g-24</code>) until Design confirms the value.</p>
+
+<h2>Section spacing</h2>
+<p>Every section has top, bottom and side padding. <strong>Default</strong> suits most sections. <strong>2x</strong> is for heroes and sections that need extra separation. <strong>None</strong> lets two sections with the same background run together.</p>
+<!--wds:responsive spacing/padding/section-->
+<h3>Gaps inside a section</h3>
+<!--wds:responsive spacing/gap/-->
+<h3>Media and video</h3>
+<!--wds:responsive spacing/padding/image-->
+<!--wds:responsive spacing/padding/video-->
+
+<h2>Implementation</h2>
+<pre><code>&lt;section class="wds-section wds-section--2x"&gt;
+  &lt;div class="wds-container wds-stack-centre"&gt;
+    &lt;h2 class="wds-headline-2 wds-h2-centre"&gt;Section title&lt;/h2&gt;
+    &lt;p class="wds-body-2-reg wds-p-centre wds-title-gap"&gt;Description&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/section&gt;</code></pre>
+<p>The layout classes are in <code>css/wds.css</code>. They only read tokens, so the same markup works at every breakpoint.</p>
+
+<h2>Figma references</h2>
+<ul>
+  <li><a href="https://www.figma.com/design/lf5SOxUpWBtO8AIzXf6snw/WDS-3.0?node-id=816-11377" target="_blank" rel="noopener">Grids (WIP)</a></li>
+  <li><a href="https://www.figma.com/design/lf5SOxUpWBtO8AIzXf6snw/WDS-3.0?node-id=816-11395" target="_blank" rel="noopener">Responsive (WIP)</a></li>
+</ul>

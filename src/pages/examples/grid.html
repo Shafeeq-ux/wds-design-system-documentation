@@ -1,0 +1,56 @@
+<!--meta {"layout": "bare"} -->
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Containers and card columns · WDS 3.0 example</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap">
+  <link rel="stylesheet" href="/css/tokens.css">
+  <link rel="stylesheet" href="/css/wds.css">
+  <style>
+    html, body { margin: 0; }
+    body { background: var(--wds-bg-subtle); }
+    .wds-section { background: var(--wds-bg-page); }
+    .wds-section + .wds-section { border-top: 1px dashed var(--wds-border-default); }
+    .label { margin: 0 0 16px; color: var(--wds-text-tertiary); }
+    .box { padding: 16px; border-radius: 12px; background: var(--wds-bg-recessed); outline: 1px dashed var(--wds-border-strong); }
+    .cards { display: grid; gap: var(--wds-gap-g-24); }
+    .cards > div { border-radius: 16px; background: var(--wds-bg-recessed); min-height: 120px; display: grid; place-items: center; color: var(--wds-text-secondary); }
+    .c3 { grid-template-columns: repeat(auto-fit, minmax(var(--wds-width-3-col-card-min-width), 1fr)); }
+    .c3 > div { max-width: var(--wds-width-3-col-card-max-width); padding: var(--wds-width-3-col-card-top-bottom-padding) var(--wds-width-3-col-card-right-left-padding); }
+    .c5 { grid-template-columns: repeat(auto-fit, minmax(var(--wds-width-5-col-card-min-width), 1fr)); }
+    .c5 > div { max-width: var(--wds-width-5-col-card-max-width); min-height: 80px; }
+    @media (max-width: 767px) { .c5 { grid-template-columns: repeat(2, 1fr); } }
+  </style>
+</head>
+<body class="wds">
+  <section class="wds-section">
+    <div class="wds-container">
+      <p class="label wds-body-4-medium">container-max-width</p>
+      <div class="box wds-stack-centre">
+        <h2 class="wds-headline-2 wds-h2-centre">Centred section title stays readable</h2>
+        <p class="wds-body-2-reg wds-p-centre wds-title-gap wds-text-secondary">The heading and paragraph have their own maximum widths, so they stay comfortable even when the container is 1420px wide.</p>
+      </div>
+    </div>
+  </section>
+  <section class="wds-section">
+    <div class="wds-container">
+      <p class="label wds-body-4-medium">3-column cards</p>
+      <div class="cards c3"><div class="wds-body-3-medium">Card</div><div class="wds-body-3-medium">Card</div><div class="wds-body-3-medium">Card</div></div>
+    </div>
+  </section>
+  <section class="wds-section">
+    <div class="wds-container">
+      <p class="label wds-body-4-medium">5-column cards</p>
+      <div class="cards c5"><div class="wds-body-4-medium">Card</div><div class="wds-body-4-medium">Card</div><div class="wds-body-4-medium">Card</div><div class="wds-body-4-medium">Card</div><div class="wds-body-4-medium">Card</div></div>
+    </div>
+  </section>
+  <section class="wds-section">
+    <div class="wds-container wds-container--offset">
+      <p class="label wds-body-4-medium">offset-max-width</p>
+      <div class="box"><p class="wds-body-3-reg" style="margin:0">Offset containers narrow the content for editorial sections, forms and centred CTAs.</p></div>
+    </div>
+  </section>
+</body>
+</html>

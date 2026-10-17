@@ -751,21 +751,21 @@
   }
 }
 
-/* Gradients (direction is a docs default; check Figma per use) */
-:root {
-  --wds-gradient-bg-beach: linear-gradient(135deg, var(--wds-gradientstop1-beach), var(--wds-gradientstop2-beach), var(--wds-gradientstop3-beach));
-  --wds-gradient-bg-ocean: linear-gradient(135deg, var(--wds-gradientstop1-ocean), var(--wds-gradientstop2-ocean), var(--wds-gradientstop3-ocean));
-  --wds-gradient-bg-purple: linear-gradient(135deg, var(--wds-gradientstop1-purple), var(--wds-gradientstop2-purple), var(--wds-gradientstop3-purple), var(--wds-gradientstop4-purple));
-  --wds-gradient-bg-violet: linear-gradient(135deg, var(--wds-gradientstop1-violet), var(--wds-gradientstop2-violet), var(--wds-gradientstop3-violet));
-  --wds-gradient-sky: linear-gradient(135deg, var(--wds-gradientstop1-sky), var(--wds-gradientstop2-sky), var(--wds-gradientstop3-sky));
-  --wds-gradient-sunrise: linear-gradient(135deg, var(--wds-gradientstop1-sunrise), var(--wds-gradientstop2-sunrise), var(--wds-gradientstop3-sunrise));
-  --wds-gradient-amethyst: linear-gradient(135deg, var(--wds-gradientstop1-amethyst), var(--wds-gradientstop2-amethyst), var(--wds-gradientstop3-amethyst));
-  --wds-gradient-ember: linear-gradient(135deg, var(--wds-gradientstop1-ember), var(--wds-gradientstop2-ember), var(--wds-gradientstop3-ember));
-  --wds-gradient-blush: linear-gradient(135deg, var(--wds-gradientstop1-blush), var(--wds-gradientstop2-blush), var(--wds-gradientstop3-blush));
-  --wds-gradient-aurora: linear-gradient(135deg, var(--wds-gradientstop1-aurora), var(--wds-gradientstop2-aurora), var(--wds-gradientstop3-aurora));
-  --wds-gradient-neon: linear-gradient(135deg, var(--wds-gradientstop1-neon), var(--wds-gradientstop2-neon), var(--wds-gradientstop3-neon));
-  --wds-gradient-pulse: linear-gradient(135deg, var(--wds-gradientstop1-pulse), var(--wds-gradientstop2-pulse), var(--wds-gradientstop3-pulse));
-  --wds-gradient-magenta: linear-gradient(135deg, var(--wds-gradientstop1-magenta), var(--wds-gradientstop2-magenta), var(--wds-gradientstop3-magenta));
+/* Gradients: geometry from Figma paint styles, stops from theme variables. Redeclared on [data-theme] so nested theme scopes pick up their own stops. */
+:root, [data-theme] {
+  --wds-gradient-bg-beach: linear-gradient(141deg, var(--wds-gradientstop1-beach) 0%, var(--wds-gradientstop2-beach) 27%, var(--wds-gradientstop3-beach) 100%);
+  --wds-gradient-bg-ocean: radial-gradient(ellipse farthest-corner at 2% 98%, var(--wds-gradientstop1-ocean) 0%, var(--wds-gradientstop2-ocean) 42%, var(--wds-gradientstop3-ocean) 100%);
+  --wds-gradient-bg-purple: linear-gradient(310deg, var(--wds-gradientstop1-purple) 0%, var(--wds-gradientstop2-purple) 32%, var(--wds-gradientstop3-purple) 68%, var(--wds-gradientstop4-purple) 100%);
+  --wds-gradient-bg-violet: radial-gradient(ellipse farthest-corner at 0% 100%, var(--wds-gradientstop1-violet) 0%, var(--wds-gradientstop2-violet) 43%, var(--wds-gradientstop3-violet) 100%);
+  --wds-gradient-sky: radial-gradient(ellipse farthest-corner at 99% 62%, var(--wds-gradientstop1-sky) 0%, var(--wds-gradientstop2-sky) 43%, var(--wds-gradientstop3-sky) 100%);
+  --wds-gradient-sunrise: linear-gradient(307deg, var(--wds-gradientstop1-sunrise) 24%, var(--wds-gradientstop2-sunrise) 47%, var(--wds-gradientstop3-sunrise) 92%);
+  --wds-gradient-amethyst: radial-gradient(ellipse farthest-corner at 100% 93%, var(--wds-gradientstop1-amethyst) 0%, var(--wds-gradientstop2-amethyst) 27%, var(--wds-gradientstop3-amethyst) 95%);
+  --wds-gradient-ember: radial-gradient(ellipse farthest-corner at 100% 93%, var(--wds-gradientstop1-ember) 11%, var(--wds-gradientstop2-ember) 35%, var(--wds-gradientstop3-ember) 95%);
+  --wds-gradient-blush: linear-gradient(135deg, var(--wds-gradientstop1-blush) 0%, var(--wds-gradientstop2-blush) 45%, var(--wds-gradientstop3-blush) 100%);
+  --wds-gradient-aurora: linear-gradient(106deg, var(--wds-gradientstop1-aurora) 0%, var(--wds-gradientstop2-aurora) 64%, var(--wds-gradientstop3-aurora) 100%);
+  --wds-gradient-neon: linear-gradient(77deg, var(--wds-gradientstop1-neon) 0%, var(--wds-gradientstop2-neon) 60%, var(--wds-gradientstop3-neon) 100%);
+  --wds-gradient-pulse: linear-gradient(90deg, var(--wds-gradientstop1-pulse) 11%, var(--wds-gradientstop2-pulse) 59%, var(--wds-gradientstop3-pulse) 100%);
+  --wds-gradient-magenta: linear-gradient(106deg, var(--wds-gradientstop1-magenta) 9%, var(--wds-gradientstop2-magenta) 64%, var(--wds-gradientstop3-magenta) 100%);
 }
 
 /* Typography + layout: desktop (default) */

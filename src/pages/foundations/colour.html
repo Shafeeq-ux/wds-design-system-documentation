@@ -1,0 +1,80 @@
+<!--meta {"status": "Stable"} -->
+<h2>Overview</h2>
+<p>WDS colour comes in three layers. Designers and developers should almost always use the <strong>semantic</strong> layer: it carries the meaning of a colour and switches automatically between light and dark.</p>
+<div class="table-wrap">
+  <table>
+    <thead><tr><th scope="col">Layer</th><th scope="col">Figma collection</th><th scope="col">Example</th><th scope="col">Use it for</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Primitive</strong></td><td><code>primitives</code></td><td><code>--wds-color-gray-800</code></td><td>Defining the palette. Don't apply primitives to designs directly.</td></tr>
+      <tr><td><strong>Semantic</strong></td><td><code>theme</code> (light, dark)</td><td><code>--wds-text-primary</code></td><td>Every page background, text, icon, border and status colour.</td></tr>
+      <tr><td><strong>Component</strong></td><td><code>theme / components</code></td><td><code>--wds-btn-primary-bg-default</code></td><td>Building a WDS component. Each state has its own token.</td></tr>
+    </tbody>
+  </table>
+</div>
+<p>Select any token name to copy it as a CSS custom property.</p>
+
+<h2>Primitive palette</h2>
+<p>The palette is mostly neutral. Gray runs from <code>gray-0</code> (white) to <code>gray-950</code> (near-black), and teal is the single brand accent. Status colours are reserved for feedback.</p>
+<h3>Gray</h3>
+<!--wds:ramp color/gray-->
+<h3>Teal</h3>
+<!--wds:ramp color/teal-->
+<h3>Status</h3>
+<!--wds:ramp color/status-->
+<h3>Static</h3>
+<p>Static colours never change with the theme. Use them for content that must stay the same, such as type on a photograph.</p>
+<!--wds:ramp color/static-->
+
+<h2>Backgrounds</h2>
+<p>Use <code>bg-page</code> for the page and default sections. Use <code>bg-subtle</code> or <code>bg-recessed</code> to separate alternate sections without a border, and <code>bg-inverse</code> for a high-emphasis band such as a closing CTA.</p>
+<!--wds:theme background/-->
+
+<h2>Text</h2>
+<p>Contrast is measured against <code>bg-page</code> in each theme. Body copy needs at least 4.5:1 (AA). Text at 24px and up, or 18.66px bold and up, needs 3:1.</p>
+<!--wds:theme text/-->
+
+<h2>Icons</h2>
+<!--wds:theme icon/-->
+
+<h2>Borders</h2>
+<p>Use <code>border-subtle</code> for dividers, <code>border-default</code> for cards and inputs, and <code>border-strong</code> for hover. <code>border-focus</code> is only for focus rings.</p>
+<!--wds:theme border/-->
+
+<h2>Status</h2>
+<p>Status colours always come as a set: background, border, text and icon. Never rely on colour alone. Pair it with an icon and a text label (WCAG 1.4.1).</p>
+<!--wds:theme status/-->
+
+<h2>Component tokens</h2>
+<p>Component tokens alias the semantic layer and exist for every state. They're listed in full on each component page. Here's the summary.</p>
+<h3>Button</h3>
+<!--wds:theme components/button-->
+<h3>Input</h3>
+<!--wds:theme components/input/-->
+<h3>Checkbox</h3>
+<!--wds:theme components/checkbox/-->
+
+<h2>Light and dark theme</h2>
+<p>Every semantic and component token has a light and a dark value. Most dark values aren't a simple inversion: surfaces step up from <code>gray-950</code> (page) to <code>gray-900</code> (subtle, elevated) to <code>gray-850</code> (recessed), so depth comes from lightness, not shadows.</p>
+<ul>
+  <li><strong>Default:</strong> pages render light.</li>
+  <li><strong>System:</strong> pages follow the visitor's operating-system setting through <code>prefers-color-scheme</code>.</li>
+  <li><strong>Forced:</strong> set <code>data-theme="dark"</code> or <code>data-theme="light"</code> on <code>&lt;html&gt;</code>, or on any section to theme only that section.</li>
+</ul>
+<p>Status backgrounds in dark mode are translucent (for example <code>#10b9811f</code>), so they tint whatever surface they sit on.</p>
+
+<h2>Accessibility</h2>
+<p>These pairs are checked in both themes on every build. Ratios for translucent backgrounds are measured after compositing over <code>bg-page</code>.</p>
+<!--wds:pairs-->
+
+<h2>Known issues</h2>
+<div class="callout callout-warn">
+  <p><strong>Raise these with Design before the related components ship.</strong></p>
+</div>
+<ul>
+  <li><strong>Primary button in dark mode is unreadable.</strong> <code>btn-primary-bg-default</code> is <code>#ffffff</code> and <code>btn-primary-text-default</code> is also <code>#ffffff</code> (1:1). The dark text value should probably be <code>gray-800</code>.</li>
+  <li><strong>Primary button colour doesn't match its token.</strong> Figma draws the primary button with a blue gradient, but the token is <code>gray-800</code>. One of them needs to change.</li>
+  <li><strong>Teal text fails on light backgrounds.</strong> <code>text-teal</code> (<code>teal-500</code>) is 2.22:1 on white. Use it only on dark backgrounds or for large decorative type, or point the light value at <code>teal-700</code> (5.68:1).</li>
+  <li><strong>Error text is just under AA in light mode.</strong> <code>status-error-text</code> on <code>status-error-bg</code> is 4.39:1. Use <code>status-error-text-strong</code> for small text.</li>
+  <li><strong>Input borders are too faint to identify a field.</strong> <code>border-default</code> is about 1.4:1 against the page. WCAG 1.4.11 needs 3:1 for the visual boundary of a control. Even <code>border-strong</code> is only 1.82:1, so field borders need <code>gray-400</code> (3.22:1) in light and <code>gray-500</code> (3.64:1) in dark.</li>
+  <li><strong>Input and checkbox backgrounds are 15% gray.</strong> They're designed to sit on gradients and images, so on a plain page they look transparent.</li>
+</ul>

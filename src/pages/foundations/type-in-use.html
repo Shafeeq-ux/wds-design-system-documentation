@@ -1,0 +1,57 @@
+<!--meta {"status": "Stable"} -->
+<h2>Overview</h2>
+<p>Tekion uses one family, <strong>Tekion Sans</strong>, for everything people read: web pages, product UI, presentations and documents. A monospace stack is used only for code and anything that needs fixed-width characters.</p>
+<div class="table-wrap">
+  <table>
+    <thead><tr><th scope="col">Scope</th><th scope="col">Font</th><th scope="col">Used for</th></tr></thead>
+    <tbody>
+      <tr><td>Everything</td><td>Tekion Sans</td><td>Web, product UI, prose, decks and documents</td></tr>
+      <tr><td>Code only</td><td>System monospace (<code>--font-mono</code>)</td><td>Code, file trees, ASCII tables, progress bars</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<h2>Two family names</h2>
+<p>Tekion Sans ships in two forms with different family names, so both can be installed on one machine without clashing:</p>
+<ul>
+  <li><strong>Tekion Sans</strong>: static files in fixed weights. This is what most people install, and the only version that works in PowerPoint and Word.</li>
+  <li><strong>Tekion Sans VF</strong>: the variable font, with a continuous weight axis (200–900) and width axis (75–125). Marketing designers use it for brand, campaign and print work.</li>
+</ul>
+<p>Duplicate font installs are invisible in font menus and take days to diagnose. Keeping the names different prevents that.</p>
+
+<h2>Web delivery</h2>
+<div class="table-wrap">
+  <table>
+    <thead><tr><th scope="col">Platform</th><th scope="col">Files</th><th scope="col">Size</th></tr></thead>
+    <tbody>
+      <tr><td>Product UI (T1)</td><td>10 static WOFF2</td><td>About 34 KB each, about 68 KB at first paint</td></tr>
+      <tr><td>Marketing website</td><td>2 variable WOFF2</td><td>172 KB + 182 KB, with the width axis</td></tr>
+    </tbody>
+  </table>
+</div>
+<p>The marketing site uses the variable font because WDS text styles depend on the width axis: headlines at 110%, statistics at 125% and body at 105%. The product UI uses only fixed weights and no width variation, so the static files are 2.5 times lighter there.</p>
+<p>In CSS, the width tokens map to <code>font-stretch</code>, for example <code>font-stretch: var(--wds-headline-1-font-stretch)</code>. Static fonts ignore it, which is why the static family can't reproduce WDS headlines exactly.</p>
+
+<h2>Rules for presentations</h2>
+<div class="do-dont">
+  <div class="do"><h3>Do</h3><ul><li>Use the static <strong>Tekion Sans</strong> in PowerPoint and Word.</li><li>Export a PDF to share a deck outside Tekion.</li><li>Build condensed type in Figma, where the width axis is real.</li></ul></div>
+  <div class="dont"><h3>Don't</h3><ul><li>Use Tekion Sans VF in decks. Recipients won't have it and it substitutes silently.</li><li>Fake condensed type with character scaling. It squeezes the strokes and breaks the letterforms.</li></ul></div>
+</div>
+
+<h2>What developers must know</h2>
+<h3>Send box-drawing characters to the monospace stack</h3>
+<p>Tekion Sans has no box-drawing or block glyphs. Any run that contains characters like <code>├── └── █ ░ ▁▇</code> (file trees, ASCII tables, progress bars, sparklines) must use <code>--font-mono</code>, not just fenced code blocks. Otherwise the browser falls back to another font halfway through a line and the alignment collapses.</p>
+<h3>Keep monospace line height at 1.31 or below</h3>
+<p>Box-drawing verticals are 1.31em tall. Any looser and the vertical lines in a file tree break into dashes.</p>
+<h3>Monospace is never downloaded</h3>
+<p>Code renders in the visitor's own system font (SF Mono, Consolas and so on) through <code>--font-mono</code>. That costs nothing to load and covers box-drawing on every platform. Geist Mono exists only on designers' machines so mockups look right. It's never shipped.</p>
+
+<h2>Character support</h2>
+<ul>
+  <li><strong>No emoji and no keyboard symbols</strong> such as ⌘ ⌥ ⇧ ⏎. Figma substitutes them silently, so expect a different font when you type them.</li>
+  <li><strong>Greek is limited</strong> to µ and π.</li>
+  <li><strong>Numbers are proportional by default</strong>, which is right for prose. Turn on tabular figures for tables, metrics and identifiers. Tabular figures also give you a slashed zero, which matters for VINs and repair-order numbers.</li>
+</ul>
+
+<h2>Figma references</h2>
+<p><a href="https://www.figma.com/design/lf5SOxUpWBtO8AIzXf6snw/WDS-3.0?node-id=1086-1512" target="_blank" rel="noopener">Typography Distribution page</a>: the full Tekion typography guide, including desktop installation by team.</p>

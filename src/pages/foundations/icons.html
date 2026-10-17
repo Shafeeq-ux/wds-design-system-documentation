@@ -1,0 +1,47 @@
+<!--meta {"status": "Stable"} -->
+<h2>Overview</h2>
+<p>WDS has two kinds of icon:</p>
+<ul>
+  <li><strong>Utility icons</strong> (16px, single colour): arrows, close, menu, check and media controls inside components.</li>
+  <li><strong>Feature icons</strong> (48px, two-tone): illustrate a benefit or step in feature, card and process sections. There are 65 in Figma, 38 of them documented with search keywords.</li>
+</ul>
+
+<h2>Utility icons</h2>
+<p>Each icon uses <code>currentColor</code>, so it takes the colour of the text around it. Select a name to download the SVG.</p>
+<!--wds:icons-->
+
+<h3>Sizes and colour</h3>
+<div class="table-wrap">
+  <table>
+    <thead><tr><th scope="col">Size</th><th scope="col">Use</th></tr></thead>
+    <tbody>
+      <tr><td class="num">16px</td><td>Default. Inside buttons, inputs, accordions and links.</td></tr>
+      <tr><td class="num">20px</td><td>Header and banner controls.</td></tr>
+      <tr><td class="num">24px</td><td>Video player controls and standalone icon buttons.</td></tr>
+    </tbody>
+  </table>
+</div>
+<p>Colour icons with icon tokens: <code>icon-primary</code> by default, <code>icon-secondary</code> for supporting icons, <code>icon-disabled</code> for disabled controls, and the status icon tokens for feedback. See <a href="/foundations/colour.html#icons">Colour › Icons</a>.</p>
+
+<h2>Feature icons</h2>
+<p>Feature icons come in light and dark versions in Figma. Always use the version that matches the section's theme.</p>
+<!--wds:icon-keywords-->
+<figure class="figure"><img src="/assets/img/icon-library.png" alt="The WDS icon library: 38 feature icons, each shown in light and dark versions with its name and keywords" width="1019" height="4096" loading="lazy"><figcaption>Icon Library Documentation frame from Figma.</figcaption></figure>
+
+<h2>Accessibility</h2>
+<ul>
+  <li>Icons next to a text label are decorative: add <code>aria-hidden="true"</code> to the SVG.</li>
+  <li>Icon-only buttons need an accessible name, such as <code>aria-label="Close"</code>.</li>
+  <li>An icon that carries meaning on its own needs 3:1 contrast against its background (WCAG 1.4.11).</li>
+  <li>Keep the hit area at least 24 × 24px even when the icon is 16px (WCAG 2.5.8).</li>
+</ul>
+
+<h2>Implementation</h2>
+<pre><code>&lt;button class="wds-btn wds-btn--secondary"&gt;
+  Learn more
+  &lt;svg aria-hidden="true" width="16" height="16"&gt;…&lt;/svg&gt;
+&lt;/button&gt;</code></pre>
+<p>Inline the SVG, or use it as a CSS mask, so <code>currentColor</code> works. An <code>&lt;img&gt;</code> tag can't inherit colour.</p>
+
+<h2>Figma references</h2>
+<p><a href="https://www.figma.com/design/lf5SOxUpWBtO8AIzXf6snw/WDS-3.0?node-id=152-173" target="_blank" rel="noopener">Icons page</a>: every icon as a component, and the Icon Library Documentation frame with keywords.</p>

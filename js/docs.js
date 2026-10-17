@@ -175,3 +175,21 @@
     if ('ResizeObserver' in window) new ResizeObserver(layout).observe(stage);
   });
 })();
+
+// ---------- Copy token names ----------
+document.addEventListener('click', async (e) => {
+  const btn = e.target.closest('[data-copy]');
+  if (!btn) return;
+  try { await navigator.clipboard.writeText(btn.dataset.copy); } catch { return; }
+  btn.classList.add('copied');
+  setTimeout(() => btn.classList.remove('copied'), 1200);
+});
+
+// ---------- Filter a table by typing ----------
+document.querySelectorAll('[data-filter]').forEach((input) => {
+  const rows = [...document.querySelectorAll(`${input.dataset.filter} tbody tr`)];
+  input.addEventListener('input', () => {
+    const q = input.value.trim().toLowerCase();
+    rows.forEach((r) => { r.hidden = q && !r.textContent.toLowerCase().includes(q); });
+  });
+});

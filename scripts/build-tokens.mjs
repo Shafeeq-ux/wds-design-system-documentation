@@ -71,8 +71,16 @@ for (const [p] of C.theme.tokens) {
   const g = p.split('/')[1];
   (grads[g] ||= []).push(`var(${cssName(p)})`);
 }
-push('/* Gradients (direction is a docs default; check Figma per use) */', ':root {');
-for (const [g, stops] of Object.entries(grads)) push(`  --wds-${g}: linear-gradient(135deg, ${stops.join(', ')});`);
+// Geometry and stop positions come from the Figma paint styles; colours swap per theme.
+export function gradientCss(name, stops) {
+  const geo = data.gradients?.styles?.[name] || { type: 'linear', angle: 135, pos: stops.map((_, i) => Math.round((i / (stops.length - 1)) * 100)) };
+  const list = stops.map((s, i) => `${s} ${geo.pos[i] ?? 100}%`).join(', ');
+  return geo.type === 'radial'
+    ? `radial-gradient(ellipse farthest-corner at ${geo.at[0]}% ${geo.at[1]}%, ${list})`
+    : `linear-gradient(${geo.angle}deg, ${list})`;
+}
+push('/* Gradients: geometry from Figma paint styles, stops from theme variables. Redeclared on [data-theme] so nested theme scopes pick up their own stops. */', ':root, [data-theme] {');
+for (const [g, stops] of Object.entries(grads)) push(`  --wds-${g}: ${gradientCss(g, stops)};`);
 push('}', '');
 
 // Responsive collections

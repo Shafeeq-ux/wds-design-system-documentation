@@ -1,0 +1,31 @@
+<!--meta {"status": "Not defined"} -->
+<h2>Overview</h2>
+<p>The WDS 3.0 Figma file doesn't define motion yet. Several sections depend on it (Accordion, Carousel, Tabbed, Pop-up, and the header on scroll), so it's needed before those pages can be marked Stable.</p>
+
+<h2>Interim defaults</h2>
+<p>Until Design sets tokens, the documentation site and demos use these values. They're <strong>proposed</strong>, not approved.</p>
+<div class="table-wrap">
+  <table>
+    <thead><tr><th scope="col">Use</th><th scope="col">Duration</th><th scope="col">Easing</th></tr></thead>
+    <tbody>
+      <tr><td>Hover and press colour changes</td><td class="num">150ms</td><td><code>ease</code></td></tr>
+      <tr><td>Accordion expand, tab change</td><td class="num">200ms</td><td><code>ease-out</code></td></tr>
+      <tr><td>Pop-up and drawer enter</td><td class="num">250ms</td><td><code>cubic-bezier(0.2, 0, 0, 1)</code></td></tr>
+      <tr><td>Exit (any)</td><td class="num">150ms</td><td><code>ease-in</code></td></tr>
+    </tbody>
+  </table>
+</div>
+
+<h2>Accessibility</h2>
+<ul>
+  <li>Respect <code>prefers-reduced-motion</code>. Replace movement with an instant change or a short fade.</li>
+  <li>Anything that moves on its own for more than five seconds, such as an autoplaying carousel or background video, needs a visible pause control (WCAG 2.2.2).</li>
+  <li>Nothing flashes more than three times a second (WCAG 2.3.1).</li>
+</ul>
+
+<h2>Needed from Design</h2>
+<ul>
+  <li>Duration and easing tokens.</li>
+  <li>Carousel autoplay timing and whether it's on by default.</li>
+  <li>Scroll-triggered animation rules, if any.</li>
+</ul>
