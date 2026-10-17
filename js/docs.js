@@ -271,3 +271,64 @@ document.querySelectorAll('[data-vfilter]').forEach((chip, _, all) => {
     document.querySelectorAll('#audit-table tbody tr').forEach((tr) => { tr.dataset.vhide = v !== 'All' && tr.dataset.v !== v ? '1' : ''; tr.hidden = !!tr.dataset.vhide || !!tr.dataset.qhide; });
   });
 });
+
+// Sitemap: full screen and zoom
+document.querySelectorAll('[data-ia-frame]').forEach((frame) => {
+  const wrap = frame.querySelector('.ia-wrap');
+  const svg = frame.querySelector('svg.ia');
+  const out = frame.querySelector('.ia-zoom');
+  const fullBtn = frame.querySelector('[data-ia="full"]');
+  const W = Number(svg.getAttribute('width'));
+  let zoom = 1;
+  const apply = (z) => {
+    zoom = Math.min(3, Math.max(0.25, Math.round(z * 100) / 100));
+    svg.style.width = `${W * zoom}px`;
+    svg.style.height = 'auto';
+    frame.classList.add('is-zoomed');
+    out.textContent = `${Math.round(zoom * 100)}%`;
+  };
+  const fit = () => apply((wrap.clientWidth - 2) / W);
+  const native = !!frame.requestFullscreen;
+  const isFull = () => document.fullscreenElement === frame || frame.classList.contains('is-full');
+  const sync = () => {
+    const on = isFull();
+    fullBtn.setAttribute('aria-pressed', String(on));
+    fullBtn.textContent = on ? 'Exit full screen' : 'Full screen';
+    requestAnimationFrame(fit);
+  };
+  // Overlay fallback for browsers or frames that refuse the Fullscreen API
+  const overlay = (on) => {
+    frame.classList.toggle('is-full', on);
+    document.documentElement.classList.toggle('ia-lock', on);
+    sync();
+  };
+  const toggle = () => {
+    if (document.fullscreenElement) document.exitFullscreen();
+    else if (frame.classList.contains('is-full')) overlay(false);
+    else if (native) {
+      frame.requestFullscreen().catch(() => {});
+      // Some embedded browsers accept the request and then drop it
+      setTimeout(() => { if (document.fullscreenElement !== frame) overlay(true); }, 400);
+    }
+    else overlay(true);
+  };
+  document.addEventListener('fullscreenchange', sync);
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && frame.classList.contains('is-full')) { toggle(); fullBtn.focus(); }
+  });
+  frame.addEventListener('click', (e) => {
+    const b = e.target.closest('[data-ia]');
+    if (!b) return;
+    const a = b.dataset.ia;
+    if (a === 'full') toggle();
+    else if (a === 'in') apply(zoom + 0.25);
+    else if (a === 'out') apply(zoom - 0.25);
+    else if (a === 'fit') fit();
+    else if (a === 'reset') apply(1);
+  });
+  wrap.addEventListener('wheel', (e) => {
+    if (!(e.ctrlKey || e.metaKey)) return;
+    e.preventDefault();
+    apply(zoom * (e.deltaY < 0 ? 1.1 : 0.9));
+  }, { passive: false });
+});

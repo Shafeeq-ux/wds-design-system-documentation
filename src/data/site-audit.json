@@ -4,11 +4,10 @@
  "viewport": "1440 × 900",
  "method": "Each page is rendered and every card-like box in the content area (180 × 100px or larger, with a background or border, outside the header, footer, menus and pop-ups) is measured. Corner radius 8px or more counts as rounded (WDS 2.0); under 8px counts as sharp (WDS 3.0). A page is 2.0 at 70% rounded or more, 3.0 at 30% or less, and Mixed in between or when it has both an all-rounded and an all-sharp section. WDS 1.0 is identified by its legacy shell rather than corner radius: those pages are served from tekion.ai, use Inter instead of Tekion Sans, and contain none of the tekion-design-system components that every tekion.com page has.",
  "counts": {
-  "2.0": 370,
-  "Mixed": 17,
+  "2.0": 440,
+  "Mixed": 2,
   "Redirect": 5,
-  "Text only": 54,
-  "3.0": 13,
+  "3.0": 12,
   "1.0": 3
  },
  "templates": [
@@ -45,14 +44,16 @@
    "key": "/legal/*",
    "label": "Legal documents",
    "count": 52,
-   "version": "Text only",
+   "version": "2.0",
    "samples": [
     "/legal/api-license-and-data-sharing-agreement",
     "/legal/applicant-and-candidate-privacy-notice"
    ],
    "votes": {
     "Text only": 2
-   }
+   },
+   "measured_as": "Text only",
+   "reviewed": "Design review, 17 Oct 2026"
   },
   {
    "key": "/events/*",
@@ -110,7 +111,7 @@
    "key": "/nada-2026-recap/*",
    "label": "NADA 2026 recap sessions",
    "count": 14,
-   "version": "Mixed",
+   "version": "2.0",
    "samples": [
     "/nada-2026-recap/ai-you-can-trust-security-governance-compliance-for-modern-dealerships",
     "/nada-2026-recap/beyond-automation-building-the-ai-native-dealership"
@@ -118,13 +119,15 @@
    "votes": {
     "Mixed": 6,
     "2.0": 5
-   }
+   },
+   "measured_as": "Mixed",
+   "reviewed": "Design review, 17 Oct 2026"
   },
   {
    "key": "/legal/privacy/*",
    "label": "Privacy documents",
    "count": 2,
-   "version": "3.0",
+   "version": "2.0",
    "samples": [
     "/legal/privacy/privacy-policy",
     "/legal/privacy/cookie-list"
@@ -132,7 +135,9 @@
    "votes": {
     "Text only": 1,
     "3.0": 52
-   }
+   },
+   "measured_as": "3.0",
+   "reviewed": "Design review, 17 Oct 2026"
   }
  ],
  "pages": [
@@ -336,15 +341,17 @@
    "path": "/job-openings",
    "title": "Job Listing",
    "section": "Company",
-   "version": "Text only",
-   "confidence": "n/a",
+   "version": "2.0",
+   "confidence": "reviewed",
    "basis": "rendered",
    "boxes": 0,
    "rounded": 0,
    "sharp": 0,
    "outlined": 0,
    "radii": "",
-   "note": "Job listings load from an external board; no cards to measure"
+   "note": "Measured as text only because the job list loads from an external board. The page shell is WDS 2.0.",
+   "measured_as": "Text only",
+   "reviewed": "Design review, 17 Oct 2026"
   },
   {
    "path": "/trust-portal/compliance",
@@ -1701,15 +1708,17 @@
    "path": "/blog/tekion-founder-ceo-jay-vijayan-keynote-address-nada-2024",
    "title": "Tekion's Founder & CEO, Jay Vijayan, delivers keynote address at NADA 2024",
    "section": "Learning",
-   "version": "Mixed",
-   "confidence": "low",
+   "version": "2.0",
+   "confidence": "template",
    "basis": "rendered",
    "boxes": 2,
    "rounded": 1,
    "sharp": 1,
    "outlined": 0,
    "radii": "0x1 12x1",
-   "template": "/blog/*"
+   "template": "/blog/*",
+   "measured_as": "Mixed",
+   "note": "Only 2 boxes to measure, so the individual result was unreliable. Same template as the other blog posts (WDS 2.0)."
   },
   {
    "path": "/blog/tekion-earns-great-place-to-work-certification",
@@ -1958,15 +1967,17 @@
    "path": "/blog/tekion-unveils-new-ai-agents-and-t1-pro-its-ai-interface-and-agent-orchestrator",
    "title": "Tekion Unveils New AI Agents and T1 Pro, Its AI Interface and Agent Orchestrator",
    "section": "Learning",
-   "version": "Mixed",
-   "confidence": "low",
+   "version": "2.0",
+   "confidence": "template",
    "basis": "rendered",
    "boxes": 2,
    "rounded": 1,
    "sharp": 1,
    "outlined": 0,
    "radii": "0x1 32x1",
-   "template": "/blog/*"
+   "template": "/blog/*",
+   "measured_as": "Mixed",
+   "note": "Only 2 boxes to measure, so the individual result was unreliable. Same template as the other blog posts (WDS 2.0)."
   },
   {
    "path": "/blog/tekion-named-to-fast-companys-2025-best-workplaces-for-innovators",
@@ -3667,15 +3678,18 @@
    "path": "/legal/api-license-and-data-sharing-agreement",
    "title": "API License and Data Sharing Agreement",
    "section": "Trust & legal",
-   "version": "Text only",
-   "confidence": "n/a",
+   "version": "2.0",
+   "confidence": "reviewed",
    "basis": "rendered",
    "boxes": 0,
    "rounded": 0,
    "sharp": 0,
    "outlined": 0,
    "radii": "",
-   "template": "/legal/*"
+   "template": "/legal/*",
+   "measured_as": "Text only",
+   "reviewed": "Design review, 17 Oct 2026",
+   "note": "Measured as text only (no cards to measure). The legal template and its side menu are WDS 2.0."
   },
   {
    "path": "/news/this-former-tesla-cio-just-raised-150-million-more-to-pull-car-dealers-into-the-21st-century",
@@ -3699,24 +3713,30 @@
    "path": "/legal/applicant-and-candidate-privacy-notice",
    "title": "Applicant and Candidate Privacy Notice",
    "section": "Trust & legal",
-   "version": "Text only",
-   "confidence": "n/a",
+   "version": "2.0",
+   "confidence": "reviewed",
    "basis": "rendered",
    "boxes": 0,
    "rounded": 0,
    "sharp": 0,
    "outlined": 0,
    "radii": "",
-   "template": "/legal/*"
+   "template": "/legal/*",
+   "measured_as": "Text only",
+   "reviewed": "Design review, 17 Oct 2026",
+   "note": "Measured as text only (no cards to measure). The legal template and its side menu are WDS 2.0."
   },
   {
    "path": "/legal/ca-arc-msa",
    "title": "Master Subscription Agreement - Canada",
    "section": "Trust & legal",
-   "version": "Text only",
-   "confidence": "template",
+   "version": "2.0",
+   "confidence": "reviewed",
    "basis": "template",
-   "template": "/legal/*"
+   "template": "/legal/*",
+   "measured_as": "Text only",
+   "reviewed": "Design review, 17 Oct 2026",
+   "note": "Measured as text only (no cards to measure). The legal template and its side menu are WDS 2.0."
   },
   {
    "path": "/news/why-dms-market-disruption-is-good-news-for-dealers",
@@ -3731,379 +3751,505 @@
    "path": "/legal/applicant-and-candidate-privacy-notice-11-01-2024",
    "title": "Applicant and Candidate Privacy Notice - November 1, 2024",
    "section": "Trust & legal",
-   "version": "Text only",
-   "confidence": "template",
+   "version": "2.0",
+   "confidence": "reviewed",
    "basis": "template",
-   "template": "/legal/*"
+   "template": "/legal/*",
+   "measured_as": "Text only",
+   "reviewed": "Design review, 17 Oct 2026",
+   "note": "Measured as text only (no cards to measure). The legal template and its side menu are WDS 2.0."
   },
   {
    "path": "/legal/applicant-and-candidate-privacy-notice-01-10-2023",
    "title": "Applicant and Candidate Privacy Notice - January 10, 2023",
    "section": "Trust & legal",
-   "version": "Text only",
-   "confidence": "template",
+   "version": "2.0",
+   "confidence": "reviewed",
    "basis": "template",
-   "template": "/legal/*"
+   "template": "/legal/*",
+   "measured_as": "Text only",
+   "reviewed": "Design review, 17 Oct 2026",
+   "note": "Measured as text only (no cards to measure). The legal template and its side menu are WDS 2.0."
   },
   {
    "path": "/legal/ca-arc-msa-01-01-2020",
    "title": "Master Subscription Agreement - Canada - January 1, 2020",
    "section": "Trust & legal",
-   "version": "Text only",
-   "confidence": "template",
+   "version": "2.0",
+   "confidence": "reviewed",
    "basis": "template",
-   "template": "/legal/*"
+   "template": "/legal/*",
+   "measured_as": "Text only",
+   "reviewed": "Design review, 17 Oct 2026",
+   "note": "Measured as text only (no cards to measure). The legal template and its side menu are WDS 2.0."
   },
   {
    "path": "/legal/ca-arc-msa-30-06-2022",
    "title": "Master Subscription Agreement - Canada - June 30, 2022",
    "section": "Trust & legal",
-   "version": "Text only",
-   "confidence": "template",
+   "version": "2.0",
+   "confidence": "reviewed",
    "basis": "template",
-   "template": "/legal/*"
+   "template": "/legal/*",
+   "measured_as": "Text only",
+   "reviewed": "Design review, 17 Oct 2026",
+   "note": "Measured as text only (no cards to measure). The legal template and its side menu are WDS 2.0."
   },
   {
    "path": "/legal/cookie-list",
    "title": "Tekion® Cookie List",
    "section": "Trust & legal",
-   "version": "Text only",
-   "confidence": "template",
+   "version": "2.0",
+   "confidence": "reviewed",
    "basis": "template",
-   "template": "/legal/*"
+   "template": "/legal/*",
+   "measured_as": "Text only",
+   "reviewed": "Design review, 17 Oct 2026",
+   "note": "Measured as text only (no cards to measure). The legal template and its side menu are WDS 2.0."
   },
   {
    "path": "/legal/cookie-list-04-04-2021",
    "title": "Tekion® Cookie List - April 04, 2021",
    "section": "Trust & legal",
-   "version": "Text only",
-   "confidence": "template",
+   "version": "2.0",
+   "confidence": "reviewed",
    "basis": "template",
-   "template": "/legal/*"
+   "template": "/legal/*",
+   "measured_as": "Text only",
+   "reviewed": "Design review, 17 Oct 2026",
+   "note": "Measured as text only (no cards to measure). The legal template and its side menu are WDS 2.0."
   },
   {
    "path": "/legal/ca-psa-fr",
    "title": "Professional Services Agreement - Canada (French)",
    "section": "Trust & legal",
-   "version": "Text only",
-   "confidence": "template",
+   "version": "2.0",
+   "confidence": "reviewed",
    "basis": "template",
-   "template": "/legal/*"
+   "template": "/legal/*",
+   "measured_as": "Text only",
+   "reviewed": "Design review, 17 Oct 2026",
+   "note": "Measured as text only (no cards to measure). The legal template and its side menu are WDS 2.0."
   },
   {
    "path": "/legal/cookie-list-08-06-2023",
    "title": "Tekion® Cookie List - June 8, 2023",
    "section": "Trust & legal",
-   "version": "Text only",
-   "confidence": "template",
+   "version": "2.0",
+   "confidence": "reviewed",
    "basis": "template",
-   "template": "/legal/*"
+   "template": "/legal/*",
+   "measured_as": "Text only",
+   "reviewed": "Design review, 17 Oct 2026",
+   "note": "Measured as text only (no cards to measure). The legal template and its side menu are WDS 2.0."
   },
   {
    "path": "/legal/ccpa-metrics",
    "title": "California Consumer Rights Act (CCPA): Metric Disclosure",
    "section": "Trust & legal",
-   "version": "Text only",
-   "confidence": "template",
+   "version": "2.0",
+   "confidence": "reviewed",
    "basis": "template",
-   "template": "/legal/*"
+   "template": "/legal/*",
+   "measured_as": "Text only",
+   "reviewed": "Design review, 17 Oct 2026",
+   "note": "Measured as text only (no cards to measure). The legal template and its side menu are WDS 2.0."
   },
   {
    "path": "/legal/ca-arc-msa-22-06-2021",
    "title": "Master Subscription Agreement - Canada - June 22, 2021",
    "section": "Trust & legal",
-   "version": "Text only",
-   "confidence": "template",
+   "version": "2.0",
+   "confidence": "reviewed",
    "basis": "template",
-   "template": "/legal/*"
+   "template": "/legal/*",
+   "measured_as": "Text only",
+   "reviewed": "Design review, 17 Oct 2026",
+   "note": "Measured as text only (no cards to measure). The legal template and its side menu are WDS 2.0."
   },
   {
    "path": "/legal/cookie-list-09-09-2021",
    "title": "Tekion® Cookie List - September 9, 2021",
    "section": "Trust & legal",
-   "version": "Text only",
-   "confidence": "template",
+   "version": "2.0",
+   "confidence": "reviewed",
    "basis": "template",
-   "template": "/legal/*"
+   "template": "/legal/*",
+   "measured_as": "Text only",
+   "reviewed": "Design review, 17 Oct 2026",
+   "note": "Measured as text only (no cards to measure). The legal template and its side menu are WDS 2.0."
   },
   {
    "path": "/legal/crm",
    "title": "CRM",
    "section": "Trust & legal",
-   "version": "Text only",
-   "confidence": "template",
+   "version": "2.0",
+   "confidence": "reviewed",
    "basis": "template",
-   "template": "/legal/*"
+   "template": "/legal/*",
+   "measured_as": "Text only",
+   "reviewed": "Design review, 17 Oct 2026",
+   "note": "Measured as text only (no cards to measure). The legal template and its side menu are WDS 2.0."
   },
   {
    "path": "/legal/ca-psa",
    "title": "Professional Services Agreement - Canada",
    "section": "Trust & legal",
-   "version": "Text only",
-   "confidence": "template",
+   "version": "2.0",
+   "confidence": "reviewed",
    "basis": "template",
-   "template": "/legal/*"
+   "template": "/legal/*",
+   "measured_as": "Text only",
+   "reviewed": "Design review, 17 Oct 2026",
+   "note": "Measured as text only (no cards to measure). The legal template and its side menu are WDS 2.0."
   },
   {
    "path": "/legal/cookie-list-11-01-2024",
    "title": "Tekion® Cookie List - November 1, 2024",
    "section": "Trust & legal",
-   "version": "Text only",
-   "confidence": "template",
+   "version": "2.0",
+   "confidence": "reviewed",
    "basis": "template",
-   "template": "/legal/*"
+   "template": "/legal/*",
+   "measured_as": "Text only",
+   "reviewed": "Design review, 17 Oct 2026",
+   "note": "Measured as text only (no cards to measure). The legal template and its side menu are WDS 2.0."
   },
   {
    "path": "/legal/crm-accelerated",
    "title": "Product Terms – Terms and Conditions for Tekion® CRM (\"Accelerated\")",
    "section": "Trust & legal",
-   "version": "Text only",
-   "confidence": "template",
+   "version": "2.0",
+   "confidence": "reviewed",
    "basis": "template",
-   "template": "/legal/*"
+   "template": "/legal/*",
+   "measured_as": "Text only",
+   "reviewed": "Design review, 17 Oct 2026",
+   "note": "Measured as text only (no cards to measure). The legal template and its side menu are WDS 2.0."
   },
   {
    "path": "/legal/dpa",
    "title": "Data Processing Agreement",
    "section": "Trust & legal",
-   "version": "Text only",
-   "confidence": "template",
+   "version": "2.0",
+   "confidence": "reviewed",
    "basis": "template",
-   "template": "/legal/*"
+   "template": "/legal/*",
+   "measured_as": "Text only",
+   "reviewed": "Design review, 17 Oct 2026",
+   "note": "Measured as text only (no cards to measure). The legal template and its side menu are WDS 2.0."
   },
   {
    "path": "/legal/digital-processing-services",
    "title": "Digital Processing Services",
    "section": "Trust & legal",
-   "version": "Text only",
-   "confidence": "template",
+   "version": "2.0",
+   "confidence": "reviewed",
    "basis": "template",
-   "template": "/legal/*"
+   "template": "/legal/*",
+   "measured_as": "Text only",
+   "reviewed": "Design review, 17 Oct 2026",
+   "note": "Measured as text only (no cards to measure). The legal template and its side menu are WDS 2.0."
   },
   {
    "path": "/legal/fr-ca-arc-msa",
    "title": "ENTENTE-CADRE DE SOUSCRIPTION",
    "section": "Trust & legal",
-   "version": "Text only",
-   "confidence": "template",
+   "version": "2.0",
+   "confidence": "reviewed",
    "basis": "template",
-   "template": "/legal/*"
+   "template": "/legal/*",
+   "measured_as": "Text only",
+   "reviewed": "Design review, 17 Oct 2026",
+   "note": "Measured as text only (no cards to measure). The legal template and its side menu are WDS 2.0."
   },
   {
    "path": "/legal/generative-ai-04-09-2025",
    "title": "Tekion® AI - September 4, 2025",
    "section": "Trust & legal",
-   "version": "Text only",
-   "confidence": "template",
+   "version": "2.0",
+   "confidence": "reviewed",
    "basis": "template",
-   "template": "/legal/*"
+   "template": "/legal/*",
+   "measured_as": "Text only",
+   "reviewed": "Design review, 17 Oct 2026",
+   "note": "Measured as text only (no cards to measure). The legal template and its side menu are WDS 2.0."
   },
   {
    "path": "/legal/generative-ai",
    "title": "Tekion® AI",
    "section": "Trust & legal",
-   "version": "Text only",
-   "confidence": "template",
+   "version": "2.0",
+   "confidence": "reviewed",
    "basis": "template",
-   "template": "/legal/*"
+   "template": "/legal/*",
+   "measured_as": "Text only",
+   "reviewed": "Design review, 17 Oct 2026",
+   "note": "Measured as text only (no cards to measure). The legal template and its side menu are WDS 2.0."
   },
   {
    "path": "/legal/paytek",
    "title": "PayTek",
    "section": "Trust & legal",
-   "version": "Text only",
-   "confidence": "template",
+   "version": "2.0",
+   "confidence": "reviewed",
    "basis": "template",
-   "template": "/legal/*"
+   "template": "/legal/*",
+   "measured_as": "Text only",
+   "reviewed": "Design review, 17 Oct 2026",
+   "note": "Measured as text only (no cards to measure). The legal template and its side menu are WDS 2.0."
   },
   {
    "path": "/legal/fr-ca-arc-msa-30-06-2022",
    "title": "ENTENTE-CADRE DE SOUSCRIPTION - June 30, 2022",
    "section": "Trust & legal",
-   "version": "Text only",
-   "confidence": "template",
+   "version": "2.0",
+   "confidence": "reviewed",
    "basis": "template",
-   "template": "/legal/*"
+   "template": "/legal/*",
+   "measured_as": "Text only",
+   "reviewed": "Design review, 17 Oct 2026",
+   "note": "Measured as text only (no cards to measure). The legal template and its side menu are WDS 2.0."
   },
   {
    "path": "/legal/privacy-policy-03-18-2021",
    "title": "Privacy Policy - March 18, 2021",
    "section": "Trust & legal",
-   "version": "Text only",
-   "confidence": "template",
+   "version": "2.0",
+   "confidence": "reviewed",
    "basis": "template",
-   "template": "/legal/*"
+   "template": "/legal/*",
+   "measured_as": "Text only",
+   "reviewed": "Design review, 17 Oct 2026",
+   "note": "Measured as text only (no cards to measure). The legal template and its side menu are WDS 2.0."
   },
   {
    "path": "/legal/privacy-policy-01-11-2024",
    "title": "Privacy Policy - November 1, 2024",
    "section": "Trust & legal",
-   "version": "Text only",
-   "confidence": "template",
+   "version": "2.0",
+   "confidence": "reviewed",
    "basis": "template",
-   "template": "/legal/*"
+   "template": "/legal/*",
+   "measured_as": "Text only",
+   "reviewed": "Design review, 17 Oct 2026",
+   "note": "Measured as text only (no cards to measure). The legal template and its side menu are WDS 2.0."
   },
   {
    "path": "/legal/fr-ca-arc-msa-01-01-2020",
    "title": "ENTENTE-CADRE DE SOUSCRIPTION - January 1, 2020",
    "section": "Trust & legal",
-   "version": "Text only",
-   "confidence": "template",
+   "version": "2.0",
+   "confidence": "reviewed",
    "basis": "template",
-   "template": "/legal/*"
+   "template": "/legal/*",
+   "measured_as": "Text only",
+   "reviewed": "Design review, 17 Oct 2026",
+   "note": "Measured as text only (no cards to measure). The legal template and its side menu are WDS 2.0."
   },
   {
    "path": "/legal/fr-ca-arc-msa-22-06-2021",
    "title": "ENTENTE-CADRE DE SERVICES - June 22, 2021",
    "section": "Trust & legal",
-   "version": "Text only",
-   "confidence": "template",
+   "version": "2.0",
+   "confidence": "reviewed",
    "basis": "template",
-   "template": "/legal/*"
+   "template": "/legal/*",
+   "measured_as": "Text only",
+   "reviewed": "Design review, 17 Oct 2026",
+   "note": "Measured as text only (no cards to measure). The legal template and its side menu are WDS 2.0."
   },
   {
    "path": "/legal/privacy-policy",
    "title": "Privacy Policy",
    "section": "Trust & legal",
-   "version": "Text only",
-   "confidence": "template",
+   "version": "2.0",
+   "confidence": "reviewed",
    "basis": "template",
-   "template": "/legal/*"
+   "template": "/legal/*",
+   "measured_as": "Text only",
+   "reviewed": "Design review, 17 Oct 2026",
+   "note": "Measured as text only (no cards to measure). The legal template and its side menu are WDS 2.0."
   },
   {
    "path": "/legal/privacy-policy-08-06-2023",
    "title": "Privacy Policy - June 8, 2023",
    "section": "Trust & legal",
-   "version": "Text only",
-   "confidence": "template",
+   "version": "2.0",
+   "confidence": "reviewed",
    "basis": "template",
-   "template": "/legal/*"
+   "template": "/legal/*",
+   "measured_as": "Text only",
+   "reviewed": "Design review, 17 Oct 2026",
+   "note": "Measured as text only (no cards to measure). The legal template and its side menu are WDS 2.0."
   },
   {
    "path": "/legal/privacy-policy-09-05-2025",
    "title": "Privacy Policy - May 9, 2025",
    "section": "Trust & legal",
-   "version": "Text only",
-   "confidence": "template",
+   "version": "2.0",
+   "confidence": "reviewed",
    "basis": "template",
-   "template": "/legal/*"
+   "template": "/legal/*",
+   "measured_as": "Text only",
+   "reviewed": "Design review, 17 Oct 2026",
+   "note": "Measured as text only (no cards to measure). The legal template and its side menu are WDS 2.0."
   },
   {
    "path": "/legal/marketscan-flow-down",
    "title": "Market Scan Data Access Agreement",
    "section": "Trust & legal",
-   "version": "Text only",
-   "confidence": "template",
+   "version": "2.0",
+   "confidence": "reviewed",
    "basis": "template",
-   "template": "/legal/*"
+   "template": "/legal/*",
+   "measured_as": "Text only",
+   "reviewed": "Design review, 17 Oct 2026",
+   "note": "Measured as text only (no cards to measure). The legal template and its side menu are WDS 2.0."
   },
   {
    "path": "/legal/privacy-policy-09-09-2021",
    "title": "Privacy Policy - September 9, 2021",
    "section": "Trust & legal",
-   "version": "Text only",
-   "confidence": "template",
+   "version": "2.0",
+   "confidence": "reviewed",
    "basis": "template",
-   "template": "/legal/*"
+   "template": "/legal/*",
+   "measured_as": "Text only",
+   "reviewed": "Design review, 17 Oct 2026",
+   "note": "Measured as text only (no cards to measure). The legal template and its side menu are WDS 2.0."
   },
   {
    "path": "/legal/sms-messaging-terms-of-use",
    "title": "SMS Messaging Terms of Use – 10DLC Compliance",
    "section": "Trust & legal",
-   "version": "Text only",
-   "confidence": "template",
+   "version": "2.0",
+   "confidence": "reviewed",
    "basis": "template",
-   "template": "/legal/*"
+   "template": "/legal/*",
+   "measured_as": "Text only",
+   "reviewed": "Design review, 17 Oct 2026",
+   "note": "Measured as text only (no cards to measure). The legal template and its side menu are WDS 2.0."
   },
   {
    "path": "/legal/privacy-policy-10-28-2017",
    "title": "Privacy Policy - October 28, 2017",
    "section": "Trust & legal",
-   "version": "Text only",
-   "confidence": "template",
+   "version": "2.0",
+   "confidence": "reviewed",
    "basis": "template",
-   "template": "/legal/*"
+   "template": "/legal/*",
+   "measured_as": "Text only",
+   "reviewed": "Design review, 17 Oct 2026",
+   "note": "Measured as text only (no cards to measure). The legal template and its side menu are WDS 2.0."
   },
   {
    "path": "/legal/privacy-policy-12-31-2020",
    "title": "Privacy Policy - December 31, 2020",
    "section": "Trust & legal",
-   "version": "Text only",
-   "confidence": "template",
+   "version": "2.0",
+   "confidence": "reviewed",
    "basis": "template",
-   "template": "/legal/*"
+   "template": "/legal/*",
+   "measured_as": "Text only",
+   "reviewed": "Design review, 17 Oct 2026",
+   "note": "Measured as text only (no cards to measure). The legal template and its side menu are WDS 2.0."
   },
   {
    "path": "/legal/t1-browser-extension-privacy-notice",
    "title": "T1 Browser Extension Privacy Notice",
    "section": "Trust & legal",
-   "version": "Text only",
-   "confidence": "template",
+   "version": "2.0",
+   "confidence": "reviewed",
    "basis": "template",
-   "template": "/legal/*"
+   "template": "/legal/*",
+   "measured_as": "Text only",
+   "reviewed": "Design review, 17 Oct 2026",
+   "note": "Measured as text only (no cards to measure). The legal template and its side menu are WDS 2.0."
   },
   {
    "path": "/legal/tekion-forms",
    "title": "Tekion® Forms",
    "section": "Trust & legal",
-   "version": "Text only",
-   "confidence": "template",
+   "version": "2.0",
+   "confidence": "reviewed",
    "basis": "template",
-   "template": "/legal/*"
+   "template": "/legal/*",
+   "measured_as": "Text only",
+   "reviewed": "Design review, 17 Oct 2026",
+   "note": "Measured as text only (no cards to measure). The legal template and its side menu are WDS 2.0."
   },
   {
    "path": "/legal/tekion-forms-store",
    "title": "Tekion® Forms Store Terms",
    "section": "Trust & legal",
-   "version": "Text only",
-   "confidence": "template",
+   "version": "2.0",
+   "confidence": "reviewed",
    "basis": "template",
-   "template": "/legal/*"
+   "template": "/legal/*",
+   "measured_as": "Text only",
+   "reviewed": "Design review, 17 Oct 2026",
+   "note": "Measured as text only (no cards to measure). The legal template and its side menu are WDS 2.0."
   },
   {
    "path": "/legal/tekion-pay",
    "title": "Tekion® Pay",
    "section": "Trust & legal",
-   "version": "Text only",
-   "confidence": "template",
+   "version": "2.0",
+   "confidence": "reviewed",
    "basis": "template",
-   "template": "/legal/*"
+   "template": "/legal/*",
+   "measured_as": "Text only",
+   "reviewed": "Design review, 17 Oct 2026",
+   "note": "Measured as text only (no cards to measure). The legal template and its side menu are WDS 2.0."
   },
   {
    "path": "/legal/privacy-policy-04-04-2022",
    "title": "Privacy Policy - April 4, 2022",
    "section": "Trust & legal",
-   "version": "Text only",
-   "confidence": "template",
+   "version": "2.0",
+   "confidence": "reviewed",
    "basis": "template",
-   "template": "/legal/*"
+   "template": "/legal/*",
+   "measured_as": "Text only",
+   "reviewed": "Design review, 17 Oct 2026",
+   "note": "Measured as text only (no cards to measure). The legal template and its side menu are WDS 2.0."
   },
   {
    "path": "/legal/us-arc-msa",
    "title": "Master Subscription Agreement - US",
    "section": "Trust & legal",
-   "version": "Text only",
-   "confidence": "template",
+   "version": "2.0",
+   "confidence": "reviewed",
    "basis": "template",
-   "template": "/legal/*"
+   "template": "/legal/*",
+   "measured_as": "Text only",
+   "reviewed": "Design review, 17 Oct 2026",
+   "note": "Measured as text only (no cards to measure). The legal template and its side menu are WDS 2.0."
   },
   {
    "path": "/legal/tekion-payroll",
    "title": "Tekion® Payroll",
    "section": "Trust & legal",
-   "version": "Text only",
-   "confidence": "template",
+   "version": "2.0",
+   "confidence": "reviewed",
    "basis": "template",
-   "template": "/legal/*"
+   "template": "/legal/*",
+   "measured_as": "Text only",
+   "reviewed": "Design review, 17 Oct 2026",
+   "note": "Measured as text only (no cards to measure). The legal template and its side menu are WDS 2.0."
   },
   {
    "path": "/legal/tekion-service-level-agreement",
    "title": "Production Support and Service Level Availability Policy",
    "section": "Trust & legal",
-   "version": "Text only",
-   "confidence": "template",
+   "version": "2.0",
+   "confidence": "reviewed",
    "basis": "template",
-   "template": "/legal/*"
+   "template": "/legal/*",
+   "measured_as": "Text only",
+   "reviewed": "Design review, 17 Oct 2026",
+   "note": "Measured as text only (no cards to measure). The legal template and its side menu are WDS 2.0."
   },
   {
    "path": "/on-demand/ai-orchestrated-customer-communications-inside-tekion",
@@ -4123,46 +4269,61 @@
    "path": "/legal/us-psa",
    "title": "Professional Services Agreement - US",
    "section": "Trust & legal",
-   "version": "Text only",
-   "confidence": "template",
+   "version": "2.0",
+   "confidence": "reviewed",
    "basis": "template",
-   "template": "/legal/*"
+   "template": "/legal/*",
+   "measured_as": "Text only",
+   "reviewed": "Design review, 17 Oct 2026",
+   "note": "Measured as text only (no cards to measure). The legal template and its side menu are WDS 2.0."
   },
   {
    "path": "/legal/uk-arc-msa-10-26-2024",
    "title": "Master Subscription Agreement - UK - October 26, 2024",
    "section": "Trust & legal",
-   "version": "Text only",
-   "confidence": "template",
+   "version": "2.0",
+   "confidence": "reviewed",
    "basis": "template",
-   "template": "/legal/*"
+   "template": "/legal/*",
+   "measured_as": "Text only",
+   "reviewed": "Design review, 17 Oct 2026",
+   "note": "Measured as text only (no cards to measure). The legal template and its side menu are WDS 2.0."
   },
   {
    "path": "/legal/uk-arc-msa",
    "title": "Master Subscription Agreement - UK",
    "section": "Trust & legal",
-   "version": "Text only",
-   "confidence": "template",
+   "version": "2.0",
+   "confidence": "reviewed",
    "basis": "template",
-   "template": "/legal/*"
+   "template": "/legal/*",
+   "measured_as": "Text only",
+   "reviewed": "Design review, 17 Oct 2026",
+   "note": "Measured as text only (no cards to measure). The legal template and its side menu are WDS 2.0."
   },
   {
    "path": "/legal/us-arc-msa-04-03-2024",
    "title": "Master Subscription Agreement - US - March 3, 2024",
    "section": "Trust & legal",
-   "version": "Text only",
-   "confidence": "template",
+   "version": "2.0",
+   "confidence": "reviewed",
    "basis": "template",
-   "template": "/legal/*"
+   "template": "/legal/*",
+   "measured_as": "Text only",
+   "reviewed": "Design review, 17 Oct 2026",
+   "note": "Measured as text only (no cards to measure). The legal template and its side menu are WDS 2.0."
   },
   {
    "path": "/legal/us-arc-msa-05-10-2022",
    "title": "Master Subscription Agreement - US - May 10, 2022",
    "section": "Trust & legal",
-   "version": "Text only",
-   "confidence": "template",
+   "version": "2.0",
+   "confidence": "reviewed",
    "basis": "template",
-   "template": "/legal/*"
+   "template": "/legal/*",
+   "measured_as": "Text only",
+   "reviewed": "Design review, 17 Oct 2026",
+   "note": "Measured as text only (no cards to measure). The legal template and its side menu are WDS 2.0."
   },
   {
    "path": "/on-demand/asbury-automotive-group-scaling-an-enterprise--and-the-efficiencies-that-follow",
@@ -4182,10 +4343,13 @@
    "path": "/legal/uk-psa",
    "title": "Professional Services Agreement - UK",
    "section": "Trust & legal",
-   "version": "Text only",
-   "confidence": "template",
+   "version": "2.0",
+   "confidence": "reviewed",
    "basis": "template",
-   "template": "/legal/*"
+   "template": "/legal/*",
+   "measured_as": "Text only",
+   "reviewed": "Design review, 17 Oct 2026",
+   "note": "Measured as text only (no cards to measure). The legal template and its side menu are WDS 2.0."
   },
   {
    "path": "/on-demand/dealership-performance-starts-with-inventory-intelligence",
@@ -4200,10 +4364,13 @@
    "path": "/legal/us-arc-msa-01-01-2020",
    "title": "Master Subscription Agreement - US - January 1, 2020",
    "section": "Trust & legal",
-   "version": "Text only",
-   "confidence": "template",
+   "version": "2.0",
+   "confidence": "reviewed",
    "basis": "template",
-   "template": "/legal/*"
+   "template": "/legal/*",
+   "measured_as": "Text only",
+   "reviewed": "Design review, 17 Oct 2026",
+   "note": "Measured as text only (no cards to measure). The legal template and its side menu are WDS 2.0."
   },
   {
    "path": "/on-demand/jay-tekionone-keynote",
@@ -4317,15 +4484,18 @@
    "path": "/nada-2026-recap/ai-you-can-trust-security-governance-compliance-for-modern-dealerships",
    "title": "AI You Can Trust: Security, Governance & Compliance for Modern Dealerships",
    "section": "Learning",
-   "version": "Mixed",
-   "confidence": "medium",
+   "version": "2.0",
+   "confidence": "reviewed",
    "basis": "rendered",
    "boxes": 6,
    "rounded": 4,
    "sharp": 2,
    "outlined": 1,
    "radii": "24x4 0x2",
-   "template": "/nada-2026-recap/*"
+   "template": "/nada-2026-recap/*",
+   "measured_as": "Mixed",
+   "reviewed": "Design review, 17 Oct 2026",
+   "note": "Measured as Mixed because the full-width video player is sharp-cornered; the rest of the template (cards, related content) is WDS 2.0."
   },
   {
    "path": "/on-demand/delivering-guest-experience-at-scale-a-conversation-with-doug-eroh",
@@ -4381,28 +4551,37 @@
    "path": "/nada-2026-recap/ceo-keynote-ai-you-can-trust-innovation-you-can-count-on-and-the-future-you-can-be-excited-about",
    "title": "CEO Keynote: AI You Can Trust, Innovation You Can Count On, and the Future You Can Be Exci",
    "section": "Learning",
-   "version": "Mixed",
-   "confidence": "template",
+   "version": "2.0",
+   "confidence": "reviewed",
    "basis": "template",
-   "template": "/nada-2026-recap/*"
+   "template": "/nada-2026-recap/*",
+   "measured_as": "Mixed",
+   "reviewed": "Design review, 17 Oct 2026",
+   "note": "Measured as Mixed because the full-width video player is sharp-cornered; the rest of the template (cards, related content) is WDS 2.0."
   },
   {
    "path": "/nada-2026-recap/dealer-success-unlocked-real-stories-with-advanced-analytics",
    "title": "Dealer Success Unlocked: Real Stories with Advanced Analytics",
    "section": "Learning",
-   "version": "Mixed",
-   "confidence": "template",
+   "version": "2.0",
+   "confidence": "reviewed",
    "basis": "template",
-   "template": "/nada-2026-recap/*"
+   "template": "/nada-2026-recap/*",
+   "measured_as": "Mixed",
+   "reviewed": "Design review, 17 Oct 2026",
+   "note": "Measured as Mixed because the full-width video player is sharp-cornered; the rest of the template (cards, related content) is WDS 2.0."
   },
   {
    "path": "/nada-2026-recap/extreme-ownership-in-dealership-support",
    "title": "Extreme Ownership in Dealership Support",
    "section": "Learning",
-   "version": "Mixed",
-   "confidence": "template",
+   "version": "2.0",
+   "confidence": "reviewed",
    "basis": "template",
-   "template": "/nada-2026-recap/*"
+   "template": "/nada-2026-recap/*",
+   "measured_as": "Mixed",
+   "reviewed": "Design review, 17 Oct 2026",
+   "note": "Measured as Mixed because the full-width video player is sharp-cornered; the rest of the template (cards, related content) is WDS 2.0."
   },
   {
    "path": "/on-demand/what-high-performing-leaders-do-differently",
@@ -4417,55 +4596,73 @@
    "path": "/nada-2026-recap/playbooks-pitfalls-proven-dms-change-management-strategies",
    "title": "Playbooks, Pitfalls & Proven DMS Change Management Strategies",
    "section": "Learning",
-   "version": "Mixed",
-   "confidence": "template",
+   "version": "2.0",
+   "confidence": "reviewed",
    "basis": "template",
-   "template": "/nada-2026-recap/*"
+   "template": "/nada-2026-recap/*",
+   "measured_as": "Mixed",
+   "reviewed": "Design review, 17 Oct 2026",
+   "note": "Measured as Mixed because the full-width video player is sharp-cornered; the rest of the template (cards, related content) is WDS 2.0."
   },
   {
    "path": "/nada-2026-recap/how-automotive-partner-cloud-is-shaping-the-next-era-of-integrations",
    "title": "How Automotive Partner Cloud is Shaping the Next Era of Integrations",
    "section": "Learning",
-   "version": "Mixed",
-   "confidence": "template",
+   "version": "2.0",
+   "confidence": "reviewed",
    "basis": "template",
-   "template": "/nada-2026-recap/*"
+   "template": "/nada-2026-recap/*",
+   "measured_as": "Mixed",
+   "reviewed": "Design review, 17 Oct 2026",
+   "note": "Measured as Mixed because the full-width video player is sharp-cornered; the rest of the template (cards, related content) is WDS 2.0."
   },
   {
    "path": "/nada-2026-recap/one-ai-native-platform-zero-chaos",
    "title": "One AI-Native Platform, Zero Chaos",
    "section": "Learning",
-   "version": "Mixed",
-   "confidence": "template",
+   "version": "2.0",
+   "confidence": "reviewed",
    "basis": "template",
-   "template": "/nada-2026-recap/*"
+   "template": "/nada-2026-recap/*",
+   "measured_as": "Mixed",
+   "reviewed": "Design review, 17 Oct 2026",
+   "note": "Measured as Mixed because the full-width video player is sharp-cornered; the rest of the template (cards, related content) is WDS 2.0."
   },
   {
    "path": "/nada-2026-recap/removing-friction-from-the-end-to-end-sales-experience",
    "title": "Removing Friction From the End-to-End Sales Experience",
    "section": "Learning",
-   "version": "Mixed",
-   "confidence": "template",
+   "version": "2.0",
+   "confidence": "reviewed",
    "basis": "template",
-   "template": "/nada-2026-recap/*"
+   "template": "/nada-2026-recap/*",
+   "measured_as": "Mixed",
+   "reviewed": "Design review, 17 Oct 2026",
+   "note": "Measured as Mixed because the full-width video player is sharp-cornered; the rest of the template (cards, related content) is WDS 2.0."
   },
   {
    "path": "/nada-2026-recap/tekion-global-scaling-the-future-of-ai-driven-automotive-retail",
    "title": "Tekion Global: Scaling the Future of AI-Driven Automotive Retail",
    "section": "Learning",
-   "version": "Mixed",
-   "confidence": "template",
+   "version": "2.0",
+   "confidence": "reviewed",
    "basis": "template",
-   "template": "/nada-2026-recap/*"
+   "template": "/nada-2026-recap/*",
+   "measured_as": "Mixed",
+   "reviewed": "Design review, 17 Oct 2026",
+   "note": "Measured as Mixed because the full-width video player is sharp-cornered; the rest of the template (cards, related content) is WDS 2.0."
   },
   {
    "path": "/nada-2026-recap/the-industry-leading-crm-for-todays-industry-leading-dealer",
    "title": "The Industry-Leading CRM for Today's Industry-Leading Dealer",
    "section": "Learning",
-   "version": "Mixed",
-   "confidence": "template",
+   "version": "2.0",
+   "confidence": "reviewed",
    "basis": "template",
-   "template": "/nada-2026-recap/*"
+   "template": "/nada-2026-recap/*",
+   "measured_as": "Mixed",
+   "reviewed": "Design review, 17 Oct 2026",
+   "note": "Measured as Mixed because the full-width video player is sharp-cornered; the rest of the template (cards, related content) is WDS 2.0."
   },
   {
    "path": "/fi-ai",
@@ -4484,56 +4681,71 @@
    "path": "/nada-2026-recap/the-modern-service-department-mastering-foundations-for-ai-success",
    "title": "The Modern Service Department: Mastering Foundations for AI Success",
    "section": "Learning",
-   "version": "Mixed",
-   "confidence": "template",
+   "version": "2.0",
+   "confidence": "reviewed",
    "basis": "template",
-   "template": "/nada-2026-recap/*"
+   "template": "/nada-2026-recap/*",
+   "measured_as": "Mixed",
+   "reviewed": "Design review, 17 Oct 2026",
+   "note": "Measured as Mixed because the full-width video player is sharp-cornered; the rest of the template (cards, related content) is WDS 2.0."
   },
   {
    "path": "/nada-2026-recap/the-state-of-automotive-retail-and-what-comes-next",
    "title": "The State of Automotive Retail and What Comes Next",
    "section": "Learning",
-   "version": "Mixed",
-   "confidence": "template",
+   "version": "2.0",
+   "confidence": "reviewed",
    "basis": "template",
-   "template": "/nada-2026-recap/*"
+   "template": "/nada-2026-recap/*",
+   "measured_as": "Mixed",
+   "reviewed": "Design review, 17 Oct 2026",
+   "note": "Measured as Mixed because the full-width video player is sharp-cornered; the rest of the template (cards, related content) is WDS 2.0."
   },
   {
    "path": "/legal/privacy/privacy-policy",
    "title": "Privacy Policy",
    "section": "Trust & legal",
-   "version": "Text only",
-   "confidence": "n/a",
+   "version": "2.0",
+   "confidence": "reviewed",
    "basis": "rendered",
    "boxes": 0,
    "rounded": 0,
    "sharp": 0,
    "outlined": 0,
    "radii": "",
-   "template": "/legal/privacy/*"
+   "template": "/legal/privacy/*",
+   "measured_as": "Text only",
+   "reviewed": "Design review, 17 Oct 2026",
+   "note": "Measured as text only (no cards to measure). The legal template and its side menu are WDS 2.0."
   },
   {
    "path": "/legal/privacy/cookie-list",
    "title": "Tekion® Cookie List",
    "section": "Trust & legal",
-   "version": "3.0",
-   "confidence": "high",
+   "version": "2.0",
+   "confidence": "reviewed",
    "basis": "rendered",
    "boxes": 52,
    "rounded": 0,
    "sharp": 52,
    "outlined": 52,
    "radii": "0x52",
-   "template": "/legal/privacy/*"
+   "template": "/legal/privacy/*",
+   "measured_as": "3.0",
+   "reviewed": "Design review, 17 Oct 2026",
+   "note": "Measured as 3.0 because the cookie table has square cells. The page uses the WDS 2.0 legal template."
   },
   {
    "path": "/nada-2026-recap/nada-2026-recap-momentum-community-and-the-ai-native-future",
    "title": "NADA 2026 Recap: Momentum, Community, and the AI-Native Future",
    "section": "Learning",
-   "version": "Mixed",
-   "confidence": "template",
+   "version": "2.0",
+   "confidence": "reviewed",
    "basis": "template",
-   "template": "/nada-2026-recap/*"
+   "template": "/nada-2026-recap/*",
+   "measured_as": "Mixed",
+   "reviewed": "Design review, 17 Oct 2026",
+   "note": "Measured as Mixed because the full-width video player is sharp-cornered; the rest of the template (cards, related content) is WDS 2.0."
   },
   {
    "path": "/products/automotive-partner-cloud",
@@ -4601,6 +4813,16 @@
    "Inter font instead of Tekion Sans",
    "No tekion-design-system classes at all (tekion.com pages have 545 or more)",
    "Square-cornered boxes and buttons, so corner radius alone would misread it as 3.0"
+  ]
+ },
+ "reviewed": {
+  "date": "2026-10-17",
+  "by": "Design",
+  "note": "Pages confirmed by Design override the automatic result. Their original measurement is kept in \"measured_as\".",
+  "rules": [
+   "/nada-2026-recap/* is WDS 2.0",
+   "/legal and /legal/* are WDS 2.0",
+   "/job-openings is WDS 2.0"
   ]
  }
 }

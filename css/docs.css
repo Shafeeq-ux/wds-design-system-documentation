@@ -385,6 +385,15 @@ pre code { background: none; padding: 0; color: var(--wds-text-primary); }
 .ia-legend i.ia-tpl-key { border-color: var(--wds-text-secondary); border-width: 1.5px 1.5px 4px 1.5px; }
 .ia-wrap { overflow-x: auto; margin: 0 0 24px; padding: 8px 0 16px; border: 1px solid var(--wds-border-subtle); border-radius: 16px; background: var(--wds-bg-page); }
 .ia { display: block; min-width: 1100px; height: auto; }
+.ia-tools { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin: 0 0 8px; }
+.ia-tools [data-ia="out"], .ia-tools [data-ia="in"] { min-width: 36px; padding-inline: 0; font-size: 16px; line-height: 1; }
+.ia-zoom { min-width: 48px; text-align: center; font-size: 13px; font-variant-numeric: tabular-nums; color: var(--wds-text-secondary); }
+.ia-frame.is-zoomed .ia { min-width: 0; max-width: none; }
+.ia-frame:fullscreen, .ia-frame.is-full { display: flex; flex-direction: column; padding: 16px; background: var(--wds-bg-page); }
+.ia-frame.is-full { position: fixed; inset: 0; z-index: 1000; }
+.ia-frame:fullscreen .ia-wrap, .ia-frame.is-full .ia-wrap { flex: 1; min-height: 0; margin: 0; overflow: auto; }
+.ia-frame:fullscreen .ia, .ia-frame.is-full .ia { margin: 0 auto; }
+html.ia-lock { overflow: hidden; }
 .ia-line { fill: none; stroke: var(--wds-border-strong); stroke-width: 1.2; }
 .ia-sec { fill: var(--wds-bg-inverse); }
 .ia-sec + text, .ia-sec + text + text { fill: var(--wds-text-inverse); }

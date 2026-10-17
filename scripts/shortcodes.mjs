@@ -259,15 +259,16 @@ function auditList(version) {
 }
 
 function auditTemplates() {
-  return table(['CMS collection', 'Pages', 'Version', 'Samples measured'], AUDIT.templates.map((t) => `<tr><td><strong>${esc(t.label)}</strong><br><code>${esc(t.key)}</code></td><td class="num">${t.count}</td><td>${vbadge(t.version)}</td><td><ul class="sample-links">${t.samples.map((s) => `<li><a href="https://tekion.com${s}" target="_blank" rel="noopener">${esc(s.split('/').pop().slice(0, 40))}</a></li>`).join('')}</ul></td></tr>`));
+  return table(['CMS collection', 'Pages', 'Version', 'Samples measured'], AUDIT.templates.map((t) => `<tr><td><strong>${esc(t.label)}</strong><br><code>${esc(t.key)}</code></td><td class="num">${t.count}</td><td>${vbadge(t.version)}${t.reviewed ? `<br><small>Confirmed by Design${t.measured_as && t.measured_as !== t.version ? ` (measured as ${esc(t.measured_as)})` : ''}</small>` : ''}</td><td><ul class="sample-links">${t.samples.map((s) => `<li><a href="https://tekion.com${s}" target="_blank" rel="noopener">${esc(s.split('/').pop().slice(0, 40))}</a></li>`).join('')}</ul></td></tr>`));
 }
 
 function auditTable() {
   const rows = AUDIT.pages.map((p) => {
-    const how = p.basis === 'rendered' ? `Measured: ${p.boxes} boxes, ${p.rounded} rounded, ${p.sharp} sharp` : p.basis === 'template' ? `Same template as ${esc(AUDIT.templates.find((t) => t.key === p.template)?.label || p.template)}` : esc(p.note || '');
-    return `<tr data-v="${esc(p.version)}"><td><a href="https://tekion.com${p.path}" target="_blank" rel="noopener">${esc(p.path)}</a><small class="figma-path">${esc(p.title)}</small></td><td>${esc(p.section)}</td><td>${vbadge(p.version)}</td><td><small>${how}${p.note && p.basis === 'rendered' ? '. ' + esc(p.note) : ''}</small></td></tr>`;
+    const tplName = esc(AUDIT.templates.find((t) => t.key === p.template)?.label || p.template);
+    const how = p.reviewed ? `<strong>Confirmed by Design review.</strong> ${esc(p.note || '')}` : p.basis === 'rendered' ? `Measured: ${p.boxes} boxes, ${p.rounded} rounded, ${p.sharp} sharp` : p.basis === 'template' ? `Same template as ${tplName}` : esc(p.note || '');
+    return `<tr data-v="${esc(p.version)}"><td><a href="https://tekion.com${p.path}" target="_blank" rel="noopener">${esc(p.path)}</a><small class="figma-path">${esc(p.title)}</small></td><td>${esc(p.section)}</td><td>${vbadge(p.version)}</td><td><small>${how}${p.note && p.basis === 'rendered' && !p.reviewed ? '. ' + esc(p.note) : ''}</small></td></tr>`;
   });
-  const chips = ['All', ...ORDER].map((v, i) => `<button type="button" class="chip-filter" data-vfilter="${v}" aria-pressed="${i === 0}">${isV(v) ? 'WDS ' + v : v}${v === 'All' ? '' : ` <small>${AUDIT.counts[v] || 0}</small>`}</button>`).join('');
+  const chips = ['All', ...ORDER.filter((v) => AUDIT.counts[v])].map((v, i) => `<button type="button" class="chip-filter" data-vfilter="${v}" aria-pressed="${i === 0}">${isV(v) ? 'WDS ' + v : v}${v === 'All' ? '' : ` <small>${AUDIT.counts[v] || 0}</small>`}</button>`).join('');
   return `<div class="afilters"><label class="filter"><span>Search pages</span><input type="search" data-filter="#audit-table" placeholder="Try “/products” or “blog”" autocomplete="off"></label><div class="chips" role="group" aria-label="Filter by version">${chips}</div></div>`
     + table(['Page', 'Section', 'Version', 'How it was decided'], rows).replace('<table class="">', '<table id="audit-table">');
 }
@@ -326,8 +327,9 @@ function auditIa() {
       g += n.href ? `<a href="https://tekion.com${n.href}" target="_blank">${inner}</a>` : inner;
     });
   });
-  const legend = ORDER.map((v) => `<span><i class="${VCLASS[v]}"></i>${isV(v) ? 'WDS ' + v : v}</span>`).join('') + '<span><i class="ia-tpl-key"></i>CMS collection (one template)</span>';
-  return `<div class="ia-legend">${legend}</div><div class="ia-wrap"><svg class="ia" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="group" aria-label="Sitemap of tekion.com: home, then ${SECTIONS.join(', ')}, with each page coloured by WDS version. The full list is in the table below.">${g}</svg></div>`;
+  const legend = ORDER.filter((v) => AUDIT.counts[v]).map((v) => `<span><i class="${VCLASS[v]}"></i>${isV(v) ? 'WDS ' + v : v}</span>`).join('') + '<span><i class="ia-tpl-key"></i>CMS collection (one template)</span>';
+  const tools = `<div class="ia-tools" role="toolbar" aria-label="Sitemap view"><button type="button" class="chip-filter" data-ia="full" aria-pressed="false">Full screen</button><button type="button" class="chip-filter" data-ia="out" aria-label="Zoom out">−</button><output class="ia-zoom" aria-live="polite">100%</output><button type="button" class="chip-filter" data-ia="in" aria-label="Zoom in">+</button><button type="button" class="chip-filter" data-ia="fit">Fit to width</button><button type="button" class="chip-filter" data-ia="reset">Actual size</button></div>`;
+  return `<div class="ia-legend">${legend}</div><div class="ia-frame" data-ia-frame>${tools}<div class="ia-wrap" role="region" tabindex="0" aria-label="Sitemap, scrollable"><svg class="ia" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="group" aria-label="Sitemap of tekion.com: home, then ${SECTIONS.join(', ')}, with each page coloured by WDS version. The full list is in the table below.">${g}</svg></div></div>`;
 }
 
 const CODES = { 'audit-stats': auditStats, 'audit-list': auditList, 'audit-templates': auditTemplates, 'audit-table': auditTable, 'audit-ia': auditIa, 'section-modes': sectionModes, 'modes-audit': modesAudit, 'limit-calculator': limitCalculator, 'section-sets': sectionSets, 'section-limits': sectionLimits, 'all-limits': allLimits, pairs, icons, 'icon-keywords': iconKeywords, ramp, theme, 'type-scale': typeScale, scale, responsive, radii, borders, gradients };

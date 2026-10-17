@@ -33,11 +33,11 @@
   <li><strong>Product pages in the main menu.</strong> AEC, APC, DMS, CRM, Tekion Pay, Payroll, DSE and Virtual to Visit, so all products match ARC, which is already 3.0.</li>
   <li><strong>Service AI.</strong> It's the only page in the Tekion AI menu that's still 2.0.</li>
   <li><strong>Company and trust pages.</strong> About Us, Our Leaders, Careers, Trust Portal (and its four sub-pages), Request Demo and the partner pages.</li>
-  <li><strong>Legal documents.</strong> They have no cards, so they read as neutral. Check their side menu and type styles against the 3.0 <a href="/sections/legal-content.html">Legal content</a> section.</li>
+  <li><strong>Legal, job and NADA recap templates.</strong> The legal template (the /legal listing and its 54 documents), Job Openings and the NADA 2026 recap sessions are WDS 2.0. Rebuild them with the 3.0 <a href="/sections/legal-content.html">Legal content</a> and <a href="/sections/video.html">Video</a> sections.</li>
 </ol>
 
 <h2>Sitemap</h2>
-<p>A bird's-eye view of tekion.com. Each box is a page, coloured by its WDS version. A box with a heavier bottom edge stands for a whole CMS collection, with its page count. Select a box to open the page. The chart scrolls sideways on small screens.</p>
+<p>A bird's-eye view of tekion.com. Each box is a page, coloured by its WDS version. A box with a heavier bottom edge stands for a whole CMS collection, with its page count. Select a box to open the page. Use <strong>Full screen</strong> for a bigger view, and the zoom buttons (or Ctrl or ⌘ with the scroll wheel) to zoom in and out. The chart scrolls in both directions when it's larger than the window.</p>
 <!--wds:audit-ia-->
 <h3>How the site is organised</h3>
 <div class="table-wrap">
@@ -55,6 +55,20 @@
   </table>
 </div>
 
+<h2>Design review corrections</h2>
+<p>Design checked the automatic results and confirmed that these pages are <strong>WDS 2.0</strong>. The table below marks each one "Confirmed by Design review" and keeps what the scan originally measured.</p>
+<div class="table-wrap">
+  <table>
+    <thead><tr><th scope="col">Pages</th><th scope="col">Scan said</th><th scope="col">Why the scan was wrong</th></tr></thead>
+    <tbody>
+      <tr><td><strong>NADA 2026 recap sessions</strong><br><code>/nada-2026-recap/*</code> · 14 pages</td><td>Mixed</td><td>The full-width video player is a large sharp-cornered box, which outweighed the rounded cards around it. Video and image frames aren't a reliable design-system signal.</td></tr>
+      <tr><td><strong>Legal</strong><br><code>/legal</code>, <code>/legal/*</code>, <code>/legal/privacy/*</code> · 55 pages</td><td>Text only (Cookie List: 3.0)</td><td>Legal documents are text with a side menu, so there were no cards to measure. The Cookie List's table cells are square, which read as 3.0. The legal template itself is 2.0.</td></tr>
+      <tr><td><strong>Job openings</strong><br><code>/job-openings</code></td><td>Text only</td><td>The job list loads from an external job board, so there was nothing to measure. The page around it is 2.0.</td></tr>
+    </tbody>
+  </table>
+</div>
+<p>Lesson for the next scan: classify text-only pages by their template, and leave media frames (video players, image wrappers) out of the measurement.</p>
+
 <h2>How pages were classified</h2>
 <ol class="outline">
   <li><strong>Inventory.</strong> All 455 URLs in <code>tekion.com/sitemap.xml</code>, plus 7 linked from the header menu but missing from the sitemap. <code>/search</code> is excluded because robots.txt blocks it.</li>
@@ -62,12 +76,13 @@
   <li><strong>Measurement.</strong> Each one-off page, and two items per CMS template, was opened at 1440 × 900. Every card-like box in the content area was measured: 180 × 100px or larger, with a background or a border, and outside the header, footer, menus and pop-ups.</li>
   <li><strong>WDS 1.0 check.</strong> Pages that end up on tekion.ai are WDS 1.0. That site is a separate build: a different header, the Inter font, and none of the WDS components that every tekion.com page has. Its boxes are also square-cornered, so corner radius can't be used to tell 1.0 from 3.0.</li>
   <li><strong>Decision.</strong> For tekion.com pages, a corner radius of 8px or more counts as rounded (2.0), and less than 8px as sharp (3.0). A page is 2.0 when at least 70% of its boxes are rounded, 3.0 when 30% or fewer are, and Mixed in between. It's also Mixed when it has one section that's all rounded and another that's all sharp.</li>
+  <li><strong>Design review.</strong> Design checked the results, and its corrections override the scan (see <a href="#design-review-corrections">Design review corrections</a>).</li>
 </ol>
 <h3>Limitations</h3>
 <ul>
   <li><strong>A snapshot.</strong> Results reflect tekion.com on 17 October 2026. Re-run the audit after each migration.</li>
-  <li><strong>Text-only pages</strong>, such as legal documents and the job board, have no cards to measure, so they're listed as "Text only" rather than given a version.</li>
-  <li><strong>Pages with few boxes</strong> (fewer than 3) are classified with low confidence: FAQ, OEM Partners and the Refer sub-pages.</li>
+  <li><strong>Pages without cards</strong>, such as legal documents, can't be measured. They now take their template's version, confirmed by Design.</li>
+  <li><strong>Pages with few boxes</strong> (fewer than 3) are classified with low confidence: FAQ, OEM Partners and the Refer sub-pages. Ask Design to confirm these too.</li>
   <li><strong>CMS items are sampled</strong>, not individually measured. An item with custom content blocks could differ from its template.</li>
   <li><strong>tekion.ai wasn't crawled.</strong> Only the three tekion.ai pages that tekion.com links to are included. The rest of tekion.ai is assumed to be WDS 1.0.</li>
   <li><strong>Corner radius is the only signal.</strong> Pages can match on radius and still differ in type, spacing or colour.</li>
