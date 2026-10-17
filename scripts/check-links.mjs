@@ -13,7 +13,8 @@ for (const p of pages) ids.set('/' + relative(DIST, p), new Set([...readFileSync
 const broken = [];
 for (const p of pages) {
   const from = '/' + relative(DIST, p);
-  for (const [, url] of readFileSync(p, 'utf8').matchAll(/\s(?:href|src)="([^"]+)"/g)) {
+  const html = readFileSync(p, 'utf8').replace(/<pre[\s\S]*?<\/pre>/g, ''); // code samples aren't links
+  for (const [, url] of html.matchAll(/\s(?:href|src)="([^"]+)"/g)) {
     if (/^(https?:|mailto:|data:)/.test(url) || url === '#') continue;
     const [path, hash] = url.split('#');
     const target = path ? (path.startsWith('/') ? path : '/' + relative(DIST, join(dirname(p), path))) : from;

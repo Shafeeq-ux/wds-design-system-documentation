@@ -1,6 +1,10 @@
 /* WDS 3.0 component and layout styles. Depends on tokens.css.
-   Phase 1 ships the layout primitives and a first pass of Button.
-   Phase 3 completes every component against Figma. */
+   Components follow the Figma WDS-3.0 file. Where Figma has no definition
+   (focus, hover on inputs, radio button, menus), the rule is marked PROPOSED. */
+
+/* Sizes in Figma include padding and borders, so every WDS element uses border-box.
+   :where() keeps the specificity at zero so pages can still override it. */
+:where([class*="wds-"], [class*="wds-"] *, [class*="wds-"]::before, [class*="wds-"]::after, [class*="wds-"] *::before, [class*="wds-"] *::after) { box-sizing: border-box; }
 
 .wds {
   font-family: var(--wds-font-family-body), "Inter", system-ui, sans-serif;
@@ -31,35 +35,223 @@
 .wds-actions { display: flex; flex-wrap: wrap; gap: var(--wds-gap-g-16); justify-content: center; }
 
 /* ---------- Button ---------- */
+/* Figma: Button (105:3). 7 types x 4 states: Default, Hover, Pressed, Disabled. */
 .wds-btn {
   --_bg: transparent; --_fg: var(--wds-text-primary); --_bd: transparent;
-  display: inline-flex; align-items: center; justify-content: center; gap: var(--wds-gap-button-icon-gap);
-  min-height: 56px; padding: var(--wds-padding-button-padding-y) 40px;
+  position: relative; isolation: isolate;
+  display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+  min-height: 56px; padding: var(--wds-padding-button-padding-y) var(--wds-padding-button-padding-x);
   border: var(--wds-border-width-button) solid var(--_bd); border-radius: var(--wds-border-radius-button);
   background: var(--_bg); color: var(--_fg);
   font-family: inherit; font-size: var(--wds-button-font-size); line-height: var(--wds-button-line-height);
   font-weight: var(--wds-button-font-weight); font-stretch: var(--wds-button-font-stretch); letter-spacing: var(--wds-button-letter-spacing);
-  text-decoration: none; white-space: nowrap; cursor: pointer;
-  transition: background-color .15s, border-color .15s, color .15s, filter .15s;
+  text-decoration: none; white-space: nowrap; cursor: pointer; -webkit-tap-highlight-color: transparent;
+  transition: background-color .15s ease-out, border-color .15s ease-out, color .15s ease-out;
 }
-.wds-btn:focus-visible { outline: 2px solid var(--wds-border-focus); outline-offset: 3px; }
+.wds-btn svg { width: 16px; height: 16px; flex: none; }
+/* PROPOSED focus ring, from the Primary Button dev handoff (Figma has no Focus variant) */
+.wds-btn:focus-visible { outline: 2px solid #47a5ff; outline-offset: 2px; }
 
-/* Primary: Figma renders a blue glass gradient over the token colour.
-   This gradient is an approximation until Phase 3 reads the exact fill. */
+/* Primary: the Figma fill is an image (IMAGE e346bef…), not a native gradient.
+   Default, Hover and Pressed share it; hover adds a cursor-following frosted blur. */
 .wds-btn--primary {
   --_fg: var(--wds-btn-primary-text-default);
-  background: radial-gradient(120% 140% at 85% 10%, #8f7bff 0%, transparent 45%), linear-gradient(100deg, #0b4fc4 0%, #1f6fe8 55%, #6fb8ff 100%);
+  --x: 50%; --y: 50%;
+  border: 0;
+  padding-inline: calc(var(--wds-padding-button-padding-x) + var(--wds-border-width-button));
+  background: #1f62d6 url("/assets/img/btn-primary-bg.png") center / 100% 100% no-repeat;
+  box-shadow: inset 0 -2px 9px -1px #a1cdff;
+  overflow: hidden;
 }
-.wds-btn--primary:hover { filter: brightness(1.08); }
-.wds-btn--primary:active { filter: brightness(0.92); }
+.wds-btn--primary::before, .wds-btn--primary::after { content: ""; position: absolute; inset: 0; border-radius: inherit; pointer-events: none; z-index: -1; transition: opacity .15s ease-out; }
+/* Cursor indicator: a soft light that follows the pointer */
+.wds-btn--primary::before { background: radial-gradient(28px circle at var(--x) var(--y), #ffffff, transparent 70%); opacity: .07; mix-blend-mode: plus-lighter; }
+/* Progressive layer blur, on hover only */
+.wds-btn--primary::after { backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px); -webkit-mask: radial-gradient(70% 120% at var(--x) var(--y), #000 0%, transparent 75%); mask: radial-gradient(70% 120% at var(--x) var(--y), #000 0%, transparent 75%); opacity: 0; }
+.wds-btn--primary:hover::after { opacity: 1; }
+.wds-btn--primary:hover::before { opacity: .2; }
+.wds-btn--primary:active::after { opacity: 0; transition-duration: 0s; }
+.wds-btn--primary:not(:hover)::after { transition-duration: .1s; transition-timing-function: ease-in; }
 
 .wds-btn--secondary { --_bg: var(--wds-btn-secondary-bg); --_fg: var(--wds-btn-secondary-text); --_bd: var(--wds-btn-secondary-border); }
 .wds-btn--secondary:hover { --_bg: var(--wds-btn-secondary-bg-hover); --_bd: var(--wds-btn-secondary-border-hover); }
 .wds-btn--secondary:active { --_bg: var(--wds-btn-secondary-bg-active); }
 
-.wds-btn:disabled, .wds-btn[aria-disabled="true"] { cursor: not-allowed; filter: none; }
-.wds-btn--primary:disabled, .wds-btn--primary[aria-disabled="true"] { background: var(--wds-btn-primary-bg-disabled); color: var(--wds-btn-primary-text-disabled); }
+/* Tertiary: label + 24px circle with a 12px glyph. No container. */
+.wds-btn--tertiary, .wds-btn--link { min-height: 24px; padding: 0; border: 0; gap: var(--wds-gap-button-icon-gap); }
+.wds-btn--tertiary { --_fg: var(--wds-btn-tertiary-text-default); }
+.wds-btn--tertiary .wds-btn__circle { display: inline-grid; place-items: center; width: 24px; height: 24px; border-radius: var(--wds-border-radius-full); background: var(--wds-btn-tertiary-icon-bg-default); color: var(--wds-btn-tertiary-icon-default); transition: inherit; }
+.wds-btn--tertiary .wds-btn__circle svg { width: 12px; height: 12px; }
+.wds-btn--tertiary:hover { --_fg: var(--wds-btn-tertiary-text-hover); }
+.wds-btn--tertiary:active { --_fg: var(--wds-btn-tertiary-text-pressed); }
+
+/* Link: label with optional 16px arrows */
+.wds-btn--link { --_fg: var(--wds-btn-link-text-default); min-height: 16px; }
+.wds-btn--link:hover { --_fg: var(--wds-btn-link-text-hover); text-decoration: underline; text-underline-offset: 3px; }
+.wds-btn--link:active { --_fg: var(--wds-btn-link-text-pressed); }
+
+/* Small targets get an invisible 24px+ hit area (WCAG 2.5.8) */
+.wds-btn--tertiary::after, .wds-btn--link::after, .wds-btn--icon-s::after { content: ""; position: absolute; inset: -10px -6px; }
+
+/* Icon-only: 56 / 40 / 32 circles holding 24 / 20 / 12 glyphs */
+.wds-btn--icon-l, .wds-btn--icon-m, .wds-btn--icon-s { --_bg: var(--wds-btn-icon-bg-default); --_fg: var(--wds-btn-icon-color-default); border: 0; padding: var(--wds-padding-button-padding-y); min-height: 0; }
+.wds-btn--icon-l { width: 56px; height: 56px; } .wds-btn--icon-l svg { width: 24px; height: 24px; }
+.wds-btn--icon-m { width: 40px; height: 40px; } .wds-btn--icon-m svg { width: 20px; height: 20px; }
+.wds-btn--icon-s { width: 32px; height: 32px; } .wds-btn--icon-s svg { width: 12px; height: 12px; }
+.wds-btn--icon-l:hover, .wds-btn--icon-m:hover, .wds-btn--icon-s:hover { --_bg: var(--wds-btn-icon-bg-hover); --_fg: var(--wds-btn-icon-color-hover); }
+.wds-btn--icon-l:active, .wds-btn--icon-m:active, .wds-btn--icon-s:active { --_bg: var(--wds-btn-icon-bg-active); --_fg: var(--wds-btn-icon-color-pressed); }
+
+/* Disabled (use aria-disabled so the button stays focusable, per the handoff) */
+.wds-btn:disabled, .wds-btn[aria-disabled="true"] { cursor: not-allowed; }
+.wds-btn--primary:disabled, .wds-btn--primary[aria-disabled="true"] { background: var(--wds-btn-primary-bg-disabled); color: var(--wds-btn-primary-text-disabled); box-shadow: none; }
+.wds-btn--primary:disabled::before, .wds-btn--primary:disabled::after, .wds-btn--primary[aria-disabled="true"]::before, .wds-btn--primary[aria-disabled="true"]::after { display: none; }
 .wds-btn--secondary:disabled, .wds-btn--secondary[aria-disabled="true"] { --_bg: var(--wds-btn-secondary-bg-disabled); --_fg: var(--wds-btn-secondary-text-disabled); --_bd: var(--wds-btn-secondary-border-disabled); }
+.wds-btn--tertiary:disabled, .wds-btn--tertiary[aria-disabled="true"] { --_fg: var(--wds-btn-tertiary-text-disabled); }
+.wds-btn--tertiary:disabled .wds-btn__circle, .wds-btn--tertiary[aria-disabled="true"] .wds-btn__circle { background: var(--wds-btn-tertiary-icon-bg-disabled); color: var(--wds-btn-tertiary-icon-disabled); }
+.wds-btn--link:disabled, .wds-btn--link[aria-disabled="true"] { --_fg: var(--wds-btn-link-text-disabled); text-decoration: none; }
+:is(.wds-btn--icon-l, .wds-btn--icon-m, .wds-btn--icon-s):is(:disabled, [aria-disabled="true"]) { --_bg: var(--wds-btn-icon-bg-disabled); --_fg: var(--wds-btn-icon-color-disabled); }
+
+/* Docs-only: force a state for static specimens */
+.wds-btn.is-hover.wds-btn--primary::after { opacity: 1; }
+.wds-btn.is-hover.wds-btn--secondary { --_bg: var(--wds-btn-secondary-bg-hover); --_bd: var(--wds-btn-secondary-border-hover); }
+.wds-btn.is-pressed.wds-btn--secondary { --_bg: var(--wds-btn-secondary-bg-active); }
+.wds-btn.is-hover.wds-btn--tertiary, .wds-btn.is-pressed.wds-btn--tertiary { --_fg: var(--wds-btn-tertiary-text-hover); }
+.wds-btn.is-hover.wds-btn--link, .wds-btn.is-pressed.wds-btn--link { --_fg: var(--wds-btn-link-text-hover); }
+.wds-btn.is-focus { outline: 2px solid #47a5ff; outline-offset: 2px; }
+
+/* ---------- Inputs ---------- */
+/* Figma: [c]-input-textfield / -email / -phone / -dropdown / -textarea.
+   States: Default, Filled, Focus, Error, Disabled. Surface 50px, radius 8px (measured). */
+.wds-field { display: flex; flex-direction: column; gap: 8px; width: 100%; max-width: 100%; }
+/* PROPOSED: Figma has no visible label; WCAG needs one. */
+.wds-field__label { font-size: var(--wds-body-4-medium-font-size); line-height: var(--wds-body-4-medium-line-height); font-weight: var(--wds-body-4-medium-font-weight); color: var(--wds-input-label); }
+.wds-field__label .wds-req { color: var(--wds-input-helper-error); margin-left: 2px; }
+.wds-input {
+  --_bd: var(--wds-input-border); --_bw: var(--wds-border-width-input);
+  display: flex; align-items: center; gap: var(--wds-gap-input-icon-gap);
+  min-height: 50px; padding: var(--wds-padding-input-padding-y) var(--wds-padding-input-padding-x);
+  border-radius: 8px; background: var(--wds-input-bg);
+  box-shadow: inset 0 0 0 var(--_bw) var(--_bd);
+  color: var(--wds-input-text); transition: box-shadow .15s, background-color .15s;
+}
+.wds-input svg { width: 16px; height: 16px; flex: none; color: var(--wds-input-icon); }
+.wds-input input, .wds-input select, .wds-input textarea {
+  flex: 1; min-width: 0; margin: 0; padding: 0; border: 0; outline: 0; background: transparent; color: inherit;
+  font-family: inherit; font-size: var(--wds-body-3-medium-font-size); line-height: var(--wds-body-3-medium-line-height); font-weight: var(--wds-body-3-medium-font-weight);
+}
+.wds-input ::placeholder { color: var(--wds-input-placeholder); opacity: 1; }
+.wds-input:hover { --_bd: var(--wds-input-border-hover); background: var(--wds-input-bg-hover); }
+.wds-input:focus-within, .wds-input.is-focus { --_bd: var(--wds-input-border-focus); --_bw: var(--wds-border-width-input-focus); background: var(--wds-input-bg-focused); }
+.wds-input:focus-within svg { color: var(--wds-input-icon-focus); }
+.wds-input.is-error, .wds-input:has([aria-invalid="true"]) { --_bd: var(--wds-input-border-error); background: var(--wds-input-bg-error); }
+.wds-input.is-error svg, .wds-input:has([aria-invalid="true"]) svg { color: var(--wds-input-icon-error); }
+.wds-input.is-disabled, .wds-input:has(:disabled) { --_bd: var(--wds-input-border-disabled); background: var(--wds-input-bg-disabled); color: var(--wds-input-text-disabled); cursor: not-allowed; }
+.wds-input:has(:disabled) svg, .wds-input.is-disabled svg { color: var(--wds-input-icon-disabled); }
+.wds-input:has(:disabled) ::placeholder { color: var(--wds-input-text-disabled); }
+.wds-input--textarea { align-items: flex-start; min-height: 120px; }
+.wds-input--textarea textarea { min-height: 96px; resize: vertical; }
+.wds-input--select { position: relative; }
+.wds-input--select select { appearance: none; -webkit-appearance: none; cursor: pointer; padding-right: 24px; }
+.wds-input--select svg { position: absolute; right: var(--wds-padding-input-padding-x); pointer-events: none; }
+.wds-input--select select:invalid { color: var(--wds-input-placeholder); }
+.wds-input__prefix { color: var(--wds-input-text); font-size: var(--wds-body-3-medium-font-size); line-height: var(--wds-body-3-medium-line-height); font-weight: var(--wds-body-3-medium-font-weight); }
+.wds-field__msg { margin: -4px 0 0; min-height: 18px; font-size: var(--wds-body-5-reg-font-size); line-height: var(--wds-body-5-reg-line-height); color: var(--wds-input-helper); }
+.wds-field__msg.is-error { color: var(--wds-input-helper-error); }
+
+/* ---------- Checkbox ---------- */
+/* Figma: [c]-input-checkbox (20px, radius 0) and [c]-input-checkbox-label (12px gap, top aligned). */
+.wds-check { display: inline-flex; align-items: flex-start; gap: var(--wds-gap-checkbox-label-gap); cursor: pointer; color: var(--wds-checkbox-label-default); font-size: var(--wds-body-4-reg-font-size); line-height: var(--wds-body-4-reg-line-height); }
+.wds-check input {
+  appearance: none; -webkit-appearance: none; flex: none; position: relative; margin: 1px 0 0;
+  width: var(--wds-gap-checkbox-size); height: var(--wds-gap-checkbox-size); border-radius: var(--wds-border-radius-checkbox);
+  background: var(--wds-checkbox-bg-default); box-shadow: inset 0 0 0 var(--wds-border-width-input) var(--wds-checkbox-border-default); cursor: inherit;
+}
+.wds-check input::after { content: ""; position: absolute; inset: 3px; background: var(--wds-checkbox-icon-checked); -webkit-mask: url("/assets/icons/check.svg") center / 14px no-repeat; mask: url("/assets/icons/check.svg") center / 14px no-repeat; opacity: 0; }
+.wds-check input:focus-visible, .wds-check input.is-focus { outline: 0; box-shadow: inset 0 0 0 var(--wds-border-width-input-focus) var(--wds-checkbox-border-focus); }
+.wds-check input:checked { background: var(--wds-checkbox-bg-checked); box-shadow: inset 0 0 0 var(--wds-border-width-input) var(--wds-checkbox-border-checked-default); }
+.wds-check input:checked::after { opacity: 1; }
+.wds-check input:checked:focus-visible { outline: 2px solid var(--wds-checkbox-border-focus); outline-offset: 2px; } /* PROPOSED: no checked-focus in Figma */
+.wds-check input:disabled { background: var(--wds-checkbox-bg-disabled); box-shadow: inset 0 0 0 var(--wds-border-width-input) var(--wds-checkbox-border-disabled); }
+.wds-check input:checked:disabled { box-shadow: inset 0 0 0 var(--wds-border-width-input) var(--wds-checkbox-border-checked-disabled); }
+.wds-check input:checked:disabled::after { background: var(--wds-checkbox-icon-checked-disabled); }
+.wds-check:has(input:disabled) { color: var(--wds-checkbox-label-disabled); cursor: not-allowed; }
+.wds-check--multiline { max-width: 280px; }
+
+/* ---------- Radio (PROPOSED: not in Figma) ---------- */
+/* Reuses the checkbox tokens with a round shape and a centred dot. */
+.wds-radio { display: inline-flex; align-items: flex-start; gap: var(--wds-gap-checkbox-label-gap); cursor: pointer; color: var(--wds-checkbox-label-default); font-size: var(--wds-body-4-reg-font-size); line-height: var(--wds-body-4-reg-line-height); }
+.wds-radio input {
+  appearance: none; -webkit-appearance: none; flex: none; margin: 1px 0 0; display: grid; place-items: center;
+  width: var(--wds-gap-checkbox-size); height: var(--wds-gap-checkbox-size); border-radius: var(--wds-border-radius-full);
+  background: var(--wds-checkbox-bg-default); box-shadow: inset 0 0 0 var(--wds-border-width-input) var(--wds-checkbox-border-default); cursor: inherit;
+}
+.wds-radio input::after { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--wds-checkbox-icon-checked); transform: scale(0); transition: transform .15s ease-out; }
+.wds-radio input:focus-visible { outline: 0; box-shadow: inset 0 0 0 var(--wds-border-width-input-focus) var(--wds-checkbox-border-focus); }
+.wds-radio input:checked { background: var(--wds-checkbox-bg-checked); box-shadow: inset 0 0 0 var(--wds-border-width-input) var(--wds-checkbox-border-checked-default); }
+.wds-radio input:checked::after { transform: scale(1); }
+.wds-radio input:checked:focus-visible { outline: 2px solid var(--wds-checkbox-border-focus); outline-offset: 2px; }
+.wds-radio input:disabled { background: var(--wds-checkbox-bg-disabled); box-shadow: inset 0 0 0 var(--wds-border-width-input) var(--wds-checkbox-border-disabled); }
+.wds-radio input:checked:disabled::after { background: var(--wds-checkbox-icon-checked-disabled); }
+.wds-radio:has(input:disabled) { color: var(--wds-checkbox-label-disabled); cursor: not-allowed; }
+.wds-choice-group { display: flex; flex-direction: column; gap: 12px; margin: 0; padding: 0; border: 0; }
+.wds-choice-group legend { margin-bottom: 12px; padding: 0; font-size: var(--wds-body-4-medium-font-size); line-height: var(--wds-body-4-medium-line-height); font-weight: var(--wds-body-4-medium-font-weight); color: var(--wds-input-label); }
+
+/* ---------- Header ---------- */
+/* Figma: header-navigation-wds-3.0. Always rendered in the dark theme (explicit mode). */
+.wds-header { position: relative; z-index: 10; background: var(--wds-bg-page); color: var(--wds-text-primary); padding: var(--wds-padding-p-16) var(--wds-padding-section-right-left-padding-default); }
+.wds-header__bar { display: flex; align-items: center; justify-content: space-between; gap: 24px; max-width: var(--wds-width-container-max-width); margin-inline: auto; }
+.wds-header__logo { display: block; flex: none; line-height: 0; }
+.wds-header__logo img { width: 194px; height: 48px; }
+.wds-header__nav > ul, .wds-header__actions { display: flex; align-items: center; gap: 8px; margin: 0; padding: 0; list-style: none; }
+.wds-header__item { position: relative; }
+.wds-navlink { display: inline-flex; align-items: center; gap: 4px; padding: 16px 8px; border: 0; background: none; color: inherit; cursor: pointer; text-decoration: none;
+  font-family: inherit; font-size: var(--wds-body-4-medium-font-size); line-height: var(--wds-body-4-medium-line-height); font-weight: var(--wds-body-4-medium-font-weight); }
+.wds-navlink svg { width: 16px; height: 16px; transition: transform .2s ease-out; }
+.wds-navlink:hover { text-decoration: underline; text-underline-offset: 4px; }
+.wds-navlink[aria-expanded="true"] svg { transform: rotate(180deg); }
+.wds-navlink:focus-visible { outline: 2px solid #47a5ff; outline-offset: -2px; border-radius: 8px; }
+.wds-header__divider { width: 1px; height: 20px; background: var(--wds-border-default); }
+/* PROPOSED: dropdowns and the menu panel are not designed in Figma */
+.wds-header__dropdown { position: absolute; top: 100%; left: 0; z-index: 2; display: block; min-width: 240px; white-space: nowrap; margin: 0; padding: 8px; list-style: none; border-radius: 16px; background: var(--wds-bg-elevated); box-shadow: 0 0 0 1px var(--wds-border-default); }
+.wds-header__dropdown a { display: block; padding: 10px 12px; border-radius: 8px; color: var(--wds-text-primary); text-decoration: none; font-size: var(--wds-body-4-reg-font-size); line-height: var(--wds-body-4-reg-line-height); }
+.wds-header__dropdown a:hover { background: var(--wds-bg-recessed); }
+.wds-header__panel { position: absolute; top: 100%; left: 0; right: 0; padding: 16px var(--wds-padding-section-right-left-padding-default) 32px; background: var(--wds-bg-page); border-top: 1px solid var(--wds-border-subtle); }
+.wds-header__panel ul { max-width: var(--wds-width-container-max-width); margin: 0 auto; padding: 0; list-style: none; }
+.wds-header__panel a { display: block; padding: 14px 0; border-bottom: 1px solid var(--wds-border-subtle); color: var(--wds-text-primary); text-decoration: none; font-size: var(--wds-body-2-medium-font-size); line-height: var(--wds-body-2-medium-line-height); font-weight: var(--wds-body-2-medium-font-weight); }
+[hidden] { display: none !important; }
+@media (max-width: 1279px) { .wds-header__nav { display: none; } }
+@media (max-width: 767px) {
+  .wds-header__logo img { width: 162px; height: 40px; }
+  .wds-header__login, .wds-header__demo, .wds-header__divider { display: none; }
+}
+
+/* ---------- Banner ---------- */
+/* Figma: [section]-banner-text-wds-3.0: a slim strip with one line and a tertiary button. */
+.wds-banner { display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 12px; min-height: 80px; padding: 0 var(--wds-padding-section-right-left-padding-default); background: var(--wds-bg-subtle); color: var(--wds-text-primary); text-align: center; }
+.wds-banner p { margin: 0; }
+@media (max-width: 767px) { .wds-banner { flex-direction: column; align-items: flex-start; justify-content: center; min-height: 90px; padding: 16px var(--wds-padding-section-right-left-padding-default); text-align: left; } }
+
+/* Figma: [section]-banner-image-wds-3.0: a promo card with art, title, copy and a primary CTA.
+   The card gradient (#ffffff to #dfe8ff) isn't tokenised, so keep the card in the light theme. */
+.wds-promo { padding: 24px var(--wds-padding-section-right-left-padding-default); background: var(--wds-bg-page); }
+.wds-promo__card { position: relative; overflow: hidden; display: flex; align-items: center; gap: 24px; max-width: var(--wds-width-container-max-width); min-height: 168px; margin: 0 auto; padding: 24px 24px 24px 208px; background: linear-gradient(90deg, #ffffff, #dfe8ff); color: var(--wds-text-primary); }
+.wds-promo__art { position: absolute; inset: 0; pointer-events: none; background:
+  radial-gradient(40% 60% at 50% -10%, #dcf2fe, transparent 70%),
+  radial-gradient(25% 70% at 85% 110%, #caccff, transparent 70%),
+  radial-gradient(18% 50% at 2% 100%, #caccff, transparent 70%); }
+.wds-promo__mark { position: absolute; left: 88px; top: 50%; width: 88px; height: 88px; transform: translateY(-50%); border-radius: 22px; background: linear-gradient(135deg, #3b8bff, #1a46d6); box-shadow: inset 0 -4px 12px #a1cdff; }
+.wds-promo__body { position: relative; flex: 1; display: flex; flex-direction: column; gap: 8px; }
+.wds-promo__body > * { margin: 0; }
+.wds-promo__card > .wds-btn { position: relative; }
+@media (max-width: 1279px) {
+  .wds-promo__card { flex-direction: column; align-items: flex-start; min-height: 312px; padding: 128px 46px 32px; }
+  .wds-promo__mark { left: 46px; top: 32px; transform: none; }
+}
+@media (max-width: 767px) {
+  .wds-promo { padding: 24px; }
+  .wds-promo__card { min-height: 342px; padding: 104px 24px 24px; }
+  .wds-promo__mark { left: 24px; top: 24px; width: 64px; height: 64px; border-radius: 16px; }
+}
 
 @media (max-width: 767px) {
   .wds-actions { flex-direction: column; align-items: stretch; width: 100%; }

@@ -1,0 +1,117 @@
+<!--meta {"status": "Stable"} -->
+<h2>Overview</h2>
+<p>Banners carry a short, site-wide or page-level message. Figma has two:</p>
+<ul>
+  <li><strong>Text banner</strong> (<code>[section]-banner-text-wds-3.0</code>): a slim strip with one line and a tertiary button, such as a pointer to terms and conditions.</li>
+  <li><strong>Image banner</strong> (<code>[section]-banner-image-wds-3.0</code>): a promotional card with artwork, a title, one line of copy and a primary CTA, such as an event announcement.</li>
+</ul>
+
+<h2>Variants and states</h2>
+<div class="doc-preview" data-src="/examples/banner.html" data-title="Banner · text and image"></div>
+<figure class="figure"><img src="/assets/img/figma-banner.png" alt="Figma banner variants: the text banner and the image banner at desktop, tablet and mobile widths" width="1600" height="606" loading="lazy"><figcaption>Figma source. The live preview approximates the image banner's artwork with CSS. Use the Figma artwork in production.</figcaption></figure>
+
+<h2>Anatomy</h2>
+<h3>Text banner</h3>
+<div class="table-wrap">
+  <table>
+    <thead><tr><th scope="col">Part</th><th scope="col">Spec</th></tr></thead>
+    <tbody>
+      <tr><td>Strip</td><td><code>bg-subtle</code> · 80px high (90px on mobile) · section side padding</td></tr>
+      <tr><td>Message</td><td>Headline 6, <code>text-primary</code></td></tr>
+      <tr><td>Action</td><td>Tertiary button, 12px after the message</td></tr>
+    </tbody>
+  </table>
+</div>
+<h3>Image banner</h3>
+<div class="table-wrap">
+  <table>
+    <thead><tr><th scope="col">Part</th><th scope="col">Spec</th></tr></thead>
+    <tbody>
+      <tr><td>Outer</td><td><code>bg-page</code> · 24px top and bottom padding · section side padding</td></tr>
+      <tr><td>Card</td><td>Container width · 168px high on desktop · square corners · linear gradient <code>#ffffff</code> → <code>#dfe8ff</code></td></tr>
+      <tr><td>Artwork</td><td>89px product mark and soft ellipses (<code>#dcf2fe</code>, <code>#caccff</code>)</td></tr>
+      <tr><td>Title and copy</td><td>Headline 3 and Body 1 Regular, 8px apart</td></tr>
+      <tr><td>Action</td><td>Primary button</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<h2>Design guidance</h2>
+<div class="do-dont">
+  <div class="do"><h3>Do</h3><ul><li>Use one banner at a time.</li><li>Use the text banner for information and the image banner for promotion.</li><li>Remove a promotional banner when the campaign ends.</li></ul></div>
+  <div class="dont"><h3>Don't</h3><ul><li>Use a banner for urgent errors. It's easy to miss.</li><li>Put more than one action in a banner.</li><li>Stack a banner directly on top of a hero with the same message.</li></ul></div>
+</div>
+
+<h2>Responsive behaviour</h2>
+<div class="table-wrap">
+  <table>
+    <thead><tr><th scope="col">Breakpoint</th><th scope="col">Text banner</th><th scope="col">Image banner</th></tr></thead>
+    <tbody>
+      <tr><td>Desktop</td><td>One centred row, 80px</td><td>Mark, text and CTA in one row, 168px card</td></tr>
+      <tr><td>Tablet</td><td>One centred row, 80px</td><td>Mark on top, then text and CTA stacked, 312px card</td></tr>
+      <tr><td>Mobile</td><td>Message and action stacked, left-aligned, 90px</td><td>Stacked, 342 × 342px card, 24px padding</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<h2>Light and dark theme</h2>
+<ul>
+  <li>The <strong>text banner</strong> follows the theme through <code>bg-subtle</code> and <code>text-primary</code>.</li>
+  <li>The <strong>image banner</strong> card uses hard-coded light colours, so its text must stay dark. Put <code>data-theme="light"</code> on the card. Without it, dark mode turns the title white on a white card.</li>
+</ul>
+
+<h2>Microcopy and limits</h2>
+<div class="table-wrap">
+  <table>
+    <thead><tr><th scope="col">Slot</th><th scope="col">Limit</th></tr></thead>
+    <tbody>
+      <tr><td>Text banner message</td><td>45 characters, one line on desktop</td></tr>
+      <tr><td>Text banner action</td><td>25 characters</td></tr>
+      <tr><td>Image banner title</td><td>35 characters, 2 lines max on mobile</td></tr>
+      <tr><td>Image banner copy</td><td>80 characters, one sentence</td></tr>
+      <tr><td>Image banner CTA</td><td>30 characters</td></tr>
+    </tbody>
+  </table>
+</div>
+<p>Limits are proposed, based on the Figma widths, and need Marketing sign-off.</p>
+
+<h2>Developer implementation</h2>
+<pre><code>&lt;div class="wds-banner"&gt;
+  &lt;p class="wds-headline-6"&gt;Want to read the fine print?&lt;/p&gt;
+  &lt;a class="wds-btn wds-btn--tertiary" href="/terms"&gt;Terms &amp;amp; Conditions&lt;span class="wds-btn__circle"&gt;…&lt;/span&gt;&lt;/a&gt;
+&lt;/div&gt;
+
+&lt;section class="wds-promo" aria-label="Tekion One 2027"&gt;
+  &lt;div class="wds-promo__card" data-theme="light"&gt;
+    &lt;div class="wds-promo__art" aria-hidden="true"&gt;&lt;/div&gt;
+    &lt;div class="wds-promo__mark" aria-hidden="true"&gt;&lt;/div&gt;
+    &lt;div class="wds-promo__body"&gt;
+      &lt;h2 class="wds-headline-3"&gt;Tekion One 2027 Is Coming&lt;/h2&gt;
+      &lt;p class="wds-body-1-reg"&gt;Tekion One 2026 sold out. Be the first in line for 2027.&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;a class="wds-btn wds-btn--primary" href="/early-access"&gt;Get on the early access list&lt;/a&gt;
+  &lt;/div&gt;
+&lt;/section&gt;</code></pre>
+<p>Replace <code>.wds-promo__art</code> and <code>.wds-promo__mark</code> with the exported Figma artwork for each campaign.</p>
+
+<h2>Accessibility</h2>
+<ul>
+  <li>The text banner is plain content, not an alert. Don't give it <code>role="alert"</code>.</li>
+  <li>Give the image banner a heading at the right level for the page, and an <code>aria-label</code> on its section.</li>
+  <li>Artwork is decorative: <code>aria-hidden="true"</code> or empty alt text.</li>
+  <li>If a banner can be dismissed, the close button needs an accessible name and the dismissal should be remembered.</li>
+</ul>
+
+<h2>Figma, asset and code references</h2>
+<ul>
+  <li><a href="https://www.figma.com/design/lf5SOxUpWBtO8AIzXf6snw/WDS-3.0?node-id=1008-1542" target="_blank" rel="noopener">Text banner</a> and <a href="https://www.figma.com/design/lf5SOxUpWBtO8AIzXf6snw/WDS-3.0?node-id=1121-2514" target="_blank" rel="noopener">image banner</a></li>
+  <li>Code: <code>css/wds.css</code> (Banner section)</li>
+</ul>
+
+<h2>Acceptance checklist</h2>
+<ul>
+  <li>Text banner stacks on mobile.</li>
+  <li>Image banner card stays light in dark mode.</li>
+  <li>One action per banner, within the copy limits.</li>
+  <li>Decorative artwork is hidden from screen readers.</li>
+</ul>

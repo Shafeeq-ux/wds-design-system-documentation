@@ -1,0 +1,111 @@
+<!--meta {"status": "Stable"} -->
+<h2>Overview</h2>
+<p>Inputs collect information in forms. WDS has five, all sharing the same surface, sizes and states:</p>
+<div class="table-wrap">
+  <table>
+    <thead><tr><th scope="col">Input</th><th scope="col">Figma component</th><th scope="col">Use for</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Text field</strong></td><td><code>[c]-input-textfield</code></td><td>Short free text, such as a name or company.</td></tr>
+      <tr><td><strong>Email</strong></td><td><code>[c]-input-email</code></td><td>An email address. Has a leading envelope icon.</td></tr>
+      <tr><td><strong>Phone</strong></td><td><code>[c]-input-phone</code></td><td>A phone number, with the calling code shown separately.</td></tr>
+      <tr><td><strong>Dropdown</strong></td><td><code>[c]-input-dropdown</code></td><td>One choice from a fixed list. Has a trailing chevron.</td></tr>
+      <tr><td><strong>Textarea</strong></td><td><code>[c]-input-textarea</code></td><td>Longer comments that may run over several lines.</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<h2>Variants and states</h2>
+<p>Every input has five states: <strong>Default</strong> (placeholder), <strong>Filled</strong>, <strong>Focus</strong> (2px border), <strong>Error</strong> (red border and message) and <strong>Disabled</strong>. The fields in this preview are live: click into one to see the real focus state.</p>
+<div class="doc-preview" data-src="/examples/inputs.html" data-title="Inputs · all types and states"></div>
+
+<h2>Anatomy</h2>
+<div class="table-wrap">
+  <table>
+    <thead><tr><th scope="col">Part</th><th scope="col">Spec</th></tr></thead>
+    <tbody>
+      <tr><td>Label (proposed)</td><td>Body 4 Medium, <code>input-label</code>, 8px above the surface</td></tr>
+      <tr><td>Surface</td><td>50px high (textarea 120px) · 8px radius · 16px horizontal, 12px vertical padding</td></tr>
+      <tr><td>Border</td><td>1px, 2px on focus</td></tr>
+      <tr><td>Value</td><td>Body 3 Medium (16 / 24)</td></tr>
+      <tr><td>Icon</td><td>16px, 8px gap from the value</td></tr>
+      <tr><td>Message</td><td>Body 5 Regular (12 / 18), 4px below the surface. The 18px is reserved even when empty, so errors don't push the layout down.</td></tr>
+    </tbody>
+  </table>
+</div>
+<div class="callout callout-warn"><p><strong>Radius mismatch.</strong> The Figma inputs measure 8px, but the <code>border-radius/input</code> token is 9999 (a pill). The CSS uses the measured 8px. Design should update the token or the components.</p></div>
+
+<h2>Design guidance</h2>
+<div class="do-dont">
+  <div class="do"><h3>Do</h3><ul><li>Give every field a visible label above it.</li><li>Use the specific input for the data: Email for emails, Phone for numbers.</li><li>Write error messages that say how to fix the problem.</li><li>Mark required fields, or say which fields are optional, consistently across a form.</li></ul></div>
+  <div class="dont"><h3>Don't</h3><ul><li>Use the placeholder as the label. It disappears when people type.</li><li>Use a dropdown for fewer than 4 options. Use radio buttons.</li><li>Show an error before someone has finished the field.</li></ul></div>
+</div>
+<p>The Figma components have no label layer and put the field name in the placeholder ("First name"). The live examples add a label above, which the WCAG guidance in the Figma handbook also recommends.</p>
+
+<h2>Responsive behaviour</h2>
+<ul>
+  <li>Inputs fill their container's width. Figma specimens are 280px wide.</li>
+  <li>In forms, put two fields side by side on desktop (for example first and last name) and stack them on mobile.</li>
+  <li>The 16px value size stops iOS from zooming in when a field gets focus. Don't make it smaller.</li>
+</ul>
+
+<h2>Light and dark theme</h2>
+<p>The input background is gray at 15% opacity (white in light, gray-900 in dark). That's designed for forms that sit on gradient or image sections: the field tints whatever is behind it. On a plain page it looks transparent.</p>
+<div class="callout callout-warn"><p><strong>Low-contrast border.</strong> <code>input-border</code> (<code>gray-200</code>) is 1.37:1 on white and 1.62:1 on the dark page. WCAG 1.4.11 needs 3:1 for the edge of a field. Use <code>gray-400</code> in light and <code>gray-500</code> in dark. See <a href="/foundations/colour.html#known-issues">Known issues</a>.</p></div>
+
+<h2>Microcopy and limits</h2>
+<ul>
+  <li><strong>Labels</strong>: 1–3 words, 25 characters max, sentence case, no colon.</li>
+  <li><strong>Placeholders</strong>: an example of the format ("name@company.com"), never instructions people need to remember.</li>
+  <li><strong>Errors</strong>: one sentence, 60 characters max, that says what to do: "Enter an email address like name@company.com", not "Invalid input".</li>
+  <li><strong>Dropdown options</strong>: 30 characters max each, in a logical or alphabetical order.</li>
+</ul>
+
+<h2>Developer implementation</h2>
+<pre><code>&lt;div class="wds-field"&gt;
+  &lt;label class="wds-field__label" for="email"&gt;Work email&lt;/label&gt;
+  &lt;div class="wds-input"&gt;
+    &lt;svg aria-hidden="true"&gt;…mail…&lt;/svg&gt;
+    &lt;input id="email" type="email" autocomplete="email"
+           placeholder="name@company.com" aria-describedby="email-msg"&gt;
+  &lt;/div&gt;
+  &lt;p class="wds-field__msg" id="email-msg"&gt;&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+<div class="table-wrap">
+  <table>
+    <thead><tr><th scope="col">Need</th><th scope="col">How</th></tr></thead>
+    <tbody>
+      <tr><td>Error</td><td>Set <code>aria-invalid="true"</code> on the control and add <code>is-error</code> to the message. The surface turns red through <code>:has()</code>.</td></tr>
+      <tr><td>Disabled</td><td>Add <code>disabled</code> to the control. The surface styles itself.</td></tr>
+      <tr><td>Dropdown</td><td>Add <code>.wds-input--select</code>, use a native <code>&lt;select required&gt;</code> with a hidden empty first option, and put the chevron SVG after it.</td></tr>
+      <tr><td>Phone</td><td>Put <code>&lt;span class="wds-input__prefix"&gt;+1&lt;/span&gt;</code> before <code>type="tel"</code>. There's no country picker in Figma.</td></tr>
+      <tr><td>Textarea</td><td>Add <code>.wds-input--textarea</code>.</td></tr>
+    </tbody>
+  </table>
+</div>
+<p>Use the <code>is-focus</code>, <code>is-error</code> and <code>is-disabled</code> classes only for static specimens. Real pages should rely on <code>:focus-within</code>, <code>aria-invalid</code> and <code>disabled</code>.</p>
+<h3>Tokens</h3>
+<!--wds:theme components/input/-->
+
+<h2>Accessibility</h2>
+<ul>
+  <li>Every input has a <code>&lt;label for&gt;</code>. Placeholders are not labels (WCAG 1.3.1, 3.3.2).</li>
+  <li>Connect messages with <code>aria-describedby</code>, and set <code>aria-invalid</code> on error (WCAG 3.3.1).</li>
+  <li>Use the right <code>type</code> and <code>autocomplete</code> so browsers and password managers can fill fields (WCAG 1.3.5).</li>
+  <li>Errors use colour and text, never colour alone (WCAG 1.4.1).</li>
+  <li>The focus state is a 2px border, which is visible against the page in both themes (WCAG 2.4.7).</li>
+</ul>
+
+<h2>Figma, asset and code references</h2>
+<ul>
+  <li><a href="https://www.figma.com/design/lf5SOxUpWBtO8AIzXf6snw/WDS-3.0?node-id=163-2" target="_blank" rel="noopener">Inputs page</a>, with a documentation frame for each input</li>
+  <li>Code: <code>css/wds.css</code> (Inputs section)</li>
+</ul>
+
+<h2>Acceptance checklist</h2>
+<ul>
+  <li>Each field has a visible label and the right <code>type</code> and <code>autocomplete</code>.</li>
+  <li>All five states match Figma in light and dark.</li>
+  <li>Error messages are linked with <code>aria-describedby</code> and say how to fix the problem.</li>
+  <li>The message space is reserved, so errors don't shift the layout.</li>
+  <li>The value text is 16px on mobile.</li>
+</ul>

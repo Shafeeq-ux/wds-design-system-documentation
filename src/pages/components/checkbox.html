@@ -1,0 +1,83 @@
+<!--meta {"status": "Stable"} -->
+<h2>Overview</h2>
+<p>Checkboxes let people turn an option on or off, choose any number of options, or agree to a statement such as marketing consent. Figma has two components:</p>
+<ul>
+  <li><strong><code>[c]-input-checkbox</code></strong>: the 20px box on its own (5 states).</li>
+  <li><strong><code>[c]-input-checkbox-label</code></strong>: the box with a label, in single-line and multi-line formats (10 variants). Use this one in forms.</li>
+</ul>
+
+<h2>Variants and states</h2>
+<p>States: <strong>Default</strong> (1px border), <strong>Focus</strong> (2px border), <strong>Disabled</strong>, <strong>Checked</strong> (dark fill with a check) and <strong>Checked-disabled</strong>. The preview is live: select a box or tab to it.</p>
+<div class="doc-preview" data-src="/examples/checkbox.html" data-title="Checkbox · states and formats"></div>
+<p>Figma has no hover, error, indeterminate or checked-and-focused state. The CSS adds an outline ring for checked-and-focused (proposed). Error and indeterminate need Design before they can be used.</p>
+
+<h2>Anatomy</h2>
+<div class="table-wrap">
+  <table>
+    <thead><tr><th scope="col">Part</th><th scope="col">Spec</th></tr></thead>
+    <tbody>
+      <tr><td>Box</td><td>20 × 20px · square corners (radius 0) · 1px border, 2px on focus</td></tr>
+      <tr><td>Check</td><td>14px icon, centred, visible only when checked</td></tr>
+      <tr><td>Gap</td><td>12px between box and label</td></tr>
+      <tr><td>Label</td><td>Body 4 Regular (14 / 22). The box aligns to the first line, not the middle.</td></tr>
+      <tr><td>Multi-line</td><td>280px wide (20 + 12 + 248px label). Used for consent copy.</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<h2>Design guidance</h2>
+<div class="do-dont">
+  <div class="do"><h3>Do</h3><ul><li>Use checkboxes for independent choices, where any combination is valid.</li><li>Group related checkboxes in a fieldset with a question as its legend.</li><li>Leave consent boxes unchecked by default.</li></ul></div>
+  <div class="dont"><h3>Don't</h3><ul><li>Use a checkbox when only one option can be chosen. Use radio buttons.</li><li>Use a checkbox to apply a setting immediately. That's a toggle.</li><li>Write labels as negatives ("Don't send me emails").</li></ul></div>
+</div>
+
+<h2>Responsive behaviour</h2>
+<p>Checkboxes don't change size between breakpoints. Labels wrap within their container. On mobile, stack options vertically with 12px between them, and keep the whole row tappable.</p>
+
+<h2>Light and dark theme</h2>
+<p>Checked boxes are dark with a white check in light mode, and white with a near-black check in dark mode. Like inputs, the unchecked background is 15% gray so the box works on gradients.</p>
+
+<h2>Microcopy and limits</h2>
+<ul>
+  <li><strong>Single-line labels</strong>: 50 characters max, sentence case, no end punctuation.</li>
+  <li><strong>Consent labels</strong>: 250 characters max. Say exactly what people agree to and how to change their mind, and link to the privacy policy.</li>
+  <li><strong>Group legends</strong>: a short question, such as "Which departments use Tekion today?"</li>
+</ul>
+
+<h2>Developer implementation</h2>
+<pre><code>&lt;label class="wds-check"&gt;
+  &lt;input type="checkbox" name="updates"&gt;
+  &lt;span&gt;Send me product updates&lt;/span&gt;
+&lt;/label&gt;
+
+&lt;fieldset class="wds-choice-group"&gt;
+  &lt;legend&gt;Which departments use Tekion today?&lt;/legend&gt;
+  &lt;label class="wds-check"&gt;&lt;input type="checkbox" name="dept" value="sales"&gt;&lt;span&gt;Sales&lt;/span&gt;&lt;/label&gt;
+  …
+&lt;/fieldset&gt;</code></pre>
+<p>The native <code>&lt;input type="checkbox"&gt;</code> is restyled with <code>appearance: none</code>, so it keeps built-in keyboard support, form submission and screen reader announcements. Add <code>.wds-check--multiline</code> for consent copy.</p>
+<h3>Tokens</h3>
+<!--wds:theme components/checkbox/-->
+
+<h2>Accessibility</h2>
+<ul>
+  <li>Wrap the input and text in one <code>&lt;label&gt;</code>, so the text is the accessible name and the whole row is clickable (WCAG 1.3.1, 2.5.8).</li>
+  <li>Tab moves focus and Space toggles (WCAG 2.1.1).</li>
+  <li>The check mark shows the state, not colour alone (WCAG 1.4.1).</li>
+  <li>The unchecked border (<code>gray-300</code>) is 1.82:1 on white, under the 3:1 WCAG 1.4.11 needs. It should move to <code>gray-400</code>.</li>
+</ul>
+
+<h2>Figma, asset and code references</h2>
+<ul>
+  <li><a href="https://www.figma.com/design/lf5SOxUpWBtO8AIzXf6snw/WDS-3.0?node-id=1217-3730" target="_blank" rel="noopener">Checkbox page</a>, with documentation frames for both components</li>
+  <li>Code: <code>css/wds.css</code> (Checkbox section) and <a href="/assets/icons/check.svg" download>check icon</a></li>
+</ul>
+
+<h2>Acceptance checklist</h2>
+<ul>
+  <li>Native checkbox inside a <code>&lt;label&gt;</code>.</li>
+  <li>All five states match Figma in light and dark.</li>
+  <li>The box is aligned to the first line of multi-line labels.</li>
+  <li>Groups use a fieldset and legend.</li>
+  <li>Consent boxes start unchecked.</li>
+</ul>

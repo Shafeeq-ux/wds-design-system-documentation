@@ -1,0 +1,56 @@
+<!--meta {"status": "Proposed"} -->
+<div class="callout callout-warn"><p><strong>Not designed yet.</strong> The Radio Button page in Figma is empty. Everything on this page is a <strong>proposal</strong> that reuses the checkbox tokens, so forms can use radios consistently until Design delivers the component.</p></div>
+
+<h2>Overview</h2>
+<p>Radio buttons let people choose exactly one option from a short list, with every option visible. Once one is chosen, people can change it but can't clear the group.</p>
+
+<h2>Variants and states</h2>
+<div class="doc-preview" data-src="/examples/radio.html" data-title="Radio button · proposed"></div>
+<p>Proposed states mirror the checkbox: Default, Focus, Checked, Disabled and Checked-disabled.</p>
+
+<h2>Anatomy</h2>
+<div class="table-wrap">
+  <table>
+    <thead><tr><th scope="col">Part</th><th scope="col">Proposed spec</th></tr></thead>
+    <tbody>
+      <tr><td>Circle</td><td>20px, full radius · checkbox border and background tokens</td></tr>
+      <tr><td>Dot</td><td>8px, <code>checkbox-icon-checked</code>, centred</td></tr>
+      <tr><td>Gap and label</td><td>12px · Body 4 Regular, aligned to the first line</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<h2>Design guidance</h2>
+<div class="do-dont">
+  <div class="do"><h3>Do</h3><ul><li>Use radios for 2–6 mutually exclusive options.</li><li>Order options logically (smallest to largest, or most common first).</li><li>Preselect an option only when it's a safe default.</li></ul></div>
+  <div class="dont"><h3>Don't</h3><ul><li>Use a single radio button. Use a checkbox.</li><li>Use radios for more than about 6 options. Use a dropdown.</li></ul></div>
+</div>
+
+<h2>Responsive behaviour and theme</h2>
+<p>Same as <a href="/components/checkbox.html">Checkbox</a>: fixed size, stacked options on mobile, and colours that invert in dark mode.</p>
+
+<h2>Developer implementation</h2>
+<pre><code>&lt;fieldset class="wds-choice-group"&gt;
+  &lt;legend&gt;How many rooftops do you run?&lt;/legend&gt;
+  &lt;label class="wds-radio"&gt;&lt;input type="radio" name="rooftops" value="1"&gt;&lt;span&gt;1&lt;/span&gt;&lt;/label&gt;
+  &lt;label class="wds-radio"&gt;&lt;input type="radio" name="rooftops" value="2-5"&gt;&lt;span&gt;2–5&lt;/span&gt;&lt;/label&gt;
+&lt;/fieldset&gt;</code></pre>
+
+<h2>Accessibility</h2>
+<ul>
+  <li>Group radios in a <code>fieldset</code> with a <code>legend</code>, and give them the same <code>name</code> (WCAG 1.3.1).</li>
+  <li>Tab moves into the group; arrow keys move between options and select them (WCAG 2.1.1). Native radios do this for free.</li>
+</ul>
+
+<h2>Needed from Design</h2>
+<ul>
+  <li>A radio component set with the five states, in light and dark.</li>
+  <li>Confirmation of the dot size and whether radios should use their own tokens.</li>
+</ul>
+
+<h2>Acceptance checklist</h2>
+<ul>
+  <li>Design has signed off the component in Figma.</li>
+  <li>Native radios, grouped in a fieldset with a legend.</li>
+  <li>Arrow-key navigation works.</li>
+</ul>

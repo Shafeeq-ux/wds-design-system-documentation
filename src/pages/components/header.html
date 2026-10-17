@@ -1,0 +1,108 @@
+<!--meta {"status": "WIP"} -->
+<h2>Overview</h2>
+<p>The header is the site's main navigation. It holds the Tekion logo, five top-level menus, Login, Request Demo and a menu button. It's always dark, whatever the page theme, so the teal logo and the white menu button stand out on every page.</p>
+
+<h2>Variants and states</h2>
+<p>Figma has one variant per breakpoint. Switch the preview viewport to see each one. The menus and the menu panel are proposed: Figma doesn't show them open.</p>
+<div class="doc-preview" data-src="/examples/header.html" data-title="Header · desktop, tablet, mobile"></div>
+<figure class="figure"><img src="/assets/img/figma-header.png" alt="Figma header variants: desktop with full navigation, tablet with Login, Request Demo and menu, and mobile with logo and menu only" width="1600" height="212" loading="lazy"><figcaption>Figma source: Desktop (1920), Tablet (768) and Mobile (390).</figcaption></figure>
+
+<h2>Anatomy</h2>
+<div class="table-wrap">
+  <table>
+    <thead><tr><th scope="col">Part</th><th scope="col">Spec</th></tr></thead>
+    <tbody>
+      <tr><td>Bar</td><td><code>bg-page</code> in the dark theme · 16px top and bottom padding · section side padding (64 / 64 / 24px) · content limited to the 1420px container</td></tr>
+      <tr><td>Logo</td><td>Tekion wordmark, 194 × 48px (162 × 40px on mobile), <code>icon-teal</code></td></tr>
+      <tr><td>Menu items</td><td>Body 4 Medium, white · 16px vertical, 8px horizontal padding · 8px between items · 16px chevron for menus with children</td></tr>
+      <tr><td>Actions</td><td>Login · 20px divider (<code>border-default</code>) · Request Demo · menu button</td></tr>
+      <tr><td>Menu button</td><td>Icon-medium button (40px) with the 20px menu icon</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<h2>Design guidance</h2>
+<ul>
+  <li>Keep top-level menus to five or fewer, and labels to one to three words.</li>
+  <li>"Request Demo" is the header's call to action. Don't add a second one.</li>
+  <li>Use the same header on every page, with the same order of items.</li>
+</ul>
+
+<h2>Responsive behaviour</h2>
+<div class="table-wrap">
+  <table>
+    <thead><tr><th scope="col">Breakpoint</th><th scope="col">Shows</th><th scope="col">Height</th></tr></thead>
+    <tbody>
+      <tr><td>Desktop (1280px and up)</td><td>Logo · five menus · Login | Request Demo · menu button</td><td class="num">80px</td></tr>
+      <tr><td>Tablet (768–1279px)</td><td>Logo · Login | Request Demo · menu button</td><td class="num">86px</td></tr>
+      <tr><td>Mobile (767px and below)</td><td>Logo · menu button</td><td class="num">72px</td></tr>
+    </tbody>
+  </table>
+</div>
+<p>Items hidden at smaller sizes move into the menu panel, so nothing is lost. The panel opens below the bar and lists every menu item, then Login and Request Demo (proposed).</p>
+
+<h2>Light and dark theme</h2>
+<p>In Figma the header component has its theme mode set to <strong>dark</strong>. In code, put <code>data-theme="dark"</code> on the <code>&lt;header&gt;</code>. Its tokens then resolve to dark values even when the page is light.</p>
+
+<h2>Microcopy and limits</h2>
+<ul>
+  <li>Menu labels: 1–3 words, 20 characters max, title case as in Figma ("Tekion AI Agents").</li>
+  <li>Header CTA: 2–3 words, 16 characters max ("Request Demo").</li>
+</ul>
+
+<h2>Developer implementation</h2>
+<pre><code>&lt;header class="wds-header" data-theme="dark"&gt;
+  &lt;div class="wds-header__bar"&gt;
+    &lt;a class="wds-header__logo" href="/"&gt;&lt;img src="/assets/logos/tekion-logo.svg" alt="Tekion home"&gt;&lt;/a&gt;
+    &lt;nav class="wds-header__nav" aria-label="Main"&gt;
+      &lt;ul&gt;
+        &lt;li class="wds-header__item"&gt;
+          &lt;button class="wds-navlink" aria-expanded="false" aria-controls="dd-products" data-wds-toggle&gt;Products …chevron…&lt;/button&gt;
+          &lt;ul class="wds-header__dropdown" id="dd-products" hidden&gt;…&lt;/ul&gt;
+        &lt;/li&gt;
+        &lt;li class="wds-header__item"&gt;&lt;a class="wds-navlink" href="/testimonials"&gt;Testimonials&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/nav&gt;
+    &lt;div class="wds-header__actions"&gt;
+      &lt;a class="wds-navlink wds-header__login" href="/login"&gt;Login&lt;/a&gt;
+      &lt;span class="wds-header__divider" aria-hidden="true"&gt;&lt;/span&gt;
+      &lt;a class="wds-navlink wds-header__demo" href="/demo"&gt;Request Demo&lt;/a&gt;
+      &lt;button class="wds-btn wds-btn--icon-m" aria-expanded="false" aria-controls="menu-panel"
+              aria-label="Open menu" data-label-open="Close menu" data-label-closed="Open menu" data-wds-toggle&gt;…menu…&lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;nav class="wds-header__panel" id="menu-panel" aria-label="Menu" hidden&gt;…&lt;/nav&gt;
+&lt;/header&gt;</code></pre>
+<p><code>js/wds.js</code> handles <code>data-wds-toggle</code>: it opens one menu at a time, closes on Escape (returning focus to the trigger) and closes on an outside click.</p>
+
+<h2>Accessibility</h2>
+<ul>
+  <li>Use <code>&lt;header&gt;</code> and <code>&lt;nav aria-label="Main"&gt;</code> landmarks, and add a "Skip to content" link before the header (WCAG 2.4.1).</li>
+  <li>Menu triggers are buttons with <code>aria-expanded</code>. Plain links stay links.</li>
+  <li>The menu button's accessible name changes between "Open menu" and "Close menu".</li>
+  <li>Logo alt text is "Tekion home" because it's a link to the home page.</li>
+  <li>The divider between Login and Request Demo is decorative: <code>aria-hidden="true"</code>.</li>
+</ul>
+
+<h2>Needed from Design</h2>
+<ul>
+  <li>Open states for the five menus (dropdown or mega menu).</li>
+  <li>The menu panel for tablet and mobile.</li>
+  <li>Behaviour on scroll: sticky, hide on scroll down, or static.</li>
+  <li>Hover and focus states for menu items.</li>
+</ul>
+
+<h2>Figma, asset and code references</h2>
+<ul>
+  <li><a href="https://www.figma.com/design/lf5SOxUpWBtO8AIzXf6snw/WDS-3.0?node-id=658-643" target="_blank" rel="noopener">header-navigation-wds-3.0</a></li>
+  <li><a href="/assets/logos/tekion-logo.svg" download>Tekion logo SVG</a></li>
+  <li>Code: <code>css/wds.css</code> (Header section) and <code>js/wds.js</code></li>
+</ul>
+
+<h2>Acceptance checklist</h2>
+<ul>
+  <li>The header is dark in both page themes.</li>
+  <li>Desktop, tablet and mobile show the items in the table above.</li>
+  <li>Every menu and the menu panel open and close with mouse, touch and keyboard, and Escape closes them.</li>
+  <li>Skip link and landmarks are present.</li>
+</ul>

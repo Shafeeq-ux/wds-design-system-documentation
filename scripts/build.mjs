@@ -124,6 +124,27 @@ function render(href, meta, body) {
   return { page, index: { title: m.title, href, group: item.group?.title || '', desc: m.desc || '', headings: headings.map((h) => ({ id: h.id, text: h.text })) } };
 }
 
+// Standalone demo page loaded by live previews. Pass "bg" in meta for a non-page background.
+function exampleShell(meta, body) {
+  return `<!doctype html>
+<html lang="en-GB"${meta.theme ? ` data-theme="${meta.theme}"` : ''}>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>${esc(meta.title || 'Example')} · WDS 3.0 example</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap">
+  <link rel="stylesheet" href="/css/tokens.css">
+  <link rel="stylesheet" href="/css/wds.css">
+  <style>html,body{margin:0}body{background:var(--wds-${meta.bg || 'bg-page'})}.demo{padding:32px;display:flex;flex-wrap:wrap;gap:24px;align-items:center}.demo-col{flex-direction:column;align-items:flex-start}.demo-label{width:100%;margin:0;color:var(--wds-text-tertiary);font-size:12px;font-weight:600;letter-spacing:1.2px;text-transform:uppercase}${meta.css || ''}</style>
+  <script src="/js/wds.js" defer></script>
+</head>
+<body class="wds">
+${body}
+</body>
+</html>
+`;
+}
+
 // ---------- build ----------
 rmSync(DIST, { recursive: true, force: true });
 mkdirSync(DIST, { recursive: true });
@@ -136,6 +157,7 @@ for (const file of walk(join(SRC, 'pages'))) {
   const outFile = join(DIST, href);
   mkdirSync(dirname(outFile), { recursive: true });
   if (meta.layout === 'bare') { writeFileSync(outFile, body); built.add(href); continue; } // standalone demo pages
+  if (meta.layout === 'example') { writeFileSync(outFile, exampleShell(meta, body)); built.add(href); continue; }
   const { page, index: entry } = render(href, meta, body);
   writeFileSync(outFile, page);
   if (!meta.noindex) index.push(entry);
