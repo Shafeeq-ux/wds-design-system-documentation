@@ -1,0 +1,79 @@
+<!--meta {"status": "Stable", "owner": "Design · Development"} -->
+<h2>Overview</h2>
+<p>tekion.com is built in <strong>Webflow</strong>. WDS 3.0 pages are designed in Figma and converted into Webflow pages with the <strong>Figma to Webflow plugin</strong>. Because the plugin carries the Figma variables across, the same tokens drive the design in Figma and the live page in Webflow.</p>
+<div class="flow" aria-label="From Figma to tekion.com">
+  <div class="flow-step"><span class="flow-num">1</span><b>Figma</b><span>Sections built from WDS components, with every value bound to a variable</span></div>
+  <div class="flow-arrow" aria-hidden="true">→</div>
+  <div class="flow-step"><span class="flow-num">2</span><b>Figma to Webflow plugin</b><span>Converts the frames and variables into Webflow elements, classes and variable collections</span></div>
+  <div class="flow-arrow" aria-hidden="true">→</div>
+  <div class="flow-step"><span class="flow-num">3</span><b>Webflow</b><span>Pages assembled from the converted sections and published to tekion.com</span></div>
+</div>
+<p>This documentation site isn't part of that pipeline. It documents the system, and its CSS (<code>tokens.css</code>, <code>wds.css</code>) is a reference build of the same Figma variables, so the live examples behave like the Webflow pages.</p>
+
+<h2>Three variable collections on every section</h2>
+<p>Every section component applies three Figma variable collections. Together they give a section its responsive spacing, responsive typography and light or dark theme, in Figma and again in Webflow.</p>
+<div class="table-wrap">
+  <table>
+    <thead><tr><th scope="col">Collection</th><th scope="col">Modes</th><th scope="col">Controls</th><th scope="col">Foundation page</th></tr></thead>
+    <tbody>
+      <tr><td><strong><code>breakpoint</code></strong></td><td>desktop · tablet · mobile</td><td>Section padding, gaps, container and text widths, card column widths</td><td><a href="/foundations/grid.html">Grid &amp; breakpoints</a></td></tr>
+      <tr><td><strong><code>typography</code></strong></td><td>desktop · tablet · mobile</td><td>Font size, line height and letter spacing of all 27 text styles</td><td><a href="/foundations/typography.html">Typography</a></td></tr>
+      <tr><td><strong><code>theme</code></strong></td><td>light · dark</td><td>Backgrounds, text, icons, borders, status and component colours, gradient stops</td><td><a href="/foundations/colour.html">Colour</a></td></tr>
+    </tbody>
+  </table>
+</div>
+
+<h3>How a section sets its modes</h3>
+<p>Each section is a component set with a Desktop, Tablet and Mobile variant. In the Figma <strong>Appearance</strong> panel, each variant sets one mode per collection:</p>
+<div class="mode-panels">
+  <figure class="mode-panel" aria-label="Desktop variant modes">
+    <figcaption>Desktop variant · 1920px</figcaption>
+    <dl><dt>breakpoint</dt><dd>desktop</dd><dt>theme</dt><dd>light</dd><dt>typography</dt><dd>desktop</dd></dl>
+  </figure>
+  <figure class="mode-panel" aria-label="Tablet variant modes">
+    <figcaption>Tablet variant · 768px</figcaption>
+    <dl><dt>breakpoint</dt><dd>tablet</dd><dt>theme</dt><dd>light</dd><dt>typography</dt><dd>tablet</dd></dl>
+  </figure>
+  <figure class="mode-panel" aria-label="Mobile variant modes">
+    <figcaption>Mobile variant · 390px</figcaption>
+    <dl><dt>breakpoint</dt><dd>mobile</dd><dt>theme</dt><dd>light</dd><dt>typography</dt><dd>mobile</dd></dl>
+  </figure>
+</div>
+<ul>
+  <li><strong>breakpoint</strong> and <strong>typography</strong> always match the variant's size.</li>
+  <li><strong>theme</strong> is the same on all three variants, and is the section's default (shown on each section page). Switching it to dark recolours the whole section without touching its layers.</li>
+  <li>Children inherit the section's modes. Don't set modes on layers inside a section unless a part must stay fixed, such as the image banner card that stays light.</li>
+</ul>
+<p>Example: <code>[section]-hero-default-wds-3.0</code> sets <code>breakpoint = desktop</code>, <code>theme = light</code> and <code>typography = desktop</code> on its 1920 × 1569 desktop variant.</p>
+
+<h2>Workflow</h2>
+<ol class="outline">
+  <li><strong>Design in Figma</strong> with WDS components. Bind every colour, spacing, width, radius and text property to a variable or text style. A hard-coded value won't respond to modes.</li>
+  <li><strong>Set the three modes</strong> on each Desktop, Tablet and Mobile variant, as above.</li>
+  <li><strong>Check the variants</strong> by switching the theme mode to dark and back, and by comparing the three variants against the <a href="/foundations/grid.html">breakpoint tokens</a>.</li>
+  <li><strong>Run the Figma to Webflow plugin</strong> on the page or section to convert it. The variable collections and their modes come across with it.</li>
+  <li><strong>Check in Webflow</strong> that the section uses the same three collections and modes, then preview it at each Webflow breakpoint and in both themes.</li>
+  <li><strong>Publish</strong>, then check the live page against the section's <a href="/sections/hero.html">documentation page</a> and character limits.</li>
+</ol>
+
+<h2>Before running the plugin</h2>
+<ul>
+  <li>Every variant sets <code>breakpoint</code>, <code>typography</code> and <code>theme</code>, with breakpoint and typography matching the variant.</li>
+  <li>No detached instances, and no colours, sizes or spacing typed in by hand.</li>
+  <li>Text uses WDS text styles, not local overrides.</li>
+  <li>Images are exported at 2× and have alt text ready.</li>
+  <li>Copy fits the section's character limits at mobile width.</li>
+</ul>
+
+<h2>Figma audit</h2>
+<p>A check of the WDS 3.0 file on 17 October 2026 found these variants that don't set their modes as described above. Fix the ones marked "Fix" before converting those sections.</p>
+<!--wds:modes-audit-->
+
+<h2>Known limitations</h2>
+<div class="callout"><p><strong>To confirm with the Webflow team.</strong> These depend on the Webflow project's setup, not on Figma.</p></div>
+<ul>
+  <li><strong>Breakpoint mapping.</strong> Figma designs at 1920, 768 and 390px. Confirm which Webflow breakpoints use the desktop, tablet and mobile modes. This documentation site's reference CSS switches at 1279px and 767px.</li>
+  <li><strong>Image fills.</strong> The primary button's background is an image fill in Figma. Confirm the plugin carries it as an image, not a flat colour.</li>
+  <li><strong>Gradients.</strong> Gradient styles use theme variables for their stops. Confirm they switch with the theme in Webflow.</li>
+  <li><strong>Fonts.</strong> Webflow needs the Tekion Sans variable font uploaded so the 105%, 110% and 125% width settings render (see <a href="/foundations/type-in-use.html">Type in use</a>).</li>
+</ul>

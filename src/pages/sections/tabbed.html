@@ -16,6 +16,10 @@
 <p>Limits are calculated from each slot's text style and its maximum width in Figma, so copy fits without breaking the layout. Type your copy into the last column to check it. Limits are <strong>proposed</strong> until Marketing signs them off.</p>
 <!--wds:section-limits tabbed-->
 
+<h2>Variable modes</h2>
+<p>Like every WDS section, each variant applies the three variable collections: <code>breakpoint</code> for spacing and widths, <code>typography</code> for text sizes, and <code>theme</code> for colours. The same collections and modes carry over to Webflow through the Figma to Webflow plugin. See <a href="/developers/figma-to-webflow.html">Figma to Webflow</a>.</p>
+<!--wds:section-modes tabbed-->
+
 <h2>Responsive layout behaviour</h2>
 <ul><li>Tabs stay in one row on tablet. On mobile they scroll sideways if they don't fit.</li><li>The 2-column panel stacks on mobile, "without" first.</li></ul>
 <p>Section padding, gaps and widths come from the <a href="/foundations/grid.html">breakpoint tokens</a>, so the spacing changes automatically at each breakpoint.</p>
@@ -33,4 +37,4 @@
 <ul><li>Use the tabs pattern: <code>role="tablist"</code>, <code>tab</code> and <code>tabpanel</code>, with arrow keys moving between tabs.</li><li>The selected tab must be clear without colour alone.</li></ul>
 
 <h2>Marketing handoff checklist</h2>
-<ul><li>2 to 4 tabs, labels within 20 characters.</li><li>Same content structure in every panel.</li><li>Section and variant chosen from Figma, with its node link.</li><li>Copy within every character limit on this page, checked at mobile width.</li><li>Eyebrow, H2 and description follow the <a href="/content/headings.html">heading rules</a>.</li><li>Images supplied at 2× with alt text.</li><li>Reviewed in light and dark if the page supports both.</li></ul>
+<ul><li>2 to 4 tabs, labels within 20 characters.</li><li>Same content structure in every panel.</li><li>Section and variant chosen from Figma, with its node link.</li><li>Each variant sets the <code>breakpoint</code>, <code>typography</code> and <code>theme</code> modes before it goes through the Figma to Webflow plugin.</li><li>Copy within every character limit on this page, checked at mobile width.</li><li>Eyebrow, H2 and description follow the <a href="/content/headings.html">heading rules</a>.</li><li>Images supplied at 2× with alt text.</li><li>Reviewed in light and dark if the page supports both.</li></ul>

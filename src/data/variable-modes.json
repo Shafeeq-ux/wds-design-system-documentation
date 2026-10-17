@@ -1,0 +1,17 @@
+{
+  "_note": "Audit of explicit variable modes on every section, header and banner variant in Figma (2026-10-17). Every variant should set breakpoint, typography and theme; breakpoint and typography must match the variant's Breakpoint property.",
+  "checked": { "sets": 58, "variants": 174 },
+  "collections": {
+    "breakpoint": { "modes": ["desktop", "tablet", "mobile"], "controls": "Section padding, gaps, container and text widths, card column widths" },
+    "typography": { "modes": ["desktop", "tablet", "mobile"], "controls": "Font size, line height and letter spacing of all 27 text styles" },
+    "theme": { "modes": ["light", "dark"], "controls": "Every background, text, icon, border, status and component colour, and gradient stops" }
+  },
+  "issues": [
+    { "section": "accordion", "set": "accordion-left-image", "variant": "Desktop", "problem": "No breakpoint or typography mode set", "impact": "Falls back to the default (desktop) modes, so it looks right by chance.", "severity": "low" },
+    { "section": "accordion", "set": "accordion-left-image", "variant": "Tablet", "problem": "No breakpoint or typography mode set", "impact": "Uses desktop spacing and type sizes on tablet.", "severity": "high" },
+    { "section": "legal-content", "set": "implementation-terms", "variant": "Tablet", "problem": "Typography mode is desktop instead of tablet", "impact": "Uses desktop type sizes on tablet.", "severity": "high" },
+    { "section": "legal-content", "set": "disclaimer-variant", "variant": "Desktop", "problem": "No modes set at all", "impact": "Falls back to the default modes (desktop, light). The theme isn't explicit.", "severity": "low" },
+    { "section": "header", "set": "header-navigation", "variant": "Mobile", "problem": "No typography mode set", "impact": "None today: the mobile header has no text. Set it so future text scales correctly.", "severity": "info" },
+    { "section": "video", "set": "video", "variant": "Desktop, Tablet, Mobile", "problem": "No typography mode set", "impact": "None: the player has no text.", "severity": "info" }
+  ]
+}

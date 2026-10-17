@@ -1,6 +1,7 @@
 <!--meta {"status": "Stable"} -->
 <h2>Overview</h2>
 <p>The <code>typography</code> and <code>breakpoint</code> collections in Figma each have desktop, tablet and mobile modes. <code>tokens.css</code> sets desktop values on <code>:root</code> and overrides them in two media queries, so components never need their own breakpoints for size and spacing.</p>
+<p>In Figma and Webflow the same switch happens through variable modes: each section variant sets <code>breakpoint</code> and <code>typography</code> to desktop, tablet or mobile. See <a href="/developers/figma-to-webflow.html">Figma to Webflow</a>.</p>
 <pre><code>:root { --wds-headline-1-font-size: 56px; --wds-width-container-max-width: 1420px; … }
 @media (max-width: 1279px) { :root { --wds-headline-1-font-size: 40px; --wds-width-container-max-width: 640px; … } }
 @media (max-width: 767px)  { :root { --wds-headline-1-font-size: 28px; --wds-width-container-max-width: 342px; … } }</code></pre>

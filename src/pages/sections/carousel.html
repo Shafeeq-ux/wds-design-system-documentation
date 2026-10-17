@@ -16,6 +16,10 @@
 <p>Limits are calculated from each slot's text style and its maximum width in Figma, so copy fits without breaking the layout. Type your copy into the last column to check it. Limits are <strong>proposed</strong> until Marketing signs them off.</p>
 <!--wds:section-limits carousel-->
 
+<h2>Variable modes</h2>
+<p>Like every WDS section, each variant applies the three variable collections: <code>breakpoint</code> for spacing and widths, <code>typography</code> for text sizes, and <code>theme</code> for colours. The same collections and modes carry over to Webflow through the Figma to Webflow plugin. See <a href="/developers/figma-to-webflow.html">Figma to Webflow</a>.</p>
+<!--wds:section-modes carousel-->
+
 <h2>Responsive layout behaviour</h2>
 <ul><li>On mobile, carousels become a swipeable row with the next item peeking in.</li><li>Arrows use the icon-small button; on touch devices, swiping also works.</li></ul>
 <p>Section padding, gaps and widths come from the <a href="/foundations/grid.html">breakpoint tokens</a>, so the spacing changes automatically at each breakpoint.</p>
@@ -33,4 +37,4 @@
 <ul><li>Don't autoplay. If you must, add a visible pause button and stop on hover and focus (WCAG 2.2.2).</li><li>Previous and next buttons need accessible names, and the current position should be announced ("Slide 2 of 6").</li><li>Every slide must be reachable by keyboard.</li></ul>
 
 <h2>Marketing handoff checklist</h2>
-<ul><li>Number of slides and their order.</li><li>Captions within 2 lines.</li><li>Whether it autoplays (avoid).</li><li>Section and variant chosen from Figma, with its node link.</li><li>Copy within every character limit on this page, checked at mobile width.</li><li>Eyebrow, H2 and description follow the <a href="/content/headings.html">heading rules</a>.</li><li>Images supplied at 2× with alt text.</li><li>Reviewed in light and dark if the page supports both.</li></ul>
+<ul><li>Number of slides and their order.</li><li>Captions within 2 lines.</li><li>Whether it autoplays (avoid).</li><li>Section and variant chosen from Figma, with its node link.</li><li>Each variant sets the <code>breakpoint</code>, <code>typography</code> and <code>theme</code> modes before it goes through the Figma to Webflow plugin.</li><li>Copy within every character limit on this page, checked at mobile width.</li><li>Eyebrow, H2 and description follow the <a href="/content/headings.html">heading rules</a>.</li><li>Images supplied at 2× with alt text.</li><li>Reviewed in light and dark if the page supports both.</li></ul>

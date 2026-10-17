@@ -16,6 +16,10 @@
 <p>Limits are calculated from each slot's text style and its maximum width in Figma, so copy fits without breaking the layout. Type your copy into the last column to check it. Limits are <strong>proposed</strong> until Marketing signs them off.</p>
 <!--wds:section-limits testimonial-->
 
+<h2>Variable modes</h2>
+<p>Like every WDS section, each variant applies the three variable collections: <code>breakpoint</code> for spacing and widths, <code>typography</code> for text sizes, and <code>theme</code> for colours. The same collections and modes carry over to Webflow through the Figma to Webflow plugin. See <a href="/developers/figma-to-webflow.html">Figma to Webflow</a>.</p>
+<!--wds:section-modes testimonial-->
+
 <h2>Responsive layout behaviour</h2>
 <ul><li>The featured quote and stats stack on mobile, with the quote first.</li><li>Text quotes become a single column on mobile.</li></ul>
 <p>Section padding, gaps and widths come from the <a href="/foundations/grid.html">breakpoint tokens</a>, so the spacing changes automatically at each breakpoint.</p>
@@ -33,4 +37,4 @@
 <ul><li>Mark quotes up with <code>blockquote</code> and the person in <code>figcaption</code> or <code>cite</code>.</li><li>A video testimonial needs captions.</li></ul>
 
 <h2>Marketing handoff checklist</h2>
-<ul><li>Written approval from each person quoted.</li><li>Name, role and company for every quote.</li><li>Source and date for every stat.</li><li>Section and variant chosen from Figma, with its node link.</li><li>Copy within every character limit on this page, checked at mobile width.</li><li>Eyebrow, H2 and description follow the <a href="/content/headings.html">heading rules</a>.</li><li>Images supplied at 2× with alt text.</li><li>Reviewed in light and dark if the page supports both.</li></ul>
+<ul><li>Written approval from each person quoted.</li><li>Name, role and company for every quote.</li><li>Source and date for every stat.</li><li>Section and variant chosen from Figma, with its node link.</li><li>Each variant sets the <code>breakpoint</code>, <code>typography</code> and <code>theme</code> modes before it goes through the Figma to Webflow plugin.</li><li>Copy within every character limit on this page, checked at mobile width.</li><li>Eyebrow, H2 and description follow the <a href="/content/headings.html">heading rules</a>.</li><li>Images supplied at 2× with alt text.</li><li>Reviewed in light and dark if the page supports both.</li></ul>

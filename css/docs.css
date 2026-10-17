@@ -329,3 +329,18 @@ pre code { background: none; padding: 0; color: var(--wds-text-primary); }
 .pair-demo { display: inline-block; vertical-align: middle; margin-right: 6px; box-shadow: none; border-radius: 8px; outline: 1px solid #8a909933; }
 .pair-demo text { font-family: var(--doc-font); }
 .table-wrap { position: relative; } /* keeps absolutely positioned hidden labels inside the scroll area */
+
+/* ---------- Figma to Webflow ---------- */
+.flow { display: flex; align-items: stretch; gap: 12px; margin: 24px 0; }
+.flow-step { flex: 1; display: flex; flex-direction: column; gap: 6px; padding: 20px; border: 1px solid var(--wds-border-default); border-radius: 16px; background: var(--wds-bg-elevated); font-size: 14px; color: var(--wds-text-secondary); }
+.flow-step b { font-size: 16px; color: var(--wds-text-primary); }
+.flow-num { display: grid; place-items: center; width: 28px; height: 28px; border-radius: 50%; background: var(--wds-bg-inverse); color: var(--wds-text-inverse); font-size: 13px; font-weight: 600; }
+.flow-arrow { align-self: center; color: var(--wds-text-tertiary); font-size: 20px; }
+.mode-panels { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; margin: 24px 0; }
+.mode-panel { margin: 0; padding: 16px 20px; border: 1px solid var(--wds-border-default); border-radius: 12px; background: var(--wds-bg-elevated); }
+.mode-panel figcaption { margin-bottom: 12px; font-size: 13px; font-weight: 600; color: var(--wds-text-primary); }
+.mode-panel dl { display: grid; grid-template-columns: auto 1fr; align-items: center; gap: 8px 16px; margin: 0; font-size: 14px; }
+.mode-panel dt { color: var(--wds-text-secondary); }
+.mode-panel dd { margin: 0; padding: 6px 12px; border: 1px solid var(--wds-border-strong); border-radius: 8px; color: var(--wds-text-primary); position: relative; }
+.mode-panel dd::after { content: "▾"; position: absolute; right: 10px; color: var(--wds-text-tertiary); }
+@media (max-width: 1023px) { .flow { flex-direction: column; } .flow-arrow { transform: rotate(90deg); } .mode-panels { grid-template-columns: 1fr; } }

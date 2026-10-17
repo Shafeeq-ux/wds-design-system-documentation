@@ -1,6 +1,7 @@
 <!--meta {"status": "Stable"} -->
 <h2>Overview</h2>
 <p>The <code>theme</code> collection in Figma has a light and a dark mode, and <code>tokens.css</code> turns them into three layers of CSS. Components only ever use theme tokens, so switching the theme switches every component.</p>
+<p>In Figma and Webflow, each section sets the <code>theme</code> mode (light or dark) on its variants. In this CSS, <code>data-theme</code> on a section does the same job. See <a href="/developers/figma-to-webflow.html">Figma to Webflow</a>.</p>
 <pre><code>/* 1. Light by default */
 :root, [data-theme="light"] { --wds-bg-page: #ffffff; … }
 

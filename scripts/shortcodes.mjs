@@ -215,7 +215,30 @@ function limitCalculator() {
 </form>`;
 }
 
-const CODES = { 'limit-calculator': limitCalculator, 'section-sets': sectionSets, 'section-limits': sectionLimits, 'all-limits': allLimits, pairs, icons, 'icon-keywords': iconKeywords, ramp, theme, 'type-scale': typeScale, scale, responsive, radii, borders, gradients };
+// ---------- Variable modes (Figma audit) ----------
+const MODES = JSON.parse(readFileSync(join(root, 'src/data/variable-modes.json'), 'utf8'));
+const SEVERITY = { high: 'badge-warn', low: 'badge-info', info: 'badge-muted' };
+
+// Per-section table: which modes each breakpoint variant sets, plus any audit findings.
+function sectionModes(key) {
+  const sec = SECTIONS[key];
+  const themes = [...new Set((sec?.sets || []).map((x) => x[2]))];
+  const rows = ['Desktop', 'Tablet', 'Mobile'].map((bp) => `<tr><td><strong>${bp}</strong></td><td><code>breakpoint = ${bp.toLowerCase()}</code></td><td><code>typography = ${bp.toLowerCase()}</code></td><td><code>theme = ${themes.join(' or ')}</code></td></tr>`);
+  const issues = MODES.issues.filter((i) => i.section === key);
+  const note = issues.length
+    ? `<div class="callout callout-warn"><p><strong>Figma audit:</strong> ${issues.map((i) => `<code>${esc(i.set)}</code> ${esc(i.variant)}: ${esc(i.problem)}. ${esc(i.impact)}`).join(' ')}</p></div>`
+    : `<p>Audit: every variant of this section sets all three modes correctly.</p>`;
+  return table(['Variant', 'Spacing and widths', 'Text sizes', 'Colours'], rows, 'modes-table') + note;
+}
+
+// Full audit table for the Figma to Webflow page
+function modesAudit() {
+  const rows = MODES.issues.map((i) => `<tr><td>${i.section === 'header' ? `<a href="/components/header.html">Header</a>` : `<a href="/sections/${i.section}.html">${esc(i.section.replace(/-/g, ' '))}</a>`}</td><td><code>${esc(i.set)}</code></td><td>${esc(i.variant)}</td><td>${esc(i.problem)}</td><td>${esc(i.impact)}</td><td><span class="badge ${SEVERITY[i.severity]}">${i.severity === 'high' ? 'Fix' : i.severity === 'low' ? 'Tidy' : 'OK'}</span></td></tr>`);
+  return `<p>Checked ${MODES.checked.variants} variants in ${MODES.checked.sets} component sets. ${MODES.checked.sets - new Set(MODES.issues.map((i) => i.set)).size} sets are fully correct.</p>`
+    + table(['Section', 'Component set', 'Variant', 'Problem', 'Impact', ''], rows);
+}
+
+const CODES = { 'section-modes': sectionModes, 'modes-audit': modesAudit, 'limit-calculator': limitCalculator, 'section-sets': sectionSets, 'section-limits': sectionLimits, 'all-limits': allLimits, pairs, icons, 'icon-keywords': iconKeywords, ramp, theme, 'type-scale': typeScale, scale, responsive, radii, borders, gradients };
 
 export function applyShortcodes(html) {
   return html.replace(/<!--wds:([\w-]+)\s*([^>]*?)-->/g, (all, name, arg) => {

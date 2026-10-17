@@ -19,6 +19,10 @@
 <p>Limits are calculated from each slot's text style and its maximum width in Figma, so copy fits without breaking the layout. Type your copy into the last column to check it. Limits are <strong>proposed</strong> until Marketing signs them off.</p>
 <!--wds:section-limits hero-->
 
+<h2>Variable modes</h2>
+<p>Like every WDS section, each variant applies the three variable collections: <code>breakpoint</code> for spacing and widths, <code>typography</code> for text sizes, and <code>theme</code> for colours. The same collections and modes carry over to Webflow through the Figma to Webflow plugin. See <a href="/developers/figma-to-webflow.html">Figma to Webflow</a>.</p>
+<!--wds:section-modes hero-->
+
 <h2>Responsive layout behaviour</h2>
 <ul><li>The headline drops from 56px to 40px on tablet and 28px on mobile, using the same style.</li><li>Stats sit side by side at every size. On mobile their labels move below the number.</li><li>Media keeps its aspect ratio and fills the container. 21:9 media can be cropped to 16:9 on mobile if the subject would get too small.</li><li>Two CTAs stack full width on mobile, with the primary first.</li></ul>
 <p>Section padding, gaps and widths come from the <a href="/foundations/grid.html">breakpoint tokens</a>, so the spacing changes automatically at each breakpoint.</p>
@@ -36,4 +40,4 @@
 <ul><li>The hero headline is the page's only <code>h1</code>.</li><li>The eyebrow is a paragraph, not a heading.</li><li>Media needs alt text that describes what it shows, or empty alt text if it's decorative.</li><li>Background video must have a pause control and never autoplay with sound.</li></ul>
 
 <h2>Marketing handoff checklist</h2>
-<ul><li>One H1, within 60 characters.</li><li>Media supplied at 2× for desktop, plus a mobile crop if needed.</li><li>Stat values checked and sourced.</li><li>Section and variant chosen from Figma, with its node link.</li><li>Copy within every character limit on this page, checked at mobile width.</li><li>Eyebrow, H2 and description follow the <a href="/content/headings.html">heading rules</a>.</li><li>Images supplied at 2× with alt text.</li><li>Reviewed in light and dark if the page supports both.</li></ul>
+<ul><li>One H1, within 60 characters.</li><li>Media supplied at 2× for desktop, plus a mobile crop if needed.</li><li>Stat values checked and sourced.</li><li>Section and variant chosen from Figma, with its node link.</li><li>Each variant sets the <code>breakpoint</code>, <code>typography</code> and <code>theme</code> modes before it goes through the Figma to Webflow plugin.</li><li>Copy within every character limit on this page, checked at mobile width.</li><li>Eyebrow, H2 and description follow the <a href="/content/headings.html">heading rules</a>.</li><li>Images supplied at 2× with alt text.</li><li>Reviewed in light and dark if the page supports both.</li></ul>

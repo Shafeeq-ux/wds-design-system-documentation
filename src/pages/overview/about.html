@@ -1,6 +1,7 @@
 <!--meta {"status": "Stable"} -->
 <h2>Purpose</h2>
 <p>WDS 3.0 is the design system for Tekion's marketing website. It gives Design, Development and Marketing one shared source for how pages look, behave and read, so new pages are faster to make and consistent with the rest of the site.</p>
+<p>Pages are designed in Figma and converted into Webflow, where tekion.com is built, using the Figma to Webflow plugin. The same variables, and the same three variable collections on every section (breakpoint, typography and theme), drive both. See <a href="/developers/figma-to-webflow.html">Figma to Webflow</a>.</p>
 
 <h2>Scope</h2>
 <div class="table-wrap">
@@ -18,7 +19,7 @@
 <h2>Principles</h2>
 <div class="meta-grid">
   <div><h3>One source of truth</h3><p>Figma variables generate the CSS. If it isn't in Figma, it isn't in the system yet.</p></div>
-  <div><h3>Responsive by default</h3><p>Every token, component and section has a desktop, tablet and mobile value.</p></div>
+  <div><h3>Responsive by default</h3><p>Every section applies the breakpoint and typography modes for desktop, tablet and mobile.</p></div>
   <div><h3>Accessible for everyone</h3><p>WCAG 2.2 AA is the minimum, checked in both themes.</p></div>
   <div><h3>Content fits by design</h3><p>Every text slot has a character limit, so copy and layout are planned together.</p></div>
 </div>
@@ -40,7 +41,7 @@
 <h2>How to use it</h2>
 <ul>
   <li><strong>Designers</strong>: start in the WDS 3.0 Figma file, use its components and variables, and check the matching page here for guidance and open issues.</li>
-  <li><strong>Developers</strong>: start with <a href="/developers/getting-started.html">Getting started</a>, and use each component page's Developer implementation section.</li>
+  <li><strong>Developers</strong>: start with <a href="/developers/figma-to-webflow.html">Figma to Webflow</a> to see how designs reach Webflow, then <a href="/developers/getting-started.html">Getting started</a>, and use each component page's Developer implementation section.</li>
   <li><strong>Marketers</strong>: pick a section from <a href="/sections/hero.html">Section layouts</a>, write to its character limits, and work through its handoff checklist.</li>
 </ul>
 
