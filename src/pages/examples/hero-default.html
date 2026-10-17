@@ -1,0 +1,34 @@
+<!--meta {"layout": "bare"} -->
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hero default · WDS 3.0 example</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap">
+  <link rel="stylesheet" href="/css/tokens.css">
+  <link rel="stylesheet" href="/css/wds.css">
+  <style>
+    html, body { margin: 0; }
+    body { background: var(--wds-bg-page); }
+    .demo-media { aspect-ratio: 21 / 9; border-radius: 24px; background: var(--wds-gradient-bg-ocean); }
+    [data-theme="dark"] .demo-media { background: var(--wds-gradient-magenta); }
+  </style>
+</head>
+<body class="wds">
+  <section class="wds-section wds-section--2x">
+    <div class="wds-container wds-stack-centre">
+      <p class="wds-overline wds-text-secondary" style="margin:0 0 16px">Automotive retail platform</p>
+      <h1 class="wds-headline-1 wds-h1-centre">Run your whole dealership on one connected platform</h1>
+      <p class="wds-body-1-reg wds-p-centre wds-title-gap wds-text-secondary">Sales, service, parts and accounting share one record of every customer and vehicle, so teams spend less time re-keying and more time selling.</p>
+      <div class="wds-actions wds-cta-gap">
+        <a class="wds-btn wds-btn--primary" href="#">Book a demo</a>
+        <a class="wds-btn wds-btn--secondary" href="#">See the platform</a>
+      </div>
+    </div>
+    <div class="wds-container wds-image-gap">
+      <div class="demo-media" role="img" aria-label="Placeholder for hero image"></div>
+    </div>
+  </section>
+</body>
+</html>

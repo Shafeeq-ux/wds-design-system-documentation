@@ -1,0 +1,66 @@
+/* WDS 3.0 component and layout styles. Depends on tokens.css.
+   Phase 1 ships the layout primitives and a first pass of Button.
+   Phase 3 completes every component against Figma. */
+
+.wds {
+  font-family: var(--wds-font-family-body), "Inter", system-ui, sans-serif;
+  color: var(--wds-text-primary);
+  background: var(--wds-bg-page);
+  font-stretch: 105%;
+}
+
+/* ---------- Layout ---------- */
+.wds-section {
+  padding: var(--wds-padding-section-top-padding-default) var(--wds-padding-section-right-left-padding-default) var(--wds-padding-section-bottom-padding-default);
+}
+.wds-section--2x { padding-top: var(--wds-padding-section-top-padding-2x); padding-bottom: var(--wds-padding-section-bottom-padding-2x); }
+.wds-container { width: 100%; max-width: var(--wds-width-container-max-width); margin-inline: auto; }
+.wds-container--offset { max-width: var(--wds-width-offset-max-width); }
+.wds-container--offset2x { max-width: var(--wds-width-offset2x-max-width); }
+
+.wds-stack-centre { display: flex; flex-direction: column; align-items: center; text-align: center; }
+.wds-h1-centre { max-width: var(--wds-width-h1-width-centre); margin: 0; }
+.wds-h2-centre { max-width: var(--wds-width-h2-width-centre); margin: 0; }
+.wds-h2-left { max-width: var(--wds-width-h2-width-left); margin: 0; }
+.wds-p-centre { max-width: var(--wds-width-p-width-centre); margin: 0; }
+.wds-title-gap { margin-top: var(--wds-gap-title-description-gap); }
+.wds-cta-gap { margin-top: var(--wds-gap-content-cta-gap); }
+.wds-image-gap { margin-top: var(--wds-gap-content-image-gap); }
+.wds-text-secondary { color: var(--wds-text-secondary); }
+
+.wds-actions { display: flex; flex-wrap: wrap; gap: var(--wds-gap-g-16); justify-content: center; }
+
+/* ---------- Button ---------- */
+.wds-btn {
+  --_bg: transparent; --_fg: var(--wds-text-primary); --_bd: transparent;
+  display: inline-flex; align-items: center; justify-content: center; gap: var(--wds-gap-button-icon-gap);
+  min-height: 56px; padding: var(--wds-padding-button-padding-y) 40px;
+  border: var(--wds-border-width-button) solid var(--_bd); border-radius: var(--wds-border-radius-button);
+  background: var(--_bg); color: var(--_fg);
+  font-family: inherit; font-size: var(--wds-button-font-size); line-height: var(--wds-button-line-height);
+  font-weight: var(--wds-button-font-weight); font-stretch: var(--wds-button-font-stretch); letter-spacing: var(--wds-button-letter-spacing);
+  text-decoration: none; white-space: nowrap; cursor: pointer;
+  transition: background-color .15s, border-color .15s, color .15s, filter .15s;
+}
+.wds-btn:focus-visible { outline: 2px solid var(--wds-border-focus); outline-offset: 3px; }
+
+/* Primary: Figma renders a blue glass gradient over the token colour.
+   This gradient is an approximation until Phase 3 reads the exact fill. */
+.wds-btn--primary {
+  --_fg: var(--wds-btn-primary-text-default);
+  background: radial-gradient(120% 140% at 85% 10%, #8f7bff 0%, transparent 45%), linear-gradient(100deg, #0b4fc4 0%, #1f6fe8 55%, #6fb8ff 100%);
+}
+.wds-btn--primary:hover { filter: brightness(1.08); }
+.wds-btn--primary:active { filter: brightness(0.92); }
+
+.wds-btn--secondary { --_bg: var(--wds-btn-secondary-bg); --_fg: var(--wds-btn-secondary-text); --_bd: var(--wds-btn-secondary-border); }
+.wds-btn--secondary:hover { --_bg: var(--wds-btn-secondary-bg-hover); --_bd: var(--wds-btn-secondary-border-hover); }
+.wds-btn--secondary:active { --_bg: var(--wds-btn-secondary-bg-active); }
+
+.wds-btn:disabled, .wds-btn[aria-disabled="true"] { cursor: not-allowed; filter: none; }
+.wds-btn--primary:disabled, .wds-btn--primary[aria-disabled="true"] { background: var(--wds-btn-primary-bg-disabled); color: var(--wds-btn-primary-text-disabled); }
+.wds-btn--secondary:disabled, .wds-btn--secondary[aria-disabled="true"] { --_bg: var(--wds-btn-secondary-bg-disabled); --_fg: var(--wds-btn-secondary-text-disabled); --_bd: var(--wds-btn-secondary-border-disabled); }
+
+@media (max-width: 767px) {
+  .wds-actions { flex-direction: column; align-items: stretch; width: 100%; }
+}

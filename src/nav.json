@@ -1,0 +1,102 @@
+{
+  "figmaFile": "https://www.figma.com/design/lf5SOxUpWBtO8AIzXf6snw/WDS-3.0",
+  "groups": [
+    {
+      "id": "overview", "title": "Overview", "number": "01", "owner": "Design",
+      "desc": "Purpose, principles, accessibility standards, contribution, governance and versioning.",
+      "items": [
+        { "title": "About WDS 3.0", "href": "/overview/about.html", "type": "foundation", "phase": 6, "desc": "Purpose, scope and the principles behind the Website Design System." },
+        { "title": "Accessibility", "href": "/overview/accessibility.html", "type": "foundation", "phase": 6, "desc": "The WCAG 2.2 AA standard every WDS page and component meets." },
+        { "title": "Contribution", "href": "/overview/contribution.html", "type": "foundation", "phase": 6, "desc": "How to propose, review and release a change to WDS." },
+        { "title": "Governance & versioning", "href": "/overview/governance.html", "type": "foundation", "phase": 6, "desc": "Ownership, cross-functional review and how versions are numbered." },
+        { "title": "Changelog", "href": "/overview/changelog.html", "type": "foundation", "phase": 6, "desc": "Every released change to WDS 3.0." }
+      ]
+    },
+    {
+      "id": "foundations", "title": "Foundations", "number": "02", "owner": "Design",
+      "desc": "Colour, typography, spacing, grid, breakpoints, borders, radii, icons and logos.",
+      "items": [
+        { "title": "Colour", "href": "/foundations/colour.html", "type": "foundation", "phase": 2, "figma": "2-2307", "desc": "Primitive palette, semantic theme tokens and component colour tokens for light and dark." },
+        { "title": "Typography", "href": "/foundations/typography.html", "type": "foundation", "phase": 2, "figma": "0-1", "desc": "27 Tekion Sans text styles and how they scale across desktop, tablet and mobile." },
+        { "title": "Type in use", "href": "/foundations/type-in-use.html", "type": "foundation", "phase": 2, "figma": "1086-1512", "desc": "Which font files each team installs and how fonts ship on the web." },
+        { "title": "Spacing", "href": "/foundations/spacing.html", "type": "foundation", "phase": 2, "figma": "6-11804", "desc": "The 4px size scale, padding and gap tokens." },
+        { "title": "Grid & breakpoints", "href": "/foundations/grid.html", "type": "foundation", "phase": 2, "figma": "816-11377", "status": "WIP", "desc": "Containers, column card widths and the desktop, tablet and mobile breakpoints." },
+        { "title": "Borders & radii", "href": "/foundations/borders.html", "type": "foundation", "phase": 2, "desc": "Border widths and corner radius tokens." },
+        { "title": "Gradients", "href": "/foundations/gradients.html", "type": "foundation", "phase": 2, "figma": "513-1322", "status": "WIP", "desc": "Brand background and accent gradients." },
+        { "title": "Elevation", "href": "/foundations/elevation.html", "type": "foundation", "phase": 2, "status": "Not defined", "desc": "Shadows and layering. Not yet defined in Figma." },
+        { "title": "Motion", "href": "/foundations/motion.html", "type": "foundation", "phase": 2, "status": "Not defined", "desc": "Durations and easing. Not yet defined in Figma." },
+        { "title": "Logos", "href": "/foundations/logos.html", "type": "foundation", "phase": 2, "figma": "262-2463", "desc": "Tekion logo files, clear space and usage." },
+        { "title": "Icons", "href": "/foundations/icons.html", "type": "foundation", "phase": 2, "figma": "152-173", "desc": "The WDS icon set, sizes and colour tokens." }
+      ]
+    },
+    {
+      "id": "components", "title": "Components", "number": "03", "owner": "Design",
+      "desc": "Reusable UI components with variants, states, responsive and theme behaviour.",
+      "items": [
+        { "title": "Button", "href": "/components/button.html", "type": "component", "phase": 3, "figma": "26-2", "desc": "Primary, secondary, tertiary, link and icon buttons that trigger an action." },
+        { "title": "Input", "href": "/components/input.html", "type": "component", "phase": 3, "figma": "163-2", "desc": "Text fields and text areas for short and long answers." },
+        { "title": "Checkbox", "href": "/components/checkbox.html", "type": "component", "phase": 3, "figma": "1217-3730", "desc": "Lets people pick any number of options, or agree to a statement." },
+        { "title": "Radio button", "href": "/components/radio-button.html", "type": "component", "phase": 3, "figma": "1217-3731", "desc": "Lets people pick one option from a short list." },
+        { "title": "Header", "href": "/components/header.html", "type": "component", "phase": 3, "figma": "658-642", "desc": "Site navigation bar with logo, menu and primary call to action." },
+        { "title": "Banner", "href": "/components/banner.html", "type": "component", "phase": 3, "figma": "1008-1480", "desc": "A slim site-wide message above the header." }
+      ]
+    },
+    {
+      "id": "sections", "title": "Section layouts", "number": "04", "owner": "Marketing",
+      "desc": "Marketing page sections with placement, content limits and responsive layouts.",
+      "items": [
+        { "title": "Hero", "href": "/sections/hero.html", "type": "section", "phase": 4, "figma": "66-3", "desc": "The opening section of a page: headline, supporting copy, CTAs and media." },
+        { "title": "Card grid", "href": "/sections/card-grid.html", "type": "section", "phase": 4, "figma": "646-4626", "desc": "Two to five columns of cards for products, features or articles." },
+        { "title": "Feature", "href": "/sections/feature.html", "type": "section", "phase": 4, "figma": "649-6694", "desc": "Explains one capability with copy beside an image or video." },
+        { "title": "Accordion", "href": "/sections/accordion.html", "type": "section", "phase": 4, "figma": "646-4627", "desc": "Expandable rows that reveal detail on demand." },
+        { "title": "Carousel", "href": "/sections/carousel.html", "type": "section", "phase": 4, "figma": "646-4628", "desc": "A horizontally scrolling set of slides or cards." },
+        { "title": "Tabbed", "href": "/sections/tabbed.html", "type": "section", "phase": 4, "figma": "649-3546", "desc": "Switches between related content panels in one section." },
+        { "title": "Comparison", "href": "/sections/comparison.html", "type": "section", "phase": 4, "figma": "701-656", "desc": "Compares plans, products or before-and-after side by side." },
+        { "title": "Video", "href": "/sections/video.html", "type": "section", "phase": 4, "figma": "646-4629", "desc": "A full-width video player with controls." },
+        { "title": "Bento", "href": "/sections/bento.html", "type": "section", "phase": 4, "figma": "646-4630", "desc": "A mosaic of mixed-size tiles that summarise a product." },
+        { "title": "Testimonial", "href": "/sections/testimonial.html", "type": "section", "phase": 4, "figma": "646-4631", "desc": "Customer quotes with name, role and company." },
+        { "title": "Stats", "href": "/sections/stats.html", "type": "section", "phase": 4, "figma": "646-4632", "desc": "Large numbers that prove an outcome." },
+        { "title": "FAQ", "href": "/sections/faq.html", "type": "section", "phase": 4, "figma": "648-2615", "desc": "Common questions and short answers." },
+        { "title": "Footer", "href": "/sections/footer.html", "type": "section", "phase": 4, "figma": "648-2616", "desc": "Site-wide links, legal and social at the bottom of every page." },
+        { "title": "Pop-up", "href": "/sections/pop-up.html", "type": "section", "phase": 4, "figma": "649-3549", "desc": "A modal overlay for sign-ups, demos or announcements." },
+        { "title": "Legal content", "href": "/sections/legal-content.html", "type": "section", "phase": 4, "figma": "1024-310", "desc": "Long-form policy and terms pages." },
+        { "title": "Form", "href": "/sections/form.html", "type": "section", "phase": 4, "figma": "1295-2819", "desc": "Lead capture and contact forms." }
+      ]
+    },
+    {
+      "id": "content", "title": "Content guidelines", "number": "05", "owner": "Marketing",
+      "desc": "Voice and tone, headings, CTAs, character limits, alt text, localisation and SEO.",
+      "items": [
+        { "title": "Voice & tone", "href": "/content/voice-and-tone.html", "type": "content", "phase": 5, "desc": "How Tekion sounds on the web." },
+        { "title": "Headings", "href": "/content/headings.html", "type": "content", "phase": 5, "desc": "Heading levels, case and length." },
+        { "title": "CTA labels", "href": "/content/ctas.html", "type": "content", "phase": 5, "desc": "Writing button and link labels people act on." },
+        { "title": "Character limits", "href": "/content/character-limits.html", "type": "content", "phase": 5, "status": "Proposed", "desc": "Maximum length for every content slot, with a live checker." },
+        { "title": "Alt text", "href": "/content/alt-text.html", "type": "content", "phase": 5, "desc": "Describing images for people who can't see them." },
+        { "title": "Accessibility copy", "href": "/content/accessibility-copy.html", "type": "content", "phase": 5, "desc": "Link text, labels, errors and hidden text for assistive tech." },
+        { "title": "Localisation", "href": "/content/localisation.html", "type": "content", "phase": 5, "desc": "Writing copy that translates and fits." },
+        { "title": "SEO & metadata", "href": "/content/seo.html", "type": "content", "phase": 5, "desc": "Page titles, meta descriptions and social cards." }
+      ]
+    },
+    {
+      "id": "developers", "title": "Developer resources", "number": "06", "owner": "Development",
+      "desc": "Tokens, theming, responsive implementation, component APIs and browser support.",
+      "items": [
+        { "title": "Getting started", "href": "/developers/getting-started.html", "type": "dev", "phase": 6, "desc": "Add WDS tokens and styles to a page." },
+        { "title": "Design tokens", "href": "/developers/tokens.html", "type": "dev", "phase": 6, "desc": "Every token as CSS custom properties and JSON." },
+        { "title": "Theming", "href": "/developers/theming.html", "type": "dev", "phase": 6, "desc": "How light and dark mode are wired." },
+        { "title": "Responsive", "href": "/developers/responsive.html", "type": "dev", "phase": 6, "desc": "Breakpoints and how tokens change at each one." },
+        { "title": "Browser support", "href": "/developers/browser-support.html", "type": "dev", "phase": 6, "desc": "Supported browsers and known limitations." }
+      ]
+    },
+    {
+      "id": "templates", "title": "Page templates", "number": "07", "owner": "Design",
+      "desc": "Blank templates for documenting foundations, components, sections and content patterns.",
+      "items": [
+        { "title": "Foundation template", "href": "/templates/foundation.html", "type": "template", "phase": 6, "desc": "Copy this to document a new foundation." },
+        { "title": "Component template", "href": "/templates/component.html", "type": "template", "phase": 6, "desc": "Copy this to document a new component." },
+        { "title": "Section template", "href": "/templates/section.html", "type": "template", "phase": 6, "desc": "Copy this to document a new section layout." },
+        { "title": "Content pattern template", "href": "/templates/content-pattern.html", "type": "template", "phase": 6, "desc": "Copy this to document a new content guideline." }
+      ]
+    }
+  ]
+}

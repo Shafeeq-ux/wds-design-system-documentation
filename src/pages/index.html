@@ -1,0 +1,81 @@
+<!--meta {"title": "WDS 3.0", "desc": "Foundations, components, section layouts and content guidelines for building Tekion's marketing websites.", "layout": "home"} -->
+<section class="home-hero">
+  <p class="overline wds-overline wds-text-secondary">Tekion Website Design System</p>
+  <h1 class="wds-headline-1">One system for every Tekion web page</h1>
+  <p class="lede">WDS 3.0 is the shared set of foundations, components and section layouts that Design, Development and Marketing use to build tekion.com. Each page explains what to use, how it adapts from desktop to mobile, how it looks in light and dark, and how much copy each slot can hold.</p>
+  <div class="actions">
+    <a class="wds-btn wds-btn--primary" href="/foundations/colour.html">Explore foundations</a>
+    <a class="wds-btn wds-btn--secondary" href="/sections/hero.html">Browse sections</a>
+  </div>
+</section>
+
+<div class="stat-row" aria-label="WDS 3.0 at a glance">
+  <div><b>581</b><span>design tokens</span></div>
+  <div><b>27</b><span>text styles</span></div>
+  <div><b>6</b><span>components</span></div>
+  <div><b>16</b><span>section layouts</span></div>
+</div>
+
+<h2>What's in WDS 3.0</h2>
+<div class="card-grid">
+  <a class="doc-card" href="/overview/about.html"><span class="card-num">01</span><h3>Overview</h3><p>Purpose, principles, accessibility standards, contribution, governance and versioning.</p><span class="card-foot">Owner: Design</span></a>
+  <a class="doc-card" href="/foundations/colour.html"><span class="card-num">02</span><h3>Foundations</h3><p>Colour, typography, spacing, grid, breakpoints, borders, radii, icons and logos.</p><span class="card-foot">Owner: Design</span></a>
+  <a class="doc-card" href="/components/button.html"><span class="card-num">03</span><h3>Components</h3><p>Button, input, checkbox, radio, header and banner, with variants, states and theme behaviour.</p><span class="card-foot">Owner: Design · Development</span></a>
+  <a class="doc-card" href="/sections/hero.html"><span class="card-num">04</span><h3>Section layouts</h3><p>Hero, feature, card grid, stats, FAQ, footer and 10 more, with content limits per slot.</p><span class="card-foot">Owner: Marketing · Design</span></a>
+  <a class="doc-card" href="/content/character-limits.html"><span class="card-num">05</span><h3>Content guidelines</h3><p>Voice and tone, headings, CTA labels, character limits, alt text, localisation and SEO.</p><span class="card-foot">Owner: Marketing</span></a>
+  <a class="doc-card" href="/developers/getting-started.html"><span class="card-num">06</span><h3>Developer resources</h3><p>Tokens as CSS and JSON, theming, responsive implementation and browser support.</p><span class="card-foot">Owner: Development</span></a>
+  <a class="doc-card" href="/templates/component.html"><span class="card-num">07</span><h3>Page templates</h3><p>Blank templates for documenting a new foundation, component, section or content pattern.</p><span class="card-foot">Owner: Design</span></a>
+</div>
+
+<h2>Every page adapts and themes</h2>
+<p>Each component and section has a live preview. Switch the viewport to see the tablet and mobile layout, and switch the theme to check light and dark. The theme buttons in the top bar change the whole site.</p>
+<div class="doc-preview" data-src="/examples/hero-default.html" data-title="Hero · default"></div>
+
+<h2>Who owns what</h2>
+<div class="owners">
+  <div class="doc-card">
+    <h3>Design</h3>
+    <p>Owns the system and keeps it true to Figma.</p>
+    <ul>
+      <li>Foundations, visual rules and interaction principles</li>
+      <li>Approved patterns and component anatomy</li>
+      <li>Figma references, states and accessibility expectations</li>
+    </ul>
+  </div>
+  <div class="doc-card">
+    <h3>Development</h3>
+    <p>Builds from the component pages and keeps technical detail current.</p>
+    <ul>
+      <li>Responsive views and light and dark theme handling</li>
+      <li>Asset links, code references and known limitations</li>
+      <li>Accessibility implementation notes</li>
+    </ul>
+  </div>
+  <div class="doc-card">
+    <h3>Marketing</h3>
+    <p>Composes pages and writes to the content limits.</p>
+    <ul>
+      <li>Section layouts and page composition</li>
+      <li>Content writing, campaign messaging and character limits</li>
+      <li>Approved examples, CTA guidance and asset usage notes</li>
+    </ul>
+  </div>
+</div>
+
+<h2>Page status</h2>
+<div class="table-wrap">
+  <table>
+    <thead><tr><th scope="col">Status</th><th scope="col">Meaning</th></tr></thead>
+    <tbody>
+      <tr><td><span class="badge badge-ok">Stable</span></td><td>Matches Figma and is approved for use.</td></tr>
+      <tr><td><span class="badge badge-warn">WIP</span></td><td>Still changing in Figma. Use it, but check back before launch.</td></tr>
+      <tr><td><span class="badge badge-info">Proposed</span></td><td>A recommendation waiting for cross-functional sign-off.</td></tr>
+      <tr><td><span class="badge badge-muted">Planned</span></td><td>On the roadmap and not written yet.</td></tr>
+      <tr><td><span class="badge badge-muted">Not defined</span></td><td>Not yet designed in Figma.</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="callout">
+  <p><strong>Governance.</strong> Update the relevant page before releasing any WDS 3.0 change broadly. A change that affects visual design, behaviour, accessibility or content limits needs cross-functional review.</p>
+</div>
