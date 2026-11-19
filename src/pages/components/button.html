@@ -1,64 +1,93 @@
 <!--meta {"status": "Stable"} -->
-<div class="callout callout-warn"><p><strong>Figma has a newer Button.</strong> Design rebuilt the component with Hierarchy (Primary, Secondary, Tertiary, Link), Tone, Surface (Default, On media), three sizes (56, 44 and 32px) and six states, including Focus and Loading, plus a separate IconButton. This page and the CSS still document the earlier 28-variant button until they are updated.</p></div>
 <h2>Overview</h2>
-<p>Buttons trigger an action or move people to the next step. WDS has seven types in one Figma component set, each in four states: Default, Hover, Pressed and Disabled (28 variants).</p>
+<p>Buttons trigger an action or move people to the next step. WDS has two Figma component sets. <strong>Button</strong> (125 variants) is a labelled button set by five properties: Hierarchy, Tone, Surface, Size and State. <strong>IconButton</strong> (54 variants) is an icon-only circle. See <a href="#iconbutton">IconButton</a>.</p>
 <div class="table-wrap">
   <table>
-    <thead><tr><th scope="col">Type</th><th scope="col">Use for</th><th scope="col">Size</th></tr></thead>
+    <thead><tr><th scope="col">Hierarchy</th><th scope="col">Use for</th><th scope="col">Shape</th></tr></thead>
     <tbody>
-      <tr><td><strong>Primary</strong></td><td>The single most important action in a section, such as "Request a Demo".</td><td class="num">56px high, pill</td></tr>
-      <tr><td><strong>Secondary</strong></td><td>An alternative next to a primary button, such as "See the Platform".</td><td class="num">56px high, pill, 2px border</td></tr>
-      <tr><td><strong>Tertiary</strong></td><td>A lighter action inside cards, banners and lists.</td><td class="num">Label + 24px circle</td></tr>
-      <tr><td><strong>Link</strong></td><td>Navigation in running text or between pages ("Previous", "Read More").</td><td class="num">16px high</td></tr>
-      <tr><td><strong>Icon large / medium / small</strong></td><td>A compact action with a familiar icon: menu, play, carousel arrows.</td><td class="num">56 / 40 / 32px circles</td></tr>
+      <tr><td><strong>Primary</strong></td><td>The single most important action in a view, such as "Request a Demo".</td><td>Pill, no border</td></tr>
+      <tr><td><strong>Secondary</strong></td><td>An alternative next to a primary button, such as "See the Platform".</td><td>Pill, 2px border</td></tr>
+      <tr><td><strong>Tertiary</strong></td><td>A lighter action inside cards, banners and lists.</td><td>Label and an arrow in a circle</td></tr>
+      <tr><td><strong>Link</strong></td><td>Navigation in running text or between pages ("Previous", "Read More").</td><td>Label, optional arrows</td></tr>
+    </tbody>
+  </table>
+</div>
+<div class="table-wrap">
+  <table>
+    <thead><tr><th scope="col">Property</th><th scope="col">Options</th><th scope="col">What it does</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Tone</strong></td><td>Brand, Neutral</td><td>Primary only. <strong>Brand</strong> is the blue image fill; use it once per view. <strong>Neutral</strong> is solid: <code>gray-800</code> with white text in light mode, white with dark text in dark mode. Secondary, Tertiary and Link are always Neutral.</td></tr>
+      <tr><td><strong>Surface</strong></td><td>Default, On media</td><td><strong>On media</strong> fixes the colours to white and glass, so a button stays readable over a photo or video. Put a blur or scrim behind it. Primary on media is solid white. Secondary on media is glass with a background blur. Link has no On media version.</td></tr>
+      <tr><td><strong>Size</strong></td><td>Large, Medium, Small</td><td>Primary and Secondary are 56, 44 and 32px high. Tertiary is 24, 20 and 16px. Link has one size (16px).</td></tr>
+      <tr><td><strong>State</strong></td><td>Default, Hover, Pressed, Focus, Loading, Disabled</td><td>Tertiary and Link have no Loading state.</td></tr>
     </tbody>
   </table>
 </div>
 
 <h2>Variants and states</h2>
-<p>Hover over the live buttons to see the real interactions. The Hover and Pressed columns are forced so you can compare them side by side.</p>
-<div class="doc-preview" data-src="/examples/buttons.html" data-title="Button · all types and states"></div>
+<p>Hover over and tab through the live buttons to see the real interactions. The Hover, Pressed and Focus columns are forced, so you can compare them side by side. Switch the preview to dark to see each theme.</p>
+<div class="doc-preview" data-src="/examples/buttons.html" data-title="Button and IconButton · every hierarchy, tone, surface, size and state"></div>
 <ul>
-  <li><strong>Primary</strong> uses an image fill (blurred blue and purple "aurora" blobs) for Default, Hover and Pressed. On hover a frosted blur follows the pointer. On press the blur switches off so the colours snap sharp, which makes the button feel pushed in.</li>
-  <li><strong>Secondary</strong> fills with <code>btn-secondary-bg-hover</code> and darkens its border on hover, then deepens on press.</li>
-  <li><strong>Tertiary and Link</strong> darken the label on hover. Link also underlines.</li>
+  <li><strong>Primary · Brand</strong> uses an image fill (blurred blue and purple "aurora" blobs) for Default, Hover, Pressed, Focus and Loading. On hover a frosted blur follows the pointer. On press the blur switches off so the colours snap sharp, which makes the button feel pushed in.</li>
+  <li><strong>Primary · Neutral</strong> darkens on hover (<code>btn-primary-bg-hover</code>) and again on press (<code>btn-primary-bg-active</code>).</li>
+  <li><strong>Secondary</strong> fills with <code>btn-secondary-bg-hover</code> and darkens its border on hover, then deepens on press. On media, the glass fill gets stronger on hover and press.</li>
+  <li><strong>Tertiary</strong> darkens the label and the circle on hover and press. On media, it dims to 72% opacity on press.</li>
+  <li><strong>Link</strong> darkens the label and underlines it on hover.</li>
+  <li><strong>Focus</strong> adds a 2px ring 2px outside the button, in <code>btn-focus-ring</code>, or <code>btn-media-focus-ring</code> (white) on media. On Tertiary and Link the ring sits 4px above and below and 8px to each side, with 8px corners.</li>
+  <li><strong>Loading</strong> keeps the button's size and colours, hides the label and shows a spinner in the label colour: 18px on labelled buttons and 20px on icon buttons.</li>
   <li><strong>Disabled</strong> removes every effect and uses flat, muted colours.</li>
 </ul>
 
 <h2>Anatomy</h2>
 <div class="table-wrap">
   <table>
-    <thead><tr><th scope="col">Type</th><th scope="col">Structure</th><th scope="col">Spacing</th></tr></thead>
+    <thead><tr><th scope="col">Part</th><th scope="col">Structure</th><th scope="col">Spacing</th></tr></thead>
     <tbody>
-      <tr><td>Primary, Secondary</td><td>Pill container → optional 16px left icon → Label → optional 16px right icon</td><td>24px horizontal, 8px vertical padding · 8px gap</td></tr>
-      <tr><td>Tertiary</td><td>Label → 24px circle holding a 12px glyph</td><td>No padding · 6px gap</td></tr>
+      <tr><td>Primary, Secondary</td><td>Pill container → optional 16px left icon → Label → optional 16px right icon</td><td>8px vertical padding. Horizontal padding is 24px for Large, 20px for Medium and 16px for Small. 8px gap.</td></tr>
+      <tr><td>Tertiary</td><td>Label → circle holding a glyph: 24px circle and 12px glyph for Large, 20 and 10px for Medium, 16 and 8px for Small</td><td>No padding · 6px gap</td></tr>
       <tr><td>Link</td><td>Optional 16px icon → Label → optional 16px icon</td><td>No padding · 6px gap</td></tr>
-      <tr><td>Icon-only</td><td>Circle → one swappable glyph (24, 20 or 12px)</td><td>8px padding</td></tr>
+      <tr><td>Focus ring</td><td>2px outline outside the container</td><td>2px offset. Tertiary and Link: 4px vertical, 8px horizontal.</td></tr>
+      <tr><td>Spinner</td><td>A three-quarter ring, centred where the label was</td><td>18px, 2px thick</td></tr>
     </tbody>
   </table>
 </div>
-<p>The Figma specimens are 207px wide, but that's an example width, not a fixed one. Buttons hug their label.</p>
+<p>Every label uses the <code>button</code> text style (14px / 16px, Medium, 110% width) at every size. The Figma specimens are 207px wide, but that's an example width, not a fixed one. Buttons hug their label.</p>
+
+<h2 id="iconbutton">IconButton</h2>
+<p>An icon-only circle for familiar actions: menu, play, mute and carousel arrows. It has its own component set in Figma.</p>
+<div class="table-wrap">
+  <table>
+    <thead><tr><th scope="col">Property</th><th scope="col">Options</th><th scope="col">Notes</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Size</strong></td><td>Large 56, Medium 40, Small 32</td><td>Glyphs are 24, 20 and 12px, with 8px padding. Small is a 32px circle; give it a 44px touch target where you can.</td></tr>
+      <tr><td><strong>Tone · Surface</strong></td><td>Neutral on Default; Neutral (white) or Glass on media</td><td>Neutral on Default is a dark circle with a light glyph in light mode, and the reverse in dark mode. On media, Neutral is solid white and Glass is a translucent circle with a 1px border and a background blur.</td></tr>
+      <tr><td><strong>State</strong></td><td>Default, Hover, Pressed, Focus, Loading, Disabled</td><td>Loading hides the glyph and shows a 20px spinner.</td></tr>
+    </tbody>
+  </table>
+</div>
+<p>Every icon-only button needs an accessible name, such as <code>aria-label="Play video"</code>.</p>
 
 <h2>Design guidance</h2>
 <div class="do-dont">
-  <div class="do"><h3>Do</h3><ul><li>Use one primary button per section.</li><li>Pair primary with secondary, primary first (left, or on top on mobile).</li><li>Use tertiary or link inside cards so the section's main CTA stays clear.</li><li>Use icon-only buttons only for icons people already know.</li></ul></div>
-  <div class="dont"><h3>Don't</h3><ul><li>Put two primary buttons side by side.</li><li>Recreate the primary fill with a CSS gradient. Use the image asset.</li><li>Use a button for navigation to another page in running text. Use a link.</li><li>Disable a button without telling people why the action isn't available.</li></ul></div>
+  <div class="do"><h3>Do</h3><ul><li>Use one Brand primary per view. Use Primary · Neutral when a second strong action is needed.</li><li>Pair primary with secondary, primary first (left, or on top on mobile).</li><li>Use the On media surface for buttons over photos and video, with a blur or scrim behind them.</li><li>Use Medium and Small in dense places such as cards, tables and banners. Keep Large for section CTAs.</li><li>Use tertiary or link inside cards so the section's main CTA stays clear.</li></ul></div>
+  <div class="dont"><h3>Don't</h3><ul><li>Put two Brand primary buttons side by side.</li><li>Recreate the Brand fill with a CSS gradient. Use the image asset.</li><li>Use Default-surface buttons on imagery. Their colours aren't designed for it.</li><li>Disable a button without telling people why the action isn't available.</li><li>Leave a button in Loading with no other feedback. Announce the result when it finishes.</li></ul></div>
 </div>
 
 <h2>Responsive behaviour</h2>
 <ul>
-  <li>Button sizes don't change between breakpoints. Primary and secondary stay 56px high, which also suits touch.</li>
+  <li>Button sizes don't change between breakpoints. Choose the size for the context: Large for section CTAs, which also suits touch.</li>
   <li>In a CTA group (<code>.wds-actions</code>), buttons sit side by side on desktop and tablet with a 16px gap, and stack full-width on mobile (767px and below).</li>
   <li>Labels never wrap. If a label doesn't fit at 342px, shorten it. See <a href="#microcopy-and-limits">Microcopy and limits</a>.</li>
 </ul>
 
 <h2>Light and dark theme</h2>
 <ul>
-  <li><strong>Primary</strong> keeps the same image and white label in both themes.</li>
+  <li><strong>Primary · Brand</strong> keeps the same image and white label in both themes.</li>
+  <li><strong>Primary · Neutral</strong> inverts: <code>gray-800</code> with white text in light mode, white with dark text in dark mode.</li>
   <li><strong>Secondary, tertiary and link</strong> invert: dark text and borders in light mode, white in dark mode.</li>
-  <li><strong>Icon-only</strong> buttons are dark circles with light glyphs in light mode, and light circles with dark glyphs in dark mode.</li>
+  <li><strong>On media</strong> buttons don't change with the theme. They're always white or glass, because they sit on imagery, not on the page.</li>
+  <li><strong>IconButton · Neutral</strong> is a dark circle with a light glyph in light mode, and a light circle with a dark glyph in dark mode.</li>
 </ul>
-<div class="callout callout-warn"><p><strong>Token mismatch.</strong> The <code>btn-primary-*</code> colour tokens describe a dark-gray button with white text (and white on white in dark mode). The Figma component doesn't use them for its fill: it uses the image. The CSS follows the component. The tokens should be updated or removed. See <a href="/foundations/colour.html#known-issues">Known issues</a>.</p></div>
 
 <h2>Microcopy and limits</h2>
 <div class="table-wrap">
@@ -82,24 +111,35 @@
 
 <h2>Token map</h2>
 <p>Every layer in this component that uses a Figma variable, taken from the Figma file. Select a layer on the image, or in the list, to see its colour, text, spacing and border variables, their CSS names and values, and the CSS to use. Padding is shaded pink and gaps are striped. Use <strong>Issues</strong> to find values that aren't tokenised yet.</p>
-<p>All 28 variants are shown. Found in Figma: the primary button background is an image fill, not a colour variable, and the tertiary button's icon circle has a hardcoded 6px padding.</p>
+<p>All 125 Button variants are shown. Found in Figma: the Brand primary background is an image fill, not a colour variable. The 8px gap between icon and label on Primary and Secondary is hardcoded. So is the padding inside the Tertiary circle (6, 5 and 4px by size), and the focus rings' corner radii (9999px and 8px) aren't tokenised.</p>
 <!--wds:token-map button-->
 
 <h2>Developer implementation</h2>
-<pre><code>&lt;!-- Action --&gt;
+<pre><code>&lt;!-- Primary · Brand (default tone, surface and size) --&gt;
 &lt;button class="wds-btn wds-btn--primary" type="button"&gt;Request a Demo&lt;/button&gt;
 
-&lt;!-- Navigation: same look, link semantics --&gt;
-&lt;a class="wds-btn wds-btn--secondary" href="/platform"&gt;See the platform&lt;/a&gt;
+&lt;!-- Primary · Neutral, Medium --&gt;
+&lt;button class="wds-btn wds-btn--primary wds-btn--neutral wds-btn--md" type="button"&gt;Get Started&lt;/button&gt;
 
-&lt;!-- Tertiary with its circle --&gt;
-&lt;a class="wds-btn wds-btn--tertiary" href="/terms"&gt;
+&lt;!-- Navigation: same look, link semantics --&gt;
+&lt;a class="wds-btn wds-btn--secondary" href="/platform"&gt;See the Platform&lt;/a&gt;
+
+&lt;!-- On media: over a photo or video --&gt;
+&lt;a class="wds-btn wds-btn--secondary wds-btn--on-media" href="/video"&gt;Watch the Video&lt;/a&gt;
+
+&lt;!-- Tertiary with its circle, Small --&gt;
+&lt;a class="wds-btn wds-btn--tertiary wds-btn--sm" href="/terms"&gt;
   Terms &amp;amp; Conditions
   &lt;span class="wds-btn__circle"&gt;&lt;svg aria-hidden="true"&gt;…&lt;/svg&gt;&lt;/span&gt;
 &lt;/a&gt;
 
-&lt;!-- Icon-only needs a name --&gt;
-&lt;button class="wds-btn wds-btn--icon-m" type="button" aria-label="Open menu"&gt;
+&lt;!-- Loading: keep the label for its width, add the spinner --&gt;
+&lt;button class="wds-btn wds-btn--primary" type="button" aria-busy="true"&gt;
+  Submit&lt;span class="wds-btn__spinner" aria-hidden="true"&gt;&lt;/span&gt;
+&lt;/button&gt;
+
+&lt;!-- IconButton: needs a name. Glass on media. --&gt;
+&lt;button class="wds-btn wds-btn--icon-m wds-btn--glass" type="button" aria-label="Play video"&gt;
   &lt;svg aria-hidden="true"&gt;…&lt;/svg&gt;
 &lt;/button&gt;
 
@@ -107,41 +147,46 @@
 &lt;button class="wds-btn wds-btn--primary" type="button" aria-disabled="true"&gt;Submit&lt;/button&gt;</code></pre>
 <div class="table-wrap">
   <table>
-    <thead><tr><th scope="col">Class</th><th scope="col">Figma variant</th></tr></thead>
+    <thead><tr><th scope="col">Class or attribute</th><th scope="col">Figma property</th></tr></thead>
     <tbody>
-      <tr><td><code>.wds-btn--primary</code></td><td>Type=Primary</td></tr>
-      <tr><td><code>.wds-btn--secondary</code></td><td>Type=Secondary</td></tr>
-      <tr><td><code>.wds-btn--tertiary</code> + <code>.wds-btn__circle</code></td><td>Type=Tertiary</td></tr>
-      <tr><td><code>.wds-btn--link</code></td><td>Type=Link</td></tr>
-      <tr><td><code>.wds-btn--icon-l</code> / <code>-m</code> / <code>-s</code></td><td>Type=Icon Large / Medium / Small</td></tr>
+      <tr><td><code>.wds-btn--primary</code> / <code>--secondary</code> / <code>--tertiary</code> + <code>.wds-btn__circle</code> / <code>--link</code></td><td>Hierarchy</td></tr>
+      <tr><td><code>.wds-btn--neutral</code> (with <code>--primary</code>)</td><td>Tone=Neutral. Leave it off for Brand.</td></tr>
+      <tr><td><code>.wds-btn--on-media</code></td><td>Surface=On media</td></tr>
+      <tr><td><code>.wds-btn--md</code> / <code>.wds-btn--sm</code></td><td>Size=Medium / Small. Leave it off for Large.</td></tr>
+      <tr><td><code>:hover</code>, <code>:active</code>, <code>:focus-visible</code></td><td>State=Hover / Pressed / Focus</td></tr>
+      <tr><td><code>aria-busy="true"</code> + <code>.wds-btn__spinner</code></td><td>State=Loading</td></tr>
+      <tr><td><code>aria-disabled="true"</code></td><td>State=Disabled</td></tr>
+      <tr><td><code>.wds-btn--icon-l</code> / <code>-m</code> / <code>-s</code>, plus <code>.wds-btn--on-media</code> or <code>.wds-btn--glass</code></td><td>IconButton: Size, and Tone · Surface</td></tr>
     </tbody>
   </table>
 </div>
-<p>Load <code>js/wds.js</code> for the primary button's pointer-following hover. Without it the blur still appears, centred.</p>
+<p>Load <code>js/wds.js</code> for the Brand primary's pointer-following hover. Without it the blur still appears, centred. The docs-only classes <code>.is-hover</code>, <code>.is-pressed</code> and <code>.is-focus</code> force a state for static specimens.</p>
 <h3>Interaction timing</h3>
 <p>From the Figma dev handoff: Default → Hover 150ms ease-out, Hover → Default 100ms ease-in, Hover → Pressed instant, Pressed → Default 200ms ease-out. Changes to and from Disabled are instant.</p>
 <h3>Tokens</h3>
+<!--wds:theme components/button-primary/-->
 <!--wds:theme components/button-secondary/-->
 <!--wds:theme components/button-tertiary/-->
 <!--wds:theme components/button-link/-->
 <!--wds:theme components/button-icon/-->
-<p>Media buttons sit on video and imagery, so they use static white in both themes:</p>
+<p>On media buttons sit on video and imagery, so they use static white and glass in both themes:</p>
 <!--wds:theme components/button-media/-->
 
 <h2>Accessibility</h2>
 <ul>
   <li><strong>Semantics</strong>: use <code>&lt;button&gt;</code> for actions and <code>&lt;a href&gt;</code> for navigation, even when they look the same (WCAG 4.1.2).</li>
-  <li><strong>Focus visible</strong>: a 2px <code>#47a5ff</code> ring 2px outside the button. This is proposed in the Figma handoff, because Figma has no Focus variant (WCAG 2.4.7).</li>
+  <li><strong>Focus visible</strong>: the Figma Focus state is a 2px ring 2px outside the button, in <code>btn-focus-ring</code> (gray-800 in light mode, white in dark mode) or white on media (WCAG 2.4.7). Use <code>:focus-visible</code>, so it shows for keyboard users.</li>
+  <li><strong>Loading</strong>: set <code>aria-busy="true"</code> and keep the label in the markup, so the accessible name stays. Stop repeat clicks, and announce the outcome in a live region when the action finishes.</li>
   <li><strong>Keyboard</strong>: Enter and Space activate buttons; Enter activates links (WCAG 2.1.1).</li>
-  <li><strong>Target size</strong>: tertiary, link and small icon buttons get an invisible hit area of at least 24px (WCAG 2.5.8). Aim for 44px on touch.</li>
+  <li><strong>Target size</strong>: tertiary, link and small icon buttons get an invisible hit area of at least 24px (WCAG 2.5.8). Small buttons are 32px high. Aim for 44px on touch.</li>
   <li><strong>Disabled</strong>: use <code>aria-disabled="true"</code> so the button stays in the tab order, and stop its click handler.</li>
   <li><strong>Label in name</strong>: an icon-only button's <code>aria-label</code> must describe the action. A visible label must be part of the accessible name (WCAG 2.5.3).</li>
-  <li><strong>Contrast</strong>: the white primary label is 5.5–6.8:1 on the deep blue at the left and centre of the image, but only 2.8:1 on the light blue at the right edge. Keep labels short so they sit on the darker part of the fill.</li>
+  <li><strong>Contrast</strong>: the white Brand primary label is 5.5–6.8:1 on the deep blue at the left and centre of the image, but only 2.8:1 on the light blue at the right edge. Keep labels short so they sit on the darker part of the fill.</li>
 </ul>
 
 <h2>Figma, asset and code references</h2>
 <ul>
-  <li><a href="https://www.figma.com/design/lf5SOxUpWBtO8AIzXf6snw/WDS-3.0?node-id=105-3" target="_blank" rel="noopener">Button component set (105:3)</a></li>
+  <li><a href="https://www.figma.com/design/lf5SOxUpWBtO8AIzXf6snw/WDS-3.0?node-id=105-3" target="_blank" rel="noopener">Button component set (105:3)</a> and <a href="https://www.figma.com/design/lf5SOxUpWBtO8AIzXf6snw/WDS-3.0?node-id=1521-202" target="_blank" rel="noopener">IconButton component set (1521:202)</a></li>
   <li><a href="https://www.figma.com/design/lf5SOxUpWBtO8AIzXf6snw/WDS-3.0?node-id=862-209" target="_blank" rel="noopener">Primary Button dev handoff</a>: states, effects and timing</li>
   <li><a href="/assets/img/btn-primary-bg.png" download>Primary fill image</a> (828 × 224, 4×)</li>
   <li>Code: <code>css/wds.css</code> (Button section) and <code>js/wds.js</code></li>
@@ -149,9 +194,11 @@
 
 <h2>Acceptance checklist</h2>
 <ul>
-  <li>Primary uses the image fill, not a gradient, and shows the hover blur.</li>
-  <li>Every type has Default, Hover, Pressed and Disabled, in light and dark.</li>
-  <li>Focus ring is visible on every type.</li>
+  <li>Brand primary uses the image fill, not a gradient, and shows the hover blur. There's only one per view.</li>
+  <li>Every hierarchy has Default, Hover, Pressed, Focus and Disabled in light and dark, plus Loading for Primary, Secondary and IconButton.</li>
+  <li>Buttons over imagery use the On media surface.</li>
+  <li>The focus ring shows on keyboard focus for every button.</li>
+  <li>Loading buttons use <code>aria-busy</code>, keep their width and ignore repeat clicks.</li>
   <li>Icon-only buttons have an accessible name.</li>
   <li>Disabled buttons use <code>aria-disabled</code> and do nothing on click.</li>
   <li>CTA groups stack at 767px and below.</li>

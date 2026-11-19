@@ -78,8 +78,7 @@
   <p><strong>Raise these with Design before the related components ship.</strong></p>
 </div>
 <ul>
-  <li><strong>Primary button in dark mode is unreadable.</strong> <code>btn-primary-bg-default</code> is <code>#ffffff</code> and <code>btn-primary-text-default</code> is also <code>#ffffff</code> (1:1). The dark text value should probably be <code>gray-800</code>.</li>
-  <li><strong>Primary button colour doesn't match its token.</strong> Figma draws the primary button with a blue gradient, but the token is <code>gray-800</code>. One of them needs to change.</li>
+  <li><strong>Resolved in Figma (November 2026): primary button colours.</strong> The rebuilt Button splits Primary into two tones. Brand uses the image fill with <code>btn-primary-text-default</code>. Neutral uses <code>btn-primary-bg-*</code> with <code>text-inverse</code>, so it's dark gray with white text in light mode and white with dark text in dark mode. <code>btn-primary-text-default</code> is still <code>#ffffff</code> in dark mode, so use it only on the Brand fill.</li>
   <li><strong>Teal text fails on light backgrounds.</strong> <code>text-teal</code> (<code>teal-500</code>) is 2.22:1 on white. Use it only on dark backgrounds or for large decorative type, or point the light value at <code>teal-700</code> (5.68:1).</li>
   <li><strong>Error text is just under AA in light mode.</strong> <code>status-error-text</code> on <code>status-error-bg</code> is 4.39:1. Use <code>status-error-text-strong</code> for small text.</li>
   <li><strong>Input borders are too faint to identify a field.</strong> <code>border-default</code> is about 1.4:1 against the page. WCAG 1.4.11 needs 3:1 for the visual boundary of a control. Even <code>border-strong</code> is only 1.82:1, so field borders need <code>gray-400</code> (3.22:1) in light and <code>gray-500</code> (3.64:1) in dark.</li>
