@@ -1,5 +1,5 @@
 {
- "_note": "Section sets and content slots from the Figma section pages (inventoried 2026-10-17). Slot = [label, text style, desktop width px, max lines on desktop]. Limits are calculated by scripts/shortcodes.mjs.",
+ "_note": "Section sets and content slots from the Figma section pages (inventoried 2026-11-19). Slot = [label, text style, desktop width px, max lines on desktop]. Limits are calculated by scripts/shortcodes.mjs.",
  "hero": {
   "sets": [
    [
@@ -43,6 +43,30 @@
     "970-5738",
     "light",
     "Headline and CTAs above three numbered steps"
+   ],
+   [
+    "hero-event",
+    "1624-12027",
+    "dark",
+    "Event details with dates and venue, a booth label, session tabs and a full-width photo"
+   ],
+   [
+    "hero-grid",
+    "1491-64298",
+    "light",
+    "Centred headline, copy and CTA over a grid with scattered photos"
+   ],
+   [
+    "hero-bg-image-fullbleed",
+    "1491-64302",
+    "dark",
+    "Headline and copy over a full-bleed background photo"
+   ],
+   [
+    "hero-fullbleed",
+    "1552-14560",
+    "dark",
+    "Centred headline and one CTA over full-bleed artwork"
    ]
   ],
   "slots": [
@@ -160,6 +184,42 @@
     "1115-485",
     "light",
     "One featured item and three cards"
+   ],
+   [
+    "card-grid-team-grid",
+    "1491-64334",
+    "light",
+    "Leadership portraits with name and title, intro copy and a CTA"
+   ],
+   [
+    "card-grid-speakers-grid",
+    "1643-15043",
+    "light",
+    "Speaker portraits in a 4-column grid, without intro copy"
+   ],
+   [
+    "card-grid-team-grid-expanded",
+    "1500-1074",
+    "light",
+    "The full team grid, with every leader"
+   ],
+   [
+    "card-grid-logos-compact",
+    "1491-64330",
+    "light",
+    "Investor or partner logos in a single-row grid"
+   ],
+   [
+    "card-grid-logos-expanded",
+    "1491-64342",
+    "light",
+    "A large logo wall, such as certified OEMs"
+   ],
+   [
+    "card-grid-cards-grid8",
+    "1491-64318",
+    "light",
+    "Eight award cards, each with a badge and caption"
    ]
   ],
   "slots": [
@@ -227,6 +287,12 @@
     "1190-899",
     "light",
     "A single large statement in Headline 2 Regular"
+   ],
+   [
+    "feature-split-image-right",
+    "1491-64322",
+    "light",
+    "Headline, copy and a link beside an image"
    ]
   ],
   "slots": [
@@ -281,6 +347,12 @@
     "618-5932",
     "light",
     "Role-based rows that open into icon lists"
+   ],
+   [
+    "accordion-multi-image",
+    "1360-161",
+    "light",
+    "Accordion with a different image for each item; stacks with an image per item on tablet and mobile"
    ]
   ],
   "slots": [
@@ -336,6 +408,18 @@
     "1174-638",
     "light",
     "Feature cards that scroll sideways"
+   ],
+   [
+    "carousel-timeline",
+    "1491-64338",
+    "light",
+    "Year-by-year timeline with a photo, year picker and milestone copy"
+   ],
+   [
+    "carousel-feature",
+    "1552-14572",
+    "dark",
+    "Horizontal feature panels with image and copy, and a progress bar"
    ]
   ],
   "slots": [
@@ -475,6 +559,12 @@
     "618-8345",
     "light",
     "Video player only, with controls"
+   ],
+   [
+    "video-contained",
+    "1552-14568",
+    "dark",
+    "Title and copy, a contained video frame, closing copy and a CTA"
    ]
   ],
   "slots": [
@@ -517,6 +607,18 @@
     "1213-2484",
     "light",
     "One intro tile with CTA and four feature tiles"
+   ],
+   [
+    "bento-long",
+    "1387-23584",
+    "dark",
+    "Long workflow page: step tabs, two video demos and feature grids"
+   ],
+   [
+    "bento-5card",
+    "1491-64310",
+    "light",
+    "Values statement above five icon cards"
    ]
   ],
   "slots": [
@@ -571,6 +673,18 @@
     "1115-451",
     "light",
     "A grid of short text quotes"
+   ],
+   [
+    "testimonial-quote-image",
+    "1491-64306",
+    "light",
+    "A large quote with attribution beside a speaker photo"
+   ],
+   [
+    "testimonial-carousel",
+    "1491-64314",
+    "light",
+    "Headline and CTA above a video testimonial carousel"
    ]
   ],
   "slots": [
@@ -819,6 +933,12 @@
     "1245-10079",
     "dark",
     "Product overview with stats and an image"
+   ],
+   [
+    "pop-up-leader-bio",
+    "1503-2402",
+    "light",
+    "Leader bio with portrait, title and paging between leaders"
    ]
   ],
   "slots": [
@@ -928,6 +1048,12 @@
     "1115-501",
     "dark",
     "Content blocks beside a sign-up form card"
+   ],
+   [
+    "form-split",
+    "1552-14576",
+    "dark",
+    "Signup form beside a brand panel with artwork"
    ]
   ],
   "slots": [

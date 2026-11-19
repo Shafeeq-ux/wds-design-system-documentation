@@ -2,15 +2,23 @@
 <p>Every change to WDS 3.0 and its documentation, newest first. Add an entry with every release (see <a href="/overview/governance.html#versioning">Versioning</a>).</p>
 
 <h2>3.0.2 · 19 November 2026</h2>
-<p>Tokens re-synced from Figma. 617 tokens, up from 581.</p>
+<p>Tokens, section renders and component renders re-synced from Figma. 617 tokens, up from 581, and 76 section variants, up from 55.</p>
 <ul>
   <li><strong>New colour tokens</strong> for components in progress: chip (13), media button (14), breadcrumb (6), and a focus ring for the primary button.</li>
   <li><strong>New spacing tokens</strong>: <code>--wds-padding-button-padding-x-md</code> (20px) and <code>--wds-padding-button-padding-x-sm</code> (16px).</li>
   <li><strong>Fixed</strong>: disabled link-button text and icon in dark mode are now <code>#636b78</code>. They were <code>#f5f7fa</code>, which looked enabled.</li>
   <li><strong>Changed</strong>: body-3-medium's line height on mobile is now 22px, down from 24px.</li>
+  <li><strong>21 new section variants</strong>: Hero event, grid, background image full-bleed and full-bleed; Card grid team, speakers, team expanded, logos compact, logos expanded and cards grid8; Feature split image right; Accordion multi image; Carousel timeline and feature; Video contained; Bento long and 5card; Testimonial quote image and carousel; Pop-up leader bio; Form split.</li>
+  <li><strong>Section renders</strong>: all 76 re-exported from Figma. 19 existing variants had design changes, including Hero default, FAQ, Tabbed 2-column, Stats platform 3 and Legal implementation terms.</li>
+  <li><strong>Component renders</strong>: Header and Banner re-exported. The banner image now shows only the two banner sets.</li>
+  <li><strong>Token maps</strong> re-extracted where the Figma variant changed: Hero default, FAQ, Header, Video AI single, Stats platform and Legal detail.</li>
+  <li><strong>Variable modes audit</strong> re-run: 79 sets, 237 variants.</li>
 </ul>
 <h3>Open issues found</h3>
 <ul>
+  <li>Button has been rebuilt in Figma (Hierarchy, Tone, Surface, three sizes and six states, 125 variants), and there's a new IconButton (54 variants). The Button page, its CSS and its token map still describe the earlier 28-variant button.</li>
+  <li>Hero default (mobile): the gap between the two stats is a hardcoded 20px.</li>
+  <li>Accordion multi image: Desktop and Tablet variants don't set breakpoint or typography modes. Carousel timeline: the Desktop variant sets no modes.</li>
   <li>The <code>font-family</code> variables in Figma are now "Tekion Sans " with a trailing space. CSS keeps "Tekion Sans", because the space would stop browsers from matching the installed font.</li>
 </ul>
 
