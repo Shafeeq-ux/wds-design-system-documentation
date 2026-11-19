@@ -3,7 +3,8 @@
 //   2. Wraps every src/pages/**/*.html in the shared layout (header, sidebar, page meta)
 //   3. Generates a "planned" stub for every nav item that has no page yet
 //   4. Copies css/, js/, assets/ and tokens/ and writes search-index.json
-//   5. With BASE_PATH set (e.g. /wds-design-system-documentation for GitHub Pages),
+//   5. Builds the prototype lab's block library and preset pages (scripts/lab.mjs)
+//   6. With BASE_PATH set (e.g. /wds-design-system-documentation for GitHub Pages),
 //      prefixes every root-relative URL so the site works from a subfolder
 //
 // A page starts with an optional meta comment:
@@ -14,6 +15,7 @@ import { dirname, join, relative } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import './build-tokens.mjs';
 import { applyShortcodes } from './shortcodes.mjs';
+import { buildLab, expandIcons } from './lab.mjs';
 
 const root = join(dirname(fileURLToPath(import.meta.url)), '..');
 const SRC = join(root, 'src');
@@ -155,7 +157,8 @@ const built = new Set();
 
 for (const file of walk(join(SRC, 'pages'))) {
   const href = '/' + relative(join(SRC, 'pages'), file).split('\\').join('/');
-  const { meta, body } = parse(file);
+  const { meta, body: raw } = parse(file);
+  const body = expandIcons(raw);
   const outFile = join(DIST, href);
   mkdirSync(dirname(outFile), { recursive: true });
   if (meta.layout === 'bare') { writeFileSync(outFile, body); built.add(href); continue; } // standalone demo pages
@@ -176,6 +179,7 @@ for (const [href, item] of navByHref) {
 
 for (const d of ['css', 'js', 'assets', 'tokens']) if (existsSync(join(root, d))) cpSync(join(root, d), join(DIST, d), { recursive: true });
 writeFileSync(join(DIST, 'search-index.json'), JSON.stringify(index));
+buildLab(SRC, DIST);
 // ---------- base path (GitHub Pages project sites live under /<repo>/) ----------
 const BASE = (process.env.BASE_PATH || '').replace(/\/+$/, '');
 if (BASE) {

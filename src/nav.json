@@ -458,6 +458,13 @@
           "type": "dev",
           "phase": 6,
           "desc": "Supported browsers and known limitations."
+        },
+        {
+          "title": "Prototype lab",
+          "href": "/lab/index.html",
+          "type": "dev",
+          "phase": 6,
+          "desc": "Build page prototypes from WDS sections, edit the copy and export HTML."
         }
       ]
     },

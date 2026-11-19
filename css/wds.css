@@ -388,6 +388,81 @@
   .wds-footer__legal { flex-direction: column; align-items: flex-start; }
 }
 
+/* ---------- Card grid (4-column) ---------- */
+/* Figma: [section]-4-column-wds-3.0 (255:2510). Icon, title and copy in ruled cells: 4 columns, 2 on tablet, 1 on mobile.
+   --3 is the same card in three columns (PROPOSED, for six cards). */
+.wds-cards4 { background: var(--wds-bg-page); color: var(--wds-text-primary); padding: var(--wds-padding-section-top-padding-default) var(--wds-padding-section-right-left-padding-default) var(--wds-padding-section-bottom-padding-default); }
+.wds-cards4__grid { display: grid; grid-template-columns: repeat(4, minmax(0, var(--wds-width-4-col-card-max-width))); justify-content: center; max-width: var(--wds-width-container-max-width); margin: var(--wds-gap-content-image-gap) auto 0; padding: 0; list-style: none; border-top: 1px solid var(--wds-border-default); border-left: 1px solid var(--wds-border-default); }
+.wds-cards4--3 .wds-cards4__grid { grid-template-columns: repeat(3, minmax(0, 1fr)); max-width: var(--wds-width-offset-max-width); }
+.wds-cards4__card { display: flex; flex-direction: column; gap: 8px; padding: var(--wds-width-4-col-card-top-bottom-padding) var(--wds-width-4-col-card-right-left-padding); border-right: 1px solid var(--wds-border-default); border-bottom: 1px solid var(--wds-border-default); }
+.wds-cards4__card > * { margin: 0; }
+.wds-cards4__card svg { width: 40px; height: 40px; margin-bottom: 24px; color: var(--wds-icon-secondary); }
+.wds-cards4__card p { color: var(--wds-text-secondary); }
+@media (max-width: 1279px) {
+  .wds-cards4__grid, .wds-cards4--3 .wds-cards4__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); max-width: 640px; }
+}
+@media (max-width: 767px) {
+  .wds-cards4__grid, .wds-cards4--3 .wds-cards4__grid { grid-template-columns: minmax(0, 1fr); }
+  .wds-cards4__card svg { margin-bottom: 16px; }
+}
+
+/* ---------- Video (ai-video-single) ---------- */
+/* Figma: [section]-ai-video-single-wds-3.0 (618:9293). A framed 16:9 player with a control bar. */
+.wds-video { background: var(--wds-bg-page); color: var(--wds-text-primary); padding: var(--wds-padding-section-top-padding-default) var(--wds-padding-section-right-left-padding-default) var(--wds-padding-section-bottom-padding-default); }
+.wds-video__player { max-width: var(--wds-width-offset-max-width); margin: var(--wds-gap-content-image-gap) auto 0; padding: var(--wds-padding-image-border-padding); border: 1px solid var(--wds-border-subtle); }
+.wds-video__screen { position: relative; overflow: hidden; aspect-ratio: 16 / 9; background: linear-gradient(135deg, var(--wds-bg-recessed), var(--wds-bg-subtle)); }
+.wds-video__screen > video, .wds-video__screen > img { display: block; width: 100%; height: 100%; object-fit: cover; }
+.wds-video__controls { position: absolute; left: 0; right: 0; bottom: 0; display: flex; align-items: center; gap: var(--wds-padding-video-player-control-inbetween-gap); padding: var(--wds-padding-video-player-control-padding-top-bottom) var(--wds-padding-video-player-control-padding-right-left); background: linear-gradient(transparent, rgba(10, 12, 16, .72)); color: #ffffff; }
+.wds-video__time { font-size: var(--wds-body-5-medium-font-size); line-height: var(--wds-body-5-medium-line-height); font-weight: var(--wds-body-5-medium-font-weight); font-variant-numeric: tabular-nums; white-space: nowrap; }
+.wds-video__track { flex: 1; height: 4px; border-radius: 2px; background: rgba(255, 255, 255, .3); }
+.wds-video__track span { display: block; height: 100%; border-radius: inherit; background: #ffffff; }
+@media (max-width: 767px) { .wds-video__track { display: none; } .wds-video__controls > .wds-video__time { margin-right: auto; } }
+
+/* ---------- Stats (security) ---------- */
+/* Figma: stats-security. Copy and shield art above a row with the trust portal CTA and the certifications.
+   PROPOSED: certifications are text badges until the logo files are exported. */
+.wds-security { background: var(--wds-bg-page); color: var(--wds-text-primary); padding: var(--wds-padding-section-top-padding-default) var(--wds-padding-section-right-left-padding-default); }
+.wds-security__inner { max-width: var(--wds-width-container-max-width); margin: 0 auto; border: 1px solid var(--wds-border-subtle); }
+.wds-security__top { display: grid; grid-template-columns: minmax(0, 580px) auto; justify-content: space-between; align-items: center; gap: 32px; padding: var(--wds-width-2-col-card-top-bottom-padding) var(--wds-width-2-col-card-right-left-padding); }
+.wds-security__top h2, .wds-security__top p { margin: 0; }
+.wds-security__top p { margin-top: var(--wds-gap-title-description-gap); color: var(--wds-text-secondary); }
+.wds-security__art { width: 200px; height: auto; color: var(--wds-text-tertiary); }
+.wds-security__bottom { display: flex; align-items: center; border-top: 1px solid var(--wds-border-subtle); }
+.wds-security__bottom > .wds-btn { flex: none; margin: 24px var(--wds-width-2-col-card-right-left-padding); }
+.wds-badges { flex: 1; display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 16px 24px; margin: 0; padding: 24px; list-style: none; border-left: 1px solid var(--wds-border-subtle); }
+.wds-badges li { padding: 6px 14px; border: 1px solid var(--wds-border-default); border-radius: var(--wds-border-radius-full); color: var(--wds-text-secondary); white-space: nowrap; }
+@media (max-width: 1279px) {
+  .wds-security__top { grid-template-columns: 1fr; justify-items: start; }
+  .wds-security__art { justify-self: center; }
+  .wds-security__bottom { flex-direction: column-reverse; }
+  .wds-badges { border-left: 0; border-bottom: 1px solid var(--wds-border-subtle); }
+}
+
+/* ---------- Form (content-form) ---------- */
+/* Figma: [section]-content-form-wds-3.0 (1115:501). Two info cards beside the form, stacked below 1280px.
+   PROPOSED: the blue art background isn't tokenised, so the section uses bg-page. */
+.wds-form { background: var(--wds-bg-page); color: var(--wds-text-primary); padding: var(--wds-padding-section-top-padding-2x) var(--wds-padding-section-right-left-padding-default) var(--wds-padding-section-bottom-padding-2x); }
+.wds-form__grid { display: grid; grid-template-columns: repeat(2, minmax(0, var(--wds-width-2-col-card-max-width))); justify-content: center; max-width: var(--wds-width-container-max-width); margin: 0 auto; border: 1px solid var(--wds-border-subtle); }
+.wds-form__aside { display: flex; flex-direction: column; border-right: 1px solid var(--wds-border-subtle); }
+.wds-form__card { flex: 1; display: flex; flex-direction: column; align-items: flex-start; gap: 12px; padding: var(--wds-width-2-col-card-top-bottom-padding) var(--wds-width-2-col-card-right-left-padding); }
+.wds-form__card + .wds-form__card { border-top: 1px solid var(--wds-border-subtle); }
+.wds-form__card > * { margin: 0; }
+.wds-form__card p { color: var(--wds-text-secondary); }
+.wds-form__card .wds-btn { margin-top: 12px; }
+.wds-form__main { display: flex; flex-direction: column; gap: 12px; padding: var(--wds-width-2-col-card-top-bottom-padding) var(--wds-width-2-col-card-right-left-padding); }
+.wds-form__main > * { margin: 0; }
+.wds-form__sub { margin-top: 12px !important; }
+.wds-form__fields { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px var(--wds-gap-g-16); margin-top: var(--wds-gap-g-24) !important; }
+.wds-choice-group legend .wds-req { color: var(--wds-input-helper-error); margin-left: 2px; }
+@media (max-width: 1279px) {
+  .wds-form__grid { grid-template-columns: minmax(0, var(--wds-width-2-col-card-max-width)); }
+  .wds-form__aside { border-right: 0; border-bottom: 1px solid var(--wds-border-subtle); }
+}
+@media (max-width: 767px) {
+  .wds-form__grid { grid-template-columns: minmax(0, 1fr); }
+  .wds-form__fields { grid-template-columns: minmax(0, 1fr); }
+}
+
 /* Skip link: hidden until focused */
 .skip-link { position: absolute; left: 16px; top: -100px; z-index: 100; padding: 8px 16px; border-radius: 9999px; background: var(--wds-bg-inverse); color: var(--wds-text-inverse); }
 .skip-link:focus { top: 12px; }

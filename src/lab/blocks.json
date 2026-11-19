@@ -1,0 +1,197 @@
+{
+  "_comment": "Prototype lab block library. Each block is one top-level element of a WDS example (src/pages/examples) or a lab block (src/lab/blocks), so the lab always renders the same markup as the docs. 'part' picks the nth top-level element of the file. 'theme' is the Figma default for the section.",
+  "categories": [
+    "Navigation",
+    "Hero",
+    "Content",
+    "Cards",
+    "Video",
+    "Stats",
+    "Form",
+    "FAQ",
+    "Footer"
+  ],
+  "blocks": [
+    {
+      "id": "header",
+      "name": "Header",
+      "category": "Navigation",
+      "from": "examples/header.html",
+      "part": 0,
+      "theme": "dark",
+      "thumb": "/assets/img/figma-header.png",
+      "docs": "/components/header.html"
+    },
+    {
+      "id": "banner-text",
+      "name": "Banner · text",
+      "category": "Navigation",
+      "from": "examples/banner.html",
+      "part": 0,
+      "theme": "light",
+      "thumb": "/assets/img/figma-banner.png",
+      "docs": "/components/banner.html"
+    },
+    {
+      "id": "hero-default",
+      "name": "Hero · default",
+      "category": "Hero",
+      "from": "examples/hero-default.html",
+      "part": 0,
+      "theme": "light",
+      "thumb": "/assets/sections/hero-default.jpg",
+      "docs": "/sections/hero.html"
+    },
+    {
+      "id": "feature-statement",
+      "name": "Feature · statement",
+      "category": "Content",
+      "from": "examples/feature-statement.html",
+      "part": 0,
+      "theme": "light",
+      "thumb": "/assets/sections/feature-content-group-reg.jpg",
+      "docs": "/sections/feature.html"
+    },
+    {
+      "id": "banner-image",
+      "name": "Banner · image",
+      "category": "Content",
+      "from": "examples/banner.html",
+      "part": 1,
+      "theme": "light",
+      "thumb": "/assets/img/figma-banner.png",
+      "docs": "/components/banner.html"
+    },
+    {
+      "id": "card-grid",
+      "name": "Card grid · 3 column",
+      "category": "Cards",
+      "from": "examples/card-grid.html",
+      "part": 0,
+      "theme": "dark",
+      "thumb": "/assets/sections/card-grid-3-column.jpg",
+      "docs": "/sections/card-grid.html"
+    },
+    {
+      "id": "card-grid-4",
+      "name": "Card grid · 4 column",
+      "category": "Cards",
+      "from": "examples/card-grid-4.html",
+      "part": 0,
+      "theme": "dark",
+      "thumb": "/assets/sections/card-grid-4-column.jpg",
+      "docs": "/sections/card-grid.html"
+    },
+    {
+      "id": "video-single",
+      "name": "Video · AI single",
+      "category": "Video",
+      "from": "examples/video-single.html",
+      "part": 0,
+      "theme": "light",
+      "thumb": "/assets/sections/video-ai-single.jpg",
+      "docs": "/sections/video.html"
+    },
+    {
+      "id": "stats",
+      "name": "Stats · platform",
+      "category": "Stats",
+      "from": "examples/stats.html",
+      "part": 0,
+      "theme": "dark",
+      "thumb": "/assets/sections/stats-platform.jpg",
+      "docs": "/sections/stats.html"
+    },
+    {
+      "id": "stats-security",
+      "name": "Stats · security",
+      "category": "Stats",
+      "from": "examples/stats-security.html",
+      "part": 0,
+      "theme": "dark",
+      "thumb": "/assets/sections/stats-security.jpg",
+      "docs": "/sections/stats.html"
+    },
+    {
+      "id": "form",
+      "name": "Form · content",
+      "category": "Form",
+      "from": "lab/blocks/form.html",
+      "part": 0,
+      "theme": "dark",
+      "thumb": "/assets/sections/form-content.jpg",
+      "docs": "/sections/form.html"
+    },
+    {
+      "id": "faq",
+      "name": "FAQ",
+      "category": "FAQ",
+      "from": "examples/faq.html",
+      "part": 0,
+      "theme": "dark",
+      "thumb": "/assets/sections/faq.jpg",
+      "docs": "/sections/faq.html"
+    },
+    {
+      "id": "footer",
+      "name": "Footer",
+      "category": "Footer",
+      "from": "examples/footer.html",
+      "part": 0,
+      "theme": "dark",
+      "thumb": "/assets/sections/footer.jpg",
+      "docs": "/sections/footer.html"
+    }
+  ],
+  "presets": [
+    {
+      "id": "arc-landing",
+      "name": "Automotive Retail Cloud",
+      "desc": "A product landing page built only from WDS 3.0 sections",
+      "theme": "light",
+      "blocks": [
+        {
+          "type": "banner-text"
+        },
+        {
+          "type": "header"
+        },
+        {
+          "type": "hero-default"
+        },
+        {
+          "type": "feature-statement"
+        },
+        {
+          "type": "stats"
+        },
+        {
+          "type": "card-grid"
+        },
+        {
+          "type": "form"
+        },
+        {
+          "type": "faq"
+        },
+        {
+          "type": "footer"
+        }
+      ]
+    },
+    {
+      "id": "blank",
+      "name": "Blank page",
+      "desc": "Start from a header and footer",
+      "theme": "light",
+      "blocks": [
+        {
+          "type": "header"
+        },
+        {
+          "type": "footer"
+        }
+      ]
+    }
+  ]
+}

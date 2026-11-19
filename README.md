@@ -71,6 +71,49 @@ Write these in a page and the build replaces them with generated HTML:
 
 The preview has Desktop (1440), Tablet (768) and Mobile (390) widths and its own Light/Dark switch. The iframe renders at the real width, so real media queries fire. Add `data-start-theme="dark"` to open it in dark.
 
+## Prototype lab
+
+`/lab/index.html` is a page builder that runs on WDS 3.0 itself. Pick sections from the library (or drag them onto the canvas), reorder them, set each one's theme, edit the copy in place, check Desktop, Tablet and Mobile widths, and export a standalone HTML page. The Foundations tab lists every colour token (light and dark), text style and spacing token; click one to copy it.
+
+Feature icons go in an example as `<wds-icon name="guided-fix-actions"></wds-icon>`. The build inlines the SVG and recolours it to follow the theme.
+
+The canvas loads only `tokens.css`, `wds.css` and `wds.js`, so a prototype looks exactly like production. Work is saved in the browser, and ⌘Z undoes.
+
+| Path | What it is |
+|---|---|
+| `src/lab/blocks.json` | The block library and presets. Each block points at a top-level element of an example file, so the lab always matches the docs. |
+| `src/lab/blocks/*.html` | Lab-only blocks, such as the content form, built from WDS components |
+| `scripts/lab.mjs` | Builds `dist/lab/blocks.json` and composes each preset into `dist/lab/pages/<id>.html` |
+| `js/lab.js`, `css/lab.css` | The lab app |
+| `js/lab-import.js` | The Word brief importer |
+| `src/pages/examples/card-grid-4.html`, `video-single.html`, `stats-security.html` | The 4-column card grid, single video and security sections the importer uses |
+
+The **Automotive Retail Cloud** preset is a full landing page built only from WDS sections: banner, header, hero, feature statement, stats, card grid, form, FAQ and footer. It's also published as a plain page at `/lab/pages/arc-landing.html`.
+
+To add a section to the lab, add its example to `src/pages/examples/` and an entry to `src/lab/blocks.json`.
+
+### Importing a page brief (.docx)
+
+**Import .docx** (or drop a Word file on the canvas) builds a page from a copy brief. The file is read in the browser and never uploaded. A report then lists the sections it made, what still needs assets, anything it couldn't place, notes in the brief and the document's review comments. Undo puts the previous page back.
+
+The importer understands the conventions our briefs already use:
+
+| In the brief | On the page |
+|---|---|
+| First plain line | Hero headline |
+| `SUBHEADING:`, `CTA BUTTON:`, `STATS:` then `25% Reduction in …` lines | Hero copy, button and up to 3 stats |
+| `Dropdown = F&I AI` | Adds the page to the header's AI agents menu |
+| `[Any Name SECTION]` | Starts a section. `SECTION HEADLINE:` and `SECTION DESCRIPTION:` fill its title and copy |
+| `[Feature Card]` with the title and copy on separate lines | Card grid · 4 column, with the feature icon whose name matches the card title |
+| `VIDEO SECTION HEADER:`, `VIDEO SECTION DESCRIPTION:`, `[video]` | Video · AI single |
+| `For Sales Managers: …` | A persona card. Six make a 3-column grid |
+| `Security Section and Footer – same as <url>` | The standard security section and footer |
+| A short line ending in `?`, then its answer | FAQ. Select the FAQ section and use **Add question** to add more |
+| `NOTE:` | Listed in the report, not put on the page |
+| A section with no cards | Feature · statement |
+
+Copy is imported as written, with tracked changes shown as if accepted. `js/lab-import.js` holds the reader and the rules, and `dist/lab/icons.json` (built by `scripts/lab.mjs`) holds the theme-coloured feature icons it matches against.
+
 ## Tokens
 
 CSS names come from the Figma path. A leading category group (`background`, `components`, `gradient`, `spacing`, `core`) is dropped, and so is a segment that the next one repeats:
