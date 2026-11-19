@@ -1,7 +1,7 @@
 {
   "meta": {
     "source": "Figma WDS-3.0 (lf5SOxUpWBtO8AIzXf6snw)",
-    "exported": "2026-10-17",
+    "exported": "2026-11-19",
     "note": "Exported with scripts/figma-export.js. Values are resolved per mode. 'ref' is the alias target in the first mode. Do not edit by hand; re-export from Figma."
   },
   "collections": {
@@ -485,7 +485,7 @@
           "lh": [
             24,
             24,
-            24
+            22
           ],
           "weight": 500,
           "stretch": 105,
@@ -755,11 +755,11 @@
         [ "components/button-link/btn-link-text-default", [ "#222630", "#ffffff" ], "color/gray/gray-800" ],
         [ "components/button-link/btn-link-text-hover", [ "#0a0c10", "#f5f7fa" ], "color/gray/gray-950" ],
         [ "components/button-link/btn-link-text-pressed", [ "#0a0c10", "#f5f7fa" ], "color/gray/gray-950" ],
-        [ "components/button-link/btn-link-text-disabled", [ "#8a9099", "#f5f7fa" ], "color/gray/gray-400" ],
+        [ "components/button-link/btn-link-text-disabled", [ "#8a9099", "#636b78" ], "color/gray/gray-400" ],
         [ "components/button-link/btn-link-icon-default", [ "#222630", "#ffffff" ], "color/gray/gray-800" ],
         [ "components/button-link/btn-link-icon-hover", [ "#0a0c10", "#f5f7fa" ], "color/gray/gray-950" ],
         [ "components/button-link/btn-link-icon-pressed", [ "#0a0c10", "#f5f7fa" ], "color/gray/gray-950" ],
-        [ "components/button-link/btn-link-icon-disabled", [ "#8a9099", "#f5f7fa" ], "color/gray/gray-400" ],
+        [ "components/button-link/btn-link-icon-disabled", [ "#8a9099", "#636b78" ], "color/gray/gray-400" ],
         [ "components/button-icon/btn-icon-bg-default", [ "#32363f", "#f5f7fa" ], "color/gray/gray-700" ],
         [ "components/button-icon/btn-icon-bg-hover", [ "#32363f", "#f5f7fa" ], "color/gray/gray-700" ],
         [ "components/button-icon/btn-icon-bg-active", [ "#32363f", "#f5f7fa" ], "color/gray/gray-700" ],
@@ -845,7 +845,41 @@
         [ "gradient/gradient-pulse/gradientstop3-pulse", [ "#0d0c0e", "#ffffff" ] ],
         [ "gradient/gradient-magenta/gradientstop1-magenta", [ "#0d0c0e", "#ffffff" ] ],
         [ "gradient/gradient-magenta/gradientstop2-magenta", [ "#8651ff", "#a781ff" ] ],
-        [ "gradient/gradient-magenta/gradientstop3-magenta", [ "#ff003e", "#ff2056" ] ]
+        [ "gradient/gradient-magenta/gradientstop3-magenta", [ "#ff003e", "#ff2056" ] ],
+        [ "components/button-media/btn-media-primary-bg", [ "#ffffff", "#ffffff" ], "color/static/static-white" ],
+        [ "components/button-media/btn-media-primary-bg-hover", [ "#ffffffdb", "#ffffffdb" ] ],
+        [ "components/button-media/btn-media-primary-bg-pressed", [ "#ffffffb8", "#ffffffb8" ] ],
+        [ "components/button-media/btn-media-primary-text", [ "#141820", "#141820" ], "color/gray/gray-900" ],
+        [ "components/button-media/btn-media-glass-bg", [ "#ffffff29", "#ffffff29" ] ],
+        [ "components/button-media/btn-media-glass-bg-hover", [ "#ffffff42", "#ffffff42" ] ],
+        [ "components/button-media/btn-media-glass-bg-pressed", [ "#ffffff57", "#ffffff57" ] ],
+        [ "components/button-media/btn-media-glass-border", [ "#ffffff6b", "#ffffff6b" ] ],
+        [ "components/button-media/btn-media-glass-border-hover", [ "#ffffff99", "#ffffff99" ] ],
+        [ "components/button-media/btn-media-text", [ "#ffffff", "#ffffff" ], "color/static/static-white" ],
+        [ "components/button-media/btn-media-disabled-bg", [ "#ffffff47", "#ffffff47" ] ],
+        [ "components/button-media/btn-media-disabled-text", [ "#ffffff9e", "#ffffff9e" ] ],
+        [ "components/button-media/btn-media-disabled-border", [ "#ffffff38", "#ffffff38" ] ],
+        [ "components/button-media/btn-media-focus-ring", [ "#ffffff", "#ffffff" ], "color/static/static-white" ],
+        [ "components/button-primary/btn-focus-ring", [ "#222630", "#ffffff" ], "border/border-focus" ],
+        [ "components/chip/chip-bg-default", [ "#00000000", "#00000000" ] ],
+        [ "components/chip/chip-bg-hover", [ "#f5f7fa", "#141820" ], "color/gray/gray-50" ],
+        [ "components/chip/chip-bg-pressed", [ "#222630", "#ffffff" ], "color/gray/gray-800" ],
+        [ "components/chip/chip-bg-disabled", [ "#00000000", "#00000000" ] ],
+        [ "components/chip/chip-border-default", [ "#dadce1", "#32363f" ], "color/gray/gray-200" ],
+        [ "components/chip/chip-border-hover", [ "#bbc0cc", "#454b56" ], "color/gray/gray-300" ],
+        [ "components/chip/chip-border-disabled", [ "#eceef3", "#1e2230" ], "color/gray/gray-100" ],
+        [ "components/chip/chip-text-default", [ "#222630", "#ffffff" ], "color/gray/gray-800" ],
+        [ "components/chip/chip-text-disabled", [ "#8a9099", "#636b78" ], "color/gray/gray-400" ],
+        [ "components/chip/chip-bg-selected", [ "#222630", "#ffffff" ], "color/gray/gray-800" ],
+        [ "components/chip/chip-text-selected", [ "#ffffff", "#222630" ], "text/text-inverse" ],
+        [ "components/chip/chip-focus-ring", [ "#222630", "#ffffff" ], "border/border-focus" ],
+        [ "components/chip/chip-text-pressed", [ "#ffffff", "#222630" ], "text/text-inverse" ],
+        [ "components/breadcrumb/breadcrumb-text-default", [ "#222630", "#ffffff" ], "color/gray/gray-800" ],
+        [ "components/breadcrumb/breadcrumb-text-hover", [ "#0a0c10", "#f5f7fa" ], "color/gray/gray-950" ],
+        [ "components/breadcrumb/breadcrumb-text-pressed", [ "#454b56", "#bbc0cc" ], "color/gray/gray-600" ],
+        [ "components/breadcrumb/breadcrumb-text-current", [ "#636b78", "#8a9099" ], "color/gray/gray-500" ],
+        [ "components/breadcrumb/breadcrumb-separator", [ "#8a9099", "#636b78" ], "icon/icon-tertiary" ],
+        [ "components/breadcrumb/breadcrumb-focus-ring", [ "#222630", "#ffffff" ], "border/border-focus" ]
       ]
     },
     "breakpoint": {
@@ -963,7 +997,9 @@
         [ "border/border-radius/bento-card", [ 24 ], "border/border-radius/br-24" ],
         [ "border/border-radius/input", [ 9999 ], "border/border-radius/br-9999" ],
         [ "border/border-radius/textarea", [ 16 ], "border/border-radius/br-16" ],
-        [ "border/border-radius/checkbox", [ 0 ], "border/border-radius/br-0" ]
+        [ "border/border-radius/checkbox", [ 0 ], "border/border-radius/br-0" ],
+        [ "spacing/padding/button-padding-x-md", [ 20 ] ],
+        [ "spacing/padding/button-padding-x-sm", [ 16 ] ]
       ]
     }
   },

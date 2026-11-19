@@ -207,6 +207,8 @@
   --wds-border-radius-input: 9999px; /* border/border-radius/br-9999 */
   --wds-border-radius-textarea: 16px; /* border/border-radius/br-16 */
   --wds-border-radius-checkbox: 0; /* border/border-radius/br-0 */
+  --wds-padding-button-padding-x-md: 20px;
+  --wds-padding-button-padding-x-sm: 16px;
 }
 
 /* Theme: light (default) */
@@ -387,6 +389,40 @@
   --wds-gradientstop1-magenta: #0d0c0e;
   --wds-gradientstop2-magenta: #8651ff;
   --wds-gradientstop3-magenta: #ff003e;
+  --wds-btn-media-primary-bg: #ffffff; /* color/static/static-white */
+  --wds-btn-media-primary-bg-hover: #ffffffdb;
+  --wds-btn-media-primary-bg-pressed: #ffffffb8;
+  --wds-btn-media-primary-text: #141820; /* color/gray/gray-900 */
+  --wds-btn-media-glass-bg: #ffffff29;
+  --wds-btn-media-glass-bg-hover: #ffffff42;
+  --wds-btn-media-glass-bg-pressed: #ffffff57;
+  --wds-btn-media-glass-border: #ffffff6b;
+  --wds-btn-media-glass-border-hover: #ffffff99;
+  --wds-btn-media-text: #ffffff; /* color/static/static-white */
+  --wds-btn-media-disabled-bg: #ffffff47;
+  --wds-btn-media-disabled-text: #ffffff9e;
+  --wds-btn-media-disabled-border: #ffffff38;
+  --wds-btn-media-focus-ring: #ffffff; /* color/static/static-white */
+  --wds-btn-focus-ring: #222630; /* border/border-focus */
+  --wds-chip-bg-default: #00000000;
+  --wds-chip-bg-hover: #f5f7fa; /* color/gray/gray-50 */
+  --wds-chip-bg-pressed: #222630; /* color/gray/gray-800 */
+  --wds-chip-bg-disabled: #00000000;
+  --wds-chip-border-default: #dadce1; /* color/gray/gray-200 */
+  --wds-chip-border-hover: #bbc0cc; /* color/gray/gray-300 */
+  --wds-chip-border-disabled: #eceef3; /* color/gray/gray-100 */
+  --wds-chip-text-default: #222630; /* color/gray/gray-800 */
+  --wds-chip-text-disabled: #8a9099; /* color/gray/gray-400 */
+  --wds-chip-bg-selected: #222630; /* color/gray/gray-800 */
+  --wds-chip-text-selected: #ffffff; /* text/text-inverse */
+  --wds-chip-focus-ring: #222630; /* border/border-focus */
+  --wds-chip-text-pressed: #ffffff; /* text/text-inverse */
+  --wds-breadcrumb-text-default: #222630; /* color/gray/gray-800 */
+  --wds-breadcrumb-text-hover: #0a0c10; /* color/gray/gray-950 */
+  --wds-breadcrumb-text-pressed: #454b56; /* color/gray/gray-600 */
+  --wds-breadcrumb-text-current: #636b78; /* color/gray/gray-500 */
+  --wds-breadcrumb-separator: #8a9099; /* icon/icon-tertiary */
+  --wds-breadcrumb-focus-ring: #222630; /* border/border-focus */
 }
 
 /* Theme: dark (explicit) */
@@ -476,11 +512,11 @@
   --wds-btn-link-text-default: #ffffff;
   --wds-btn-link-text-hover: #f5f7fa;
   --wds-btn-link-text-pressed: #f5f7fa;
-  --wds-btn-link-text-disabled: #f5f7fa;
+  --wds-btn-link-text-disabled: #636b78;
   --wds-btn-link-icon-default: #ffffff;
   --wds-btn-link-icon-hover: #f5f7fa;
   --wds-btn-link-icon-pressed: #f5f7fa;
-  --wds-btn-link-icon-disabled: #f5f7fa;
+  --wds-btn-link-icon-disabled: #636b78;
   --wds-btn-icon-bg-default: #f5f7fa;
   --wds-btn-icon-bg-hover: #f5f7fa;
   --wds-btn-icon-bg-active: #f5f7fa;
@@ -567,6 +603,40 @@
   --wds-gradientstop1-magenta: #ffffff;
   --wds-gradientstop2-magenta: #a781ff;
   --wds-gradientstop3-magenta: #ff2056;
+  --wds-btn-media-primary-bg: #ffffff;
+  --wds-btn-media-primary-bg-hover: #ffffffdb;
+  --wds-btn-media-primary-bg-pressed: #ffffffb8;
+  --wds-btn-media-primary-text: #141820;
+  --wds-btn-media-glass-bg: #ffffff29;
+  --wds-btn-media-glass-bg-hover: #ffffff42;
+  --wds-btn-media-glass-bg-pressed: #ffffff57;
+  --wds-btn-media-glass-border: #ffffff6b;
+  --wds-btn-media-glass-border-hover: #ffffff99;
+  --wds-btn-media-text: #ffffff;
+  --wds-btn-media-disabled-bg: #ffffff47;
+  --wds-btn-media-disabled-text: #ffffff9e;
+  --wds-btn-media-disabled-border: #ffffff38;
+  --wds-btn-media-focus-ring: #ffffff;
+  --wds-btn-focus-ring: #ffffff;
+  --wds-chip-bg-default: #00000000;
+  --wds-chip-bg-hover: #141820;
+  --wds-chip-bg-pressed: #ffffff;
+  --wds-chip-bg-disabled: #00000000;
+  --wds-chip-border-default: #32363f;
+  --wds-chip-border-hover: #454b56;
+  --wds-chip-border-disabled: #1e2230;
+  --wds-chip-text-default: #ffffff;
+  --wds-chip-text-disabled: #636b78;
+  --wds-chip-bg-selected: #ffffff;
+  --wds-chip-text-selected: #222630;
+  --wds-chip-focus-ring: #ffffff;
+  --wds-chip-text-pressed: #222630;
+  --wds-breadcrumb-text-default: #ffffff;
+  --wds-breadcrumb-text-hover: #f5f7fa;
+  --wds-breadcrumb-text-pressed: #bbc0cc;
+  --wds-breadcrumb-text-current: #8a9099;
+  --wds-breadcrumb-separator: #636b78;
+  --wds-breadcrumb-focus-ring: #ffffff;
 }
 
 /* Theme: dark (follow OS unless the user picked light) */
@@ -657,11 +727,11 @@
     --wds-btn-link-text-default: #ffffff;
     --wds-btn-link-text-hover: #f5f7fa;
     --wds-btn-link-text-pressed: #f5f7fa;
-    --wds-btn-link-text-disabled: #f5f7fa;
+    --wds-btn-link-text-disabled: #636b78;
     --wds-btn-link-icon-default: #ffffff;
     --wds-btn-link-icon-hover: #f5f7fa;
     --wds-btn-link-icon-pressed: #f5f7fa;
-    --wds-btn-link-icon-disabled: #f5f7fa;
+    --wds-btn-link-icon-disabled: #636b78;
     --wds-btn-icon-bg-default: #f5f7fa;
     --wds-btn-icon-bg-hover: #f5f7fa;
     --wds-btn-icon-bg-active: #f5f7fa;
@@ -748,6 +818,40 @@
     --wds-gradientstop1-magenta: #ffffff;
     --wds-gradientstop2-magenta: #a781ff;
     --wds-gradientstop3-magenta: #ff2056;
+    --wds-btn-media-primary-bg: #ffffff;
+    --wds-btn-media-primary-bg-hover: #ffffffdb;
+    --wds-btn-media-primary-bg-pressed: #ffffffb8;
+    --wds-btn-media-primary-text: #141820;
+    --wds-btn-media-glass-bg: #ffffff29;
+    --wds-btn-media-glass-bg-hover: #ffffff42;
+    --wds-btn-media-glass-bg-pressed: #ffffff57;
+    --wds-btn-media-glass-border: #ffffff6b;
+    --wds-btn-media-glass-border-hover: #ffffff99;
+    --wds-btn-media-text: #ffffff;
+    --wds-btn-media-disabled-bg: #ffffff47;
+    --wds-btn-media-disabled-text: #ffffff9e;
+    --wds-btn-media-disabled-border: #ffffff38;
+    --wds-btn-media-focus-ring: #ffffff;
+    --wds-btn-focus-ring: #ffffff;
+    --wds-chip-bg-default: #00000000;
+    --wds-chip-bg-hover: #141820;
+    --wds-chip-bg-pressed: #ffffff;
+    --wds-chip-bg-disabled: #00000000;
+    --wds-chip-border-default: #32363f;
+    --wds-chip-border-hover: #454b56;
+    --wds-chip-border-disabled: #1e2230;
+    --wds-chip-text-default: #ffffff;
+    --wds-chip-text-disabled: #636b78;
+    --wds-chip-bg-selected: #ffffff;
+    --wds-chip-text-selected: #222630;
+    --wds-chip-focus-ring: #ffffff;
+    --wds-chip-text-pressed: #222630;
+    --wds-breadcrumb-text-default: #ffffff;
+    --wds-breadcrumb-text-hover: #f5f7fa;
+    --wds-breadcrumb-text-pressed: #bbc0cc;
+    --wds-breadcrumb-text-current: #8a9099;
+    --wds-breadcrumb-separator: #636b78;
+    --wds-breadcrumb-focus-ring: #ffffff;
   }
 }
 
@@ -1127,7 +1231,7 @@
     --wds-body-3-reg-line-height: 22px;
     --wds-body-3-reg-letter-spacing: 0;
     --wds-body-3-medium-font-size: 14px;
-    --wds-body-3-medium-line-height: 24px;
+    --wds-body-3-medium-line-height: 22px;
     --wds-body-3-medium-letter-spacing: 0;
     --wds-body-3-bold-font-size: 14px;
     --wds-body-3-bold-line-height: 20px;

@@ -1,6 +1,19 @@
 <!--meta {"status": "Stable"} -->
 <p>Every change to WDS 3.0 and its documentation, newest first. Add an entry with every release (see <a href="/overview/governance.html#versioning">Versioning</a>).</p>
 
+<h2>3.0.2 · 19 November 2026</h2>
+<p>Tokens re-synced from Figma. 617 tokens, up from 581.</p>
+<ul>
+  <li><strong>New colour tokens</strong> for components in progress: chip (13), media button (14), breadcrumb (6), and a focus ring for the primary button.</li>
+  <li><strong>New spacing tokens</strong>: <code>--wds-padding-button-padding-x-md</code> (20px) and <code>--wds-padding-button-padding-x-sm</code> (16px).</li>
+  <li><strong>Fixed</strong>: disabled link-button text and icon in dark mode are now <code>#636b78</code>. They were <code>#f5f7fa</code>, which looked enabled.</li>
+  <li><strong>Changed</strong>: body-3-medium's line height on mobile is now 22px, down from 24px.</li>
+</ul>
+<h3>Open issues found</h3>
+<ul>
+  <li>The <code>font-family</code> variables in Figma are now "Tekion Sans " with a trailing space. CSS keeps "Tekion Sans", because the space would stop browsers from matching the installed font.</li>
+</ul>
+
 <h2>3.0.1 · 17 October 2026</h2>
 <ul>
   <li><strong>Token map</strong> on every section page and on Button, Input, Checkbox, Header and Banner (Radio button has no Figma component yet): the Figma render with every layer's colour, type, spacing and border variables, their CSS names and values per breakpoint and theme, padding and gap overlays, CSS for each layer, and untokenised values flagged as issues.</li>

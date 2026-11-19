@@ -824,6 +824,14 @@
    "value": "0",
    "figma": "border/border-radius/checkbox"
   },
+  "--wds-padding-button-padding-x-md": {
+   "value": "20px",
+   "figma": "spacing/padding/button-padding-x-md"
+  },
+  "--wds-padding-button-padding-x-sm": {
+   "value": "16px",
+   "figma": "spacing/padding/button-padding-x-sm"
+  },
   "--wds-bg-page": {
    "light": "#ffffff",
    "dark": "#0a0c10",
@@ -1246,7 +1254,7 @@
   },
   "--wds-btn-link-text-disabled": {
    "light": "#8a9099",
-   "dark": "#f5f7fa",
+   "dark": "#636b78",
    "figma": "components/button-link/btn-link-text-disabled"
   },
   "--wds-btn-link-icon-default": {
@@ -1266,7 +1274,7 @@
   },
   "--wds-btn-link-icon-disabled": {
    "light": "#8a9099",
-   "dark": "#f5f7fa",
+   "dark": "#636b78",
    "figma": "components/button-link/btn-link-icon-disabled"
   },
   "--wds-btn-icon-bg-default": {
@@ -1698,6 +1706,176 @@
    "light": "#ff003e",
    "dark": "#ff2056",
    "figma": "gradient/gradient-magenta/gradientstop3-magenta"
+  },
+  "--wds-btn-media-primary-bg": {
+   "light": "#ffffff",
+   "dark": "#ffffff",
+   "figma": "components/button-media/btn-media-primary-bg"
+  },
+  "--wds-btn-media-primary-bg-hover": {
+   "light": "#ffffffdb",
+   "dark": "#ffffffdb",
+   "figma": "components/button-media/btn-media-primary-bg-hover"
+  },
+  "--wds-btn-media-primary-bg-pressed": {
+   "light": "#ffffffb8",
+   "dark": "#ffffffb8",
+   "figma": "components/button-media/btn-media-primary-bg-pressed"
+  },
+  "--wds-btn-media-primary-text": {
+   "light": "#141820",
+   "dark": "#141820",
+   "figma": "components/button-media/btn-media-primary-text"
+  },
+  "--wds-btn-media-glass-bg": {
+   "light": "#ffffff29",
+   "dark": "#ffffff29",
+   "figma": "components/button-media/btn-media-glass-bg"
+  },
+  "--wds-btn-media-glass-bg-hover": {
+   "light": "#ffffff42",
+   "dark": "#ffffff42",
+   "figma": "components/button-media/btn-media-glass-bg-hover"
+  },
+  "--wds-btn-media-glass-bg-pressed": {
+   "light": "#ffffff57",
+   "dark": "#ffffff57",
+   "figma": "components/button-media/btn-media-glass-bg-pressed"
+  },
+  "--wds-btn-media-glass-border": {
+   "light": "#ffffff6b",
+   "dark": "#ffffff6b",
+   "figma": "components/button-media/btn-media-glass-border"
+  },
+  "--wds-btn-media-glass-border-hover": {
+   "light": "#ffffff99",
+   "dark": "#ffffff99",
+   "figma": "components/button-media/btn-media-glass-border-hover"
+  },
+  "--wds-btn-media-text": {
+   "light": "#ffffff",
+   "dark": "#ffffff",
+   "figma": "components/button-media/btn-media-text"
+  },
+  "--wds-btn-media-disabled-bg": {
+   "light": "#ffffff47",
+   "dark": "#ffffff47",
+   "figma": "components/button-media/btn-media-disabled-bg"
+  },
+  "--wds-btn-media-disabled-text": {
+   "light": "#ffffff9e",
+   "dark": "#ffffff9e",
+   "figma": "components/button-media/btn-media-disabled-text"
+  },
+  "--wds-btn-media-disabled-border": {
+   "light": "#ffffff38",
+   "dark": "#ffffff38",
+   "figma": "components/button-media/btn-media-disabled-border"
+  },
+  "--wds-btn-media-focus-ring": {
+   "light": "#ffffff",
+   "dark": "#ffffff",
+   "figma": "components/button-media/btn-media-focus-ring"
+  },
+  "--wds-btn-focus-ring": {
+   "light": "#222630",
+   "dark": "#ffffff",
+   "figma": "components/button-primary/btn-focus-ring"
+  },
+  "--wds-chip-bg-default": {
+   "light": "#00000000",
+   "dark": "#00000000",
+   "figma": "components/chip/chip-bg-default"
+  },
+  "--wds-chip-bg-hover": {
+   "light": "#f5f7fa",
+   "dark": "#141820",
+   "figma": "components/chip/chip-bg-hover"
+  },
+  "--wds-chip-bg-pressed": {
+   "light": "#222630",
+   "dark": "#ffffff",
+   "figma": "components/chip/chip-bg-pressed"
+  },
+  "--wds-chip-bg-disabled": {
+   "light": "#00000000",
+   "dark": "#00000000",
+   "figma": "components/chip/chip-bg-disabled"
+  },
+  "--wds-chip-border-default": {
+   "light": "#dadce1",
+   "dark": "#32363f",
+   "figma": "components/chip/chip-border-default"
+  },
+  "--wds-chip-border-hover": {
+   "light": "#bbc0cc",
+   "dark": "#454b56",
+   "figma": "components/chip/chip-border-hover"
+  },
+  "--wds-chip-border-disabled": {
+   "light": "#eceef3",
+   "dark": "#1e2230",
+   "figma": "components/chip/chip-border-disabled"
+  },
+  "--wds-chip-text-default": {
+   "light": "#222630",
+   "dark": "#ffffff",
+   "figma": "components/chip/chip-text-default"
+  },
+  "--wds-chip-text-disabled": {
+   "light": "#8a9099",
+   "dark": "#636b78",
+   "figma": "components/chip/chip-text-disabled"
+  },
+  "--wds-chip-bg-selected": {
+   "light": "#222630",
+   "dark": "#ffffff",
+   "figma": "components/chip/chip-bg-selected"
+  },
+  "--wds-chip-text-selected": {
+   "light": "#ffffff",
+   "dark": "#222630",
+   "figma": "components/chip/chip-text-selected"
+  },
+  "--wds-chip-focus-ring": {
+   "light": "#222630",
+   "dark": "#ffffff",
+   "figma": "components/chip/chip-focus-ring"
+  },
+  "--wds-chip-text-pressed": {
+   "light": "#ffffff",
+   "dark": "#222630",
+   "figma": "components/chip/chip-text-pressed"
+  },
+  "--wds-breadcrumb-text-default": {
+   "light": "#222630",
+   "dark": "#ffffff",
+   "figma": "components/breadcrumb/breadcrumb-text-default"
+  },
+  "--wds-breadcrumb-text-hover": {
+   "light": "#0a0c10",
+   "dark": "#f5f7fa",
+   "figma": "components/breadcrumb/breadcrumb-text-hover"
+  },
+  "--wds-breadcrumb-text-pressed": {
+   "light": "#454b56",
+   "dark": "#bbc0cc",
+   "figma": "components/breadcrumb/breadcrumb-text-pressed"
+  },
+  "--wds-breadcrumb-text-current": {
+   "light": "#636b78",
+   "dark": "#8a9099",
+   "figma": "components/breadcrumb/breadcrumb-text-current"
+  },
+  "--wds-breadcrumb-separator": {
+   "light": "#8a9099",
+   "dark": "#636b78",
+   "figma": "components/breadcrumb/breadcrumb-separator"
+  },
+  "--wds-breadcrumb-focus-ring": {
+   "light": "#222630",
+   "dark": "#ffffff",
+   "figma": "components/breadcrumb/breadcrumb-focus-ring"
   },
   "--wds-gap-title-description-gap": {
    "desktop": "24px",
@@ -2146,7 +2324,7 @@
   "--wds-body-3-medium-line-height": {
    "desktop": "24px",
    "tablet": "24px",
-   "mobile": "24px",
+   "mobile": "22px",
    "figma": "body-3-medium/line-height"
   },
   "--wds-body-3-bold-font-size": {
