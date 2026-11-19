@@ -1100,5 +1100,96 @@
     4
    ]
   ]
+ },
+ "event": {
+  "sets": [
+   [
+    "event-map",
+    "1552-14564",
+    "dark",
+    "Event name, dates, booth and venue in a header band above a venue map"
+   ],
+   [
+    "event-agenda",
+    "1624-12854",
+    "dark",
+    "Agenda with day chips, then time slots with location, session title, speakers and Add to calendar"
+   ]
+  ],
+  "slots": [
+   [
+    "Event title",
+    "headline-3",
+    726,
+    1
+   ],
+   [
+    "Event dates",
+    "headline-4-reg",
+    260,
+    1
+   ],
+   [
+    "Booth",
+    "body-1-bold",
+    354,
+    1
+   ],
+   [
+    "Venue",
+    "body-3-reg",
+    354,
+    2
+   ],
+   [
+    "Agenda title",
+    "headline-2",
+    540,
+    1
+   ],
+   [
+    "Agenda dates",
+    "headline-5",
+    460,
+    1
+   ],
+   [
+    "Session time",
+    "headline-4",
+    220,
+    1
+   ],
+   [
+    "Session location",
+    "body-2-bold",
+    220,
+    1
+   ],
+   [
+    "Session title",
+    "headline-4-reg",
+    532,
+    2
+   ],
+   [
+    "Speaker name",
+    "body-2-bold",
+    532,
+    1
+   ],
+   [
+    "Speaker title",
+    "body-4-reg",
+    532,
+    2
+   ],
+   [
+    "Day chip",
+    "body-4-medium",
+    0,
+    1,
+    20
+   ]
+  ]
  }
 }

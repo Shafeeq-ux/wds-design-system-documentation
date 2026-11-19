@@ -1,0 +1,45 @@
+<!--meta {"status": "Stable", "figma": "1697-288"} -->
+<h2>Section overview</h2>
+<p>Event sections tell visitors where and when to find Tekion at a show, and what's on. The <strong>map</strong> shows the venue and booth, and the <strong>agenda</strong> lists sessions by day.</p>
+<div class="meta-grid">
+  <div><h3>Recommended placement</h3><p>On event and conference landing pages, after the event hero.</p></div>
+  <div><h3>Audience</h3><p>Dealers and partners planning their visit to a show.</p></div>
+  <div><h3>Goal</h3><p>Get people to the booth and into sessions, and onto their calendar.</p></div>
+</div>
+
+<h2>Variants</h2>
+<p>Use <strong>map</strong> to show the venue, booth numbers and dates at a glance. Use <strong>agenda</strong> for the session schedule: day <a href="/components/chip.html">chips</a> switch the day, and each time slot has a location, session title, speakers and an Add to calendar button. Pair them with the <a href="/sections/hero.html#variant-hero-event">Hero event</a> variant.</p>
+<ul class="variant-index"><li><a href="#variant-event-map">map</a></li><li><a href="#variant-event-agenda">agenda</a></li></ul>
+<!--wds:section-sets event-->
+
+<h2>Content structure and character limits</h2>
+<p>Limits are calculated from each slot's text style and its maximum width in Figma, so copy fits without breaking the layout. Type your copy into the last column to check it. Limits are <strong>proposed</strong> until Marketing signs them off.</p>
+<!--wds:section-limits event-->
+
+<h2>Token map</h2>
+<p>Every layer in this section that uses a Figma variable, taken from the Figma file. Select a layer on the image, or in the list, to see its colour, text, spacing and border variables, their CSS names and values, and the CSS to use. Padding is shaded pink and gaps are striped. Use <strong>Issues</strong> to find values that aren't tokenised yet.</p>
+<p><strong>Map variant.</strong> Found in Figma: the vertical padding in the header band (40 and 36px on Desktop, 32 and 24px on Tablet and Mobile) and the 2px gap between the booth and venue lines aren't tokenised, and the map image itself isn't a token.</p>
+<!--wds:token-map event-map-->
+
+<h2>Variable modes</h2>
+<p>Like every WDS section, each variant applies the three variable collections: <code>breakpoint</code> for spacing and widths, <code>typography</code> for text sizes, and <code>theme</code> for colours. The same collections and modes carry over to Webflow through the Figma to Webflow plugin. See <a href="/developers/figma-to-webflow.html">Figma to Webflow</a>.</p>
+<!--wds:section-modes event-->
+
+<h2>Responsive layout behaviour</h2>
+<ul><li><strong>Map</strong>: the header band puts the event name, dates and booth in one row on desktop, then stacks them on mobile. The map keeps its width and crops.</li><li><strong>Agenda</strong>: the dates, venue and day chips sit in a column beside the schedule on desktop, and move above it on tablet and mobile. Each time slot stacks its time, location and session on mobile.</li></ul>
+<p>Section padding, gaps and widths come from the <a href="/foundations/grid.html">breakpoint tokens</a>, so the spacing changes automatically at each breakpoint.</p>
+
+<h2>Light and dark theme</h2>
+<p>Both variants are dark in Figma.</p>
+
+<h2>Design guidance</h2>
+<div class="do-dont">
+  <div class="do"><h3>Do</h3><ul><li>Show booth numbers and the venue exactly as the organiser publishes them.</li><li>Use one chip per show day, with the same short date format ("Tue, Feb 17").</li><li>Give every session an Add to calendar link with the right time zone.</li></ul></div>
+  <div class="dont"><h3>Don't</h3><ul><li>Use the map as the only way to find the booth. Keep the booth number in text.</li><li>List more than about six sessions per day. Link to a full schedule instead.</li></ul></div>
+</div>
+
+<h2>Accessibility</h2>
+<ul><li>The venue map needs alt text that gives the booth location in words, for example "Tekion booths 1501 and 1701, Hall A, near the north entrance".</li><li>Day chips are a single-choice group: use radios or a tablist, with a label such as "Agenda day" (see <a href="/components/chip.html">Chip</a>).</li><li>Mark each session time up as text, not an image, and use <code>&lt;time datetime&gt;</code>.</li><li>Each Add to calendar button needs a name that includes the session, such as "Add Extreme Ownership in Dealership Support to calendar".</li></ul>
+
+<h2>Marketing handoff checklist</h2>
+<ul><li>Event name, dates, venue and booth numbers checked against the organiser's listing.</li><li>Venue map exported from Figma with alt text.</li><li>Agenda: every session has a time, location, title and speakers, with titles within 2 lines.</li><li>Calendar links tested, with the right time zone.</li><li>Section and variant chosen from Figma, with its node link.</li><li>Each variant sets the <code>breakpoint</code>, <code>typography</code> and <code>theme</code> modes.</li></ul>

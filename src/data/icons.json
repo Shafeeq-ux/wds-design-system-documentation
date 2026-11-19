@@ -180,7 +180,15 @@
   "icon-integrated-tekion-ecosystem",
   "icon-transparent-payment-calculator",
   "icon-live-online-sessions",
-  "icon-sales-checkout-concierge"
+  "icon-sales-checkout-concierge",
+  "icon-ai-inspection-suggestions",
+  "icon-increased-ro-profitability",
+  "icon-marketable-recommendations",
+  "icon-more-time-in-the-bay",
+  "icon-real-time-insights",
+  "icon-smart-recommendation-ordering",
+  "icon-vehicle-health-summary",
+  "icon-voice-to-form-inspection"
  ],
  "products": [
   "core-dms",

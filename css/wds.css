@@ -164,6 +164,58 @@
 @keyframes wds-btn-spin { to { transform: rotate(360deg); } }
 @media (prefers-reduced-motion: reduce) { .wds-btn[aria-busy="true"] .wds-btn__spinner { animation-duration: 2.4s; } }
 
+/* ---------- Chip ---------- */
+/* Figma: Chip (1633:42). States: Default, Hover, Pressed, Selected, Disabled, plus Focus on any state.
+   The 1px border is drawn inside (box-shadow), so the chip never changes width between states. */
+.wds-chip {
+  --_bg: var(--wds-chip-bg-default); --_fg: var(--wds-chip-text-default); --_bd: var(--wds-chip-border-default);
+  display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+  min-height: 44px; padding: 10px 16px; border: 0; border-radius: var(--wds-border-radius-full);
+  background: var(--_bg); color: var(--_fg); box-shadow: inset 0 0 0 1px var(--_bd);
+  font-family: inherit; font-size: var(--wds-body-4-medium-font-size); line-height: var(--wds-body-4-medium-line-height);
+  font-weight: var(--wds-body-4-medium-font-weight); font-stretch: var(--wds-body-4-medium-font-stretch); letter-spacing: var(--wds-body-4-medium-letter-spacing);
+  white-space: nowrap; cursor: pointer; -webkit-tap-highlight-color: transparent;
+  transition: background-color .15s ease-out, box-shadow .15s ease-out, color .15s ease-out;
+}
+.wds-chip:is(:hover, .is-hover) { --_bg: var(--wds-chip-bg-hover); --_bd: var(--wds-chip-border-hover); }
+.wds-chip:is(:active, .is-pressed) { --_bg: var(--wds-chip-bg-pressed); --_fg: var(--wds-chip-text-pressed); --_bd: transparent; }
+.wds-chip:is([aria-pressed="true"], [aria-checked="true"], .is-selected), :checked + .wds-chip { --_bg: var(--wds-chip-bg-selected); --_fg: var(--wds-chip-text-selected); --_bd: transparent; }
+.wds-chip:is(:disabled, [aria-disabled="true"]), :disabled + .wds-chip { --_bg: var(--wds-chip-bg-disabled); --_fg: var(--wds-chip-text-disabled); --_bd: var(--wds-chip-border-disabled); cursor: not-allowed; }
+/* Focus: a 2px ring 4px outside the chip, on any state */
+.wds-chip:is(:focus-visible, .is-focus), :focus-visible + .wds-chip { outline: 2px solid var(--wds-chip-focus-ring); outline-offset: 4px; }
+/* A row of chips: 8px apart; scrolls sideways on narrow screens instead of wrapping */
+.wds-chips { display: flex; gap: 8px; margin: 0; padding: 6px; list-style: none; overflow-x: auto; scrollbar-width: none; }
+.wds-chips::-webkit-scrollbar { display: none; }
+/* Native radio or checkbox chips: <label><input class="wds-chip__input" type="radio"><span class="wds-chip">…</span></label> */
+.wds-chip__input { position: absolute; opacity: 0; width: 1px; height: 1px; margin: 0; pointer-events: none; }
+
+/* ---------- Breadcrumbs ---------- */
+/* Figma: Breadcrumb Item (1659:37), Separator (1659:12), Breadcrumbs (1659:129).
+   Items are links; the last item is the current page (aria-current="page"), muted and not a link.
+   Layouts: 2 to 5 levels; Collapsed above 5 (… opens the hidden levels); Compact on mobile (a back link to the parent). */
+.wds-breadcrumbs ol { display: flex; flex-wrap: wrap; align-items: center; gap: var(--wds-gap-button-icon-gap); margin: 0; padding: 0; list-style: none; }
+.wds-breadcrumbs li { display: inline-flex; align-items: center; gap: var(--wds-gap-button-icon-gap); }
+.wds-breadcrumbs li + li::before { content: ""; flex: none; width: 16px; height: 16px; background: var(--wds-breadcrumb-separator); -webkit-mask: url("/assets/icons/chevron-down.svg") center / 16px no-repeat; mask: url("/assets/icons/chevron-down.svg") center / 16px no-repeat; transform: rotate(-90deg); }
+.wds-breadcrumbs a, .wds-breadcrumbs [aria-current="page"], .wds-breadcrumbs__more {
+  font-family: inherit; font-size: var(--wds-button-font-size); line-height: var(--wds-button-line-height);
+  font-weight: var(--wds-button-font-weight); font-stretch: var(--wds-button-font-stretch); letter-spacing: var(--wds-button-letter-spacing);
+}
+.wds-breadcrumbs a, .wds-breadcrumbs__more { position: relative; color: var(--wds-breadcrumb-text-default); text-decoration: none; border-radius: 4px; }
+.wds-breadcrumbs__more { padding: 0; border: 0; background: none; cursor: pointer; }
+.wds-breadcrumbs a:is(:hover, .is-hover), .wds-breadcrumbs__more:hover { color: var(--wds-breadcrumb-text-hover); text-decoration: underline; text-underline-offset: 3px; }
+.wds-breadcrumbs a:is(:active, .is-pressed) { color: var(--wds-breadcrumb-text-pressed); text-decoration: underline; text-underline-offset: 3px; }
+.wds-breadcrumbs a:is(:focus-visible, .is-focus), .wds-breadcrumbs__more:focus-visible { outline: 2px solid var(--wds-breadcrumb-focus-ring); outline-offset: 2px; }
+/* Invisible hit area of at least 24px on the 16px-high links (WCAG 2.5.8) */
+.wds-breadcrumbs a::after, .wds-breadcrumbs__more::after { content: ""; position: absolute; inset: -4px -3px; }
+.wds-breadcrumbs [aria-current="page"] { color: var(--wds-breadcrumb-text-current); }
+/* Compact (mobile): only a back link to the parent page */
+@media (max-width: 767px) {
+  .wds-breadcrumbs ol:has(> li + li) > li:not(:nth-last-child(2)) { display: none; }
+  .wds-breadcrumbs ol:has(> li + li) > li:nth-last-child(2)::before { content: ""; flex: none; width: 16px; height: 16px; background: var(--wds-breadcrumb-separator); -webkit-mask: url("/assets/icons/chevron-down.svg") center / 16px no-repeat; mask: url("/assets/icons/chevron-down.svg") center / 16px no-repeat; transform: rotate(90deg); }
+}
+.wds-breadcrumbs--compact li:not(:nth-last-child(2)) { display: none; }
+.wds-breadcrumbs--compact li:nth-last-child(2)::before { content: ""; flex: none; width: 16px; height: 16px; background: var(--wds-breadcrumb-separator); -webkit-mask: url("/assets/icons/chevron-down.svg") center / 16px no-repeat; mask: url("/assets/icons/chevron-down.svg") center / 16px no-repeat; transform: rotate(90deg); }
+
 /* ---------- Inputs ---------- */
 /* Figma: [c]-input-textfield / -email / -phone / -dropdown / -textarea.
    States: Default, Filled, Focus, Error, Disabled. Surface 50px, radius 8px (measured). */

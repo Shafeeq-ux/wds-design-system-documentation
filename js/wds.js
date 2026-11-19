@@ -9,6 +9,17 @@
     btn.style.setProperty('--y', `${e.clientY - r.top}px`);
   }, { passive: true });
 
+  // Breadcrumbs, Collapsed layout: the "…" button shows the hidden middle levels
+  document.addEventListener('click', (e) => {
+    const more = e.target.closest?.('.wds-breadcrumbs__more');
+    if (!more) return;
+    const list = more.closest('ol');
+    list.querySelectorAll('li[hidden]').forEach((li) => { li.hidden = false; });
+    const li = more.closest('li');
+    (li.nextElementSibling?.querySelector('a') || list.querySelector('a'))?.focus();
+    li.remove();
+  });
+
   // Disclosure: <button aria-expanded="false" aria-controls="id" data-wds-toggle>
   // Used by header dropdowns and the menu panel. Only one open at a time per header.
   const open = new Set();

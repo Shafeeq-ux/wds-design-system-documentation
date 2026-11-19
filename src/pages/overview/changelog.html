@@ -2,7 +2,7 @@
 <p>Every change to WDS 3.0 and its documentation, newest first. Add an entry with every release (see <a href="/overview/governance.html#versioning">Versioning</a>).</p>
 
 <h2>3.0.2 · 19 November 2026</h2>
-<p>Tokens, section renders and component renders re-synced from Figma. 617 tokens, up from 581, and 76 section variants, up from 55.</p>
+<p>Tokens, section renders and component renders re-synced from Figma. 617 tokens, up from 581; 78 section variants in 17 sections, up from 55 in 16; and two new components.</p>
 <ul>
   <li><strong>New colour tokens</strong> for components in progress: chip (13), media button (14), breadcrumb (6), and a focus ring for the primary button.</li>
   <li><strong>New spacing tokens</strong>: <code>--wds-padding-button-padding-x-md</code> (20px) and <code>--wds-padding-button-padding-x-sm</code> (16px).</li>
@@ -15,10 +15,17 @@
   <li><strong>Variable modes audit</strong> re-run: 79 sets, 237 variants.</li>
   <li><strong>Button rebuilt</strong> to match Figma: Hierarchy (Primary, Secondary, Tertiary, Link), Tone (Brand, Neutral), Surface (Default, On media), Size (Large 56, Medium 44, Small 32) and six states, now including Focus and Loading. New classes: <code>.wds-btn--neutral</code>, <code>.wds-btn--on-media</code>, <code>.wds-btn--md</code>, <code>.wds-btn--sm</code>, <code>.wds-btn--glass</code> and <code>aria-busy</code> with <code>.wds-btn__spinner</code>. The existing classes still work. The focus ring now uses <code>btn-focus-ring</code> instead of the proposed <code>#47a5ff</code>.</li>
   <li><strong>IconButton</strong> documented on the Button page: Large, Medium and Small, Neutral or Glass, on Default or On media.</li>
+  <li><strong>New component: Chip</strong>, a selectable pill for dates and filters, with five states and a focus ring. Page, CSS (<code>.wds-chip</code>, <code>.wds-chips</code>), live example and token map.</li>
+  <li><strong>New component: Breadcrumbs</strong>, in 2 to 5 levels, Collapsed and Compact (automatic on mobile). Page, CSS (<code>.wds-breadcrumbs</code>), the Collapsed "…" behaviour in <code>js/wds.js</code>, live example and token maps.</li>
+  <li><strong>New section: Event</strong>, with a venue map and an agenda. Page, renders, character limits and token map.</li>
+  <li><strong>Icons</strong>: a new utility icon (calendar) and 8 new feature icons for service workflows, so 15 utility and 73 feature icons in all.</li>
 </ul>
 <h3>Open issues found</h3>
 <ul>
   <li>Hero default (mobile): the gap between the two stats is a hardcoded 20px.</li>
+  <li>Event map: the Desktop variant sets no breakpoint or typography mode, and its header band padding isn't tokenised.</li>
+  <li>Chip: the 10px vertical padding is hardcoded.</li>
+  <li>Feature icon <code>Vehicle Health Summary</code> is named differently from the others in Figma. The site calls it <code>icon-vehicle-health-summary</code>.</li>
   <li>Button: the 8px icon gap on Primary and Secondary, the Tertiary circle's padding (6, 5 and 4px) and the focus rings' radii aren't tokenised.</li>
   <li>Accordion multi image: Desktop and Tablet variants don't set breakpoint or typography modes. Carousel timeline: the Desktop variant sets no modes.</li>
   <li>The <code>font-family</code> variables in Figma are now "Tekion Sans " with a trailing space. CSS keeps "Tekion Sans", because the space would stop browsers from matching the installed font.</li>

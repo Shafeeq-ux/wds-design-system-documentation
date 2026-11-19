@@ -190,6 +190,22 @@
           "desc": "Lets people pick one option from a short list."
         },
         {
+          "title": "Chip",
+          "href": "/components/chip.html",
+          "type": "component",
+          "phase": 3,
+          "figma": "1628-14524",
+          "desc": "Selectable pill for filters and quick choices such as dates."
+        },
+        {
+          "title": "Breadcrumbs",
+          "href": "/components/breadcrumbs.html",
+          "type": "component",
+          "phase": 3,
+          "figma": "1655-36333",
+          "desc": "Shows where a page sits in the site and links back up the hierarchy."
+        },
+        {
           "title": "Header",
           "href": "/components/header.html",
           "type": "component",
@@ -341,6 +357,14 @@
           "phase": 4,
           "figma": "1295-2819",
           "desc": "Lead capture and contact forms."
+        },
+        {
+          "title": "Event",
+          "href": "/sections/event.html",
+          "type": "section",
+          "phase": 4,
+          "figma": "1697-288",
+          "desc": "Event details with a venue map, and session agendas."
         }
       ]
     },

@@ -1,0 +1,22 @@
+<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="48" height="48" fill="#F5F5F5"/>
+<g id="Vehicle Health Summary">
+<g id="Group 2087328299">
+<path id="Vector 4325" d="M10.0176 24.5039H13.0742" stroke="#8A9099" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector 4326" d="M33.8926 24.5039H36.9492" stroke="#8A9099" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Rectangle 34626586" d="M12.8652 26.5073H34.1011L31.8039 19.7177L15.7583 19.626L12.8652 26.5073Z" stroke="#8A9099" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Rectangle 34626587" d="M9.84961 28.7178C9.84961 28.7178 11.9904 26.7178 13.3621 26.7178C14.7338 26.7178 16.8745 26.7178 16.8745 26.7178H23.8994H30.9243H34.4368L37.9492 28.7178V37.481H9.84961V28.7178Z" stroke="#8A9099" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Rectangle 34626588" d="M18.2715 32.9785H29.5508L30.5508 34.3579V35.7373V37.4961H17.2715V35.7373V34.3579L18.2715 32.9785Z" stroke="#8A9099" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Rectangle 34626589" d="M9.86328 37.5684H14.4688V41.5522H9.86328V37.5684Z" stroke="#8A9099" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Rectangle 34626591" d="M33.3262 37.5684H37.9316V41.5522H33.3262V37.5684Z" stroke="#8A9099" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<path id="Vector" d="M15.5078 11.7592H19.6217L21.7356 6.88086L24.378 15.418L26.4919 11.7592H30.4297" stroke="url(#paint0_linear_152_173)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<defs>
+<linearGradient id="paint0_linear_152_173" x1="12.1373" y1="9.91213" x2="39.8655" y2="14.6208" gradientUnits="userSpaceOnUse">
+<stop stop-color="#1FC8A9"/>
+<stop offset="0.5" stop-color="#3B82F6"/>
+<stop offset="1" stop-color="#7C4DFF"/>
+</linearGradient>
+</defs>
+</svg>

@@ -1,0 +1,20 @@
+<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="48" height="48" fill="#F5F5F5"/>
+<g id="icon-real-time-insights">
+<g id="Group">
+<path id="Vector" d="M27.75 12H9.75C8.75544 12 7.80161 12.3951 7.09835 13.0983C6.39509 13.8016 6 14.7554 6 15.75V32.25C6 32.7425 6.097 33.2301 6.28545 33.6851C6.47391 34.14 6.75013 34.5534 7.09835 34.9017C7.44657 35.2499 7.85997 35.5261 8.31494 35.7145C8.76991 35.903 9.25754 36 9.75 36H35.25C35.7425 36 36.2301 35.903 36.6851 35.7145C37.14 35.5261 37.5534 35.2499 37.9017 34.9017C38.2499 34.5534 38.5261 34.14 38.7145 33.6851C38.903 33.2301 39 32.7425 39 32.25V21.75" stroke="#80848E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_2" d="M13.5 30V25.5" stroke="#80848E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_3" d="M17.834 30V21" stroke="#80848E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_4" d="M22.168 30V24" stroke="#80848E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_5" d="M22.5 36V42M18 42H27" stroke="#80848E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<path id="Vector_6" d="M37.5 18.25C40.3995 18.25 42.75 15.8995 42.75 13C42.75 10.1005 40.3995 7.75 37.5 7.75C34.6005 7.75 32.25 10.1005 32.25 13C32.25 15.8995 34.6005 18.25 37.5 18.25Z" fill="url(#paint0_linear_152_173)"/>
+</g>
+<defs>
+<linearGradient id="paint0_linear_152_173" x1="30.4911" y1="11.3964" x2="47.6675" y2="20.9755" gradientUnits="userSpaceOnUse">
+<stop stop-color="#1FC8A9"/>
+<stop offset="0.5" stop-color="#3B82F6"/>
+<stop offset="1" stop-color="#7C4DFF"/>
+</linearGradient>
+</defs>
+</svg>

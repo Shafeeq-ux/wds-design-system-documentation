@@ -1,0 +1,18 @@
+<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="48" height="48" fill="#F5F5F5"/>
+<g id="icon-smart-recommendation-ordering">
+<g id="Group">
+<path id="Vector" d="M7.5 12H25.5" stroke="#80848E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_2" d="M7.5 22.5H21" stroke="#80848E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_3" d="M7.5 33H16.5" stroke="#80848E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<path id="Vector_4" d="M35.25 9V37.5M41.25 31.5L35.25 37.5L29.25 31.5" stroke="url(#paint0_linear_152_173)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<defs>
+<linearGradient id="paint0_linear_152_173" x1="28.9919" y1="8.85386" x2="41.6143" y2="51.8556" gradientUnits="userSpaceOnUse">
+<stop stop-color="#1FC8A9"/>
+<stop offset="0.5" stop-color="#3B82F6"/>
+<stop offset="1" stop-color="#7C4DFF"/>
+</linearGradient>
+</defs>
+</svg>

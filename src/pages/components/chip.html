@@ -1,0 +1,125 @@
+<!--meta {"status": "Stable", "figma": "1628-14524"} -->
+<h2>Overview</h2>
+<p>A chip is a selectable pill for quick choices, such as a date or a filter, made in place without leaving the page. Figma has one component set, <strong>Chip</strong>, with five states and a Focus option that works on every state.</p>
+<div class="table-wrap">
+  <table>
+    <thead><tr><th scope="col">Use</th><th scope="col">Example</th><th scope="col">Semantics</th></tr></thead>
+    <tbody>
+      <tr><td>Pick one value</td><td>A session day: "Tue, Feb 17"</td><td>Radio group</td></tr>
+      <tr><td>Pick any number of values</td><td>Agenda filters: Sales, Service, Parts</td><td>Checkbox group, or toggle buttons with <code>aria-pressed</code></td></tr>
+    </tbody>
+  </table>
+</div>
+<p>If tapping runs an action instead of choosing a value, use a <a href="/components/button.html">Button</a>, not a chip.</p>
+
+<h2>Variants and states</h2>
+<p>Select the chips in the live example to see the real interactions. The Hover, Pressed and Focus specimens are forced, so you can compare them side by side.</p>
+<div class="doc-preview" data-src="/examples/chip.html" data-title="Chip · states, single choice and filters"></div>
+<ul>
+  <li><strong>Default</strong> has no fill and a 1px border.</li>
+  <li><strong>Hover</strong> adds a light fill and a darker border.</li>
+  <li><strong>Pressed</strong> and <strong>Selected</strong> look the same: a solid fill with no border. Pressed is the moment of tapping; Selected is the chip staying chosen.</li>
+  <li><strong>Disabled</strong> uses a faint border and muted label.</li>
+  <li><strong>Focus</strong> shows a 2px ring 4px outside the chip, on any state.</li>
+</ul>
+
+<h2>Anatomy</h2>
+<div class="table-wrap">
+  <table>
+    <thead><tr><th scope="col">Part</th><th scope="col">Spec</th></tr></thead>
+    <tbody>
+      <tr><td>Container</td><td>Pill (<code>border-radius/br-9999</code>), 44px high, 1px border drawn inside, so the chip never changes width</td></tr>
+      <tr><td>Padding</td><td>16px horizontal, 10px vertical</td></tr>
+      <tr><td>Label</td><td><code>body-4-medium</code> (14px / 22px)</td></tr>
+      <tr><td>Gap</td><td>8px, reserved for a future leading icon</td></tr>
+      <tr><td>Focus ring</td><td>2px, <code>chip-focus-ring</code>, 4px outside</td></tr>
+    </tbody>
+  </table>
+</div>
+<p>Chips hug their label. In a row they sit 8px apart, so touch targets don't overlap.</p>
+
+<h2>Design guidance</h2>
+<div class="do-dont">
+  <div class="do"><h3>Do</h3><ul><li>Use chips for a few short options people choose in place.</li><li>Show which chip is selected with the Selected state.</li><li>In a single-choice group, keep exactly one chip selected.</li></ul></div>
+  <div class="dont"><h3>Don't</h3><ul><li>Use a chip to run an action. Use a button.</li><li>Use chips for long or many options. Use a dropdown or list.</li><li>Wrap a row of chips onto several lines on mobile.</li></ul></div>
+</div>
+
+<h2>Responsive behaviour</h2>
+<ul>
+  <li>Chips are the same size at every breakpoint. 44px high meets the minimum touch target.</li>
+  <li>A row of chips (<code>.wds-chips</code>) scrolls sideways on narrow screens instead of wrapping.</li>
+</ul>
+
+<h2>Light and dark theme</h2>
+<ul>
+  <li><strong>Default</strong> has a <code>gray-200</code> border and dark label in light mode, and a <code>gray-700</code> border and white label in dark mode.</li>
+  <li><strong>Pressed and Selected</strong> invert: <code>gray-800</code> with a white label in light mode, white with a dark label in dark mode.</li>
+</ul>
+
+<h2>Microcopy and limits</h2>
+<ul>
+  <li>One or two words, or a short date such as "Thu, Feb 18". 20 characters max (proposed).</li>
+  <li>Sentence case for words, and the same date format across a group.</li>
+</ul>
+
+<h2>Token map</h2>
+<p>Every layer in this component that uses a Figma variable, taken from the Figma file. Select a layer on the image, or in the list, to see its colour, text, spacing and border variables, their CSS names and values, and the CSS to use. Padding is shaded pink and gaps are striped. Use <strong>Issues</strong> to find values that aren't tokenised yet.</p>
+<p>All five states are shown. Found in Figma: the 10px vertical padding is hardcoded, while the 16px horizontal padding uses <code>spacing/padding/p-16</code>.</p>
+<!--wds:token-map chip-->
+
+<h2>Developer implementation</h2>
+<pre><code>&lt;!-- Single choice: native radios keep keyboard and form behaviour --&gt;
+&lt;fieldset&gt;
+  &lt;legend class="visually-hidden"&gt;Day&lt;/legend&gt;
+  &lt;ul class="wds-chips"&gt;
+    &lt;li&gt;&lt;label&gt;&lt;input class="wds-chip__input" type="radio" name="day" checked&gt;&lt;span class="wds-chip"&gt;Tue, Feb 17&lt;/span&gt;&lt;/label&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;label&gt;&lt;input class="wds-chip__input" type="radio" name="day"&gt;&lt;span class="wds-chip"&gt;Wed, Feb 18&lt;/span&gt;&lt;/label&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/fieldset&gt;
+
+&lt;!-- Filters: toggle buttons --&gt;
+&lt;div role="group" aria-label="Filter sessions"&gt;
+  &lt;button class="wds-chip" type="button" aria-pressed="true"&gt;Sales&lt;/button&gt;
+  &lt;button class="wds-chip" type="button" aria-pressed="false"&gt;Service&lt;/button&gt;
+&lt;/div&gt;</code></pre>
+<div class="table-wrap">
+  <table>
+    <thead><tr><th scope="col">Class or attribute</th><th scope="col">Figma</th></tr></thead>
+    <tbody>
+      <tr><td><code>.wds-chip</code></td><td>Chip, State=Default</td></tr>
+      <tr><td><code>:hover</code>, <code>:active</code></td><td>State=Hover, Pressed</td></tr>
+      <tr><td><code>aria-pressed="true"</code>, <code>aria-checked="true"</code>, or a checked <code>.wds-chip__input</code></td><td>State=Selected</td></tr>
+      <tr><td><code>aria-disabled="true"</code>, or a disabled <code>.wds-chip__input</code></td><td>State=Disabled</td></tr>
+      <tr><td><code>:focus-visible</code></td><td>Focus=true</td></tr>
+      <tr><td><code>.wds-chips</code></td><td>A row of chips, 8px apart</td></tr>
+    </tbody>
+  </table>
+</div>
+<h3>Tokens</h3>
+<!--wds:theme components/chip/-->
+
+<h2>Accessibility</h2>
+<ul>
+  <li><strong>Semantics</strong>: use radios for single choice, checkboxes for multiple choice, or buttons with <code>aria-pressed</code> for toggles, so the selected state is announced (WCAG 4.1.2).</li>
+  <li><strong>Group label</strong>: name the group with a <code>&lt;legend&gt;</code> or <code>aria-label</code> (WCAG 1.3.1).</li>
+  <li><strong>Keyboard</strong>: Tab to the group; arrow keys move between radios, and Space toggles a checkbox or button (WCAG 2.1.1).</li>
+  <li><strong>Focus visible</strong>: the 2px ring shows on keyboard focus (WCAG 2.4.7).</li>
+  <li><strong>Not colour alone</strong>: Selected changes the fill and removes the border, and the state is also announced (WCAG 1.4.1).</li>
+  <li><strong>Boundary contrast</strong>: the Default border (<code>gray-200</code>) is about 1.4:1 on white. The label identifies the chip, but if chips sit without context, consider <code>gray-400</code> (WCAG 1.4.11).</li>
+</ul>
+
+<h2>Figma, asset and code references</h2>
+<ul>
+  <li><a href="https://www.figma.com/design/lf5SOxUpWBtO8AIzXf6snw/WDS-3.0?node-id=1633-42" target="_blank" rel="noopener">Chip component set (1633:42)</a> and its <a href="https://www.figma.com/design/lf5SOxUpWBtO8AIzXf6snw/WDS-3.0?node-id=1633-472" target="_blank" rel="noopener">documentation frame</a></li>
+  <li>Code: <code>css/wds.css</code> (Chip section)</li>
+</ul>
+
+<h2>Acceptance checklist</h2>
+<ul>
+  <li>All five states match Figma in light and dark, with the focus ring on keyboard focus.</li>
+  <li>Selected state is announced (radio, checkbox or <code>aria-pressed</code>).</li>
+  <li>The group has a label.</li>
+  <li>The chip doesn't change width between states.</li>
+  <li>Rows scroll sideways on mobile, with 8px between chips.</li>
+  <li>Labels are one or two words, or a short date.</li>
+</ul>
